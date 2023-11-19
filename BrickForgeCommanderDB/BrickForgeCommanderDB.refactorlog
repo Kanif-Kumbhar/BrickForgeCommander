@@ -21,4 +21,39 @@
     <Property Name="ParentElementType" Value="SqlTable" />
     <Property Name="NewName" Value="UserName" />
   </Operation>
+  <Operation Name="Rename Refactor" Key="d393fcc3-4297-456b-8655-4f23a5c8196f" ChangeDateTime="11/19/2023 05:26:32">
+    <Property Name="ElementName" Value="[kanif].[Orders].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[kanif].[Orders]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="OrderId" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="ed378a73-42f6-4b12-97e3-5e508bca72ac" ChangeDateTime="11/19/2023 05:28:26">
+    <Property Name="ElementName" Value="[kanif].[OrderDetails].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[kanif].[OrderDetails]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="OrderDetailId" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="65b72b21-0f3d-49da-a1b8-320ab68b4f79" ChangeDateTime="11/19/2023 05:29:12">
+    <Property Name="ElementName" Value="[kanif].[OrderDetails].[Orderid]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[kanif].[OrderDetails]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="OrderId" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="254d4823-0822-4a8d-bef3-dd8ef670ca7b" ChangeDateTime="11/19/2023 05:30:24">
+    <Property Name="ElementName" Value="[kanif].[ProductDetails].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[kanif].[ProductDetails]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="ProductId" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="156642dd-53e6-4938-8bd0-3a787052df48" ChangeDateTime="11/19/2023 05:32:32">
+    <Property Name="ElementName" Value="[kanif].[VendorDetails].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[kanif].[VendorDetails]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="VendorId" />
+  </Operation>
 </Operations>

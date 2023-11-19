@@ -36,9 +36,6 @@
   <PropertyGroup>
     <ApplicationManifest>app.manifest</ApplicationManifest>
   </PropertyGroup>
-  <PropertyGroup>
-    <StartupObject>BrickForgeCommanderUI.Program</StartupObject>
-  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -59,8 +56,6 @@
     <Compile Include="Dashboard\frmDashBoard.Designer.cs">
       <DependentUpon>frmDashBoard.cs</DependentUpon>
     </Compile>
-    <Compile Include="Dashboard\Models\DashBoard.cs" />
-    <Compile Include="Db\DbConnection.cs" />
     <Compile Include="Login &amp; Registeration\frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
