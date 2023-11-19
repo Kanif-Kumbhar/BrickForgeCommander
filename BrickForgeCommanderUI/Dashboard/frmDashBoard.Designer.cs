@@ -92,15 +92,16 @@
             this.panel23 = new System.Windows.Forms.Panel();
             this.pbReports = new System.Windows.Forms.PictureBox();
             this.timerProduction = new System.Windows.Forms.Timer(this.components);
-            this.btnLast30d = new System.Windows.Forms.Button();
-            this.dtpStartDate = new System.Windows.Forms.DateTimePicker();
-            this.btnLast7d = new System.Windows.Forms.Button();
-            this.dtpEndDate = new System.Windows.Forms.DateTimePicker();
-            this.btnToday = new System.Windows.Forms.Button();
-            this.btnThisMonth = new System.Windows.Forms.Button();
-            this.btnCustom = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
+            this.pnlMain = new System.Windows.Forms.Panel();
             this.pnlDashBoardTop = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.btnCustom = new System.Windows.Forms.Button();
+            this.btnThisMonth = new System.Windows.Forms.Button();
+            this.btnToday = new System.Windows.Forms.Button();
+            this.dtpEndDate = new System.Windows.Forms.DateTimePicker();
+            this.btnLast7d = new System.Windows.Forms.Button();
+            this.dtpStartDate = new System.Windows.Forms.DateTimePicker();
+            this.btnLast30d = new System.Windows.Forms.Button();
             this.floatPanelTop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbClose)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbMaximize)).BeginInit();
@@ -140,6 +141,7 @@
             this.panel22.SuspendLayout();
             this.panel23.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbReports)).BeginInit();
+            this.pnlMain.SuspendLayout();
             this.pnlDashBoardTop.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -158,13 +160,13 @@
             this.floatPanelTop.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
             this.floatPanelTop.Location = new System.Drawing.Point(200, 0);
             this.floatPanelTop.Name = "floatPanelTop";
-            this.floatPanelTop.Size = new System.Drawing.Size(1397, 43);
+            this.floatPanelTop.Size = new System.Drawing.Size(1392, 43);
             this.floatPanelTop.TabIndex = 12;
             // 
             // pbClose
             // 
             this.pbClose.Image = ((System.Drawing.Image)(resources.GetObject("pbClose.Image")));
-            this.pbClose.Location = new System.Drawing.Point(1363, 10);
+            this.pbClose.Location = new System.Drawing.Point(1358, 10);
             this.pbClose.Margin = new System.Windows.Forms.Padding(10);
             this.pbClose.Name = "pbClose";
             this.pbClose.Size = new System.Drawing.Size(24, 26);
@@ -175,7 +177,7 @@
             // pbMaximize
             // 
             this.pbMaximize.Image = ((System.Drawing.Image)(resources.GetObject("pbMaximize.Image")));
-            this.pbMaximize.Location = new System.Drawing.Point(1316, 10);
+            this.pbMaximize.Location = new System.Drawing.Point(1311, 10);
             this.pbMaximize.Margin = new System.Windows.Forms.Padding(10);
             this.pbMaximize.Name = "pbMaximize";
             this.pbMaximize.Size = new System.Drawing.Size(27, 26);
@@ -186,7 +188,7 @@
             // pbMinimize
             // 
             this.pbMinimize.Image = ((System.Drawing.Image)(resources.GetObject("pbMinimize.Image")));
-            this.pbMinimize.Location = new System.Drawing.Point(1274, 10);
+            this.pbMinimize.Location = new System.Drawing.Point(1269, 10);
             this.pbMinimize.Margin = new System.Windows.Forms.Padding(10);
             this.pbMinimize.Name = "pbMinimize";
             this.pbMinimize.Size = new System.Drawing.Size(22, 26);
@@ -204,7 +206,7 @@
             this.flowPanelBottom.Location = new System.Drawing.Point(200, 731);
             this.flowPanelBottom.MinimumSize = new System.Drawing.Size(1057, 36);
             this.flowPanelBottom.Name = "flowPanelBottom";
-            this.flowPanelBottom.Size = new System.Drawing.Size(1397, 36);
+            this.flowPanelBottom.Size = new System.Drawing.Size(1392, 36);
             this.flowPanelBottom.TabIndex = 13;
             // 
             // lblLogOut
@@ -213,7 +215,7 @@
             this.lblLogOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblLogOut.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.lblLogOut.ForeColor = System.Drawing.Color.White;
-            this.lblLogOut.Location = new System.Drawing.Point(1257, 0);
+            this.lblLogOut.Location = new System.Drawing.Point(1252, 0);
             this.lblLogOut.Margin = new System.Windows.Forms.Padding(3, 0, 15, 0);
             this.lblLogOut.Name = "lblLogOut";
             this.lblLogOut.Padding = new System.Windows.Forms.Padding(0, 0, 25, 0);
@@ -225,7 +227,7 @@
             // pbLogOut
             // 
             this.pbLogOut.Image = ((System.Drawing.Image)(resources.GetObject("pbLogOut.Image")));
-            this.pbLogOut.Location = new System.Drawing.Point(1212, 0);
+            this.pbLogOut.Location = new System.Drawing.Point(1207, 0);
             this.pbLogOut.Margin = new System.Windows.Forms.Padding(8, 0, 3, 5);
             this.pbLogOut.Name = "pbLogOut";
             this.pbLogOut.Size = new System.Drawing.Size(39, 44);
@@ -236,7 +238,7 @@
             // 
             this.pnlHome.Controls.Add(this.btnHome);
             this.pnlHome.Controls.Add(this.panel10);
-            this.pnlHome.Location = new System.Drawing.Point(3, 81);
+            this.pnlHome.Location = new System.Drawing.Point(3, 96);
             this.pnlHome.Name = "pnlHome";
             this.pnlHome.Size = new System.Drawing.Size(213, 59);
             this.pnlHome.TabIndex = 4;
@@ -279,7 +281,7 @@
             // 
             this.flowPanelRight.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
             this.flowPanelRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.flowPanelRight.Location = new System.Drawing.Point(1597, 0);
+            this.flowPanelRight.Location = new System.Drawing.Point(1592, 0);
             this.flowPanelRight.MaximumSize = new System.Drawing.Size(10, 1080);
             this.flowPanelRight.MinimumSize = new System.Drawing.Size(10, 563);
             this.flowPanelRight.Name = "flowPanelRight";
@@ -297,13 +299,13 @@
             this.pnlMenu.Controls.Add(this.lblMenu);
             this.pnlMenu.Location = new System.Drawing.Point(3, 3);
             this.pnlMenu.Name = "pnlMenu";
-            this.pnlMenu.Size = new System.Drawing.Size(197, 72);
+            this.pnlMenu.Size = new System.Drawing.Size(197, 87);
             this.pnlMenu.TabIndex = 0;
             // 
             // pbMenu
             // 
             this.pbMenu.Image = ((System.Drawing.Image)(resources.GetObject("pbMenu.Image")));
-            this.pbMenu.Location = new System.Drawing.Point(6, 16);
+            this.pbMenu.Location = new System.Drawing.Point(6, 33);
             this.pbMenu.Name = "pbMenu";
             this.pbMenu.Padding = new System.Windows.Forms.Padding(10);
             this.pbMenu.Size = new System.Drawing.Size(49, 47);
@@ -316,7 +318,7 @@
             this.lblMenu.AutoSize = true;
             this.lblMenu.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMenu.ForeColor = System.Drawing.Color.White;
-            this.lblMenu.Location = new System.Drawing.Point(76, 31);
+            this.lblMenu.Location = new System.Drawing.Point(77, 48);
             this.lblMenu.Name = "lblMenu";
             this.lblMenu.Size = new System.Drawing.Size(77, 32);
             this.lblMenu.TabIndex = 2;
@@ -357,7 +359,7 @@
             this.fpnlMasterContainer.Controls.Add(this.panel11);
             this.fpnlMasterContainer.Controls.Add(this.panel9);
             this.fpnlMasterContainer.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.fpnlMasterContainer.Location = new System.Drawing.Point(3, 146);
+            this.fpnlMasterContainer.Location = new System.Drawing.Point(3, 161);
             this.fpnlMasterContainer.MaximumSize = new System.Drawing.Size(197, 588);
             this.fpnlMasterContainer.MinimumSize = new System.Drawing.Size(197, 66);
             this.fpnlMasterContainer.Name = "fpnlMasterContainer";
@@ -582,7 +584,7 @@
             this.fpnlProduction.Controls.Add(this.panel12);
             this.fpnlProduction.Controls.Add(this.panel15);
             this.fpnlProduction.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.fpnlProduction.Location = new System.Drawing.Point(3, 218);
+            this.fpnlProduction.Location = new System.Drawing.Point(3, 233);
             this.fpnlProduction.MaximumSize = new System.Drawing.Size(197, 195);
             this.fpnlProduction.MinimumSize = new System.Drawing.Size(197, 63);
             this.fpnlProduction.Name = "fpnlProduction";
@@ -678,7 +680,7 @@
             // 
             this.panel16.Controls.Add(this.btnOrders);
             this.panel16.Controls.Add(this.panel17);
-            this.panel16.Location = new System.Drawing.Point(3, 287);
+            this.panel16.Location = new System.Drawing.Point(3, 302);
             this.panel16.Name = "panel16";
             this.panel16.Size = new System.Drawing.Size(194, 59);
             this.panel16.TabIndex = 25;
@@ -720,7 +722,7 @@
             // 
             this.panel18.Controls.Add(this.btnSales);
             this.panel18.Controls.Add(this.panel19);
-            this.panel18.Location = new System.Drawing.Point(3, 352);
+            this.panel18.Location = new System.Drawing.Point(3, 367);
             this.panel18.MaximumSize = new System.Drawing.Size(194, 59);
             this.panel18.MinimumSize = new System.Drawing.Size(194, 59);
             this.panel18.Name = "panel18";
@@ -765,7 +767,7 @@
             // 
             this.panel22.Controls.Add(this.btnReports);
             this.panel22.Controls.Add(this.panel23);
-            this.panel22.Location = new System.Drawing.Point(3, 417);
+            this.panel22.Location = new System.Drawing.Point(3, 432);
             this.panel22.MaximumSize = new System.Drawing.Size(194, 59);
             this.panel22.MinimumSize = new System.Drawing.Size(194, 59);
             this.panel22.Name = "panel22";
@@ -810,93 +812,32 @@
             this.timerProduction.Interval = 15;
             this.timerProduction.Tick += new System.EventHandler(this.timerProduction_Tick);
             // 
-            // btnLast30d
+            // pnlMain
             // 
-            this.btnLast30d.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnLast30d.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btnLast30d.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLast30d.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnLast30d.ForeColor = System.Drawing.Color.White;
-            this.btnLast30d.Location = new System.Drawing.Point(1141, 0);
-            this.btnLast30d.Name = "btnLast30d";
-            this.btnLast30d.Size = new System.Drawing.Size(122, 45);
-            this.btnLast30d.TabIndex = 18;
-            this.btnLast30d.Text = "Last 30 days";
-            this.btnLast30d.UseVisualStyleBackColor = true;
+            this.pnlMain.Controls.Add(this.pnlDashBoardTop);
+            this.pnlMain.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlMain.Location = new System.Drawing.Point(200, 43);
+            this.pnlMain.Name = "pnlMain";
+            this.pnlMain.Size = new System.Drawing.Size(1392, 688);
+            this.pnlMain.TabIndex = 15;
             // 
-            // dtpStartDate
+            // pnlDashBoardTop
             // 
-            this.dtpStartDate.CustomFormat = "MMM dd,yyyy";
-            this.dtpStartDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpStartDate.Location = new System.Drawing.Point(299, 6);
-            this.dtpStartDate.Name = "dtpStartDate";
-            this.dtpStartDate.Size = new System.Drawing.Size(200, 26);
-            this.dtpStartDate.TabIndex = 0;
-            // 
-            // btnLast7d
-            // 
-            this.btnLast7d.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnLast7d.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btnLast7d.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLast7d.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnLast7d.ForeColor = System.Drawing.Color.White;
-            this.btnLast7d.Location = new System.Drawing.Point(1013, 0);
-            this.btnLast7d.Name = "btnLast7d";
-            this.btnLast7d.Size = new System.Drawing.Size(122, 45);
-            this.btnLast7d.TabIndex = 19;
-            this.btnLast7d.Text = "Last 7 days";
-            this.btnLast7d.UseVisualStyleBackColor = true;
-            // 
-            // dtpEndDate
-            // 
-            this.dtpEndDate.CustomFormat = "MMM dd,yyyy";
-            this.dtpEndDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpEndDate.Location = new System.Drawing.Point(505, 6);
-            this.dtpEndDate.Name = "dtpEndDate";
-            this.dtpEndDate.Size = new System.Drawing.Size(200, 26);
-            this.dtpEndDate.TabIndex = 1;
-            // 
-            // btnToday
-            // 
-            this.btnToday.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnToday.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btnToday.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnToday.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.btnToday.ForeColor = System.Drawing.Color.White;
-            this.btnToday.Location = new System.Drawing.Point(885, 0);
-            this.btnToday.Name = "btnToday";
-            this.btnToday.Size = new System.Drawing.Size(122, 45);
-            this.btnToday.TabIndex = 20;
-            this.btnToday.Text = "Today";
-            this.btnToday.UseVisualStyleBackColor = true;
-            // 
-            // btnThisMonth
-            // 
-            this.btnThisMonth.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnThisMonth.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btnThisMonth.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnThisMonth.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.btnThisMonth.ForeColor = System.Drawing.Color.White;
-            this.btnThisMonth.Location = new System.Drawing.Point(1269, 0);
-            this.btnThisMonth.Name = "btnThisMonth";
-            this.btnThisMonth.Size = new System.Drawing.Size(122, 45);
-            this.btnThisMonth.TabIndex = 17;
-            this.btnThisMonth.Text = "This Month";
-            this.btnThisMonth.UseVisualStyleBackColor = true;
-            // 
-            // btnCustom
-            // 
-            this.btnCustom.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCustom.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btnCustom.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCustom.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.btnCustom.ForeColor = System.Drawing.Color.White;
-            this.btnCustom.Location = new System.Drawing.Point(757, 0);
-            this.btnCustom.Name = "btnCustom";
-            this.btnCustom.Size = new System.Drawing.Size(122, 45);
-            this.btnCustom.TabIndex = 21;
-            this.btnCustom.Text = "Custom";
-            this.btnCustom.UseVisualStyleBackColor = true;
+            this.pnlDashBoardTop.AutoSize = true;
+            this.pnlDashBoardTop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(66)))), ((int)(((byte)(66)))));
+            this.pnlDashBoardTop.Controls.Add(this.label2);
+            this.pnlDashBoardTop.Controls.Add(this.btnCustom);
+            this.pnlDashBoardTop.Controls.Add(this.btnThisMonth);
+            this.pnlDashBoardTop.Controls.Add(this.btnToday);
+            this.pnlDashBoardTop.Controls.Add(this.dtpEndDate);
+            this.pnlDashBoardTop.Controls.Add(this.btnLast7d);
+            this.pnlDashBoardTop.Controls.Add(this.dtpStartDate);
+            this.pnlDashBoardTop.Controls.Add(this.btnLast30d);
+            this.pnlDashBoardTop.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlDashBoardTop.Location = new System.Drawing.Point(0, 0);
+            this.pnlDashBoardTop.Name = "pnlDashBoardTop";
+            this.pnlDashBoardTop.Size = new System.Drawing.Size(1392, 47);
+            this.pnlDashBoardTop.TabIndex = 16;
             // 
             // label2
             // 
@@ -913,38 +854,105 @@
             this.label2.TabIndex = 15;
             this.label2.Text = "DashBoard";
             // 
-            // pnlDashBoardTop
+            // btnCustom
             // 
-            this.pnlDashBoardTop.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pnlDashBoardTop.AutoSize = true;
-            this.pnlDashBoardTop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(66)))), ((int)(((byte)(66)))));
-            this.pnlDashBoardTop.Controls.Add(this.label2);
-            this.pnlDashBoardTop.Controls.Add(this.btnCustom);
-            this.pnlDashBoardTop.Controls.Add(this.btnThisMonth);
-            this.pnlDashBoardTop.Controls.Add(this.btnToday);
-            this.pnlDashBoardTop.Controls.Add(this.dtpEndDate);
-            this.pnlDashBoardTop.Controls.Add(this.btnLast7d);
-            this.pnlDashBoardTop.Controls.Add(this.dtpStartDate);
-            this.pnlDashBoardTop.Controls.Add(this.btnLast30d);
-            this.pnlDashBoardTop.Location = new System.Drawing.Point(200, 43);
-            this.pnlDashBoardTop.MaximumSize = new System.Drawing.Size(1397, 47);
-            this.pnlDashBoardTop.MinimumSize = new System.Drawing.Size(1397, 47);
-            this.pnlDashBoardTop.Name = "pnlDashBoardTop";
-            this.pnlDashBoardTop.Size = new System.Drawing.Size(1397, 47);
-            this.pnlDashBoardTop.TabIndex = 15;
+            this.btnCustom.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnCustom.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnCustom.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCustom.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.btnCustom.ForeColor = System.Drawing.Color.White;
+            this.btnCustom.Location = new System.Drawing.Point(782, 0);
+            this.btnCustom.Name = "btnCustom";
+            this.btnCustom.Size = new System.Drawing.Size(122, 47);
+            this.btnCustom.TabIndex = 21;
+            this.btnCustom.Text = "Custom";
+            this.btnCustom.UseVisualStyleBackColor = true;
+            // 
+            // btnThisMonth
+            // 
+            this.btnThisMonth.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnThisMonth.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnThisMonth.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnThisMonth.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.btnThisMonth.ForeColor = System.Drawing.Color.White;
+            this.btnThisMonth.Location = new System.Drawing.Point(904, 0);
+            this.btnThisMonth.Name = "btnThisMonth";
+            this.btnThisMonth.Size = new System.Drawing.Size(122, 47);
+            this.btnThisMonth.TabIndex = 17;
+            this.btnThisMonth.Text = "This Month";
+            this.btnThisMonth.UseVisualStyleBackColor = true;
+            // 
+            // btnToday
+            // 
+            this.btnToday.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnToday.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnToday.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnToday.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.btnToday.ForeColor = System.Drawing.Color.White;
+            this.btnToday.Location = new System.Drawing.Point(1026, 0);
+            this.btnToday.Name = "btnToday";
+            this.btnToday.Size = new System.Drawing.Size(122, 47);
+            this.btnToday.TabIndex = 20;
+            this.btnToday.Text = "Today";
+            this.btnToday.UseVisualStyleBackColor = true;
+            // 
+            // dtpEndDate
+            // 
+            this.dtpEndDate.CustomFormat = "MMM dd,yyyy";
+            this.dtpEndDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpEndDate.Location = new System.Drawing.Point(424, 13);
+            this.dtpEndDate.Name = "dtpEndDate";
+            this.dtpEndDate.Size = new System.Drawing.Size(200, 26);
+            this.dtpEndDate.TabIndex = 1;
+            // 
+            // btnLast7d
+            // 
+            this.btnLast7d.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnLast7d.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnLast7d.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLast7d.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnLast7d.ForeColor = System.Drawing.Color.White;
+            this.btnLast7d.Location = new System.Drawing.Point(1148, 0);
+            this.btnLast7d.Name = "btnLast7d";
+            this.btnLast7d.Size = new System.Drawing.Size(122, 47);
+            this.btnLast7d.TabIndex = 19;
+            this.btnLast7d.Text = "Last 7 days";
+            this.btnLast7d.UseVisualStyleBackColor = true;
+            // 
+            // dtpStartDate
+            // 
+            this.dtpStartDate.CustomFormat = "MMM dd,yyyy";
+            this.dtpStartDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpStartDate.Location = new System.Drawing.Point(209, 13);
+            this.dtpStartDate.Name = "dtpStartDate";
+            this.dtpStartDate.Size = new System.Drawing.Size(200, 26);
+            this.dtpStartDate.TabIndex = 0;
+            // 
+            // btnLast30d
+            // 
+            this.btnLast30d.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnLast30d.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnLast30d.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLast30d.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnLast30d.ForeColor = System.Drawing.Color.White;
+            this.btnLast30d.Location = new System.Drawing.Point(1270, 0);
+            this.btnLast30d.Name = "btnLast30d";
+            this.btnLast30d.Size = new System.Drawing.Size(122, 47);
+            this.btnLast30d.TabIndex = 18;
+            this.btnLast30d.Text = "Last 30 days";
+            this.btnLast30d.UseVisualStyleBackColor = true;
             // 
             // frmDashBoard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(144F, 144F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.Chocolate;
-            this.ClientSize = new System.Drawing.Size(1607, 767);
+            this.ClientSize = new System.Drawing.Size(1602, 767);
+            this.Controls.Add(this.pnlMain);
             this.Controls.Add(this.floatPanelTop);
             this.Controls.Add(this.flowPanelBottom);
             this.Controls.Add(this.flowPanelRight);
             this.Controls.Add(this.siderBar);
-            this.Controls.Add(this.pnlDashBoardTop);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmDashBoard";
             this.Text = "frmDashBoard";
@@ -990,10 +998,11 @@
             this.panel22.ResumeLayout(false);
             this.panel23.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pbReports)).EndInit();
+            this.pnlMain.ResumeLayout(false);
+            this.pnlMain.PerformLayout();
             this.pnlDashBoardTop.ResumeLayout(false);
             this.pnlDashBoardTop.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -1060,14 +1069,15 @@
         private System.Windows.Forms.PictureBox pbReports;
         private System.Windows.Forms.Label lblLogOut;
         private System.Windows.Forms.PictureBox pbLogOut;
-        private System.Windows.Forms.Button btnLast30d;
-        private System.Windows.Forms.DateTimePicker dtpStartDate;
-        private System.Windows.Forms.Button btnLast7d;
-        private System.Windows.Forms.DateTimePicker dtpEndDate;
-        private System.Windows.Forms.Button btnToday;
-        private System.Windows.Forms.Button btnThisMonth;
-        private System.Windows.Forms.Button btnCustom;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Panel pnlMain;
         private System.Windows.Forms.Panel pnlDashBoardTop;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button btnCustom;
+        private System.Windows.Forms.Button btnThisMonth;
+        private System.Windows.Forms.Button btnToday;
+        private System.Windows.Forms.DateTimePicker dtpEndDate;
+        private System.Windows.Forms.Button btnLast7d;
+        private System.Windows.Forms.DateTimePicker dtpStartDate;
+        private System.Windows.Forms.Button btnLast30d;
     }
 }

@@ -17,9 +17,9 @@ namespace BrickForgeCommanderUI.Dashboard
         bool sideBarExpand;
         bool masterCollapsed;
         bool productionCollapsed;
-        bool orderCollapsed;
-        bool salesCollapsed;
-        bool reportCollapsed;
+      //  bool orderCollapsed;
+       // bool salesCollapsed;
+       // bool reportCollapsed;
 
         #endregion
         public frmDashBoard()
@@ -90,6 +90,7 @@ namespace BrickForgeCommanderUI.Dashboard
             {
                 //if sidebar is expand,minimize
                 siderBar.Width -= 10;
+                pnlMain.Left = siderBar.Right;
                 if (siderBar.Width == siderBar.MinimumSize.Width)
                 {
                     sideBarExpand = false;
@@ -99,6 +100,7 @@ namespace BrickForgeCommanderUI.Dashboard
             else
             {
                 siderBar.Width += 10;
+                pnlMain.Left = siderBar.Right;
                 if (siderBar.Width == siderBar.MaximumSize.Width)
                 {
                     sideBarExpand = true;
