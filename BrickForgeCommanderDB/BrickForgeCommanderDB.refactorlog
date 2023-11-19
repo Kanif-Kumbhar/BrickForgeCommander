@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Operations Version="1.0" xmlns="http://schemas.microsoft.com/sqlserver/dac/Serialization/2012/02">
+  <Operation Name="Rename Refactor" Key="1603198c-78ed-4352-9e7c-f03740137027" ChangeDateTime="11/18/2023 07:52:58">
+    <Property Name="ElementName" Value="[dbo].[LoginCredentials].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[LoginCredentials]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="UserID" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="fd0d3aaf-f415-4a4b-8129-6646342fdf2b" ChangeDateTime="11/18/2023 07:58:36">
+    <Property Name="ElementName" Value="[dbo].[LoginCredentials].[UserID]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[LoginCredentials]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="UserName" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="146ec7f0-771e-4a19-9603-c020a612550e" ChangeDateTime="11/18/2023 08:26:19">
+    <Property Name="ElementName" Value="[kanif].[Login_Credentials].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[kanif].[Login_Credentials]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="UserName" />
+  </Operation>
+</Operations>
