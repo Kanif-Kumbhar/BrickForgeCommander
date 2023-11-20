@@ -93,7 +93,6 @@
             this.pbReports = new System.Windows.Forms.PictureBox();
             this.timerProduction = new System.Windows.Forms.Timer(this.components);
             this.pnlMain = new System.Windows.Forms.Panel();
-            this.pnlDashBoardTop = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.btnCustom = new System.Windows.Forms.Button();
             this.btnThisMonth = new System.Windows.Forms.Button();
@@ -102,6 +101,8 @@
             this.btnLast7d = new System.Windows.Forms.Button();
             this.dtpStartDate = new System.Windows.Forms.DateTimePicker();
             this.btnLast30d = new System.Windows.Forms.Button();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.floatPanelTop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbClose)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbMaximize)).BeginInit();
@@ -142,7 +143,11 @@
             this.panel23.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbReports)).BeginInit();
             this.pnlMain.SuspendLayout();
-            this.pnlDashBoardTop.SuspendLayout();
+            this.flowLayoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
+            this.splitContainer1.Panel1.SuspendLayout();
+            this.splitContainer1.Panel2.SuspendLayout();
+            this.splitContainer1.SuspendLayout();
             this.SuspendLayout();
             // 
             // sideBarTimer
@@ -249,7 +254,7 @@
             this.btnHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnHome.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.btnHome.ForeColor = System.Drawing.Color.White;
-            this.btnHome.Location = new System.Drawing.Point(64, 3);
+            this.btnHome.Location = new System.Drawing.Point(61, 2);
             this.btnHome.Name = "btnHome";
             this.btnHome.Padding = new System.Windows.Forms.Padding(0, 0, 30, 0);
             this.btnHome.Size = new System.Drawing.Size(133, 60);
@@ -814,30 +819,12 @@
             // 
             // pnlMain
             // 
-            this.pnlMain.Controls.Add(this.pnlDashBoardTop);
+            this.pnlMain.Controls.Add(this.splitContainer1);
             this.pnlMain.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlMain.Location = new System.Drawing.Point(200, 43);
             this.pnlMain.Name = "pnlMain";
             this.pnlMain.Size = new System.Drawing.Size(1392, 688);
             this.pnlMain.TabIndex = 15;
-            // 
-            // pnlDashBoardTop
-            // 
-            this.pnlDashBoardTop.AutoSize = true;
-            this.pnlDashBoardTop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(66)))), ((int)(((byte)(66)))));
-            this.pnlDashBoardTop.Controls.Add(this.label2);
-            this.pnlDashBoardTop.Controls.Add(this.btnCustom);
-            this.pnlDashBoardTop.Controls.Add(this.btnThisMonth);
-            this.pnlDashBoardTop.Controls.Add(this.btnToday);
-            this.pnlDashBoardTop.Controls.Add(this.dtpEndDate);
-            this.pnlDashBoardTop.Controls.Add(this.btnLast7d);
-            this.pnlDashBoardTop.Controls.Add(this.dtpStartDate);
-            this.pnlDashBoardTop.Controls.Add(this.btnLast30d);
-            this.pnlDashBoardTop.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlDashBoardTop.Location = new System.Drawing.Point(0, 0);
-            this.pnlDashBoardTop.Name = "pnlDashBoardTop";
-            this.pnlDashBoardTop.Size = new System.Drawing.Size(1392, 47);
-            this.pnlDashBoardTop.TabIndex = 16;
             // 
             // label2
             // 
@@ -847,7 +834,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Palatino Linotype", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(-2, 0);
+            this.label2.Location = new System.Drawing.Point(3, 6);
             this.label2.Name = "label2";
             this.label2.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
             this.label2.Size = new System.Drawing.Size(188, 44);
@@ -856,42 +843,40 @@
             // 
             // btnCustom
             // 
-            this.btnCustom.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnCustom.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnCustom.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btnCustom.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCustom.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.btnCustom.ForeColor = System.Drawing.Color.White;
-            this.btnCustom.Location = new System.Drawing.Point(782, 0);
+            this.btnCustom.Location = new System.Drawing.Point(101, 3);
             this.btnCustom.Name = "btnCustom";
-            this.btnCustom.Size = new System.Drawing.Size(122, 47);
+            this.btnCustom.Size = new System.Drawing.Size(122, 45);
             this.btnCustom.TabIndex = 21;
             this.btnCustom.Text = "Custom";
             this.btnCustom.UseVisualStyleBackColor = true;
             // 
             // btnThisMonth
             // 
-            this.btnThisMonth.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnThisMonth.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btnThisMonth.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnThisMonth.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.btnThisMonth.ForeColor = System.Drawing.Color.White;
-            this.btnThisMonth.Location = new System.Drawing.Point(904, 0);
+            this.btnThisMonth.Location = new System.Drawing.Point(613, 3);
             this.btnThisMonth.Name = "btnThisMonth";
-            this.btnThisMonth.Size = new System.Drawing.Size(122, 47);
+            this.btnThisMonth.Size = new System.Drawing.Size(122, 45);
             this.btnThisMonth.TabIndex = 17;
             this.btnThisMonth.Text = "This Month";
             this.btnThisMonth.UseVisualStyleBackColor = true;
             // 
             // btnToday
             // 
-            this.btnToday.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnToday.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btnToday.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnToday.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.btnToday.ForeColor = System.Drawing.Color.White;
-            this.btnToday.Location = new System.Drawing.Point(1026, 0);
+            this.btnToday.Location = new System.Drawing.Point(357, 3);
             this.btnToday.Name = "btnToday";
-            this.btnToday.Size = new System.Drawing.Size(122, 47);
+            this.btnToday.Size = new System.Drawing.Size(122, 45);
             this.btnToday.TabIndex = 20;
             this.btnToday.Text = "Today";
             this.btnToday.UseVisualStyleBackColor = true;
@@ -900,21 +885,20 @@
             // 
             this.dtpEndDate.CustomFormat = "MMM dd,yyyy";
             this.dtpEndDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpEndDate.Location = new System.Drawing.Point(424, 13);
+            this.dtpEndDate.Location = new System.Drawing.Point(438, 24);
             this.dtpEndDate.Name = "dtpEndDate";
             this.dtpEndDate.Size = new System.Drawing.Size(200, 26);
             this.dtpEndDate.TabIndex = 1;
             // 
             // btnLast7d
             // 
-            this.btnLast7d.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnLast7d.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btnLast7d.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLast7d.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnLast7d.ForeColor = System.Drawing.Color.White;
-            this.btnLast7d.Location = new System.Drawing.Point(1148, 0);
+            this.btnLast7d.Location = new System.Drawing.Point(229, 3);
             this.btnLast7d.Name = "btnLast7d";
-            this.btnLast7d.Size = new System.Drawing.Size(122, 47);
+            this.btnLast7d.Size = new System.Drawing.Size(122, 45);
             this.btnLast7d.TabIndex = 19;
             this.btnLast7d.Text = "Last 7 days";
             this.btnLast7d.UseVisualStyleBackColor = true;
@@ -923,24 +907,59 @@
             // 
             this.dtpStartDate.CustomFormat = "MMM dd,yyyy";
             this.dtpStartDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpStartDate.Location = new System.Drawing.Point(209, 13);
+            this.dtpStartDate.Location = new System.Drawing.Point(209, 24);
             this.dtpStartDate.Name = "dtpStartDate";
             this.dtpStartDate.Size = new System.Drawing.Size(200, 26);
             this.dtpStartDate.TabIndex = 0;
             // 
             // btnLast30d
             // 
-            this.btnLast30d.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnLast30d.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btnLast30d.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLast30d.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnLast30d.ForeColor = System.Drawing.Color.White;
-            this.btnLast30d.Location = new System.Drawing.Point(1270, 0);
+            this.btnLast30d.Location = new System.Drawing.Point(485, 3);
             this.btnLast30d.Name = "btnLast30d";
-            this.btnLast30d.Size = new System.Drawing.Size(122, 47);
+            this.btnLast30d.Size = new System.Drawing.Size(122, 45);
             this.btnLast30d.TabIndex = 18;
             this.btnLast30d.Text = "Last 30 days";
             this.btnLast30d.UseVisualStyleBackColor = true;
+            // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.BackColor = System.Drawing.Color.Red;
+            this.flowLayoutPanel1.Controls.Add(this.btnThisMonth);
+            this.flowLayoutPanel1.Controls.Add(this.btnLast30d);
+            this.flowLayoutPanel1.Controls.Add(this.btnToday);
+            this.flowLayoutPanel1.Controls.Add(this.btnLast7d);
+            this.flowLayoutPanel1.Controls.Add(this.btnCustom);
+            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(738, 58);
+            this.flowLayoutPanel1.TabIndex = 22;
+            // 
+            // splitContainer1
+            // 
+            this.splitContainer1.BackColor = System.Drawing.Color.DarkRed;
+            this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.splitContainer1.IsSplitterFixed = true;
+            this.splitContainer1.Location = new System.Drawing.Point(0, 0);
+            this.splitContainer1.Name = "splitContainer1";
+            // 
+            // splitContainer1.Panel1
+            // 
+            this.splitContainer1.Panel1.Controls.Add(this.label2);
+            this.splitContainer1.Panel1.Controls.Add(this.dtpStartDate);
+            this.splitContainer1.Panel1.Controls.Add(this.dtpEndDate);
+            // 
+            // splitContainer1.Panel2
+            // 
+            this.splitContainer1.Panel2.Controls.Add(this.flowLayoutPanel1);
+            this.splitContainer1.Size = new System.Drawing.Size(1392, 55);
+            this.splitContainer1.SplitterDistance = 650;
+            this.splitContainer1.TabIndex = 23;
             // 
             // frmDashBoard
             // 
@@ -957,6 +976,7 @@
             this.Name = "frmDashBoard";
             this.Text = "frmDashBoard";
             this.Load += new System.EventHandler(this.frmDashBoard_Load);
+            this.Resize += new System.EventHandler(this.frmDashBoard_Resize);
             this.floatPanelTop.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pbClose)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbMaximize)).EndInit();
@@ -999,9 +1019,12 @@
             this.panel23.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pbReports)).EndInit();
             this.pnlMain.ResumeLayout(false);
-            this.pnlMain.PerformLayout();
-            this.pnlDashBoardTop.ResumeLayout(false);
-            this.pnlDashBoardTop.PerformLayout();
+            this.flowLayoutPanel1.ResumeLayout(false);
+            this.splitContainer1.Panel1.ResumeLayout(false);
+            this.splitContainer1.Panel1.PerformLayout();
+            this.splitContainer1.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
+            this.splitContainer1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -1070,7 +1093,6 @@
         private System.Windows.Forms.Label lblLogOut;
         private System.Windows.Forms.PictureBox pbLogOut;
         private System.Windows.Forms.Panel pnlMain;
-        private System.Windows.Forms.Panel pnlDashBoardTop;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnCustom;
         private System.Windows.Forms.Button btnThisMonth;
@@ -1079,5 +1101,7 @@
         private System.Windows.Forms.Button btnLast7d;
         private System.Windows.Forms.DateTimePicker dtpStartDate;
         private System.Windows.Forms.Button btnLast30d;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.SplitContainer splitContainer1;
     }
 }

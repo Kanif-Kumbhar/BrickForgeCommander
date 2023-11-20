@@ -17,9 +17,11 @@ namespace BrickForgeCommanderUI.Dashboard
         bool sideBarExpand;
         bool masterCollapsed;
         bool productionCollapsed;
-      //  bool orderCollapsed;
-       // bool salesCollapsed;
-       // bool reportCollapsed;
+        //  bool orderCollapsed;
+        // bool salesCollapsed;
+        // bool reportCollapsed;
+        private Padding initialMarginbtnToday;
+        private Padding initialMarginbtnThisMonth;
 
         #endregion
         public frmDashBoard()
@@ -183,6 +185,41 @@ namespace BrickForgeCommanderUI.Dashboard
         private void lblLogOut_Click(object sender, EventArgs e)
         {
             Application.Restart();
+        }
+
+        private void frmDashBoard_Resize(object sender, EventArgs e)
+        {
+            if (this.WindowState == FormWindowState.Maximized)
+            {
+                // Adjust the width of multiple buttons when the form is maximized
+                AdjustButtonPadding();
+            }
+            else if (this.WindowState == FormWindowState.Normal)
+            {
+                RestoreInitialMargin();
+            }
+        }
+
+       
+        private void AdjustButtonPadding()
+        {
+            initialMarginbtnThisMonth = btnThisMonth.Margin;
+            initialMarginbtnToday = btnToday.Margin;
+            // Calculate the new padding for each button based on the form's size
+            //int newButtonPadding = (this.Width - 2 * btnToday.Left - btnToday.Width) / 4;
+            int marginIncrease = 15;
+            int newButtonPadding = btnToday.Margin.Left + marginIncrease;
+
+            // Set the new padding for each button
+            btnToday.Margin = new Padding(newButtonPadding, btnToday.Margin.Left, newButtonPadding, btnToday.Margin.Right);
+            btnThisMonth.Margin = new Padding(newButtonPadding, btnThisMonth.Margin.Left, newButtonPadding, btnThisMonth.Margin.Right);
+        }
+
+        private void RestoreInitialMargin()
+        {
+            // Restore the initial margin for each button
+            btnToday.Margin = initialMarginbtnToday;
+            btnThisMonth.Margin = initialMarginbtnThisMonth;
         }
     }
 }
