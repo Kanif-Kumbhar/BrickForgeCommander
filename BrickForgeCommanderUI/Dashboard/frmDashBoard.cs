@@ -21,6 +21,7 @@ namespace BrickForgeCommanderUI.Dashboard
         //  bool orderCollapsed;
         // bool salesCollapsed;
         // bool reportCollapsed;
+        private Button currentButton;
 
         #endregion
 
@@ -34,14 +35,54 @@ namespace BrickForgeCommanderUI.Dashboard
             dtpEndDate.Value = DateTime.Now;
             btnLast7d.Select();
 
+            HighlightCurrentButton(btnLast7d);
+
             model = new DashBoard();
             LoadData();
         }
 
         private void frmDashBoard_Load(object sender, EventArgs e)
         {
-
+            lblStartDate.Text = dtpStartDate.Text;
+            lblEndDate.Text = dtpEndDate.Text;
+            dgvUnderStock.Columns[1].Width = 50;
         }
+
+        #region Functions
+
+        private void HighlightCurrentButton(object button)
+        {
+            var btn = (Button)button;
+
+            btn.BackColor = btnLast30d.FlatAppearance.BorderColor;
+            btn.ForeColor = Color.White;
+
+            if(currentButton != null && currentButton != btn)
+            {
+                currentButton.BackColor = this.BackColor;
+                currentButton.ForeColor = Color.FromArgb(123, 141, 181); 
+            }
+            currentButton = btn;
+
+            if(btn == btnCustom)
+            {
+                dtpStartDate.Enabled = true;
+                dtpEndDate.Enabled = true;
+                btnOk.Visible = true;
+                lblStartDate.Cursor = Cursors.Hand;
+                lblEndDate.Cursor = Cursors.Hand;
+            }
+            else
+            {
+                dtpStartDate.Enabled = false;
+                dtpEndDate.Enabled = false;
+                btnOk.Visible = false;
+                lblStartDate.Cursor = Cursors.Default;
+                lblEndDate.Cursor = Cursors.Default;
+            }
+        }
+
+        #endregion
 
         #region DashBoardCharts
 
@@ -210,6 +251,8 @@ namespace BrickForgeCommanderUI.Dashboard
 
         #endregion
 
+        #region Buttons Click Events
+
         private void btnMaster_Click(object sender, EventArgs e)
         {
             timerMaster.Start();
@@ -253,6 +296,8 @@ namespace BrickForgeCommanderUI.Dashboard
             dtpEndDate.Value = DateTime.Now;
             LoadData();
             DisableCustomDates();
+            HighlightCurrentButton(sender);
+
         }
 
         private void btnLast7d_Click(object sender, EventArgs e)
@@ -261,6 +306,8 @@ namespace BrickForgeCommanderUI.Dashboard
             dtpEndDate.Value = DateTime.Now;
             LoadData();
             DisableCustomDates();
+            HighlightCurrentButton(sender);
+
         }
         private void btnLast30d_Click(object sender, EventArgs e)
         {
@@ -268,6 +315,8 @@ namespace BrickForgeCommanderUI.Dashboard
             dtpEndDate.Value = DateTime.Now;
             LoadData();
             DisableCustomDates();
+            HighlightCurrentButton(sender);
+
         }
 
         private void btnThisMonth_Click(object sender, EventArgs e)
@@ -276,18 +325,47 @@ namespace BrickForgeCommanderUI.Dashboard
             dtpEndDate.Value = DateTime.Now;
             LoadData();
             DisableCustomDates();
+            HighlightCurrentButton(sender);
         }
 
         private void btnCustom_Click(object sender, EventArgs e)
         {
-            dtpStartDate.Enabled = true;
-            dtpEndDate.Enabled = true;
-            btnOk.Visible = true;
+            HighlightCurrentButton(sender);
         }
 
         private void btnOk_Click(object sender, EventArgs e)
         {
             LoadData();
+        }
+
+        #endregion
+
+        private void lblStartDate_Click(object sender, EventArgs e)
+        {
+            if(currentButton == btnCustom)
+            {
+                dtpStartDate.Select();
+                SendKeys.Send("%{DOWN}");
+            }
+        }
+
+        private void lblEndDate_Click(object sender, EventArgs e)
+        {
+            if (currentButton == btnCustom)
+            {
+                dtpEndDate.Select();
+                SendKeys.Send("%{DOWN}");
+            }
+        }
+
+        private void dtpStartDate_ValueChanged(object sender, EventArgs e)
+        {
+            lblStartDate.Text = dtpStartDate.Text;
+        }
+
+        private void dtpEndDate_ValueChanged(object sender, EventArgs e)
+        {
+            lblEndDate.Text = dtpEndDate.Text;
         }
     }
 }
