@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BrickForgeCommanderUI.Dashboard.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -20,19 +21,71 @@ namespace BrickForgeCommanderUI.Dashboard
         //  bool orderCollapsed;
         // bool salesCollapsed;
         // bool reportCollapsed;
-        private Padding initialMarginbtnToday;
-        private Padding initialMarginbtnThisMonth;
 
         #endregion
+
+        private DashBoard model;
+
         public frmDashBoard()
         {
             InitializeComponent();
+            //Default - Last 7 days
+            dtpStartDate.Value = DateTime.Today.AddDays(-7);
+            dtpEndDate.Value = DateTime.Now;
+            btnLast7d.Select();
+
+            model = new DashBoard();
+            LoadData();
         }
 
         private void frmDashBoard_Load(object sender, EventArgs e)
         {
 
         }
+
+        #region DashBoardCharts
+
+        private void LoadData()
+        {
+            var refereshData  = model.LoadData(dtpStartDate.Value,dtpEndDate.Value);
+            if (refereshData == true)
+            {
+                lblTotalOrders.Text = model.NumOrders.ToString();
+                lblTotalRevenue.Text = "₹" + model.TotalRevenue.ToString();
+                lblTotalProfit.Text = "₹" + model.TotalProfit.ToString();
+
+                lblNumberOfCustomer.Text = model.NumCustomers.ToString();
+                lblNumberOfSupplier.Text = model.NumSuppliers.ToString();
+                lblNumberOfProducts.Text = model.NumProducts.ToString();
+
+                chartGrossRevenue.DataSource = model.GrossRevenueList;
+                chartGrossRevenue.Series[0].XValueMember = "Date";
+                chartGrossRevenue.Series[0].YValueMembers = "Total Amount";
+                chartGrossRevenue.DataBind();
+
+                chartTop5Products.DataSource = model.TopProductsList;
+                chartTop5Products.Series[0].XValueMember = "Key";
+                chartTop5Products.Series[0].YValueMembers = "Value";
+
+                dgvUnderStock.DataSource = model.UnderStockList;
+                dgvUnderStock.Columns[0].HeaderText = "Item";
+                dgvUnderStock.Columns[1].HeaderText = "Units";
+
+                Console.WriteLine("Loaded View: ");
+            }
+            else
+            {
+                Console.WriteLine("View not loaded, same query");
+            }
+        }
+
+        private void DisableCustomDates()
+        {
+            dtpStartDate.Enabled = false;
+            dtpEndDate.Enabled = false;
+            btnOk.Visible = false;
+        }
+        #endregion
 
         #region TimerCode
 
@@ -189,37 +242,52 @@ namespace BrickForgeCommanderUI.Dashboard
 
         private void frmDashBoard_Resize(object sender, EventArgs e)
         {
-            if (this.WindowState == FormWindowState.Maximized)
-            {
-                // Adjust the width of multiple buttons when the form is maximized
-                AdjustButtonPadding();
-            }
-            else if (this.WindowState == FormWindowState.Normal)
-            {
-                RestoreInitialMargin();
-            }
+          
         }
 
-       
-        private void AdjustButtonPadding()
-        {
-            initialMarginbtnThisMonth = btnThisMonth.Margin;
-            initialMarginbtnToday = btnToday.Margin;
-            // Calculate the new padding for each button based on the form's size
-            //int newButtonPadding = (this.Width - 2 * btnToday.Left - btnToday.Width) / 4;
-            int marginIncrease = 15;
-            int newButtonPadding = btnToday.Margin.Left + marginIncrease;
 
-            // Set the new padding for each button
-            btnToday.Margin = new Padding(newButtonPadding, btnToday.Margin.Left, newButtonPadding, btnToday.Margin.Right);
-            btnThisMonth.Margin = new Padding(newButtonPadding, btnThisMonth.Margin.Left, newButtonPadding, btnThisMonth.Margin.Right);
+
+        private void btnToday_Click(object sender, EventArgs e)
+        {
+            dtpStartDate.Value = DateTime.Today;
+            dtpEndDate.Value = DateTime.Now;
+            LoadData();
+            DisableCustomDates();
         }
 
-        private void RestoreInitialMargin()
+        private void btnLast7d_Click(object sender, EventArgs e)
         {
-            // Restore the initial margin for each button
-            btnToday.Margin = initialMarginbtnToday;
-            btnThisMonth.Margin = initialMarginbtnThisMonth;
+            dtpStartDate.Value = DateTime.Today.AddDays(-7);
+            dtpEndDate.Value = DateTime.Now;
+            LoadData();
+            DisableCustomDates();
+        }
+        private void btnLast30d_Click(object sender, EventArgs e)
+        {
+            dtpStartDate.Value = DateTime.Today.AddDays(-30);
+            dtpEndDate.Value = DateTime.Now;
+            LoadData();
+            DisableCustomDates();
+        }
+
+        private void btnThisMonth_Click(object sender, EventArgs e)
+        {
+            dtpStartDate.Value = new DateTime(DateTime.Today.Year,DateTime.Today.Month,1);
+            dtpEndDate.Value = DateTime.Now;
+            LoadData();
+            DisableCustomDates();
+        }
+
+        private void btnCustom_Click(object sender, EventArgs e)
+        {
+            dtpStartDate.Enabled = true;
+            dtpEndDate.Enabled = true;
+            btnOk.Visible = true;
+        }
+
+        private void btnOk_Click(object sender, EventArgs e)
+        {
+            LoadData();
         }
     }
 }

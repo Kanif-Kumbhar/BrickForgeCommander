@@ -5,5 +5,6 @@
     [LastName] VARCHAR(15) NOT NULL, 
     [CityId] INT NOT NULL, 
     [VillageId] INT NOT NULL, 
-    [PhoneNo] TEXT NOT NULL
+    [PhoneNo] TEXT NOT NULL, 
+    [VendorTypeId] INT NOT NULL
 )

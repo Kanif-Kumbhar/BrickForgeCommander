@@ -6,5 +6,6 @@
     [unitPrice] DECIMAL(12, 2) NOT NULL, 
     [ScoreId] INT NOT NULL, 
     [ClassTypeId] NCHAR(10) NOT NULL, 
-    [isDiscontiuned] BIT NOT NULL
+    [isDiscontinued] BIT NOT NULL, 
+    [Stock] INT NOT NULL
 )

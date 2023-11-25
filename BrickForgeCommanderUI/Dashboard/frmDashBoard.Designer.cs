@@ -30,6 +30,14 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDashBoard));
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title2 = new System.Windows.Forms.DataVisualization.Charting.Title();
             this.sideBarTimer = new System.Windows.Forms.Timer(this.components);
             this.floatPanelTop = new System.Windows.Forms.FlowLayoutPanel();
             this.pbClose = new System.Windows.Forms.PictureBox();
@@ -93,16 +101,39 @@
             this.pbReports = new System.Windows.Forms.PictureBox();
             this.timerProduction = new System.Windows.Forms.Timer(this.components);
             this.pnlMain = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.btnCustom = new System.Windows.Forms.Button();
-            this.btnThisMonth = new System.Windows.Forms.Button();
-            this.btnToday = new System.Windows.Forms.Button();
-            this.dtpEndDate = new System.Windows.Forms.DateTimePicker();
-            this.btnLast7d = new System.Windows.Forms.Button();
-            this.dtpStartDate = new System.Windows.Forms.DateTimePicker();
-            this.btnLast30d = new System.Windows.Forms.Button();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.panel26 = new System.Windows.Forms.Panel();
+            this.dgvUnderStock = new System.Windows.Forms.DataGridView();
+            this.label15 = new System.Windows.Forms.Label();
+            this.panel25 = new System.Windows.Forms.Panel();
+            this.label9 = new System.Windows.Forms.Label();
+            this.lblNumberOfProducts = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.lblNumberOfSupplier = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.lblNumberOfCustomer = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.chartTop5Products = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.chartGrossRevenue = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.panel24 = new System.Windows.Forms.Panel();
+            this.lblTotalProfit = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.panel21 = new System.Windows.Forms.Panel();
+            this.lblTotalRevenue = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.panel20 = new System.Windows.Forms.Panel();
+            this.lblTotalOrders = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.label2 = new System.Windows.Forms.Label();
+            this.dtpStartDate = new System.Windows.Forms.DateTimePicker();
+            this.dtpEndDate = new System.Windows.Forms.DateTimePicker();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.btnThisMonth = new System.Windows.Forms.Button();
+            this.btnLast30d = new System.Windows.Forms.Button();
+            this.btnLast7d = new System.Windows.Forms.Button();
+            this.btnToday = new System.Windows.Forms.Button();
+            this.btnCustom = new System.Windows.Forms.Button();
+            this.btnOk = new System.Windows.Forms.Button();
             this.floatPanelTop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbClose)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbMaximize)).BeginInit();
@@ -143,11 +174,19 @@
             this.panel23.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbReports)).BeginInit();
             this.pnlMain.SuspendLayout();
-            this.flowLayoutPanel1.SuspendLayout();
+            this.panel26.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvUnderStock)).BeginInit();
+            this.panel25.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chartTop5Products)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartGrossRevenue)).BeginInit();
+            this.panel24.SuspendLayout();
+            this.panel21.SuspendLayout();
+            this.panel20.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
+            this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // sideBarTimer
@@ -819,6 +858,13 @@
             // 
             // pnlMain
             // 
+            this.pnlMain.Controls.Add(this.panel26);
+            this.pnlMain.Controls.Add(this.panel25);
+            this.pnlMain.Controls.Add(this.chartTop5Products);
+            this.pnlMain.Controls.Add(this.chartGrossRevenue);
+            this.pnlMain.Controls.Add(this.panel24);
+            this.pnlMain.Controls.Add(this.panel21);
+            this.pnlMain.Controls.Add(this.panel20);
             this.pnlMain.Controls.Add(this.splitContainer1);
             this.pnlMain.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlMain.Location = new System.Drawing.Point(200, 43);
@@ -826,119 +872,239 @@
             this.pnlMain.Size = new System.Drawing.Size(1392, 688);
             this.pnlMain.TabIndex = 15;
             // 
-            // label2
+            // panel26
             // 
-            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Palatino Linotype", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(3, 6);
-            this.label2.Name = "label2";
-            this.label2.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.label2.Size = new System.Drawing.Size(188, 44);
-            this.label2.TabIndex = 15;
-            this.label2.Text = "DashBoard";
+            this.panel26.Controls.Add(this.dgvUnderStock);
+            this.panel26.Controls.Add(this.label15);
+            this.panel26.Location = new System.Drawing.Point(225, 477);
+            this.panel26.Name = "panel26";
+            this.panel26.Size = new System.Drawing.Size(531, 205);
+            this.panel26.TabIndex = 30;
             // 
-            // btnCustom
+            // dgvUnderStock
             // 
-            this.btnCustom.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnCustom.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btnCustom.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCustom.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.btnCustom.ForeColor = System.Drawing.Color.White;
-            this.btnCustom.Location = new System.Drawing.Point(101, 3);
-            this.btnCustom.Name = "btnCustom";
-            this.btnCustom.Size = new System.Drawing.Size(122, 45);
-            this.btnCustom.TabIndex = 21;
-            this.btnCustom.Text = "Custom";
-            this.btnCustom.UseVisualStyleBackColor = true;
+            this.dgvUnderStock.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvUnderStock.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvUnderStock.Location = new System.Drawing.Point(18, 38);
+            this.dgvUnderStock.Name = "dgvUnderStock";
+            this.dgvUnderStock.RowHeadersWidth = 62;
+            this.dgvUnderStock.RowTemplate.Height = 28;
+            this.dgvUnderStock.Size = new System.Drawing.Size(499, 150);
+            this.dgvUnderStock.TabIndex = 1;
             // 
-            // btnThisMonth
+            // label15
             // 
-            this.btnThisMonth.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btnThisMonth.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnThisMonth.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.btnThisMonth.ForeColor = System.Drawing.Color.White;
-            this.btnThisMonth.Location = new System.Drawing.Point(613, 3);
-            this.btnThisMonth.Name = "btnThisMonth";
-            this.btnThisMonth.Size = new System.Drawing.Size(122, 45);
-            this.btnThisMonth.TabIndex = 17;
-            this.btnThisMonth.Text = "This Month";
-            this.btnThisMonth.UseVisualStyleBackColor = true;
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(14, 10);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(161, 20);
+            this.label15.TabIndex = 0;
+            this.label15.Text = "Products UnderStock";
             // 
-            // btnToday
+            // panel25
             // 
-            this.btnToday.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btnToday.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnToday.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.btnToday.ForeColor = System.Drawing.Color.White;
-            this.btnToday.Location = new System.Drawing.Point(357, 3);
-            this.btnToday.Name = "btnToday";
-            this.btnToday.Size = new System.Drawing.Size(122, 45);
-            this.btnToday.TabIndex = 20;
-            this.btnToday.Text = "Today";
-            this.btnToday.UseVisualStyleBackColor = true;
+            this.panel25.Controls.Add(this.label9);
+            this.panel25.Controls.Add(this.lblNumberOfProducts);
+            this.panel25.Controls.Add(this.label3);
+            this.panel25.Controls.Add(this.lblNumberOfSupplier);
+            this.panel25.Controls.Add(this.label7);
+            this.panel25.Controls.Add(this.lblNumberOfCustomer);
+            this.panel25.Controls.Add(this.label5);
+            this.panel25.Location = new System.Drawing.Point(9, 477);
+            this.panel25.Name = "panel25";
+            this.panel25.Size = new System.Drawing.Size(210, 205);
+            this.panel25.TabIndex = 29;
             // 
-            // dtpEndDate
+            // label9
             // 
-            this.dtpEndDate.CustomFormat = "MMM dd,yyyy";
-            this.dtpEndDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpEndDate.Location = new System.Drawing.Point(438, 24);
-            this.dtpEndDate.Name = "dtpEndDate";
-            this.dtpEndDate.Size = new System.Drawing.Size(200, 26);
-            this.dtpEndDate.TabIndex = 1;
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(14, 148);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(150, 20);
+            this.label9.TabIndex = 6;
+            this.label9.Text = "Number of Products";
             // 
-            // btnLast7d
+            // lblNumberOfProducts
             // 
-            this.btnLast7d.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btnLast7d.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLast7d.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnLast7d.ForeColor = System.Drawing.Color.White;
-            this.btnLast7d.Location = new System.Drawing.Point(229, 3);
-            this.btnLast7d.Name = "btnLast7d";
-            this.btnLast7d.Size = new System.Drawing.Size(122, 45);
-            this.btnLast7d.TabIndex = 19;
-            this.btnLast7d.Text = "Last 7 days";
-            this.btnLast7d.UseVisualStyleBackColor = true;
+            this.lblNumberOfProducts.AutoSize = true;
+            this.lblNumberOfProducts.Location = new System.Drawing.Point(14, 168);
+            this.lblNumberOfProducts.Name = "lblNumberOfProducts";
+            this.lblNumberOfProducts.Size = new System.Drawing.Size(54, 20);
+            this.lblNumberOfProducts.TabIndex = 5;
+            this.lblNumberOfProducts.Text = "10000";
             // 
-            // dtpStartDate
+            // label3
             // 
-            this.dtpStartDate.CustomFormat = "MMM dd,yyyy";
-            this.dtpStartDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpStartDate.Location = new System.Drawing.Point(209, 24);
-            this.dtpStartDate.Name = "dtpStartDate";
-            this.dtpStartDate.Size = new System.Drawing.Size(200, 26);
-            this.dtpStartDate.TabIndex = 0;
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(14, 98);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(145, 20);
+            this.label3.TabIndex = 4;
+            this.label3.Text = "Number of Supplier";
             // 
-            // btnLast30d
+            // lblNumberOfSupplier
             // 
-            this.btnLast30d.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btnLast30d.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLast30d.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnLast30d.ForeColor = System.Drawing.Color.White;
-            this.btnLast30d.Location = new System.Drawing.Point(485, 3);
-            this.btnLast30d.Name = "btnLast30d";
-            this.btnLast30d.Size = new System.Drawing.Size(122, 45);
-            this.btnLast30d.TabIndex = 18;
-            this.btnLast30d.Text = "Last 30 days";
-            this.btnLast30d.UseVisualStyleBackColor = true;
+            this.lblNumberOfSupplier.AutoSize = true;
+            this.lblNumberOfSupplier.Location = new System.Drawing.Point(14, 118);
+            this.lblNumberOfSupplier.Name = "lblNumberOfSupplier";
+            this.lblNumberOfSupplier.Size = new System.Drawing.Size(54, 20);
+            this.lblNumberOfSupplier.TabIndex = 3;
+            this.lblNumberOfSupplier.Text = "10000";
             // 
-            // flowLayoutPanel1
+            // label7
             // 
-            this.flowLayoutPanel1.BackColor = System.Drawing.Color.Red;
-            this.flowLayoutPanel1.Controls.Add(this.btnThisMonth);
-            this.flowLayoutPanel1.Controls.Add(this.btnLast30d);
-            this.flowLayoutPanel1.Controls.Add(this.btnToday);
-            this.flowLayoutPanel1.Controls.Add(this.btnLast7d);
-            this.flowLayoutPanel1.Controls.Add(this.btnCustom);
-            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(738, 58);
-            this.flowLayoutPanel1.TabIndex = 22;
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(14, 48);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(156, 20);
+            this.label7.TabIndex = 2;
+            this.label7.Text = "Number of Customer";
+            // 
+            // lblNumberOfCustomer
+            // 
+            this.lblNumberOfCustomer.AutoSize = true;
+            this.lblNumberOfCustomer.Location = new System.Drawing.Point(14, 68);
+            this.lblNumberOfCustomer.Name = "lblNumberOfCustomer";
+            this.lblNumberOfCustomer.Size = new System.Drawing.Size(54, 20);
+            this.lblNumberOfCustomer.TabIndex = 1;
+            this.lblNumberOfCustomer.Text = "10000";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(14, 10);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(105, 20);
+            this.label5.TabIndex = 0;
+            this.label5.Text = "Total Counter";
+            // 
+            // chartTop5Products
+            // 
+            chartArea1.Name = "ChartArea1";
+            this.chartTop5Products.ChartAreas.Add(chartArea1);
+            legend1.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Bottom;
+            legend1.Name = "Legend1";
+            this.chartTop5Products.Legends.Add(legend1);
+            this.chartTop5Products.Location = new System.Drawing.Point(762, 148);
+            this.chartTop5Products.Name = "chartTop5Products";
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Doughnut;
+            series1.IsValueShownAsLabel = true;
+            series1.LabelForeColor = System.Drawing.Color.White;
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            this.chartTop5Products.Series.Add(series1);
+            this.chartTop5Products.Size = new System.Drawing.Size(624, 534);
+            this.chartTop5Products.TabIndex = 28;
+            this.chartTop5Products.Text = "chart2";
+            title1.Alignment = System.Drawing.ContentAlignment.MiddleLeft;
+            title1.Font = new System.Drawing.Font("Segoe UI", 14F);
+            title1.Name = "Title1";
+            title1.Text = "Top 5 Products";
+            this.chartTop5Products.Titles.Add(title1);
+            // 
+            // chartGrossRevenue
+            // 
+            chartArea2.Name = "ChartArea1";
+            this.chartGrossRevenue.ChartAreas.Add(chartArea2);
+            legend2.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Top;
+            legend2.Name = "Legend1";
+            this.chartGrossRevenue.Legends.Add(legend2);
+            this.chartGrossRevenue.Location = new System.Drawing.Point(9, 148);
+            this.chartGrossRevenue.Name = "chartGrossRevenue";
+            series2.ChartArea = "ChartArea1";
+            series2.Legend = "Legend1";
+            series2.Name = "Series1";
+            this.chartGrossRevenue.Series.Add(series2);
+            this.chartGrossRevenue.Size = new System.Drawing.Size(747, 323);
+            this.chartGrossRevenue.TabIndex = 27;
+            this.chartGrossRevenue.Text = "chart1";
+            title2.Alignment = System.Drawing.ContentAlignment.MiddleLeft;
+            title2.Font = new System.Drawing.Font("Segoe UI", 14F);
+            title2.Name = "Title1";
+            title2.Text = "Gross Revenue";
+            this.chartGrossRevenue.Titles.Add(title2);
+            // 
+            // panel24
+            // 
+            this.panel24.Controls.Add(this.lblTotalProfit);
+            this.panel24.Controls.Add(this.label6);
+            this.panel24.Location = new System.Drawing.Point(841, 64);
+            this.panel24.Name = "panel24";
+            this.panel24.Size = new System.Drawing.Size(545, 78);
+            this.panel24.TabIndex = 26;
+            // 
+            // lblTotalProfit
+            // 
+            this.lblTotalProfit.AutoSize = true;
+            this.lblTotalProfit.Location = new System.Drawing.Point(14, 37);
+            this.lblTotalProfit.Name = "lblTotalProfit";
+            this.lblTotalProfit.Size = new System.Drawing.Size(54, 20);
+            this.lblTotalProfit.TabIndex = 1;
+            this.lblTotalProfit.Text = "10000";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(14, 10);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(85, 20);
+            this.label6.TabIndex = 0;
+            this.label6.Text = "Total Profit";
+            // 
+            // panel21
+            // 
+            this.panel21.Controls.Add(this.lblTotalRevenue);
+            this.panel21.Controls.Add(this.label4);
+            this.panel21.Location = new System.Drawing.Point(372, 64);
+            this.panel21.Name = "panel21";
+            this.panel21.Size = new System.Drawing.Size(463, 78);
+            this.panel21.TabIndex = 25;
+            // 
+            // lblTotalRevenue
+            // 
+            this.lblTotalRevenue.AutoSize = true;
+            this.lblTotalRevenue.Location = new System.Drawing.Point(14, 37);
+            this.lblTotalRevenue.Name = "lblTotalRevenue";
+            this.lblTotalRevenue.Size = new System.Drawing.Size(54, 20);
+            this.lblTotalRevenue.TabIndex = 1;
+            this.lblTotalRevenue.Text = "10000";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(14, 10);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(112, 20);
+            this.label4.TabIndex = 0;
+            this.label4.Text = "Total Revenue";
+            // 
+            // panel20
+            // 
+            this.panel20.Controls.Add(this.lblTotalOrders);
+            this.panel20.Controls.Add(this.label1);
+            this.panel20.Location = new System.Drawing.Point(8, 64);
+            this.panel20.Name = "panel20";
+            this.panel20.Size = new System.Drawing.Size(358, 78);
+            this.panel20.TabIndex = 24;
+            // 
+            // lblTotalOrders
+            // 
+            this.lblTotalOrders.AutoSize = true;
+            this.lblTotalOrders.Location = new System.Drawing.Point(14, 37);
+            this.lblTotalOrders.Name = "lblTotalOrders";
+            this.lblTotalOrders.Size = new System.Drawing.Size(54, 20);
+            this.lblTotalOrders.TabIndex = 1;
+            this.lblTotalOrders.Text = "10000";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(14, 10);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(135, 20);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Number of Orders";
             // 
             // splitContainer1
             // 
@@ -957,9 +1123,163 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.flowLayoutPanel1);
-            this.splitContainer1.Size = new System.Drawing.Size(1392, 55);
+            this.splitContainer1.Size = new System.Drawing.Size(1392, 58);
             this.splitContainer1.SplitterDistance = 650;
             this.splitContainer1.TabIndex = 23;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Dock = System.Windows.Forms.DockStyle.Left;
+            this.label2.Font = new System.Drawing.Font("Palatino Linotype", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(0, 0);
+            this.label2.Name = "label2";
+            this.label2.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.label2.Size = new System.Drawing.Size(188, 44);
+            this.label2.TabIndex = 15;
+            this.label2.Text = "DashBoard";
+            // 
+            // dtpStartDate
+            // 
+            this.dtpStartDate.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.dtpStartDate.CustomFormat = "MMM dd,yyyy";
+            this.dtpStartDate.Enabled = false;
+            this.dtpStartDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpStartDate.Location = new System.Drawing.Point(209, 14);
+            this.dtpStartDate.Name = "dtpStartDate";
+            this.dtpStartDate.Size = new System.Drawing.Size(200, 26);
+            this.dtpStartDate.TabIndex = 0;
+            // 
+            // dtpEndDate
+            // 
+            this.dtpEndDate.CustomFormat = "MMM dd,yyyy";
+            this.dtpEndDate.Enabled = false;
+            this.dtpEndDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpEndDate.Location = new System.Drawing.Point(438, 14);
+            this.dtpEndDate.Name = "dtpEndDate";
+            this.dtpEndDate.Size = new System.Drawing.Size(200, 26);
+            this.dtpEndDate.TabIndex = 1;
+            // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.flowLayoutPanel1.BackColor = System.Drawing.Color.Red;
+            this.flowLayoutPanel1.Controls.Add(this.btnThisMonth);
+            this.flowLayoutPanel1.Controls.Add(this.btnLast30d);
+            this.flowLayoutPanel1.Controls.Add(this.btnLast7d);
+            this.flowLayoutPanel1.Controls.Add(this.btnToday);
+            this.flowLayoutPanel1.Controls.Add(this.btnCustom);
+            this.flowLayoutPanel1.Controls.Add(this.btnOk);
+            this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(738, 58);
+            this.flowLayoutPanel1.TabIndex = 22;
+            // 
+            // btnThisMonth
+            // 
+            this.btnThisMonth.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnThisMonth.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnThisMonth.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.btnThisMonth.ForeColor = System.Drawing.Color.White;
+            this.btnThisMonth.Location = new System.Drawing.Point(613, 8);
+            this.btnThisMonth.Margin = new System.Windows.Forms.Padding(3, 8, 3, 3);
+            this.btnThisMonth.Name = "btnThisMonth";
+            this.btnThisMonth.Size = new System.Drawing.Size(122, 36);
+            this.btnThisMonth.TabIndex = 17;
+            this.btnThisMonth.Text = "This Month";
+            this.btnThisMonth.UseVisualStyleBackColor = true;
+            this.btnThisMonth.Click += new System.EventHandler(this.btnThisMonth_Click);
+            // 
+            // btnLast30d
+            // 
+            this.btnLast30d.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnLast30d.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLast30d.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnLast30d.ForeColor = System.Drawing.Color.White;
+            this.btnLast30d.Location = new System.Drawing.Point(485, 8);
+            this.btnLast30d.Margin = new System.Windows.Forms.Padding(3, 8, 3, 3);
+            this.btnLast30d.Name = "btnLast30d";
+            this.btnLast30d.Size = new System.Drawing.Size(122, 36);
+            this.btnLast30d.TabIndex = 18;
+            this.btnLast30d.Text = "Last 30 days";
+            this.btnLast30d.UseVisualStyleBackColor = true;
+            this.btnLast30d.Click += new System.EventHandler(this.btnLast30d_Click);
+            // 
+            // btnLast7d
+            // 
+            this.btnLast7d.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnLast7d.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLast7d.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnLast7d.ForeColor = System.Drawing.Color.White;
+            this.btnLast7d.Location = new System.Drawing.Point(357, 8);
+            this.btnLast7d.Margin = new System.Windows.Forms.Padding(3, 8, 3, 3);
+            this.btnLast7d.Name = "btnLast7d";
+            this.btnLast7d.Size = new System.Drawing.Size(122, 38);
+            this.btnLast7d.TabIndex = 19;
+            this.btnLast7d.Text = "Last 7 days";
+            this.btnLast7d.UseVisualStyleBackColor = true;
+            this.btnLast7d.Click += new System.EventHandler(this.btnLast7d_Click);
+            // 
+            // btnToday
+            // 
+            this.btnToday.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnToday.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnToday.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnToday.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.btnToday.ForeColor = System.Drawing.Color.White;
+            this.btnToday.Location = new System.Drawing.Point(229, 8);
+            this.btnToday.Margin = new System.Windows.Forms.Padding(3, 8, 3, 3);
+            this.btnToday.Name = "btnToday";
+            this.btnToday.Size = new System.Drawing.Size(122, 38);
+            this.btnToday.TabIndex = 20;
+            this.btnToday.Text = "Today";
+            this.btnToday.UseVisualStyleBackColor = true;
+            this.btnToday.Click += new System.EventHandler(this.btnToday_Click);
+            // 
+            // btnCustom
+            // 
+            this.btnCustom.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCustom.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnCustom.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnCustom.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCustom.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.btnCustom.ForeColor = System.Drawing.Color.White;
+            this.btnCustom.Location = new System.Drawing.Point(101, 8);
+            this.btnCustom.Margin = new System.Windows.Forms.Padding(3, 8, 3, 3);
+            this.btnCustom.Name = "btnCustom";
+            this.btnCustom.Size = new System.Drawing.Size(122, 38);
+            this.btnCustom.TabIndex = 21;
+            this.btnCustom.Text = "Custom";
+            this.btnCustom.UseVisualStyleBackColor = true;
+            this.btnCustom.Click += new System.EventHandler(this.btnCustom_Click);
+            // 
+            // btnOk
+            // 
+            this.btnOk.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnOk.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnOk.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnOk.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnOk.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.btnOk.ForeColor = System.Drawing.Color.White;
+            this.btnOk.Location = new System.Drawing.Point(42, 8);
+            this.btnOk.Margin = new System.Windows.Forms.Padding(3, 8, 3, 3);
+            this.btnOk.Name = "btnOk";
+            this.btnOk.Size = new System.Drawing.Size(53, 38);
+            this.btnOk.TabIndex = 24;
+            this.btnOk.Text = "Ok";
+            this.btnOk.UseVisualStyleBackColor = true;
+            this.btnOk.Visible = false;
+            this.btnOk.Click += new System.EventHandler(this.btnOk_Click);
             // 
             // frmDashBoard
             // 
@@ -1019,12 +1339,25 @@
             this.panel23.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pbReports)).EndInit();
             this.pnlMain.ResumeLayout(false);
-            this.flowLayoutPanel1.ResumeLayout(false);
+            this.panel26.ResumeLayout(false);
+            this.panel26.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvUnderStock)).EndInit();
+            this.panel25.ResumeLayout(false);
+            this.panel25.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chartTop5Products)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartGrossRevenue)).EndInit();
+            this.panel24.ResumeLayout(false);
+            this.panel24.PerformLayout();
+            this.panel21.ResumeLayout(false);
+            this.panel21.PerformLayout();
+            this.panel20.ResumeLayout(false);
+            this.panel20.PerformLayout();
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel1.PerformLayout();
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
+            this.flowLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -1103,5 +1436,28 @@
         private System.Windows.Forms.Button btnLast30d;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.SplitContainer splitContainer1;
+        private System.Windows.Forms.Button btnOk;
+        private System.Windows.Forms.Panel panel21;
+        private System.Windows.Forms.Label lblTotalRevenue;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Panel panel20;
+        private System.Windows.Forms.Label lblTotalOrders;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel panel24;
+        private System.Windows.Forms.Label lblTotalProfit;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chartGrossRevenue;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chartTop5Products;
+        private System.Windows.Forms.Panel panel25;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label lblNumberOfProducts;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lblNumberOfSupplier;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label lblNumberOfCustomer;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Panel panel26;
+        private System.Windows.Forms.DataGridView dgvUnderStock;
+        private System.Windows.Forms.Label label15;
     }
 }

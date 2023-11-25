@@ -56,4 +56,11 @@
     <Property Name="ParentElementType" Value="SqlTable" />
     <Property Name="NewName" Value="VendorId" />
   </Operation>
+  <Operation Name="Rename Refactor" Key="9c285186-c086-4eaa-bcfd-7dec38e6576e" ChangeDateTime="11/20/2023 14:06:30">
+    <Property Name="ElementName" Value="[kanif].[ProductDetails].[isDiscontiuned]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[kanif].[ProductDetails]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="isDiscontinued" />
+  </Operation>
 </Operations>

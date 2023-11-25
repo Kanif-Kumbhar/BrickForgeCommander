@@ -13,7 +13,7 @@ namespace BrickForgeCommanderUI.Db
 
         public DbConnection()
         {
-            connectionString = "Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=BrickForgeCommanderDB;Integrated Security=True;Encrypt=True";
+            connectionString = "Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=BrickForgeCommanderDB;Integrated Security=True;Encrypt=False";
         }
 
         protected SqlConnection GetConnection() 
