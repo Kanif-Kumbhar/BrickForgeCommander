@@ -1,5 +1,6 @@
 ﻿using BrickForgeCommanderUI.Dashboard;
 using BrickForgeCommanderUI.Login___Registeration;
+using BrickForgeCommanderUI.MasterForms;
 using System;
 using System.Collections.Generic;
 using System.Linq;

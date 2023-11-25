@@ -9,6 +9,7 @@ using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BrickForgeCommanderUI.MasterForms;
 
 namespace BrickForgeCommanderUI.Dashboard
 {
@@ -371,6 +372,16 @@ namespace BrickForgeCommanderUI.Dashboard
         private void dtpEndDate_ValueChanged(object sender, EventArgs e)
         {
             lblEndDate.Text = dtpEndDate.Text;
+        }
+
+        private void btnMaster_MouseClick(object sender, MouseEventArgs e)
+        {
+            new frmVendorTypeDetails().Show();
+        }
+
+        private void btnReports_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }

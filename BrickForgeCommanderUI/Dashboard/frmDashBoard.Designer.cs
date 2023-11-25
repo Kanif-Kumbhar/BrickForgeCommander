@@ -436,6 +436,7 @@
             this.btnMaster.Text = "Master";
             this.btnMaster.UseVisualStyleBackColor = true;
             this.btnMaster.Click += new System.EventHandler(this.btnMaster_Click);
+            this.btnMaster.MouseClick += new System.Windows.Forms.MouseEventHandler(this.btnMaster_MouseClick);
             // 
             // panel2
             // 
@@ -833,6 +834,7 @@
             this.btnReports.TabIndex = 0;
             this.btnReports.Text = "Reports";
             this.btnReports.UseVisualStyleBackColor = true;
+            this.btnReports.Click += new System.EventHandler(this.btnReports_Click);
             // 
             // panel23
             // 
@@ -1289,7 +1291,7 @@
             // 
             this.splitContainer1.Panel2.Controls.Add(this.flowLayoutPanel1);
             this.splitContainer1.Size = new System.Drawing.Size(1392, 58);
-            this.splitContainer1.SplitterDistance = 706;
+            this.splitContainer1.SplitterDistance = 718;
             this.splitContainer1.SplitterWidth = 1;
             this.splitContainer1.TabIndex = 23;
             // 
