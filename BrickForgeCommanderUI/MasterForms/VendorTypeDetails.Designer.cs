@@ -536,9 +536,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.Location = new System.Drawing.Point(264, 55);
+            this.button1.Location = new System.Drawing.Point(261, 8);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(67, 23);
+            this.button1.Size = new System.Drawing.Size(91, 54);
             this.button1.TabIndex = 32;
             this.button1.UseVisualStyleBackColor = true;
             // 
@@ -546,9 +546,9 @@
             // 
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
-            this.button2.Location = new System.Drawing.Point(209, 55);
+            this.button2.Location = new System.Drawing.Point(225, 4);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(49, 23);
+            this.button2.Size = new System.Drawing.Size(49, 62);
             this.button2.TabIndex = 33;
             this.button2.UseVisualStyleBackColor = true;
             // 

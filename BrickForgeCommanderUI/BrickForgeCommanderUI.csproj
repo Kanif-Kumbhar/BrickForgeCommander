@@ -54,6 +54,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controls\BFC_TextBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\BFC_TextBox.Designer.cs">
+      <DependentUpon>BFC_TextBox.cs</DependentUpon>
+    </Compile>
     <Compile Include="Dashboard\frmDashBoard.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -75,6 +81,12 @@
       <DependentUpon>frmRegisteration.cs</DependentUpon>
     </Compile>
     <Compile Include="MasterForms\Command\SqlQueryRunner.cs" />
+    <Compile Include="MasterForms\frmModeDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MasterForms\frmModeDetails.Designer.cs">
+      <DependentUpon>frmModeDetails.cs</DependentUpon>
+    </Compile>
     <Compile Include="MasterForms\VendorTypeDetails.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -83,6 +95,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Controls\BFC_TextBox.resx">
+      <DependentUpon>BFC_TextBox.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Dashboard\frmDashBoard.resx">
       <DependentUpon>frmDashBoard.cs</DependentUpon>
     </EmbeddedResource>
@@ -91,6 +106,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Login &amp; Registeration\frmRegisteration.resx">
       <DependentUpon>frmRegisteration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MasterForms\frmModeDetails.resx">
+      <DependentUpon>frmModeDetails.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MasterForms\VendorTypeDetails.resx">
       <DependentUpon>VendorTypeDetails.cs</DependentUpon>
