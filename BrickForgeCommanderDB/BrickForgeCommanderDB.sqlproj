@@ -62,6 +62,7 @@
     <Folder Include="ChildTables\OrderTables" />
     <Folder Include="ChildTables\ProductTable" />
     <Folder Include="ChildTables\VendorTables" />
+    <Folder Include="MasterTables" />
   </ItemGroup>
   <ItemGroup>
     <RefactorLog Include="BrickForgeCommanderDB.refactorlog" />
@@ -73,5 +74,6 @@
     <Build Include="ChildTables\OrderTables\OrderDetails.sql" />
     <Build Include="ChildTables\ProductTable\ProductDetails.sql" />
     <Build Include="ChildTables\VendorTables\VendorDetails.sql" />
+    <Build Include="MasterTables\VendorTypeDetails.sql" />
   </ItemGroup>
 </Project>
