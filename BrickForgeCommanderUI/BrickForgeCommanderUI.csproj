@@ -54,12 +54,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controls\BFC_ComboBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\BFC_DropDownMenu.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Controls\BFC_TextBox.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Controls\BFC_TextBox.Designer.cs">
       <DependentUpon>BFC_TextBox.cs</DependentUpon>
     </Compile>
+    <Compile Include="Controls\MenuColorTable.cs" />
+    <Compile Include="Controls\MenuRenderer.cs" />
     <Compile Include="Dashboard\frmDashBoard.cs">
       <SubType>Form</SubType>
     </Compile>

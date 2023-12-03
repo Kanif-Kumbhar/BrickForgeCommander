@@ -19,7 +19,7 @@ namespace BrickForgeCommanderUI
        {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmVendorTypeDetails());
+            Application.Run(new frmDashBoard());
         }
     }
 }

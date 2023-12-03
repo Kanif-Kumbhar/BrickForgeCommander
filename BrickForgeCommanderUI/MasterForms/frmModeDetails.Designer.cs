@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.bfC_TextBox1 = new BrickForgeCommanderUI.Controls.BFC_TextBox();
+            this.bfC_ComboBox1 = new BrickForgeCommanderUI.Controls.BFC_ComboBox();
             this.SuspendLayout();
             // 
             // bfC_TextBox1
@@ -53,11 +54,29 @@
             this.bfC_TextBox1.Texts = "";
             this.bfC_TextBox1.UnderLineStyle = false;
             // 
+            // bfC_ComboBox1
+            // 
+            this.bfC_ComboBox1.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.bfC_ComboBox1.BorderSize = 1;
+            this.bfC_ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
+            this.bfC_ComboBox1.ForeColor = System.Drawing.Color.DimGray;
+            this.bfC_ComboBox1.IconColor = System.Drawing.Color.MediumSlateBlue;
+            this.bfC_ComboBox1.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
+            this.bfC_ComboBox1.ListTextColor = System.Drawing.Color.DimGray;
+            this.bfC_ComboBox1.Location = new System.Drawing.Point(190, 243);
+            this.bfC_ComboBox1.MinimumSize = new System.Drawing.Size(200, 30);
+            this.bfC_ComboBox1.Name = "bfC_ComboBox1";
+            this.bfC_ComboBox1.Padding = new System.Windows.Forms.Padding(1);
+            this.bfC_ComboBox1.Size = new System.Drawing.Size(200, 30);
+            this.bfC_ComboBox1.TabIndex = 1;
+            this.bfC_ComboBox1.Texts = "";
+            // 
             // frmModeDetails
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.bfC_ComboBox1);
             this.Controls.Add(this.bfC_TextBox1);
             this.Name = "frmModeDetails";
             this.Text = "frmModeDetails";
@@ -68,5 +87,6 @@
         #endregion
 
         private Controls.BFC_TextBox bfC_TextBox1;
+        private Controls.BFC_ComboBox bfC_ComboBox1;
     }
 }
