@@ -1322,7 +1322,7 @@
             // 
             this.splitContainer1.Panel2.Controls.Add(this.flowLayoutPanel1);
             this.splitContainer1.Size = new System.Drawing.Size(1390, 58);
-            this.splitContainer1.SplitterDistance = 708;
+            this.splitContainer1.SplitterDistance = 711;
             this.splitContainer1.SplitterWidth = 1;
             this.splitContainer1.TabIndex = 23;
             // 
@@ -1334,7 +1334,7 @@
             this.panel27.Controls.Add(this.dtpStartDate);
             this.panel27.Controls.Add(this.dtpEndDate);
             this.panel27.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel27.Location = new System.Drawing.Point(227, 0);
+            this.panel27.Location = new System.Drawing.Point(230, 0);
             this.panel27.Name = "panel27";
             this.panel27.Size = new System.Drawing.Size(481, 58);
             this.panel27.TabIndex = 16;
