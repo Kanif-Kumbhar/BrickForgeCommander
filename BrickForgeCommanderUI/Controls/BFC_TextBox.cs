@@ -331,6 +331,13 @@ namespace BrickForgeCommanderUI.Controls
             }
         }
 
+        public void Clear()
+        {
+            textBox1.Clear();
+            SetPlaceHolder(); // Reset placeholder if applicable
+            isFocused = false; // Ensure focus-related properties are reset
+            this.Invalidate();
+        }
         #region Events Trigger
         private void textBox1_Click(object sender, EventArgs e)
         {
@@ -364,6 +371,11 @@ namespace BrickForgeCommanderUI.Controls
             isFocused = false;
             this.Invalidate();
             SetPlaceHolder();
+        }
+
+        private void textBox1_KeyDown(object sender, KeyEventArgs e)
+        {
+            this.OnKeyDown(e);
         }
 
         #endregion

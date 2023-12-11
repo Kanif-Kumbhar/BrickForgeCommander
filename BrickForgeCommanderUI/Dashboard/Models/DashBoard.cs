@@ -48,11 +48,11 @@ namespace BrickForgeCommanderUI.Dashboard.Models
                     command.Connection = connection;
 
                     //Get total number of Customer
-                    command.CommandText = "SELECT COUNT(VendorId) FROM kanif.VendorDetails WHERE VendorTypeId=3";
+                    command.CommandText = "SELECT COUNT(VenderId) FROM kanif.VendorDetails WHERE VendorTypeId=3";
                     NumCustomers = (int)command.ExecuteScalar();
                     
                     //Get total number of Supplier
-                    command.CommandText = "SELECT COUNT(VendorId) FROM kanif.VendorDetails WHERE VendorTypeId=4";
+                    command.CommandText = "SELECT COUNT(VenderId) FROM kanif.VendorDetails WHERE VendorTypeId=4";
                     NumSuppliers = (int)command.ExecuteScalar();
 
                     //Get total number of Products

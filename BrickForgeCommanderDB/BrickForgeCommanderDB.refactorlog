@@ -70,4 +70,32 @@
     <Property Name="ParentElementType" Value="SqlTable" />
     <Property Name="NewName" Value="VendorTypeId" />
   </Operation>
+  <Operation Name="Rename Refactor" Key="da76dc9f-dec0-40fc-88dd-44c23707046d" ChangeDateTime="12/10/2023 05:54:31">
+    <Property Name="ElementName" Value="[kanif].[VendorDetails].[VendorId]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[kanif].[VendorDetails]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="VenderId" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="95ae34af-0420-4cac-aaa9-c1bb70cec533" ChangeDateTime="12/10/2023 06:09:48">
+    <Property Name="ElementName" Value="[kanif].[VendorTypeDetails].[VendorTypeId]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[kanif].[VendorTypeDetails]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="VenderTypeId" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="2108af85-58f8-4305-8f3b-4ff9618b6797" ChangeDateTime="12/10/2023 06:09:51">
+    <Property Name="ElementName" Value="[kanif].[VendorTypeDetails].[VendorTypeName]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[kanif].[VendorTypeDetails]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="VenderTypeName" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="b7dde319-b58a-4dea-8b20-4c0bb7a5f0d3" ChangeDateTime="12/10/2023 12:15:03">
+    <Property Name="ElementName" Value="[kanif].[CityDetails].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[kanif].[CityDetails]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="CityId" />
+  </Operation>
 </Operations>
