@@ -182,5 +182,107 @@
   <ItemGroup>
     <None Include="Resources\calendarWhite.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Controls\icons8-delete-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Controls\icons8-insert-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Controls\icons8-redo-40.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Controls\icons8-save-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Controls\icons8-search-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Controls\icons8-undo-40.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Controls\icons8-update-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Controls\icons8-clear-40.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DashBoard\icons8-bricks-35.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DashBoard\icons8-bricks-60.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DashBoard\icons8-business-report-35.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DashBoard\icons8-get-revenue-35.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DashBoard\icons8-get-revenue-70.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DashBoard\icons8-home-45.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DashBoard\icons8-increase-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DashBoard\icons8-increase-60.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DashBoard\icons8-logout-40.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DashBoard\icons8-master-40.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DashBoard\icons8-products-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DashBoard\icons8-sales-35.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DashBoard\icons8-shopping-cart-35.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DashBoard\icons8-supplier-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DashBoard\icons8-workers-28.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DashBoard\icons8-workers-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DashBoard\icons8-bricks-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NavIcons\icons8-log-out-28.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NavIcons\icons8-maximize-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NavIcons\icons8-menu-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NavIcons\icons8-menu-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NavIcons\icons8-minimize-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NavIcons\icons8-next-30 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NavIcons\icons8-next-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NavIcons\icons8-tick-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NavIcons\icons8-close-24.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
