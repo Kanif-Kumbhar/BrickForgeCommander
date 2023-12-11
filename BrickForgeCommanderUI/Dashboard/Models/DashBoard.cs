@@ -48,19 +48,19 @@ namespace BrickForgeCommanderUI.Dashboard.Models
                     command.Connection = connection;
 
                     //Get total number of Customer
-                    command.CommandText = "SELECT COUNT(VendorId) FROM VendorDetails WHERE VendorTypeId=3";
+                    command.CommandText = "SELECT COUNT(VenderId) FROM kanif.VendorDetails WHERE VendorTypeId=3";
                     NumCustomers = (int)command.ExecuteScalar();
                     
                     //Get total number of Supplier
-                    command.CommandText = "SELECT COUNT(VendorId) FROM VendorDetails WHERE VendorTypeId=4";
+                    command.CommandText = "SELECT COUNT(VenderId) FROM kanif.VendorDetails WHERE VendorTypeId=4";
                     NumSuppliers = (int)command.ExecuteScalar();
 
                     //Get total number of Products
-                    command.CommandText = "SELECT COUNT(ProductId) FROM ProductDetails";
+                    command.CommandText = "SELECT COUNT(ProductId) FROM kanif.ProductDetails";
                     NumProducts = (int)command.ExecuteScalar();
 
                     //Get total number of Orders
-                    command.CommandText = "SELECT COUNT(OrderId) FROM OrderDetails WHERE OrderDate BETWEEN @StartDate AND @EndDate";
+                    command.CommandText = "SELECT COUNT(OrderId) FROM kanif.Orders WHERE OrderDate BETWEEN @StartDate AND @EndDate";
                     command.Parameters.Add("@StartDate", System.Data.SqlDbType.DateTime).Value = startDate;
                     command.Parameters.Add("@EndDate", System.Data.SqlDbType.DateTime).Value = endDate;
                     NumOrders = (int)command.ExecuteScalar();
@@ -80,7 +80,7 @@ namespace BrickForgeCommanderUI.Dashboard.Models
                 using (var command = new SqlCommand())
                 {
                     command.Connection = connection;
-                    command.CommandText = @"SELECT OrderDate, SUM(TotalAmount) from OrderDetails 
+                    command.CommandText = @"SELECT OrderDate, SUM(TotalAmount) from kanif.Orders
                                           WHERE OrderDate BETWEEN @StartDate AND @EndDate GROUP BY OrderDate";
                     command.Parameters.Add("@StartDate", System.Data.SqlDbType.DateTime).Value = startDate;
                     command.Parameters.Add("@EndDate", System.Data.SqlDbType.DateTime).Value = endDate;
@@ -176,10 +176,14 @@ namespace BrickForgeCommanderUI.Dashboard.Models
                     command.Connection = connection;
 
                     //Get top 5 Products
-                    command.CommandText = @"SELECT top 5 P.ProductName, SUM(OrderItem.Quantity) AS Quantity from OrderDetails
-                                            INNER JOIN Orders 0 ON 0.OrderId = OrderDetails.OrderId 
-                                            WHERE OrderDate BETWEEN @StartDate AND @ EndDate
-                                            GROUP BY P.ProductName ORDER BY Quantity DESC";
+                    command.CommandText = @"select top 5 P.ProductName, sum(kanif.OrderDetails.Quantity) as Q
+                                            from kanif.OrderDetails
+                                            inner join kanif.ProductDetails P on P.ProductId = kanif.OrderDetails.ProductId
+                                            inner
+                                            join kanif.Orders O on O.OrderId = kanif.OrderDetails.OrderId
+                                            where OrderDate between @StartDate and @EndDate
+                                            group by P.ProductName
+                                            order by Q desc";
                     command.Parameters.Add("@StartDate", System.Data.SqlDbType.DateTime).Value = startDate;
                     command.Parameters.Add("@EndDate", System.Data.SqlDbType.DateTime).Value = endDate;
                     reader = command.ExecuteReader();
@@ -190,7 +194,7 @@ namespace BrickForgeCommanderUI.Dashboard.Models
                     reader.Close();
 
                     //Get Under Stock Product
-                    command.CommandText = @"SELECT ProductName, Stock FROM ProductDetails 
+                    command.CommandText = @"SELECT ProductName, Stock FROM kanif.ProductDetails 
                                             WHERE Stock <= 100 AND isDiscontinued = 0";
                     reader = command.ExecuteReader();
                     while(reader.Read()) 

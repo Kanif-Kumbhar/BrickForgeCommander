@@ -8,7 +8,7 @@
     <OutputType>WinExe</OutputType>
     <RootNamespace>BrickForgeCommanderUI</RootNamespace>
     <AssemblyName>BrickForgeCommanderUI</AssemblyName>
-    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
@@ -42,6 +42,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -53,6 +54,31 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BrickForgeCommanderDBDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BrickForgeCommanderDBDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\BFC_Button.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\BFC_ComboBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\BFC_DateTimePicker.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\BFC_DropDownMenu.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\BFC_TextBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\BFC_TextBox.Designer.cs">
+      <DependentUpon>BFC_TextBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\MenuColorTable.cs" />
+    <Compile Include="Controls\MenuRenderer.cs" />
     <Compile Include="Dashboard\frmDashBoard.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -60,7 +86,19 @@
       <DependentUpon>frmDashBoard.cs</DependentUpon>
     </Compile>
     <Compile Include="Dashboard\Models\DashBoard.cs" />
+    <Compile Include="Dashboard\test.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dashboard\test.Designer.cs">
+      <DependentUpon>test.cs</DependentUpon>
+    </Compile>
     <Compile Include="Db\DbConnection.cs" />
+    <Compile Include="Login &amp; Registeration\frmForgotPwd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login &amp; Registeration\frmForgotPwd.Designer.cs">
+      <DependentUpon>frmForgotPwd.cs</DependentUpon>
+    </Compile>
     <Compile Include="Login &amp; Registeration\frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -73,16 +111,44 @@
     <Compile Include="Login &amp; Registeration\frmRegisteration.Designer.cs">
       <DependentUpon>frmRegisteration.cs</DependentUpon>
     </Compile>
+    <Compile Include="MasterForms\Command\SqlQueryRunner.cs" />
+    <Compile Include="MasterForms\frmModeDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MasterForms\frmModeDetails.Designer.cs">
+      <DependentUpon>frmModeDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MasterForms\VendorTypeDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MasterForms\VendorTypeDetails.Designer.cs">
+      <DependentUpon>VendorTypeDetails.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Controls\BFC_TextBox.resx">
+      <DependentUpon>BFC_TextBox.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Dashboard\frmDashBoard.resx">
       <DependentUpon>frmDashBoard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dashboard\test.resx">
+      <DependentUpon>test.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login &amp; Registeration\frmForgotPwd.resx">
+      <DependentUpon>frmForgotPwd.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login &amp; Registeration\frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login &amp; Registeration\frmRegisteration.resx">
       <DependentUpon>frmRegisteration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MasterForms\frmModeDetails.resx">
+      <DependentUpon>frmModeDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MasterForms\VendorTypeDetails.resx">
+      <DependentUpon>VendorTypeDetails.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -95,6 +161,17 @@
       <DesignTime>True</DesignTime>
     </Compile>
     <None Include="app.manifest" />
+    <None Include="BrickForgeCommanderDBDataSet.xsc">
+      <DependentUpon>BrickForgeCommanderDBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="BrickForgeCommanderDBDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BrickForgeCommanderDBDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BrickForgeCommanderDBDataSet.xss">
+      <DependentUpon>BrickForgeCommanderDBDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -107,6 +184,114 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\calendarDark.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\calendarWhite.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Controls\icons8-delete-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Controls\icons8-insert-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Controls\icons8-redo-40.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Controls\icons8-save-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Controls\icons8-search-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Controls\icons8-undo-40.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Controls\icons8-update-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Controls\icons8-clear-40.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DashBoard\icons8-bricks-35.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DashBoard\icons8-bricks-60.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DashBoard\icons8-business-report-35.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DashBoard\icons8-get-revenue-35.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DashBoard\icons8-get-revenue-70.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DashBoard\icons8-home-45.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DashBoard\icons8-increase-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DashBoard\icons8-increase-60.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DashBoard\icons8-logout-40.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DashBoard\icons8-master-40.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DashBoard\icons8-products-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DashBoard\icons8-sales-35.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DashBoard\icons8-shopping-cart-35.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DashBoard\icons8-supplier-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DashBoard\icons8-workers-28.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DashBoard\icons8-workers-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DashBoard\icons8-bricks-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NavIcons\icons8-log-out-28.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NavIcons\icons8-maximize-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NavIcons\icons8-menu-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NavIcons\icons8-menu-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NavIcons\icons8-minimize-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NavIcons\icons8-next-30 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NavIcons\icons8-next-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NavIcons\icons8-tick-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NavIcons\icons8-close-24.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
