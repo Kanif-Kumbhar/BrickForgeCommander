@@ -54,6 +54,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BrickForgeCommanderDBDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BrickForgeCommanderDBDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Controls\BFC_Button.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -82,6 +87,12 @@
     </Compile>
     <Compile Include="Dashboard\Models\DashBoard.cs" />
     <Compile Include="Db\DbConnection.cs" />
+    <Compile Include="Login &amp; Registeration\frmForgotPwd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login &amp; Registeration\frmForgotPwd.Designer.cs">
+      <DependentUpon>frmForgotPwd.cs</DependentUpon>
+    </Compile>
     <Compile Include="Login &amp; Registeration\frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -115,6 +126,9 @@
     <EmbeddedResource Include="Dashboard\frmDashBoard.resx">
       <DependentUpon>frmDashBoard.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Login &amp; Registeration\frmForgotPwd.resx">
+      <DependentUpon>frmForgotPwd.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Login &amp; Registeration\frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
@@ -138,6 +152,17 @@
       <DesignTime>True</DesignTime>
     </Compile>
     <None Include="app.manifest" />
+    <None Include="BrickForgeCommanderDBDataSet.xsc">
+      <DependentUpon>BrickForgeCommanderDBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="BrickForgeCommanderDBDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BrickForgeCommanderDBDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BrickForgeCommanderDBDataSet.xss">
+      <DependentUpon>BrickForgeCommanderDBDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

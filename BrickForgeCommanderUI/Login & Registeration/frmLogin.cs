@@ -44,7 +44,6 @@ namespace BrickForgeCommanderUI.Login___Registeration
 
         private void btbLogin_Click(object sender, EventArgs e)
         {
-
             try
             {
                 con.Open();
@@ -80,7 +79,7 @@ namespace BrickForgeCommanderUI.Login___Registeration
 
         private void lblCreateAccount_Click(object sender, EventArgs e)
         {
-            new frmRegisteration().Show();
+            new frmForgotPwd().Show();
             this.Hide();
         }
 

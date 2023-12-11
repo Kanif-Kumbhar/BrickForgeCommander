@@ -35,9 +35,9 @@
             this.lblPassword = new System.Windows.Forms.Label();
             this.txtUserName = new System.Windows.Forms.TextBox();
             this.lblUserName = new System.Windows.Forms.Label();
-            this.lblCreateAccount = new System.Windows.Forms.Label();
+            this.lblResetPwd = new System.Windows.Forms.Label();
             this.lblGetStarted = new System.Windows.Forms.Label();
-            this.lblAlready = new System.Windows.Forms.Label();
+            this.lblForgotPwd = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // button2
@@ -129,20 +129,20 @@
             this.lblUserName.TabIndex = 25;
             this.lblUserName.Text = "User Name:";
             // 
-            // lblCreateAccount
+            // lblResetPwd
             // 
-            this.lblCreateAccount.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.lblCreateAccount.AutoSize = true;
-            this.lblCreateAccount.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lblCreateAccount.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(86)))), ((int)(((byte)(174)))));
-            this.lblCreateAccount.Location = new System.Drawing.Point(103, 542);
-            this.lblCreateAccount.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblCreateAccount.Name = "lblCreateAccount";
-            this.lblCreateAccount.Size = new System.Drawing.Size(157, 28);
-            this.lblCreateAccount.TabIndex = 33;
-            this.lblCreateAccount.Text = "Create Account";
-            this.lblCreateAccount.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lblCreateAccount.Click += new System.EventHandler(this.lblCreateAccount_Click);
+            this.lblResetPwd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.lblResetPwd.AutoSize = true;
+            this.lblResetPwd.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblResetPwd.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(86)))), ((int)(((byte)(174)))));
+            this.lblResetPwd.Location = new System.Drawing.Point(98, 523);
+            this.lblResetPwd.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblResetPwd.Name = "lblResetPwd";
+            this.lblResetPwd.Size = new System.Drawing.Size(157, 28);
+            this.lblResetPwd.TabIndex = 33;
+            this.lblResetPwd.Text = "Reset Password";
+            this.lblResetPwd.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblResetPwd.Click += new System.EventHandler(this.lblCreateAccount_Click);
             // 
             // lblGetStarted
             // 
@@ -156,18 +156,19 @@
             this.lblGetStarted.TabIndex = 24;
             this.lblGetStarted.Text = "LOGIN";
             // 
-            // lblAlready
+            // lblForgotPwd
             // 
-            this.lblAlready.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.lblAlready.AutoSize = true;
-            this.lblAlready.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.lblAlready.Location = new System.Drawing.Point(69, 488);
-            this.lblAlready.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblAlready.Name = "lblAlready";
-            this.lblAlready.Size = new System.Drawing.Size(234, 28);
-            this.lblAlready.TabIndex = 32;
-            this.lblAlready.Text = "Don\'t Have An Account";
-            this.lblAlready.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblForgotPwd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.lblForgotPwd.AutoSize = true;
+            this.lblForgotPwd.Font = new System.Drawing.Font("Nirmala UI", 10.5F, System.Drawing.FontStyle.Bold);
+            this.lblForgotPwd.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.lblForgotPwd.Location = new System.Drawing.Point(85, 488);
+            this.lblForgotPwd.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblForgotPwd.Name = "lblForgotPwd";
+            this.lblForgotPwd.Size = new System.Drawing.Size(192, 30);
+            this.lblForgotPwd.TabIndex = 32;
+            this.lblForgotPwd.Text = "Forgot Password ?";
+            this.lblForgotPwd.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // frmLogin
             // 
@@ -175,7 +176,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(362, 585);
-            this.Controls.Add(this.lblAlready);
+            this.Controls.Add(this.lblForgotPwd);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.btbLogin);
             this.Controls.Add(this.CheckbxShowPas);
@@ -183,7 +184,7 @@
             this.Controls.Add(this.lblPassword);
             this.Controls.Add(this.txtUserName);
             this.Controls.Add(this.lblUserName);
-            this.Controls.Add(this.lblCreateAccount);
+            this.Controls.Add(this.lblResetPwd);
             this.Controls.Add(this.lblGetStarted);
             this.Font = new System.Drawing.Font("Nirmala UI", 10F, System.Drawing.FontStyle.Bold);
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(165)))), ((int)(((byte)(169)))));
@@ -208,8 +209,8 @@
         private System.Windows.Forms.Label lblPassword;
         private System.Windows.Forms.TextBox txtUserName;
         private System.Windows.Forms.Label lblUserName;
-        private System.Windows.Forms.Label lblCreateAccount;
+        private System.Windows.Forms.Label lblResetPwd;
         private System.Windows.Forms.Label lblGetStarted;
-        private System.Windows.Forms.Label lblAlready;
+        private System.Windows.Forms.Label lblForgotPwd;
     }
 }

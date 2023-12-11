@@ -7,7 +7,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectVersion>4.1</ProjectVersion>
     <ProjectGuid>{b0ca7a58-0922-46e0-8064-8fed9a35fc9a}</ProjectGuid>
-    <DSP>Microsoft.Data.Tools.Schema.Sql.Sql150DatabaseSchemaProvider</DSP>
+    <DSP>Microsoft.Data.Tools.Schema.Sql.Sql120DatabaseSchemaProvider</DSP>
     <OutputType>Database</OutputType>
     <RootPath>
     </RootPath>
@@ -73,7 +73,8 @@
     <Build Include="ChildTables\OrderTables\Orders.sql" />
     <Build Include="ChildTables\OrderTables\OrderDetails.sql" />
     <Build Include="ChildTables\ProductTable\ProductDetails.sql" />
-    <Build Include="ChildTables\VendorTables\VendorDetails.sql" />
-    <Build Include="MasterTables\VendorTypeDetails.sql" />
+    <Build Include="ChildTables\VendorTables\VenderDetails.sql" />
+    <Build Include="MasterTables\VenderTypeDetails.sql" />
+    <Build Include="MasterTables\CityDetails.sql" />
   </ItemGroup>
 </Project>
