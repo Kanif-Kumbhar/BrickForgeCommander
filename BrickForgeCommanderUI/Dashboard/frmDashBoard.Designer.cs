@@ -140,13 +140,13 @@
             this.dtpStartDate = new System.Windows.Forms.DateTimePicker();
             this.dtpEndDate = new System.Windows.Forms.DateTimePicker();
             this.label2 = new System.Windows.Forms.Label();
+            this.panel30 = new System.Windows.Forms.Panel();
             this.btnThisMonth = new System.Windows.Forms.Button();
             this.btnLast30d = new System.Windows.Forms.Button();
-            this.btnLast7d = new System.Windows.Forms.Button();
-            this.btnToday = new System.Windows.Forms.Button();
-            this.btnCustom = new System.Windows.Forms.Button();
             this.btnOk = new System.Windows.Forms.Button();
-            this.panel30 = new System.Windows.Forms.Panel();
+            this.btnCustom = new System.Windows.Forms.Button();
+            this.btnToday = new System.Windows.Forms.Button();
+            this.btnLast7d = new System.Windows.Forms.Button();
             this.floatPanelTop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbClose)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbMaximize)).BeginInit();
@@ -1322,7 +1322,7 @@
             // 
             this.splitContainer1.Panel2.Controls.Add(this.panel30);
             this.splitContainer1.Size = new System.Drawing.Size(1390, 58);
-            this.splitContainer1.SplitterDistance = 670;
+            this.splitContainer1.SplitterDistance = 679;
             this.splitContainer1.SplitterWidth = 1;
             this.splitContainer1.TabIndex = 23;
             // 
@@ -1334,7 +1334,7 @@
             this.panel27.Controls.Add(this.dtpStartDate);
             this.panel27.Controls.Add(this.dtpEndDate);
             this.panel27.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel27.Location = new System.Drawing.Point(189, 0);
+            this.panel27.Location = new System.Drawing.Point(198, 0);
             this.panel27.Name = "panel27";
             this.panel27.Size = new System.Drawing.Size(481, 58);
             this.panel27.TabIndex = 16;
@@ -1411,6 +1411,20 @@
             this.label2.TabIndex = 15;
             this.label2.Text = "DashBoard";
             // 
+            // panel30
+            // 
+            this.panel30.Controls.Add(this.btnThisMonth);
+            this.panel30.Controls.Add(this.btnLast30d);
+            this.panel30.Controls.Add(this.btnOk);
+            this.panel30.Controls.Add(this.btnCustom);
+            this.panel30.Controls.Add(this.btnToday);
+            this.panel30.Controls.Add(this.btnLast7d);
+            this.panel30.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel30.Location = new System.Drawing.Point(0, 0);
+            this.panel30.Name = "panel30";
+            this.panel30.Size = new System.Drawing.Size(710, 58);
+            this.panel30.TabIndex = 0;
+            // 
             // btnThisMonth
             // 
             this.btnThisMonth.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -1418,7 +1432,7 @@
             this.btnThisMonth.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnThisMonth.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.btnThisMonth.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(141)))), ((int)(((byte)(181)))));
-            this.btnThisMonth.Location = new System.Drawing.Point(591, 13);
+            this.btnThisMonth.Location = new System.Drawing.Point(582, 13);
             this.btnThisMonth.Margin = new System.Windows.Forms.Padding(3, 8, 30, 3);
             this.btnThisMonth.Name = "btnThisMonth";
             this.btnThisMonth.Size = new System.Drawing.Size(122, 38);
@@ -1434,7 +1448,7 @@
             this.btnLast30d.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLast30d.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnLast30d.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(141)))), ((int)(((byte)(181)))));
-            this.btnLast30d.Location = new System.Drawing.Point(465, 13);
+            this.btnLast30d.Location = new System.Drawing.Point(461, 13);
             this.btnLast30d.Margin = new System.Windows.Forms.Padding(3, 8, 3, 3);
             this.btnLast30d.Name = "btnLast30d";
             this.btnLast30d.Size = new System.Drawing.Size(122, 38);
@@ -1442,54 +1456,6 @@
             this.btnLast30d.Text = "Last 30 days";
             this.btnLast30d.UseVisualStyleBackColor = true;
             this.btnLast30d.Click += new System.EventHandler(this.btnLast30d_Click);
-            // 
-            // btnLast7d
-            // 
-            this.btnLast7d.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnLast7d.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(83)))), ((int)(((byte)(255)))));
-            this.btnLast7d.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLast7d.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnLast7d.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(141)))), ((int)(((byte)(181)))));
-            this.btnLast7d.Location = new System.Drawing.Point(339, 13);
-            this.btnLast7d.Margin = new System.Windows.Forms.Padding(3, 8, 3, 3);
-            this.btnLast7d.Name = "btnLast7d";
-            this.btnLast7d.Size = new System.Drawing.Size(122, 38);
-            this.btnLast7d.TabIndex = 19;
-            this.btnLast7d.Text = "Last 7 days";
-            this.btnLast7d.UseVisualStyleBackColor = true;
-            this.btnLast7d.Click += new System.EventHandler(this.btnLast7d_Click);
-            // 
-            // btnToday
-            // 
-            this.btnToday.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnToday.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(83)))), ((int)(((byte)(255)))));
-            this.btnToday.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnToday.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.btnToday.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(141)))), ((int)(((byte)(181)))));
-            this.btnToday.Location = new System.Drawing.Point(214, 13);
-            this.btnToday.Margin = new System.Windows.Forms.Padding(3, 8, 3, 3);
-            this.btnToday.Name = "btnToday";
-            this.btnToday.Size = new System.Drawing.Size(122, 38);
-            this.btnToday.TabIndex = 20;
-            this.btnToday.Text = "Today";
-            this.btnToday.UseVisualStyleBackColor = true;
-            this.btnToday.Click += new System.EventHandler(this.btnToday_Click);
-            // 
-            // btnCustom
-            // 
-            this.btnCustom.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnCustom.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(83)))), ((int)(((byte)(255)))));
-            this.btnCustom.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCustom.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.btnCustom.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(141)))), ((int)(((byte)(181)))));
-            this.btnCustom.Location = new System.Drawing.Point(88, 13);
-            this.btnCustom.Margin = new System.Windows.Forms.Padding(3, 8, 3, 3);
-            this.btnCustom.Name = "btnCustom";
-            this.btnCustom.Size = new System.Drawing.Size(122, 38);
-            this.btnCustom.TabIndex = 21;
-            this.btnCustom.Text = "Custom";
-            this.btnCustom.UseVisualStyleBackColor = true;
-            this.btnCustom.Click += new System.EventHandler(this.btnCustom_Click);
             // 
             // btnOk
             // 
@@ -1507,25 +1473,59 @@
             this.btnOk.Location = new System.Drawing.Point(41, 13);
             this.btnOk.Margin = new System.Windows.Forms.Padding(1, 8, 1, 3);
             this.btnOk.Name = "btnOk";
-            this.btnOk.Size = new System.Drawing.Size(44, 38);
+            this.btnOk.Size = new System.Drawing.Size(35, 38);
             this.btnOk.TabIndex = 24;
             this.btnOk.UseVisualStyleBackColor = false;
             this.btnOk.Visible = false;
             this.btnOk.Click += new System.EventHandler(this.btnOk_Click);
             // 
-            // panel30
+            // btnCustom
             // 
-            this.panel30.Controls.Add(this.btnThisMonth);
-            this.panel30.Controls.Add(this.btnLast30d);
-            this.panel30.Controls.Add(this.btnOk);
-            this.panel30.Controls.Add(this.btnCustom);
-            this.panel30.Controls.Add(this.btnToday);
-            this.panel30.Controls.Add(this.btnLast7d);
-            this.panel30.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel30.Location = new System.Drawing.Point(0, 0);
-            this.panel30.Name = "panel30";
-            this.panel30.Size = new System.Drawing.Size(719, 58);
-            this.panel30.TabIndex = 0;
+            this.btnCustom.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnCustom.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(83)))), ((int)(((byte)(255)))));
+            this.btnCustom.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCustom.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.btnCustom.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(141)))), ((int)(((byte)(181)))));
+            this.btnCustom.Location = new System.Drawing.Point(88, 13);
+            this.btnCustom.Margin = new System.Windows.Forms.Padding(3, 8, 3, 3);
+            this.btnCustom.Name = "btnCustom";
+            this.btnCustom.Size = new System.Drawing.Size(122, 38);
+            this.btnCustom.TabIndex = 21;
+            this.btnCustom.Text = "Custom";
+            this.btnCustom.UseVisualStyleBackColor = true;
+            this.btnCustom.Click += new System.EventHandler(this.btnCustom_Click);
+            // 
+            // btnToday
+            // 
+            this.btnToday.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnToday.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(83)))), ((int)(((byte)(255)))));
+            this.btnToday.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnToday.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.btnToday.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(141)))), ((int)(((byte)(181)))));
+            this.btnToday.Location = new System.Drawing.Point(210, 13);
+            this.btnToday.Margin = new System.Windows.Forms.Padding(3, 8, 3, 3);
+            this.btnToday.Name = "btnToday";
+            this.btnToday.Size = new System.Drawing.Size(122, 38);
+            this.btnToday.TabIndex = 20;
+            this.btnToday.Text = "Today";
+            this.btnToday.UseVisualStyleBackColor = true;
+            this.btnToday.Click += new System.EventHandler(this.btnToday_Click);
+            // 
+            // btnLast7d
+            // 
+            this.btnLast7d.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnLast7d.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(83)))), ((int)(((byte)(255)))));
+            this.btnLast7d.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLast7d.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnLast7d.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(141)))), ((int)(((byte)(181)))));
+            this.btnLast7d.Location = new System.Drawing.Point(335, 13);
+            this.btnLast7d.Margin = new System.Windows.Forms.Padding(3, 8, 3, 3);
+            this.btnLast7d.Name = "btnLast7d";
+            this.btnLast7d.Size = new System.Drawing.Size(122, 38);
+            this.btnLast7d.TabIndex = 19;
+            this.btnLast7d.Text = "Last 7 days";
+            this.btnLast7d.UseVisualStyleBackColor = true;
+            this.btnLast7d.Click += new System.EventHandler(this.btnLast7d_Click);
             // 
             // frmDashBoard
             // 
