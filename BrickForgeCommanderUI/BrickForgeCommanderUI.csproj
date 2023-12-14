@@ -77,8 +77,17 @@
     <Compile Include="Controls\BFC_TextBox.Designer.cs">
       <DependentUpon>BFC_TextBox.cs</DependentUpon>
     </Compile>
+    <Compile Include="Controls\FunctionControls\BFC_UndoRedo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\FunctionControls\BFC_UndoRedo.Designer.cs">
+      <DependentUpon>BFC_UndoRedo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Controls\MenuColorTable.cs" />
     <Compile Include="Controls\MenuRenderer.cs" />
+    <Compile Include="Controls\NavControls\BFC_Close.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Dashboard\frmDashBoard.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -86,12 +95,6 @@
       <DependentUpon>frmDashBoard.cs</DependentUpon>
     </Compile>
     <Compile Include="Dashboard\Models\DashBoard.cs" />
-    <Compile Include="Dashboard\test.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Dashboard\test.Designer.cs">
-      <DependentUpon>test.cs</DependentUpon>
-    </Compile>
     <Compile Include="Db\DbConnection.cs" />
     <Compile Include="Login &amp; Registeration\frmForgotPwd.cs">
       <SubType>Form</SubType>
@@ -118,6 +121,12 @@
     <Compile Include="MasterForms\frmModeDetails.Designer.cs">
       <DependentUpon>frmModeDetails.cs</DependentUpon>
     </Compile>
+    <Compile Include="MasterForms\Menu\frmMasterMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MasterForms\Menu\frmMasterMenu.Designer.cs">
+      <DependentUpon>frmMasterMenu.cs</DependentUpon>
+    </Compile>
     <Compile Include="MasterForms\VendorTypeDetails.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -126,14 +135,17 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Controls\BFC_ComboBox.resx">
+      <DependentUpon>BFC_ComboBox.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Controls\BFC_TextBox.resx">
       <DependentUpon>BFC_TextBox.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Controls\FunctionControls\BFC_UndoRedo.resx">
+      <DependentUpon>BFC_UndoRedo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Dashboard\frmDashBoard.resx">
       <DependentUpon>frmDashBoard.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Dashboard\test.resx">
-      <DependentUpon>test.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login &amp; Registeration\frmForgotPwd.resx">
       <DependentUpon>frmForgotPwd.cs</DependentUpon>
@@ -146,6 +158,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MasterForms\frmModeDetails.resx">
       <DependentUpon>frmModeDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MasterForms\Menu\frmMasterMenu.resx">
+      <DependentUpon>frmMasterMenu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MasterForms\VendorTypeDetails.resx">
       <DependentUpon>VendorTypeDetails.cs</DependentUpon>
@@ -291,7 +306,13 @@
     <None Include="Resources\NavIcons\icons8-tick-24.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\NavIcons\icons8-close-24.png" />
+    <None Include="Resources\NavIcons\icons8_close_24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CustomControls\calendarDark.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CustomControls\calendarWhite.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

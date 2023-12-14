@@ -10,6 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using BrickForgeCommanderUI.MasterForms;
+using BrickForgeCommanderUI.MasterForms.Menu;
 
 namespace BrickForgeCommanderUI.Dashboard
 {
@@ -108,7 +109,7 @@ namespace BrickForgeCommanderUI.Dashboard
 
                 chartGrossRevenue.DataSource = model.GrossRevenueList;
                 chartGrossRevenue.Series[0].XValueMember = "Date";
-                chartGrossRevenue.Series[0].YValueMembers = "Total Amount";
+                chartGrossRevenue.Series[0].YValueMembers = "TotalAmount";
                 chartGrossRevenue.DataBind();
 
                 chartTop5Products.DataSource = model.TopProductsList;
@@ -136,56 +137,6 @@ namespace BrickForgeCommanderUI.Dashboard
         #endregion
 
         #region TimerCode
-
-        private void timerMaster_Tick(object sender, EventArgs e)
-        {
-            if (WindowState == FormWindowState.Maximized)
-            {
-                if (masterCollapsed)
-                {
-                    fpnlMasterContainer.Height += 10;
-                    if (fpnlMasterContainer.Height == fpnlMasterContainer.MaximumSize.Height)
-                    {
-                        masterCollapsed = false;
-                        timerMaster.Stop();
-                    }
-                }
-                else
-                {
-                    fpnlMasterContainer.Height -= 10;
-                    if (fpnlMasterContainer.Height == fpnlMasterContainer.MinimumSize.Height)
-                    {
-                        masterCollapsed = true;
-                        timerMaster.Stop();
-                    }
-                }
-            }
-        }
-
-        private void timerProduction_Tick(object sender, EventArgs e)
-        {
-            if (WindowState == FormWindowState.Maximized)
-            {
-                if (productionCollapsed)
-                {
-                    fpnlProduction.Height += 10;
-                    if (fpnlProduction.Height == fpnlProduction.MaximumSize.Height)
-                    {
-                        productionCollapsed = false;
-                        timerProduction.Stop();
-                    }
-                }
-                else
-                {
-                    fpnlProduction.Height -= 10;
-                    if (fpnlProduction.Height == fpnlProduction.MinimumSize.Height)
-                    {
-                        productionCollapsed = true;
-                        timerProduction.Stop();
-                    }
-                }
-            }
-        }
 
         private void sideBarTimer_Tick(object sender, EventArgs e)
         {
@@ -258,16 +209,6 @@ namespace BrickForgeCommanderUI.Dashboard
         #endregion
 
         #region Buttons Click Events
-
-        private void btnMaster_Click(object sender, EventArgs e)
-        {
-            timerMaster.Start();
-        }
-
-        private void btnProduction_Click(object sender, EventArgs e)
-        {
-            timerProduction.Start();
-        }
 
         private void btnLogOut_Click(object sender, EventArgs e)
         {
@@ -374,14 +315,9 @@ namespace BrickForgeCommanderUI.Dashboard
             lblEndDate.Text = dtpEndDate.Text;
         }
 
-        private void btnMaster_MouseClick(object sender, MouseEventArgs e)
+        private void btnMaster_Click(object sender, EventArgs e)
         {
-            new frmVendorTypeDetails().Show();
-        }
-
-        private void btnReports_Click(object sender, EventArgs e)
-        {
-            
+            new frmMasterMenu().Show();
         }
     }
 }
