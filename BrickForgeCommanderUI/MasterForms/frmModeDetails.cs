@@ -19,8 +19,8 @@ namespace BrickForgeCommanderUI.MasterForms
             InitializeComponent();
             undoRedo = new BFC_UndoRedo();
 
-            undoRedo.TextBoxes.Add(txtId);
-            undoRedo.TextBoxes.Add(txtName);
+           // undoRedo.TextBoxes.Add(txtId);
+          //  undoRedo.TextBoxes.Add(txtName);
 
             undoRedo.TextBoxName = "CommonName";
 
@@ -45,6 +45,11 @@ namespace BrickForgeCommanderUI.MasterForms
         }
 
         private void frmModeDetails_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bfC_TextBox1_KeyDown(object sender, KeyEventArgs e)
         {
 
         }

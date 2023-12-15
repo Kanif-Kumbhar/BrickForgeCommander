@@ -30,16 +30,16 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDashBoard));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea11 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend11 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series11 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title11 = new System.Windows.Forms.DataVisualization.Charting.Title();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea12 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend12 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series12 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title12 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title3 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title4 = new System.Windows.Forms.DataVisualization.Charting.Title();
             this.sideBarTimer = new System.Windows.Forms.Timer(this.components);
             this.floatPanelTop = new System.Windows.Forms.FlowLayoutPanel();
             this.pbClose = new System.Windows.Forms.PictureBox();
@@ -53,10 +53,15 @@
             this.lblMenu = new System.Windows.Forms.Label();
             this.siderBar = new System.Windows.Forms.FlowLayoutPanel();
             this.panel22 = new System.Windows.Forms.Panel();
+            this.btnMaster = new BrickForgeCommanderUI.Controls.BFC_Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.bfC_Button1 = new BrickForgeCommanderUI.Controls.BFC_Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.bfC_Button2 = new BrickForgeCommanderUI.Controls.BFC_Button();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.bfC_Button3 = new BrickForgeCommanderUI.Controls.BFC_Button();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.bfC_Button4 = new BrickForgeCommanderUI.Controls.BFC_Button();
             this.pnlMain = new System.Windows.Forms.Panel();
             this.panel21 = new System.Windows.Forms.Panel();
             this.panel28 = new System.Windows.Forms.Panel();
@@ -97,16 +102,11 @@
             this.dtpEndDate = new System.Windows.Forms.DateTimePicker();
             this.label2 = new System.Windows.Forms.Label();
             this.btnThisMonth = new System.Windows.Forms.Button();
-            this.btnLast30d = new System.Windows.Forms.Button();
             this.btnLast7d = new System.Windows.Forms.Button();
-            this.btnToday = new System.Windows.Forms.Button();
-            this.btnCustom = new System.Windows.Forms.Button();
             this.btnOk = new System.Windows.Forms.Button();
-            this.btnMaster = new BrickForgeCommanderUI.Controls.BFC_Button();
-            this.bfC_Button1 = new BrickForgeCommanderUI.Controls.BFC_Button();
-            this.bfC_Button2 = new BrickForgeCommanderUI.Controls.BFC_Button();
-            this.bfC_Button3 = new BrickForgeCommanderUI.Controls.BFC_Button();
-            this.bfC_Button4 = new BrickForgeCommanderUI.Controls.BFC_Button();
+            this.btnLast30d = new System.Windows.Forms.Button();
+            this.btnCustom = new System.Windows.Forms.Button();
+            this.btnToday = new System.Windows.Forms.Button();
             this.floatPanelTop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbClose)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbMaximize)).BeginInit();
@@ -157,15 +157,15 @@
             this.floatPanelTop.Controls.Add(this.pbMinimize);
             this.floatPanelTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.floatPanelTop.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
-            this.floatPanelTop.Location = new System.Drawing.Point(200, 0);
+            this.floatPanelTop.Location = new System.Drawing.Point(61, 0);
             this.floatPanelTop.Name = "floatPanelTop";
-            this.floatPanelTop.Size = new System.Drawing.Size(1390, 43);
+            this.floatPanelTop.Size = new System.Drawing.Size(1529, 43);
             this.floatPanelTop.TabIndex = 12;
             // 
             // pbClose
             // 
             this.pbClose.Image = ((System.Drawing.Image)(resources.GetObject("pbClose.Image")));
-            this.pbClose.Location = new System.Drawing.Point(1356, 10);
+            this.pbClose.Location = new System.Drawing.Point(1495, 10);
             this.pbClose.Margin = new System.Windows.Forms.Padding(10);
             this.pbClose.Name = "pbClose";
             this.pbClose.Size = new System.Drawing.Size(24, 26);
@@ -176,7 +176,7 @@
             // pbMaximize
             // 
             this.pbMaximize.Image = ((System.Drawing.Image)(resources.GetObject("pbMaximize.Image")));
-            this.pbMaximize.Location = new System.Drawing.Point(1309, 10);
+            this.pbMaximize.Location = new System.Drawing.Point(1448, 10);
             this.pbMaximize.Margin = new System.Windows.Forms.Padding(10);
             this.pbMaximize.Name = "pbMaximize";
             this.pbMaximize.Size = new System.Drawing.Size(27, 26);
@@ -187,7 +187,7 @@
             // pbMinimize
             // 
             this.pbMinimize.Image = ((System.Drawing.Image)(resources.GetObject("pbMinimize.Image")));
-            this.pbMinimize.Location = new System.Drawing.Point(1267, 10);
+            this.pbMinimize.Location = new System.Drawing.Point(1406, 10);
             this.pbMinimize.Margin = new System.Windows.Forms.Padding(10);
             this.pbMinimize.Name = "pbMinimize";
             this.pbMinimize.Size = new System.Drawing.Size(22, 26);
@@ -201,9 +201,9 @@
             this.flowPanelBottom.Controls.Add(this.lblLogOut);
             this.flowPanelBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.flowPanelBottom.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
-            this.flowPanelBottom.Location = new System.Drawing.Point(200, 731);
+            this.flowPanelBottom.Location = new System.Drawing.Point(61, 731);
             this.flowPanelBottom.Name = "flowPanelBottom";
-            this.flowPanelBottom.Size = new System.Drawing.Size(1390, 36);
+            this.flowPanelBottom.Size = new System.Drawing.Size(1529, 36);
             this.flowPanelBottom.TabIndex = 13;
             // 
             // lblLogOut
@@ -213,7 +213,7 @@
             this.lblLogOut.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.lblLogOut.ForeColor = System.Drawing.Color.White;
             this.lblLogOut.Image = ((System.Drawing.Image)(resources.GetObject("lblLogOut.Image")));
-            this.lblLogOut.Location = new System.Drawing.Point(1335, 0);
+            this.lblLogOut.Location = new System.Drawing.Point(1474, 0);
             this.lblLogOut.Margin = new System.Windows.Forms.Padding(0, 0, 5, 0);
             this.lblLogOut.Name = "lblLogOut";
             this.lblLogOut.Padding = new System.Windows.Forms.Padding(25, 0, 25, 0);
@@ -244,7 +244,7 @@
             // pbMenu
             // 
             this.pbMenu.Image = ((System.Drawing.Image)(resources.GetObject("pbMenu.Image")));
-            this.pbMenu.Location = new System.Drawing.Point(6, 33);
+            this.pbMenu.Location = new System.Drawing.Point(0, 33);
             this.pbMenu.Name = "pbMenu";
             this.pbMenu.Padding = new System.Windows.Forms.Padding(10);
             this.pbMenu.Size = new System.Drawing.Size(49, 47);
@@ -278,7 +278,7 @@
             this.siderBar.MaximumSize = new System.Drawing.Size(200, 1080);
             this.siderBar.MinimumSize = new System.Drawing.Size(61, 627);
             this.siderBar.Name = "siderBar";
-            this.siderBar.Size = new System.Drawing.Size(200, 767);
+            this.siderBar.Size = new System.Drawing.Size(61, 767);
             this.siderBar.TabIndex = 11;
             // 
             // panel22
@@ -291,6 +291,29 @@
             this.panel22.Size = new System.Drawing.Size(194, 59);
             this.panel22.TabIndex = 28;
             // 
+            // btnMaster
+            // 
+            this.btnMaster.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+            this.btnMaster.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+            this.btnMaster.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnMaster.BorderRadius = 1;
+            this.btnMaster.BorderSize = 0;
+            this.btnMaster.FlatAppearance.BorderSize = 0;
+            this.btnMaster.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMaster.Font = new System.Drawing.Font("Nirmala UI", 14F);
+            this.btnMaster.ForeColor = System.Drawing.Color.White;
+            this.btnMaster.Image = global::BrickForgeCommanderUI.Properties.Resources.icons8_master_40;
+            this.btnMaster.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnMaster.Location = new System.Drawing.Point(0, 0);
+            this.btnMaster.Name = "btnMaster";
+            this.btnMaster.Size = new System.Drawing.Size(195, 59);
+            this.btnMaster.TabIndex = 0;
+            this.btnMaster.Text = "Master   ";
+            this.btnMaster.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnMaster.TextColor = System.Drawing.Color.White;
+            this.btnMaster.UseVisualStyleBackColor = false;
+            this.btnMaster.Click += new System.EventHandler(this.btnMaster_Click);
+            // 
             // panel1
             // 
             this.panel1.Controls.Add(this.bfC_Button1);
@@ -300,6 +323,28 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(194, 59);
             this.panel1.TabIndex = 29;
+            // 
+            // bfC_Button1
+            // 
+            this.bfC_Button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+            this.bfC_Button1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+            this.bfC_Button1.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.bfC_Button1.BorderRadius = 1;
+            this.bfC_Button1.BorderSize = 0;
+            this.bfC_Button1.FlatAppearance.BorderSize = 0;
+            this.bfC_Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bfC_Button1.Font = new System.Drawing.Font("Nirmala UI", 14F);
+            this.bfC_Button1.ForeColor = System.Drawing.Color.White;
+            this.bfC_Button1.Image = global::BrickForgeCommanderUI.Properties.Resources.icons8_master_40;
+            this.bfC_Button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.bfC_Button1.Location = new System.Drawing.Point(0, 0);
+            this.bfC_Button1.Name = "bfC_Button1";
+            this.bfC_Button1.Size = new System.Drawing.Size(195, 59);
+            this.bfC_Button1.TabIndex = 0;
+            this.bfC_Button1.Text = "Master   ";
+            this.bfC_Button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.bfC_Button1.TextColor = System.Drawing.Color.White;
+            this.bfC_Button1.UseVisualStyleBackColor = false;
             // 
             // panel2
             // 
@@ -311,6 +356,28 @@
             this.panel2.Size = new System.Drawing.Size(194, 59);
             this.panel2.TabIndex = 30;
             // 
+            // bfC_Button2
+            // 
+            this.bfC_Button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+            this.bfC_Button2.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+            this.bfC_Button2.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.bfC_Button2.BorderRadius = 1;
+            this.bfC_Button2.BorderSize = 0;
+            this.bfC_Button2.FlatAppearance.BorderSize = 0;
+            this.bfC_Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bfC_Button2.Font = new System.Drawing.Font("Nirmala UI", 14F);
+            this.bfC_Button2.ForeColor = System.Drawing.Color.White;
+            this.bfC_Button2.Image = global::BrickForgeCommanderUI.Properties.Resources.icons8_master_40;
+            this.bfC_Button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.bfC_Button2.Location = new System.Drawing.Point(0, 0);
+            this.bfC_Button2.Name = "bfC_Button2";
+            this.bfC_Button2.Size = new System.Drawing.Size(195, 59);
+            this.bfC_Button2.TabIndex = 0;
+            this.bfC_Button2.Text = "Master   ";
+            this.bfC_Button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.bfC_Button2.TextColor = System.Drawing.Color.White;
+            this.bfC_Button2.UseVisualStyleBackColor = false;
+            // 
             // panel3
             // 
             this.panel3.Controls.Add(this.bfC_Button3);
@@ -320,6 +387,28 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(194, 59);
             this.panel3.TabIndex = 31;
+            // 
+            // bfC_Button3
+            // 
+            this.bfC_Button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+            this.bfC_Button3.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+            this.bfC_Button3.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.bfC_Button3.BorderRadius = 1;
+            this.bfC_Button3.BorderSize = 0;
+            this.bfC_Button3.FlatAppearance.BorderSize = 0;
+            this.bfC_Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bfC_Button3.Font = new System.Drawing.Font("Nirmala UI", 14F);
+            this.bfC_Button3.ForeColor = System.Drawing.Color.White;
+            this.bfC_Button3.Image = global::BrickForgeCommanderUI.Properties.Resources.icons8_master_40;
+            this.bfC_Button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.bfC_Button3.Location = new System.Drawing.Point(0, 0);
+            this.bfC_Button3.Name = "bfC_Button3";
+            this.bfC_Button3.Size = new System.Drawing.Size(195, 59);
+            this.bfC_Button3.TabIndex = 0;
+            this.bfC_Button3.Text = "Master   ";
+            this.bfC_Button3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.bfC_Button3.TextColor = System.Drawing.Color.White;
+            this.bfC_Button3.UseVisualStyleBackColor = false;
             // 
             // panel4
             // 
@@ -331,15 +420,37 @@
             this.panel4.Size = new System.Drawing.Size(194, 59);
             this.panel4.TabIndex = 32;
             // 
+            // bfC_Button4
+            // 
+            this.bfC_Button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+            this.bfC_Button4.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+            this.bfC_Button4.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.bfC_Button4.BorderRadius = 1;
+            this.bfC_Button4.BorderSize = 0;
+            this.bfC_Button4.FlatAppearance.BorderSize = 0;
+            this.bfC_Button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bfC_Button4.Font = new System.Drawing.Font("Nirmala UI", 14F);
+            this.bfC_Button4.ForeColor = System.Drawing.Color.White;
+            this.bfC_Button4.Image = global::BrickForgeCommanderUI.Properties.Resources.icons8_master_40;
+            this.bfC_Button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.bfC_Button4.Location = new System.Drawing.Point(0, 0);
+            this.bfC_Button4.Name = "bfC_Button4";
+            this.bfC_Button4.Size = new System.Drawing.Size(195, 59);
+            this.bfC_Button4.TabIndex = 0;
+            this.bfC_Button4.Text = "Master   ";
+            this.bfC_Button4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.bfC_Button4.TextColor = System.Drawing.Color.White;
+            this.bfC_Button4.UseVisualStyleBackColor = false;
+            // 
             // pnlMain
             // 
             this.pnlMain.Controls.Add(this.panel21);
             this.pnlMain.Controls.Add(this.panel20);
             this.pnlMain.Controls.Add(this.splitContainer1);
             this.pnlMain.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlMain.Location = new System.Drawing.Point(200, 43);
+            this.pnlMain.Location = new System.Drawing.Point(61, 43);
             this.pnlMain.Name = "pnlMain";
-            this.pnlMain.Size = new System.Drawing.Size(1390, 688);
+            this.pnlMain.Size = new System.Drawing.Size(1529, 688);
             this.pnlMain.TabIndex = 15;
             // 
             // panel21
@@ -351,7 +462,7 @@
             this.panel21.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel21.Location = new System.Drawing.Point(0, 152);
             this.panel21.Name = "panel21";
-            this.panel21.Size = new System.Drawing.Size(1390, 536);
+            this.panel21.Size = new System.Drawing.Size(1529, 536);
             this.panel21.TabIndex = 25;
             // 
             // panel28
@@ -360,7 +471,7 @@
             this.panel28.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(45)))), ((int)(((byte)(86)))));
             this.panel28.Controls.Add(this.dgvUnderStock);
             this.panel28.Controls.Add(this.label15);
-            this.panel28.Location = new System.Drawing.Point(334, 333);
+            this.panel28.Location = new System.Drawing.Point(473, 333);
             this.panel28.Name = "panel28";
             this.panel28.Size = new System.Drawing.Size(420, 197);
             this.panel28.TabIndex = 41;
@@ -372,23 +483,23 @@
             this.dgvUnderStock.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvUnderStock.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgvUnderStock.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(45)))), ((int)(((byte)(86)))));
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
-            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(141)))), ((int)(((byte)(181)))));
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvUnderStock.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(45)))), ((int)(((byte)(86)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(141)))), ((int)(((byte)(181)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvUnderStock.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvUnderStock.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(45)))), ((int)(((byte)(86)))));
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
-            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.Silver;
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(122)))), ((int)(((byte)(133)))));
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvUnderStock.DefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(45)))), ((int)(((byte)(86)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Silver;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(122)))), ((int)(((byte)(133)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvUnderStock.DefaultCellStyle = dataGridViewCellStyle4;
             this.dgvUnderStock.EnableHeadersVisualStyles = false;
             this.dgvUnderStock.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(75)))), ((int)(((byte)(111)))));
             this.dgvUnderStock.Location = new System.Drawing.Point(18, 38);
@@ -428,7 +539,7 @@
             this.panel29.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel29.Location = new System.Drawing.Point(7, 333);
             this.panel29.Name = "panel29";
-            this.panel29.Size = new System.Drawing.Size(321, 197);
+            this.panel29.Size = new System.Drawing.Size(460, 197);
             this.panel29.TabIndex = 40;
             // 
             // pictureBox8
@@ -537,16 +648,16 @@
             this.chartTop5Products.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.chartTop5Products.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(45)))), ((int)(((byte)(86)))));
-            chartArea11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(45)))), ((int)(((byte)(86)))));
-            chartArea11.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(45)))), ((int)(((byte)(86)))));
-            chartArea11.Name = "ChartArea1";
-            this.chartTop5Products.ChartAreas.Add(chartArea11);
-            legend11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(45)))), ((int)(((byte)(86)))));
-            legend11.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Bottom;
-            legend11.ForeColor = System.Drawing.Color.Gainsboro;
-            legend11.Name = "Legend1";
-            this.chartTop5Products.Legends.Add(legend11);
-            this.chartTop5Products.Location = new System.Drawing.Point(760, -2);
+            chartArea3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(45)))), ((int)(((byte)(86)))));
+            chartArea3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(45)))), ((int)(((byte)(86)))));
+            chartArea3.Name = "ChartArea1";
+            this.chartTop5Products.ChartAreas.Add(chartArea3);
+            legend3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(45)))), ((int)(((byte)(86)))));
+            legend3.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Bottom;
+            legend3.ForeColor = System.Drawing.Color.Gainsboro;
+            legend3.Name = "Legend1";
+            this.chartTop5Products.Legends.Add(legend3);
+            this.chartTop5Products.Location = new System.Drawing.Point(899, -2);
             this.chartTop5Products.Name = "chartTop5Products";
             this.chartTop5Products.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None;
             this.chartTop5Products.PaletteCustomColors = new System.Drawing.Color[] {
@@ -555,27 +666,27 @@
         System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(88)))), ((int)(((byte)(127))))),
         System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(83)))), ((int)(((byte)(255))))),
         System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(153)))), ((int)(((byte)(254)))))};
-            series11.BackGradientStyle = System.Windows.Forms.DataVisualization.Charting.GradientStyle.DiagonalRight;
-            series11.BackSecondaryColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(159)))), ((int)(((byte)(255)))));
-            series11.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(45)))), ((int)(((byte)(86)))));
-            series11.BorderWidth = 10;
-            series11.ChartArea = "ChartArea1";
-            series11.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Doughnut;
-            series11.Color = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            series11.IsValueShownAsLabel = true;
-            series11.LabelForeColor = System.Drawing.Color.White;
-            series11.Legend = "Legend1";
-            series11.Name = "Series1";
-            this.chartTop5Products.Series.Add(series11);
+            series3.BackGradientStyle = System.Windows.Forms.DataVisualization.Charting.GradientStyle.DiagonalRight;
+            series3.BackSecondaryColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(159)))), ((int)(((byte)(255)))));
+            series3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(45)))), ((int)(((byte)(86)))));
+            series3.BorderWidth = 10;
+            series3.ChartArea = "ChartArea1";
+            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Doughnut;
+            series3.Color = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            series3.IsValueShownAsLabel = true;
+            series3.LabelForeColor = System.Drawing.Color.White;
+            series3.Legend = "Legend1";
+            series3.Name = "Series1";
+            this.chartTop5Products.Series.Add(series3);
             this.chartTop5Products.Size = new System.Drawing.Size(624, 532);
             this.chartTop5Products.TabIndex = 39;
             this.chartTop5Products.Text = "chart2";
-            title11.Alignment = System.Drawing.ContentAlignment.MiddleLeft;
-            title11.Font = new System.Drawing.Font("Segoe UI", 14F);
-            title11.ForeColor = System.Drawing.Color.WhiteSmoke;
-            title11.Name = "Title1";
-            title11.Text = "Top 5 Products";
-            this.chartTop5Products.Titles.Add(title11);
+            title3.Alignment = System.Drawing.ContentAlignment.MiddleLeft;
+            title3.Font = new System.Drawing.Font("Segoe UI", 14F);
+            title3.ForeColor = System.Drawing.Color.WhiteSmoke;
+            title3.Name = "Title1";
+            title3.Text = "Top 5 Products";
+            this.chartTop5Products.Titles.Add(title3);
             // 
             // chartGrossRevenue
             // 
@@ -583,50 +694,50 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.chartGrossRevenue.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(45)))), ((int)(((byte)(86)))));
-            chartArea12.AxisX.IsMarginVisible = false;
-            chartArea12.AxisX.LabelStyle.ForeColor = System.Drawing.Color.Silver;
-            chartArea12.AxisX.LineColor = System.Drawing.Color.White;
-            chartArea12.AxisX.LineWidth = 0;
-            chartArea12.AxisX.MajorGrid.LineColor = System.Drawing.Color.White;
-            chartArea12.AxisX.MajorGrid.LineWidth = 0;
-            chartArea12.AxisX.MajorTickMark.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(75)))), ((int)(((byte)(111)))));
-            chartArea12.AxisX.MajorTickMark.LineWidth = 0;
-            chartArea12.AxisY.LabelStyle.ForeColor = System.Drawing.Color.Silver;
-            chartArea12.AxisY.LabelStyle.Format = "₹{0:0,}K";
-            chartArea12.AxisY.LineWidth = 0;
-            chartArea12.AxisY.MajorGrid.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(75)))), ((int)(((byte)(111)))));
-            chartArea12.AxisY.MajorTickMark.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(75)))), ((int)(((byte)(111)))));
-            chartArea12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(45)))), ((int)(((byte)(86)))));
-            chartArea12.Name = "ChartArea1";
-            this.chartGrossRevenue.ChartAreas.Add(chartArea12);
-            legend12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(45)))), ((int)(((byte)(86)))));
-            legend12.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Top;
-            legend12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            legend12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            legend12.IsTextAutoFit = false;
-            legend12.Name = "Legend1";
-            this.chartGrossRevenue.Legends.Add(legend12);
+            chartArea4.AxisX.IsMarginVisible = false;
+            chartArea4.AxisX.LabelStyle.ForeColor = System.Drawing.Color.Silver;
+            chartArea4.AxisX.LineColor = System.Drawing.Color.White;
+            chartArea4.AxisX.LineWidth = 0;
+            chartArea4.AxisX.MajorGrid.LineColor = System.Drawing.Color.White;
+            chartArea4.AxisX.MajorGrid.LineWidth = 0;
+            chartArea4.AxisX.MajorTickMark.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(75)))), ((int)(((byte)(111)))));
+            chartArea4.AxisX.MajorTickMark.LineWidth = 0;
+            chartArea4.AxisY.LabelStyle.ForeColor = System.Drawing.Color.Silver;
+            chartArea4.AxisY.LabelStyle.Format = "₹{0:0,}K";
+            chartArea4.AxisY.LineWidth = 0;
+            chartArea4.AxisY.MajorGrid.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(75)))), ((int)(((byte)(111)))));
+            chartArea4.AxisY.MajorTickMark.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(75)))), ((int)(((byte)(111)))));
+            chartArea4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(45)))), ((int)(((byte)(86)))));
+            chartArea4.Name = "ChartArea1";
+            this.chartGrossRevenue.ChartAreas.Add(chartArea4);
+            legend4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(45)))), ((int)(((byte)(86)))));
+            legend4.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Top;
+            legend4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            legend4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            legend4.IsTextAutoFit = false;
+            legend4.Name = "Legend1";
+            this.chartGrossRevenue.Legends.Add(legend4);
             this.chartGrossRevenue.Location = new System.Drawing.Point(7, -2);
             this.chartGrossRevenue.Name = "chartGrossRevenue";
-            series12.BackGradientStyle = System.Windows.Forms.DataVisualization.Charting.GradientStyle.LeftRight;
-            series12.BackSecondaryColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(83)))), ((int)(((byte)(255)))));
-            series12.BorderWidth = 3;
-            series12.ChartArea = "ChartArea1";
-            series12.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.SplineArea;
-            series12.Color = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(88)))), ((int)(((byte)(127)))));
-            series12.Legend = "Legend1";
-            series12.MarkerSize = 10;
-            series12.Name = "Series1";
-            this.chartGrossRevenue.Series.Add(series12);
-            this.chartGrossRevenue.Size = new System.Drawing.Size(747, 329);
+            series4.BackGradientStyle = System.Windows.Forms.DataVisualization.Charting.GradientStyle.LeftRight;
+            series4.BackSecondaryColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(83)))), ((int)(((byte)(255)))));
+            series4.BorderWidth = 3;
+            series4.ChartArea = "ChartArea1";
+            series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.SplineArea;
+            series4.Color = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(88)))), ((int)(((byte)(127)))));
+            series4.Legend = "Legend1";
+            series4.MarkerSize = 10;
+            series4.Name = "Series1";
+            this.chartGrossRevenue.Series.Add(series4);
+            this.chartGrossRevenue.Size = new System.Drawing.Size(886, 329);
             this.chartGrossRevenue.TabIndex = 38;
             this.chartGrossRevenue.Text = "chart1";
-            title12.Alignment = System.Drawing.ContentAlignment.MiddleLeft;
-            title12.Font = new System.Drawing.Font("Segoe UI", 14F);
-            title12.ForeColor = System.Drawing.Color.WhiteSmoke;
-            title12.Name = "Title1";
-            title12.Text = "Gross Revenue";
-            this.chartGrossRevenue.Titles.Add(title12);
+            title4.Alignment = System.Drawing.ContentAlignment.MiddleLeft;
+            title4.Font = new System.Drawing.Font("Segoe UI", 14F);
+            title4.ForeColor = System.Drawing.Color.WhiteSmoke;
+            title4.Name = "Title1";
+            title4.Text = "Gross Revenue";
+            this.chartGrossRevenue.Titles.Add(title4);
             // 
             // panel20
             // 
@@ -636,7 +747,7 @@
             this.panel20.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel20.Location = new System.Drawing.Point(0, 58);
             this.panel20.Name = "panel20";
-            this.panel20.Size = new System.Drawing.Size(1390, 94);
+            this.panel20.Size = new System.Drawing.Size(1529, 94);
             this.panel20.TabIndex = 24;
             // 
             // panel24
@@ -646,7 +757,7 @@
             this.panel24.Controls.Add(this.pictureBox4);
             this.panel24.Controls.Add(this.lblTotalProfit);
             this.panel24.Controls.Add(this.label6);
-            this.panel24.Location = new System.Drawing.Point(839, 11);
+            this.panel24.Location = new System.Drawing.Point(978, 11);
             this.panel24.Name = "panel24";
             this.panel24.Size = new System.Drawing.Size(545, 78);
             this.panel24.TabIndex = 36;
@@ -692,7 +803,7 @@
             this.panel25.Controls.Add(this.label4);
             this.panel25.Location = new System.Drawing.Point(370, 11);
             this.panel25.Name = "panel25";
-            this.panel25.Size = new System.Drawing.Size(463, 78);
+            this.panel25.Size = new System.Drawing.Size(602, 78);
             this.panel25.TabIndex = 35;
             // 
             // pictureBox3
@@ -790,8 +901,8 @@
             this.splitContainer1.Panel2.Controls.Add(this.btnLast30d);
             this.splitContainer1.Panel2.Controls.Add(this.btnCustom);
             this.splitContainer1.Panel2.Controls.Add(this.btnToday);
-            this.splitContainer1.Size = new System.Drawing.Size(1390, 58);
-            this.splitContainer1.SplitterDistance = 680;
+            this.splitContainer1.Size = new System.Drawing.Size(1529, 58);
+            this.splitContainer1.SplitterDistance = 825;
             this.splitContainer1.SplitterWidth = 1;
             this.splitContainer1.TabIndex = 23;
             // 
@@ -803,7 +914,7 @@
             this.panel27.Controls.Add(this.dtpStartDate);
             this.panel27.Controls.Add(this.dtpEndDate);
             this.panel27.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel27.Location = new System.Drawing.Point(199, 0);
+            this.panel27.Location = new System.Drawing.Point(344, 0);
             this.panel27.Name = "panel27";
             this.panel27.Size = new System.Drawing.Size(481, 58);
             this.panel27.TabIndex = 16;
@@ -902,22 +1013,6 @@
             this.btnThisMonth.UseVisualStyleBackColor = true;
             this.btnThisMonth.Click += new System.EventHandler(this.btnThisMonth_Click);
             // 
-            // btnLast30d
-            // 
-            this.btnLast30d.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnLast30d.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(83)))), ((int)(((byte)(255)))));
-            this.btnLast30d.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLast30d.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnLast30d.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(141)))), ((int)(((byte)(181)))));
-            this.btnLast30d.Location = new System.Drawing.Point(456, 11);
-            this.btnLast30d.Margin = new System.Windows.Forms.Padding(3, 8, 3, 3);
-            this.btnLast30d.Name = "btnLast30d";
-            this.btnLast30d.Size = new System.Drawing.Size(122, 38);
-            this.btnLast30d.TabIndex = 18;
-            this.btnLast30d.Text = "Last 30 days";
-            this.btnLast30d.UseVisualStyleBackColor = true;
-            this.btnLast30d.Click += new System.EventHandler(this.btnLast30d_Click);
-            // 
             // btnLast7d
             // 
             this.btnLast7d.Anchor = System.Windows.Forms.AnchorStyles.Top;
@@ -933,39 +1028,6 @@
             this.btnLast7d.Text = "Last 7 days";
             this.btnLast7d.UseVisualStyleBackColor = true;
             this.btnLast7d.Click += new System.EventHandler(this.btnLast7d_Click);
-            // 
-            // btnToday
-            // 
-            this.btnToday.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnToday.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(83)))), ((int)(((byte)(255)))));
-            this.btnToday.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnToday.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.btnToday.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(141)))), ((int)(((byte)(181)))));
-            this.btnToday.Location = new System.Drawing.Point(185, 11);
-            this.btnToday.Margin = new System.Windows.Forms.Padding(3, 8, 3, 3);
-            this.btnToday.Name = "btnToday";
-            this.btnToday.Size = new System.Drawing.Size(149, 38);
-            this.btnToday.TabIndex = 20;
-            this.btnToday.Text = "Today";
-            this.btnToday.UseVisualStyleBackColor = true;
-            this.btnToday.Click += new System.EventHandler(this.btnToday_Click);
-            // 
-            // btnCustom
-            // 
-            this.btnCustom.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnCustom.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnCustom.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(83)))), ((int)(((byte)(255)))));
-            this.btnCustom.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCustom.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.btnCustom.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(141)))), ((int)(((byte)(181)))));
-            this.btnCustom.Location = new System.Drawing.Point(41, 11);
-            this.btnCustom.Margin = new System.Windows.Forms.Padding(3, 8, 3, 3);
-            this.btnCustom.Name = "btnCustom";
-            this.btnCustom.Size = new System.Drawing.Size(149, 38);
-            this.btnCustom.TabIndex = 21;
-            this.btnCustom.Text = "Custom";
-            this.btnCustom.UseVisualStyleBackColor = true;
-            this.btnCustom.Click += new System.EventHandler(this.btnCustom_Click);
             // 
             // btnOk
             // 
@@ -986,116 +1048,54 @@
             this.btnOk.Visible = false;
             this.btnOk.Click += new System.EventHandler(this.btnOk_Click);
             // 
-            // btnMaster
+            // btnLast30d
             // 
-            this.btnMaster.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
-            this.btnMaster.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
-            this.btnMaster.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnMaster.BorderRadius = 1;
-            this.btnMaster.BorderSize = 0;
-            this.btnMaster.FlatAppearance.BorderSize = 0;
-            this.btnMaster.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMaster.Font = new System.Drawing.Font("Nirmala UI", 14F);
-            this.btnMaster.ForeColor = System.Drawing.Color.White;
-            this.btnMaster.Image = global::BrickForgeCommanderUI.Properties.Resources.icons8_master_40;
-            this.btnMaster.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMaster.Location = new System.Drawing.Point(0, 0);
-            this.btnMaster.Name = "btnMaster";
-            this.btnMaster.Size = new System.Drawing.Size(195, 59);
-            this.btnMaster.TabIndex = 0;
-            this.btnMaster.Text = "Master   ";
-            this.btnMaster.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnMaster.TextColor = System.Drawing.Color.White;
-            this.btnMaster.UseVisualStyleBackColor = false;
-            this.btnMaster.Click += new System.EventHandler(this.btnMaster_Click);
+            this.btnLast30d.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnLast30d.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(83)))), ((int)(((byte)(255)))));
+            this.btnLast30d.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLast30d.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnLast30d.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(141)))), ((int)(((byte)(181)))));
+            this.btnLast30d.Location = new System.Drawing.Point(456, 11);
+            this.btnLast30d.Margin = new System.Windows.Forms.Padding(3, 8, 3, 3);
+            this.btnLast30d.Name = "btnLast30d";
+            this.btnLast30d.Size = new System.Drawing.Size(122, 38);
+            this.btnLast30d.TabIndex = 18;
+            this.btnLast30d.Text = "Last 30 days";
+            this.btnLast30d.UseVisualStyleBackColor = true;
+            this.btnLast30d.Click += new System.EventHandler(this.btnLast30d_Click);
             // 
-            // bfC_Button1
+            // btnCustom
             // 
-            this.bfC_Button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
-            this.bfC_Button1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
-            this.bfC_Button1.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.bfC_Button1.BorderRadius = 1;
-            this.bfC_Button1.BorderSize = 0;
-            this.bfC_Button1.FlatAppearance.BorderSize = 0;
-            this.bfC_Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bfC_Button1.Font = new System.Drawing.Font("Nirmala UI", 14F);
-            this.bfC_Button1.ForeColor = System.Drawing.Color.White;
-            this.bfC_Button1.Image = global::BrickForgeCommanderUI.Properties.Resources.icons8_master_40;
-            this.bfC_Button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bfC_Button1.Location = new System.Drawing.Point(0, 0);
-            this.bfC_Button1.Name = "bfC_Button1";
-            this.bfC_Button1.Size = new System.Drawing.Size(195, 59);
-            this.bfC_Button1.TabIndex = 0;
-            this.bfC_Button1.Text = "Master   ";
-            this.bfC_Button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.bfC_Button1.TextColor = System.Drawing.Color.White;
-            this.bfC_Button1.UseVisualStyleBackColor = false;
+            this.btnCustom.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnCustom.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnCustom.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(83)))), ((int)(((byte)(255)))));
+            this.btnCustom.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCustom.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.btnCustom.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(141)))), ((int)(((byte)(181)))));
+            this.btnCustom.Location = new System.Drawing.Point(41, 11);
+            this.btnCustom.Margin = new System.Windows.Forms.Padding(3, 8, 3, 3);
+            this.btnCustom.Name = "btnCustom";
+            this.btnCustom.Size = new System.Drawing.Size(149, 38);
+            this.btnCustom.TabIndex = 21;
+            this.btnCustom.Text = "Custom";
+            this.btnCustom.UseVisualStyleBackColor = true;
+            this.btnCustom.Click += new System.EventHandler(this.btnCustom_Click);
             // 
-            // bfC_Button2
+            // btnToday
             // 
-            this.bfC_Button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
-            this.bfC_Button2.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
-            this.bfC_Button2.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.bfC_Button2.BorderRadius = 1;
-            this.bfC_Button2.BorderSize = 0;
-            this.bfC_Button2.FlatAppearance.BorderSize = 0;
-            this.bfC_Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bfC_Button2.Font = new System.Drawing.Font("Nirmala UI", 14F);
-            this.bfC_Button2.ForeColor = System.Drawing.Color.White;
-            this.bfC_Button2.Image = global::BrickForgeCommanderUI.Properties.Resources.icons8_master_40;
-            this.bfC_Button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bfC_Button2.Location = new System.Drawing.Point(0, 0);
-            this.bfC_Button2.Name = "bfC_Button2";
-            this.bfC_Button2.Size = new System.Drawing.Size(195, 59);
-            this.bfC_Button2.TabIndex = 0;
-            this.bfC_Button2.Text = "Master   ";
-            this.bfC_Button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.bfC_Button2.TextColor = System.Drawing.Color.White;
-            this.bfC_Button2.UseVisualStyleBackColor = false;
-            // 
-            // bfC_Button3
-            // 
-            this.bfC_Button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
-            this.bfC_Button3.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
-            this.bfC_Button3.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.bfC_Button3.BorderRadius = 1;
-            this.bfC_Button3.BorderSize = 0;
-            this.bfC_Button3.FlatAppearance.BorderSize = 0;
-            this.bfC_Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bfC_Button3.Font = new System.Drawing.Font("Nirmala UI", 14F);
-            this.bfC_Button3.ForeColor = System.Drawing.Color.White;
-            this.bfC_Button3.Image = global::BrickForgeCommanderUI.Properties.Resources.icons8_master_40;
-            this.bfC_Button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bfC_Button3.Location = new System.Drawing.Point(0, 0);
-            this.bfC_Button3.Name = "bfC_Button3";
-            this.bfC_Button3.Size = new System.Drawing.Size(195, 59);
-            this.bfC_Button3.TabIndex = 0;
-            this.bfC_Button3.Text = "Master   ";
-            this.bfC_Button3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.bfC_Button3.TextColor = System.Drawing.Color.White;
-            this.bfC_Button3.UseVisualStyleBackColor = false;
-            // 
-            // bfC_Button4
-            // 
-            this.bfC_Button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
-            this.bfC_Button4.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
-            this.bfC_Button4.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.bfC_Button4.BorderRadius = 1;
-            this.bfC_Button4.BorderSize = 0;
-            this.bfC_Button4.FlatAppearance.BorderSize = 0;
-            this.bfC_Button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bfC_Button4.Font = new System.Drawing.Font("Nirmala UI", 14F);
-            this.bfC_Button4.ForeColor = System.Drawing.Color.White;
-            this.bfC_Button4.Image = global::BrickForgeCommanderUI.Properties.Resources.icons8_master_40;
-            this.bfC_Button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bfC_Button4.Location = new System.Drawing.Point(0, 0);
-            this.bfC_Button4.Name = "bfC_Button4";
-            this.bfC_Button4.Size = new System.Drawing.Size(195, 59);
-            this.bfC_Button4.TabIndex = 0;
-            this.bfC_Button4.Text = "Master   ";
-            this.bfC_Button4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.bfC_Button4.TextColor = System.Drawing.Color.White;
-            this.bfC_Button4.UseVisualStyleBackColor = false;
+            this.btnToday.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnToday.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(83)))), ((int)(((byte)(255)))));
+            this.btnToday.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnToday.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.btnToday.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(141)))), ((int)(((byte)(181)))));
+            this.btnToday.Location = new System.Drawing.Point(185, 11);
+            this.btnToday.Margin = new System.Windows.Forms.Padding(3, 8, 3, 3);
+            this.btnToday.Name = "btnToday";
+            this.btnToday.Size = new System.Drawing.Size(149, 38);
+            this.btnToday.TabIndex = 20;
+            this.btnToday.Text = "Today";
+            this.btnToday.UseVisualStyleBackColor = true;
+            this.btnToday.Click += new System.EventHandler(this.btnToday_Click);
             // 
             // frmDashBoard
             // 
@@ -1108,9 +1108,7 @@
             this.Controls.Add(this.flowPanelRight);
             this.Controls.Add(this.siderBar);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmDashBoard";
-            this.Text = "frmDashBoard";
             this.Load += new System.EventHandler(this.frmDashBoard_Load);
             this.Resize += new System.EventHandler(this.frmDashBoard_Resize);
             this.floatPanelTop.ResumeLayout(false);

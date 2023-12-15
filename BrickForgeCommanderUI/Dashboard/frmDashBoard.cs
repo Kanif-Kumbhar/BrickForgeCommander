@@ -19,11 +19,7 @@ namespace BrickForgeCommanderUI.Dashboard
         #region Initialization
 
         bool sideBarExpand;
-        bool masterCollapsed;
-        bool productionCollapsed;
-        //  bool orderCollapsed;
-        // bool salesCollapsed;
-        // bool reportCollapsed;
+
         private Button currentButton;
 
         #endregion
@@ -140,9 +136,15 @@ namespace BrickForgeCommanderUI.Dashboard
 
         private void sideBarTimer_Tick(object sender, EventArgs e)
         {
-            if (sideBarExpand)
+            if(WindowState == FormWindowState.Normal)
+    {
+                sideBarExpand = false;
+                sideBarTimer.Stop();
+                siderBar.Width = siderBar.MinimumSize.Width;
+                pnlMain.Left = siderBar.Right;
+            }
+    else if (sideBarExpand)
             {
-                //if sidebar is expand,minimize
                 siderBar.Width -= 10;
                 pnlMain.Left = siderBar.Right;
                 if (siderBar.Width == siderBar.MinimumSize.Width)

@@ -9,6 +9,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace BrickForgeCommanderUI.Login___Registeration
 {
@@ -28,6 +29,14 @@ namespace BrickForgeCommanderUI.Login___Registeration
             txtName.Focus();
             this.KeyDown += frmRegisteration_KeyDown;
 
+            txtName.KeyPress += EnterKeyPressHandler;
+            txtAddress.KeyPress += EnterKeyPressHandler;
+            txtPhoneNo.KeyPress += EnterKeyPressHandler;
+            txtUserName.KeyPress += EnterKeyPressHandler;
+            txtKey.KeyPress += EnterKeyPressHandler;
+            txtPassword.KeyPress += EnterKeyPressHandler;
+            txtConfirmPassword.KeyPress += EnterKeyPressHandler;
+
             LoadLastSavedUserId();
         }
 
@@ -39,7 +48,7 @@ namespace BrickForgeCommanderUI.Login___Registeration
                 {
                     MessageBox.Show("Please fill in all fields", "Registration Failed!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-                else if (txtPassword.Text == txtConPassword.Text)
+                else if (txtPassword.Text == txtConfirmPassword.Text)
                 {
                     try
                     {
@@ -71,7 +80,7 @@ namespace BrickForgeCommanderUI.Login___Registeration
 
                         txtUserName.Text = "";
                         txtPassword.Text = "";
-                        txtConPassword.Text = "";
+                        txtConfirmPassword.Text = "";
                         dboxUserType.SelectedIndex = -1;
 
                         MessageBox.Show("Your Account has been Successfully Created", "Registration Successful", MessageBoxButtons.OK);
@@ -105,7 +114,7 @@ namespace BrickForgeCommanderUI.Login___Registeration
         {
             if (e.KeyCode == Keys.Enter)
             {
-                txtConPassword.Focus();
+                txtConfirmPassword.Focus();
             }
         }
 
@@ -117,7 +126,7 @@ namespace BrickForgeCommanderUI.Login___Registeration
             }
         }
 
-        #region Functions
+             #region Functions
 
         private void ClearData()
         {
@@ -126,12 +135,28 @@ namespace BrickForgeCommanderUI.Login___Registeration
             txtAddress.Clear();
             txtUserName.Clear();
             txtPassword.Clear();
-            txtConPassword.Clear();
+            txtConfirmPassword.Clear();
 
             txtName.Clear();
             txtName.Focus();
             dboxUserType.SelectedIndex = 0;
             dboxCity.SelectedIndex = 0;
+        }
+
+        private void EnterKeyPressHandler(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                // Get the next control in the tab order
+                Control nextControl = GetNextControl((Control)sender, true);
+
+                // If there is a next control, set focus to it
+                if (nextControl != null)
+                {
+                    nextControl.Focus();
+                    e.Handled = true; // Prevent the Enter key from being processed further
+                }
+            }
         }
 
         private void LoadLastSavedUserId()
@@ -161,13 +186,13 @@ namespace BrickForgeCommanderUI.Login___Registeration
         {
             if (CheckbxShowPas.Checked)
             {
-                txtPassword.PasswordChar = '\0';
-                txtConPassword.PasswordChar = '\0';
+                txtPassword.PasswordChar = false;
+                txtConfirmPassword.PasswordChar = false;
             }
             else
             {
-                txtPassword.PasswordChar = '*';
-                txtConPassword.PasswordChar = '*';
+                txtPassword.PasswordChar = true;
+                txtConfirmPassword.PasswordChar = true;
             }
         }
 
@@ -257,6 +282,11 @@ namespace BrickForgeCommanderUI.Login___Registeration
             {
                 ClearData();
             }
+        }
+
+        private void txtConPassword_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
     public class UserTypeItem

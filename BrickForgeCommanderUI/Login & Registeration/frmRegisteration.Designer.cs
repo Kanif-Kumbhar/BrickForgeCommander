@@ -32,35 +32,35 @@
             this.btnClear = new System.Windows.Forms.Button();
             this.btnRegister = new System.Windows.Forms.Button();
             this.CheckbxShowPas = new System.Windows.Forms.CheckBox();
-            this.txtPassword = new System.Windows.Forms.TextBox();
             this.lblPassword = new System.Windows.Forms.Label();
-            this.txtUserName = new System.Windows.Forms.TextBox();
             this.lblUserName = new System.Windows.Forms.Label();
             this.lblGetStarted = new System.Windows.Forms.Label();
-            this.txtConPassword = new System.Windows.Forms.TextBox();
             this.lblConPassword = new System.Windows.Forms.Label();
-            this.txtKey = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.txtPhoneNo = new System.Windows.Forms.TextBox();
+            this.txtPhoneNo = new BrickForgeCommanderUI.Controls.BFC_TextBox();
+            this.txtAddress = new BrickForgeCommanderUI.Controls.BFC_TextBox();
+            this.txtName = new BrickForgeCommanderUI.Controls.BFC_TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.dboxCity = new BrickForgeCommanderUI.Controls.BFC_ComboBox();
             this.txtId = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.txtAddress = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.txtConfirmPassword = new BrickForgeCommanderUI.Controls.BFC_TextBox();
+            this.txtKey = new BrickForgeCommanderUI.Controls.BFC_TextBox();
+            this.txtUserName = new BrickForgeCommanderUI.Controls.BFC_TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.dboxUserType = new BrickForgeCommanderUI.Controls.BFC_ComboBox();
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.brickForgeCommanderDBDataSet = new BrickForgeCommanderUI.BrickForgeCommanderDBDataSet();
             this.cityDetailsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.cityDetailsTableAdapter = new BrickForgeCommanderUI.BrickForgeCommanderDBDataSetTableAdapters.CityDetailsTableAdapter();
-            this.dboxUserType = new BrickForgeCommanderUI.Controls.BFC_ComboBox();
-            this.txtName = new BrickForgeCommanderUI.Controls.BFC_TextBox();
-            this.dboxCity = new BrickForgeCommanderUI.Controls.BFC_ComboBox();
+            this.txtPassword = new BrickForgeCommanderUI.Controls.BFC_TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.brickForgeCommanderDBDataSet)).BeginInit();
@@ -115,19 +115,6 @@
             this.CheckbxShowPas.UseVisualStyleBackColor = true;
             this.CheckbxShowPas.CheckedChanged += new System.EventHandler(this.CheckbxShowPas_CheckedChanged);
             // 
-            // txtPassword
-            // 
-            this.txtPassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
-            this.txtPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtPassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(165)))), ((int)(((byte)(169)))));
-            this.txtPassword.Location = new System.Drawing.Point(16, 314);
-            this.txtPassword.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txtPassword.Name = "txtPassword";
-            this.txtPassword.PasswordChar = '*';
-            this.txtPassword.Size = new System.Drawing.Size(324, 35);
-            this.txtPassword.TabIndex = 38;
-            this.txtPassword.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtPassword_KeyDown);
-            // 
             // lblPassword
             // 
             this.lblPassword.AutoSize = true;
@@ -139,18 +126,6 @@
             this.lblPassword.Size = new System.Drawing.Size(105, 28);
             this.lblPassword.TabIndex = 37;
             this.lblPassword.Text = "Password:";
-            // 
-            // txtUserName
-            // 
-            this.txtUserName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
-            this.txtUserName.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtUserName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(165)))), ((int)(((byte)(169)))));
-            this.txtUserName.Location = new System.Drawing.Point(20, 158);
-            this.txtUserName.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txtUserName.Name = "txtUserName";
-            this.txtUserName.Size = new System.Drawing.Size(324, 35);
-            this.txtUserName.TabIndex = 36;
-            this.txtUserName.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtUserName_KeyDown);
             // 
             // lblUserName
             // 
@@ -176,19 +151,6 @@
             this.lblGetStarted.TabIndex = 34;
             this.lblGetStarted.Text = "REGISTRATION";
             // 
-            // txtConPassword
-            // 
-            this.txtConPassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
-            this.txtConPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtConPassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(165)))), ((int)(((byte)(169)))));
-            this.txtConPassword.Location = new System.Drawing.Point(16, 389);
-            this.txtConPassword.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txtConPassword.Name = "txtConPassword";
-            this.txtConPassword.PasswordChar = '*';
-            this.txtConPassword.Size = new System.Drawing.Size(324, 35);
-            this.txtConPassword.TabIndex = 45;
-            this.txtConPassword.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtConPassword_KeyDown);
-            // 
             // lblConPassword
             // 
             this.lblConPassword.AutoSize = true;
@@ -200,17 +162,6 @@
             this.lblConPassword.Size = new System.Drawing.Size(187, 28);
             this.lblConPassword.TabIndex = 44;
             this.lblConPassword.Text = "Confirm Password:";
-            // 
-            // txtKey
-            // 
-            this.txtKey.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
-            this.txtKey.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtKey.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(165)))), ((int)(((byte)(169)))));
-            this.txtKey.Location = new System.Drawing.Point(18, 240);
-            this.txtKey.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txtKey.Name = "txtKey";
-            this.txtKey.Size = new System.Drawing.Size(324, 35);
-            this.txtKey.TabIndex = 47;
             // 
             // label1
             // 
@@ -227,14 +178,14 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.SystemColors.Control;
-            this.groupBox1.Controls.Add(this.txtName);
             this.groupBox1.Controls.Add(this.txtPhoneNo);
+            this.groupBox1.Controls.Add(this.txtAddress);
+            this.groupBox1.Controls.Add(this.txtName);
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.dboxCity);
             this.groupBox1.Controls.Add(this.txtId);
             this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.txtAddress);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Font = new System.Drawing.Font("Nirmala UI", 13F, System.Drawing.FontStyle.Bold);
@@ -249,13 +200,68 @@
             // txtPhoneNo
             // 
             this.txtPhoneNo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
-            this.txtPhoneNo.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtPhoneNo.Location = new System.Drawing.Point(11, 390);
-            this.txtPhoneNo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtPhoneNo.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
+            this.txtPhoneNo.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(86)))), ((int)(((byte)(174)))));
+            this.txtPhoneNo.BorderRadius = 0;
+            this.txtPhoneNo.BorderSize = 2;
+            this.txtPhoneNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
+            this.txtPhoneNo.ForeColor = System.Drawing.Color.DimGray;
+            this.txtPhoneNo.Location = new System.Drawing.Point(13, 389);
+            this.txtPhoneNo.Margin = new System.Windows.Forms.Padding(4);
+            this.txtPhoneNo.MultiLine = false;
             this.txtPhoneNo.Name = "txtPhoneNo";
-            this.txtPhoneNo.PasswordChar = '*';
-            this.txtPhoneNo.Size = new System.Drawing.Size(324, 35);
-            this.txtPhoneNo.TabIndex = 57;
+            this.txtPhoneNo.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.txtPhoneNo.PasswordChar = false;
+            this.txtPhoneNo.PlaceHolderColor = System.Drawing.Color.DarkGray;
+            this.txtPhoneNo.PlaceHolderText = "                 Eg.   0123456789";
+            this.txtPhoneNo.Size = new System.Drawing.Size(324, 39);
+            this.txtPhoneNo.TabIndex = 60;
+            this.txtPhoneNo.Texts = "";
+            this.txtPhoneNo.UnderLineStyle = false;
+            // 
+            // txtAddress
+            // 
+            this.txtAddress.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
+            this.txtAddress.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
+            this.txtAddress.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(86)))), ((int)(((byte)(174)))));
+            this.txtAddress.BorderRadius = 0;
+            this.txtAddress.BorderSize = 2;
+            this.txtAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
+            this.txtAddress.ForeColor = System.Drawing.Color.DimGray;
+            this.txtAddress.Location = new System.Drawing.Point(13, 238);
+            this.txtAddress.Margin = new System.Windows.Forms.Padding(4);
+            this.txtAddress.MultiLine = false;
+            this.txtAddress.Name = "txtAddress";
+            this.txtAddress.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.txtAddress.PasswordChar = false;
+            this.txtAddress.PlaceHolderColor = System.Drawing.Color.DarkGray;
+            this.txtAddress.PlaceHolderText = "Eg. A/P KumbharGalli, KavathePiran.";
+            this.txtAddress.Size = new System.Drawing.Size(324, 39);
+            this.txtAddress.TabIndex = 59;
+            this.txtAddress.Texts = "";
+            this.txtAddress.UnderLineStyle = false;
+            // 
+            // txtName
+            // 
+            this.txtName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
+            this.txtName.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
+            this.txtName.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(86)))), ((int)(((byte)(174)))));
+            this.txtName.BorderRadius = 0;
+            this.txtName.BorderSize = 2;
+            this.txtName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
+            this.txtName.ForeColor = System.Drawing.Color.DimGray;
+            this.txtName.Location = new System.Drawing.Point(9, 158);
+            this.txtName.Margin = new System.Windows.Forms.Padding(4);
+            this.txtName.MultiLine = false;
+            this.txtName.Name = "txtName";
+            this.txtName.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.txtName.PasswordChar = false;
+            this.txtName.PlaceHolderColor = System.Drawing.Color.DarkGray;
+            this.txtName.PlaceHolderText = "( First ) ( Middle ) ( Last )";
+            this.txtName.Size = new System.Drawing.Size(324, 39);
+            this.txtName.TabIndex = 58;
+            this.txtName.Texts = "";
+            this.txtName.UnderLineStyle = true;
             // 
             // label7
             // 
@@ -281,9 +287,28 @@
             this.label6.TabIndex = 55;
             this.label6.Text = "City:";
             // 
+            // dboxCity
+            // 
+            this.dboxCity.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.dboxCity.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
+            this.dboxCity.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
+            this.dboxCity.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.dboxCity.BorderSize = 0;
+            this.dboxCity.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
+            this.dboxCity.ForeColor = System.Drawing.Color.DimGray;
+            this.dboxCity.IconColor = System.Drawing.Color.MediumSlateBlue;
+            this.dboxCity.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
+            this.dboxCity.ListTextColor = System.Drawing.Color.DimGray;
+            this.dboxCity.Location = new System.Drawing.Point(11, 314);
+            this.dboxCity.MinimumSize = new System.Drawing.Size(200, 30);
+            this.dboxCity.Name = "dboxCity";
+            this.dboxCity.Size = new System.Drawing.Size(200, 36);
+            this.dboxCity.TabIndex = 54;
+            this.dboxCity.Texts = "";
+            // 
             // txtId
             // 
-            this.txtId.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
+            this.txtId.BackColor = System.Drawing.SystemColors.Control;
             this.txtId.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtId.Location = new System.Drawing.Point(9, 81);
             this.txtId.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -303,16 +328,6 @@
             this.label3.Size = new System.Drawing.Size(35, 28);
             this.label3.TabIndex = 52;
             this.label3.Text = "Id:";
-            // 
-            // txtAddress
-            // 
-            this.txtAddress.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
-            this.txtAddress.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtAddress.Location = new System.Drawing.Point(11, 240);
-            this.txtAddress.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txtAddress.Name = "txtAddress";
-            this.txtAddress.Size = new System.Drawing.Size(324, 35);
-            this.txtAddress.TabIndex = 51;
             // 
             // label4
             // 
@@ -340,19 +355,19 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.txtPassword);
+            this.groupBox2.Controls.Add(this.txtConfirmPassword);
+            this.groupBox2.Controls.Add(this.txtKey);
+            this.groupBox2.Controls.Add(this.txtUserName);
             this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Controls.Add(this.dboxUserType);
-            this.groupBox2.Controls.Add(this.txtKey);
             this.groupBox2.Controls.Add(this.textBox6);
             this.groupBox2.Controls.Add(this.lblUserName);
-            this.groupBox2.Controls.Add(this.txtUserName);
             this.groupBox2.Controls.Add(this.textBox5);
             this.groupBox2.Controls.Add(this.lblPassword);
             this.groupBox2.Controls.Add(this.textBox3);
-            this.groupBox2.Controls.Add(this.txtPassword);
             this.groupBox2.Controls.Add(this.label1);
             this.groupBox2.Controls.Add(this.CheckbxShowPas);
-            this.groupBox2.Controls.Add(this.txtConPassword);
             this.groupBox2.Controls.Add(this.lblConPassword);
             this.groupBox2.Font = new System.Drawing.Font("Nirmala UI", 13F, System.Drawing.FontStyle.Bold);
             this.groupBox2.ForeColor = System.Drawing.Color.MediumPurple;
@@ -362,6 +377,72 @@
             this.groupBox2.TabIndex = 51;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Login Credentials";
+            // 
+            // txtConfirmPassword
+            // 
+            this.txtConfirmPassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
+            this.txtConfirmPassword.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
+            this.txtConfirmPassword.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(86)))), ((int)(((byte)(174)))));
+            this.txtConfirmPassword.BorderRadius = 0;
+            this.txtConfirmPassword.BorderSize = 2;
+            this.txtConfirmPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
+            this.txtConfirmPassword.ForeColor = System.Drawing.Color.DimGray;
+            this.txtConfirmPassword.Location = new System.Drawing.Point(20, 389);
+            this.txtConfirmPassword.Margin = new System.Windows.Forms.Padding(4);
+            this.txtConfirmPassword.MultiLine = false;
+            this.txtConfirmPassword.Name = "txtConfirmPassword";
+            this.txtConfirmPassword.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.txtConfirmPassword.PasswordChar = true;
+            this.txtConfirmPassword.PlaceHolderColor = System.Drawing.Color.DarkGray;
+            this.txtConfirmPassword.PlaceHolderText = "";
+            this.txtConfirmPassword.Size = new System.Drawing.Size(324, 39);
+            this.txtConfirmPassword.TabIndex = 63;
+            this.txtConfirmPassword.Texts = "";
+            this.txtConfirmPassword.UnderLineStyle = false;
+            // 
+            // txtKey
+            // 
+            this.txtKey.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
+            this.txtKey.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
+            this.txtKey.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(86)))), ((int)(((byte)(174)))));
+            this.txtKey.BorderRadius = 0;
+            this.txtKey.BorderSize = 2;
+            this.txtKey.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
+            this.txtKey.ForeColor = System.Drawing.Color.DimGray;
+            this.txtKey.Location = new System.Drawing.Point(20, 238);
+            this.txtKey.Margin = new System.Windows.Forms.Padding(4);
+            this.txtKey.MultiLine = false;
+            this.txtKey.Name = "txtKey";
+            this.txtKey.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.txtKey.PasswordChar = false;
+            this.txtKey.PlaceHolderColor = System.Drawing.Color.DarkGray;
+            this.txtKey.PlaceHolderText = "Eg. Place of Birth, D.O.B.";
+            this.txtKey.Size = new System.Drawing.Size(324, 39);
+            this.txtKey.TabIndex = 61;
+            this.txtKey.Texts = "";
+            this.txtKey.UnderLineStyle = false;
+            // 
+            // txtUserName
+            // 
+            this.txtUserName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
+            this.txtUserName.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
+            this.txtUserName.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(86)))), ((int)(((byte)(174)))));
+            this.txtUserName.BorderRadius = 0;
+            this.txtUserName.BorderSize = 2;
+            this.txtUserName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
+            this.txtUserName.ForeColor = System.Drawing.Color.DimGray;
+            this.txtUserName.Location = new System.Drawing.Point(16, 158);
+            this.txtUserName.Margin = new System.Windows.Forms.Padding(4);
+            this.txtUserName.MultiLine = false;
+            this.txtUserName.Name = "txtUserName";
+            this.txtUserName.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.txtUserName.PasswordChar = false;
+            this.txtUserName.PlaceHolderColor = System.Drawing.Color.DarkGray;
+            this.txtUserName.PlaceHolderText = "Eg. UserName@4344";
+            this.txtUserName.Size = new System.Drawing.Size(324, 39);
+            this.txtUserName.TabIndex = 60;
+            this.txtUserName.Texts = "";
+            this.txtUserName.UnderLineStyle = false;
             // 
             // label2
             // 
@@ -374,6 +455,24 @@
             this.label2.Size = new System.Drawing.Size(110, 28);
             this.label2.TabIndex = 59;
             this.label2.Text = "User Type:";
+            // 
+            // dboxUserType
+            // 
+            this.dboxUserType.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.dboxUserType.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
+            this.dboxUserType.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.dboxUserType.BorderSize = 0;
+            this.dboxUserType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
+            this.dboxUserType.ForeColor = System.Drawing.Color.DimGray;
+            this.dboxUserType.IconColor = System.Drawing.Color.MediumSlateBlue;
+            this.dboxUserType.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
+            this.dboxUserType.ListTextColor = System.Drawing.Color.DimGray;
+            this.dboxUserType.Location = new System.Drawing.Point(16, 79);
+            this.dboxUserType.MinimumSize = new System.Drawing.Size(200, 30);
+            this.dboxUserType.Name = "dboxUserType";
+            this.dboxUserType.Size = new System.Drawing.Size(200, 35);
+            this.dboxUserType.TabIndex = 58;
+            this.dboxUserType.Texts = "";
             // 
             // textBox6
             // 
@@ -425,64 +524,27 @@
             // 
             this.cityDetailsTableAdapter.ClearBeforeFill = true;
             // 
-            // dboxUserType
+            // txtPassword
             // 
-            this.dboxUserType.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.dboxUserType.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
-            this.dboxUserType.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.dboxUserType.BorderSize = 0;
-            this.dboxUserType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
-            this.dboxUserType.ForeColor = System.Drawing.Color.DimGray;
-            this.dboxUserType.IconColor = System.Drawing.Color.MediumSlateBlue;
-            this.dboxUserType.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
-            this.dboxUserType.ListTextColor = System.Drawing.Color.DimGray;
-            this.dboxUserType.Location = new System.Drawing.Point(16, 79);
-            this.dboxUserType.MinimumSize = new System.Drawing.Size(200, 30);
-            this.dboxUserType.Name = "dboxUserType";
-            this.dboxUserType.Size = new System.Drawing.Size(200, 35);
-            this.dboxUserType.TabIndex = 58;
-            this.dboxUserType.Texts = "";
-            // 
-            // txtName
-            // 
-            this.txtName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
-            this.txtName.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
-            this.txtName.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
-            this.txtName.BorderRadius = 0;
-            this.txtName.BorderSize = 2;
-            this.txtName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
-            this.txtName.ForeColor = System.Drawing.Color.DimGray;
-            this.txtName.Location = new System.Drawing.Point(9, 158);
-            this.txtName.Margin = new System.Windows.Forms.Padding(4);
-            this.txtName.MultiLine = false;
-            this.txtName.Name = "txtName";
-            this.txtName.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.txtName.PasswordChar = false;
-            this.txtName.PlaceHolderColor = System.Drawing.Color.DarkGray;
-            this.txtName.PlaceHolderText = "( First ) ( Middle ) ( Last )";
-            this.txtName.Size = new System.Drawing.Size(324, 39);
-            this.txtName.TabIndex = 58;
-            this.txtName.Texts = "";
-            this.txtName.UnderLineStyle = false;
-            // 
-            // dboxCity
-            // 
-            this.dboxCity.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.dboxCity.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
-            this.dboxCity.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
-            this.dboxCity.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.dboxCity.BorderSize = 0;
-            this.dboxCity.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
-            this.dboxCity.ForeColor = System.Drawing.Color.DimGray;
-            this.dboxCity.IconColor = System.Drawing.Color.MediumSlateBlue;
-            this.dboxCity.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
-            this.dboxCity.ListTextColor = System.Drawing.Color.DimGray;
-            this.dboxCity.Location = new System.Drawing.Point(11, 314);
-            this.dboxCity.MinimumSize = new System.Drawing.Size(200, 30);
-            this.dboxCity.Name = "dboxCity";
-            this.dboxCity.Size = new System.Drawing.Size(200, 36);
-            this.dboxCity.TabIndex = 54;
-            this.dboxCity.Texts = "";
+            this.txtPassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
+            this.txtPassword.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
+            this.txtPassword.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(86)))), ((int)(((byte)(174)))));
+            this.txtPassword.BorderRadius = 0;
+            this.txtPassword.BorderSize = 2;
+            this.txtPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
+            this.txtPassword.ForeColor = System.Drawing.Color.DimGray;
+            this.txtPassword.Location = new System.Drawing.Point(20, 311);
+            this.txtPassword.Margin = new System.Windows.Forms.Padding(4);
+            this.txtPassword.MultiLine = false;
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.txtPassword.PasswordChar = true;
+            this.txtPassword.PlaceHolderColor = System.Drawing.Color.DarkGray;
+            this.txtPassword.PlaceHolderText = "";
+            this.txtPassword.Size = new System.Drawing.Size(324, 39);
+            this.txtPassword.TabIndex = 64;
+            this.txtPassword.Texts = "";
+            this.txtPassword.UnderLineStyle = false;
             // 
             // frmRegisteration
             // 
@@ -519,23 +581,17 @@
         private System.Windows.Forms.Button btnClear;
         private System.Windows.Forms.Button btnRegister;
         private System.Windows.Forms.CheckBox CheckbxShowPas;
-        private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.Label lblPassword;
-        private System.Windows.Forms.TextBox txtUserName;
         private System.Windows.Forms.Label lblUserName;
         private System.Windows.Forms.Label lblGetStarted;
-        private System.Windows.Forms.TextBox txtConPassword;
         private System.Windows.Forms.Label lblConPassword;
-        private System.Windows.Forms.TextBox txtKey;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TextBox txtId;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtAddress;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private Controls.BFC_TextBox txtName;
-        private System.Windows.Forms.TextBox txtPhoneNo;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private Controls.BFC_ComboBox dboxCity;
@@ -548,5 +604,11 @@
         private BrickForgeCommanderDBDataSet brickForgeCommanderDBDataSet;
         private System.Windows.Forms.BindingSource cityDetailsBindingSource;
         private BrickForgeCommanderDBDataSetTableAdapters.CityDetailsTableAdapter cityDetailsTableAdapter;
+        private Controls.BFC_TextBox txtPhoneNo;
+        private Controls.BFC_TextBox txtAddress;
+        private Controls.BFC_TextBox txtKey;
+        private Controls.BFC_TextBox txtUserName;
+        private Controls.BFC_TextBox txtConfirmPassword;
+        private Controls.BFC_TextBox txtPassword;
     }
 }

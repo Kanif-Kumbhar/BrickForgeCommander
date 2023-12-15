@@ -80,7 +80,14 @@ namespace BrickForgeCommanderUI.Controls
         public bool PasswordChar
         {
             get { return isPasswordChar; }
-            set { textBox1.UseSystemPasswordChar = value; }
+            set 
+            { 
+                isPasswordChar = value;
+                if(!isPlaceHolder) 
+                {
+                    textBox1.UseSystemPasswordChar = value;
+                }
+            }
         }
         [Category("Custom")]
         public bool MultiLine
@@ -334,8 +341,8 @@ namespace BrickForgeCommanderUI.Controls
         public void Clear()
         {
             textBox1.Clear();
-            SetPlaceHolder(); // Reset placeholder if applicable
-            isFocused = false; // Ensure focus-related properties are reset
+            SetPlaceHolder();
+            isFocused = false;
             this.Invalidate();
         }
         #region Events Trigger

@@ -96,6 +96,12 @@
     </Compile>
     <Compile Include="Dashboard\Models\DashBoard.cs" />
     <Compile Include="Db\DbConnection.cs" />
+    <Compile Include="Display\frmStart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Display\frmStart.Designer.cs">
+      <DependentUpon>frmStart.cs</DependentUpon>
+    </Compile>
     <Compile Include="Login &amp; Registeration\frmForgotPwd.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -146,6 +152,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Dashboard\frmDashBoard.resx">
       <DependentUpon>frmDashBoard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Display\frmStart.resx">
+      <DependentUpon>frmStart.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login &amp; Registeration\frmForgotPwd.resx">
       <DependentUpon>frmForgotPwd.cs</DependentUpon>
