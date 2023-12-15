@@ -1,6 +1,7 @@
 ﻿using BrickForgeCommanderUI.Dashboard;
 using BrickForgeCommanderUI.Login___Registeration;
 using BrickForgeCommanderUI.MasterForms;
+using BrickForgeCommanderUI.MasterForms.Menu;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -19,7 +20,7 @@ namespace BrickForgeCommanderUI
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmRegisteration());
+            Application.Run(new frmMasterMenu());
         }
     }
 }

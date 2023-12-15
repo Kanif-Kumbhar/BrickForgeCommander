@@ -323,5 +323,23 @@
   <ItemGroup>
     <None Include="Resources\CustomControls\calendarWhite.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\VehicleType.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CreditType.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MaterialType.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-business-man-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PaymentType.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\StatusType.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

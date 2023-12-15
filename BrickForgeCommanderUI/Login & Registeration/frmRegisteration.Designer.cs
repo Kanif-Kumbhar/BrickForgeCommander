@@ -50,6 +50,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.txtConfirmPassword = new BrickForgeCommanderUI.Controls.BFC_TextBox();
+            this.txtPassword = new BrickForgeCommanderUI.Controls.BFC_TextBox();
             this.txtKey = new BrickForgeCommanderUI.Controls.BFC_TextBox();
             this.txtUserName = new BrickForgeCommanderUI.Controls.BFC_TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -60,7 +61,6 @@
             this.brickForgeCommanderDBDataSet = new BrickForgeCommanderUI.BrickForgeCommanderDBDataSet();
             this.cityDetailsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.cityDetailsTableAdapter = new BrickForgeCommanderUI.BrickForgeCommanderDBDataSetTableAdapters.CityDetailsTableAdapter();
-            this.txtPassword = new BrickForgeCommanderUI.Controls.BFC_TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.brickForgeCommanderDBDataSet)).BeginInit();
@@ -218,6 +218,7 @@
             this.txtPhoneNo.TabIndex = 60;
             this.txtPhoneNo.Texts = "";
             this.txtPhoneNo.UnderLineStyle = false;
+            this.txtPhoneNo.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtPhoneNo_KeyDown);
             // 
             // txtAddress
             // 
@@ -240,6 +241,7 @@
             this.txtAddress.TabIndex = 59;
             this.txtAddress.Texts = "";
             this.txtAddress.UnderLineStyle = false;
+            this.txtAddress.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAddress_KeyPress);
             // 
             // txtName
             // 
@@ -355,8 +357,8 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.txtPassword);
             this.groupBox2.Controls.Add(this.txtConfirmPassword);
+            this.groupBox2.Controls.Add(this.txtPassword);
             this.groupBox2.Controls.Add(this.txtKey);
             this.groupBox2.Controls.Add(this.txtUserName);
             this.groupBox2.Controls.Add(this.label2);
@@ -396,9 +398,32 @@
             this.txtConfirmPassword.PlaceHolderColor = System.Drawing.Color.DarkGray;
             this.txtConfirmPassword.PlaceHolderText = "";
             this.txtConfirmPassword.Size = new System.Drawing.Size(324, 39);
-            this.txtConfirmPassword.TabIndex = 63;
+            this.txtConfirmPassword.TabIndex = 65;
             this.txtConfirmPassword.Texts = "";
             this.txtConfirmPassword.UnderLineStyle = false;
+            this.txtConfirmPassword.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtConfirmPassword_KeyDown);
+            // 
+            // txtPassword
+            // 
+            this.txtPassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
+            this.txtPassword.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
+            this.txtPassword.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(86)))), ((int)(((byte)(174)))));
+            this.txtPassword.BorderRadius = 0;
+            this.txtPassword.BorderSize = 2;
+            this.txtPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
+            this.txtPassword.ForeColor = System.Drawing.Color.DimGray;
+            this.txtPassword.Location = new System.Drawing.Point(20, 311);
+            this.txtPassword.Margin = new System.Windows.Forms.Padding(4);
+            this.txtPassword.MultiLine = false;
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.txtPassword.PasswordChar = true;
+            this.txtPassword.PlaceHolderColor = System.Drawing.Color.DarkGray;
+            this.txtPassword.PlaceHolderText = "";
+            this.txtPassword.Size = new System.Drawing.Size(324, 39);
+            this.txtPassword.TabIndex = 64;
+            this.txtPassword.Texts = "";
+            this.txtPassword.UnderLineStyle = false;
             // 
             // txtKey
             // 
@@ -524,28 +549,6 @@
             // 
             this.cityDetailsTableAdapter.ClearBeforeFill = true;
             // 
-            // txtPassword
-            // 
-            this.txtPassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
-            this.txtPassword.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
-            this.txtPassword.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(86)))), ((int)(((byte)(174)))));
-            this.txtPassword.BorderRadius = 0;
-            this.txtPassword.BorderSize = 2;
-            this.txtPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
-            this.txtPassword.ForeColor = System.Drawing.Color.DimGray;
-            this.txtPassword.Location = new System.Drawing.Point(20, 311);
-            this.txtPassword.Margin = new System.Windows.Forms.Padding(4);
-            this.txtPassword.MultiLine = false;
-            this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.txtPassword.PasswordChar = true;
-            this.txtPassword.PlaceHolderColor = System.Drawing.Color.DarkGray;
-            this.txtPassword.PlaceHolderText = "";
-            this.txtPassword.Size = new System.Drawing.Size(324, 39);
-            this.txtPassword.TabIndex = 64;
-            this.txtPassword.Texts = "";
-            this.txtPassword.UnderLineStyle = false;
-            // 
             // frmRegisteration
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -608,7 +611,7 @@
         private Controls.BFC_TextBox txtAddress;
         private Controls.BFC_TextBox txtKey;
         private Controls.BFC_TextBox txtUserName;
-        private Controls.BFC_TextBox txtConfirmPassword;
         private Controls.BFC_TextBox txtPassword;
+        private Controls.BFC_TextBox txtConfirmPassword;
     }
 }

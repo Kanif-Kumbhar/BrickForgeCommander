@@ -83,6 +83,16 @@ namespace BrickForgeCommanderUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap CreditType {
+            get {
+                object obj = ResourceManager.GetObject("CreditType", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_bricks_30 {
             get {
                 object obj = ResourceManager.GetObject("icons8_bricks_30", resourceCulture);
@@ -106,6 +116,16 @@ namespace BrickForgeCommanderUI.Properties {
         internal static System.Drawing.Bitmap icons8_bricks_60 {
             get {
                 object obj = ResourceManager.GetObject("icons8_bricks_60", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_business_man_64 {
+            get {
+                object obj = ResourceManager.GetObject("icons8_business_man_64", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -416,6 +436,46 @@ namespace BrickForgeCommanderUI.Properties {
         internal static System.Drawing.Bitmap icons8_workers_50 {
             get {
                 object obj = ResourceManager.GetObject("icons8_workers_50", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap MaterialType {
+            get {
+                object obj = ResourceManager.GetObject("MaterialType", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap PaymentType {
+            get {
+                object obj = ResourceManager.GetObject("PaymentType", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap StatusType {
+            get {
+                object obj = ResourceManager.GetObject("StatusType", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap VehicleType {
+            get {
+                object obj = ResourceManager.GetObject("VehicleType", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -10,6 +10,7 @@ using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using ComboBox = System.Windows.Forms.ComboBox;
 
 namespace BrickForgeCommanderUI.Login___Registeration
 {
@@ -27,15 +28,20 @@ namespace BrickForgeCommanderUI.Login___Registeration
             LoadUserTypes();
             LoadCityName();
             txtName.Focus();
+
             this.KeyDown += frmRegisteration_KeyDown;
 
             txtName.KeyPress += EnterKeyPressHandler;
-            txtAddress.KeyPress += EnterKeyPressHandler;
+           // txtAddress.KeyPress += EnterKeyPressHandler;
             txtPhoneNo.KeyPress += EnterKeyPressHandler;
             txtUserName.KeyPress += EnterKeyPressHandler;
             txtKey.KeyPress += EnterKeyPressHandler;
             txtPassword.KeyPress += EnterKeyPressHandler;
             txtConfirmPassword.KeyPress += EnterKeyPressHandler;
+            dboxCity.KeyPress += EnterKeyPressHandler;
+            dboxUserType.KeyPress += EnterKeyPressHandler;
+            dboxCity.KeyPress += EnterKeyPressHandler;
+            dboxUserType.KeyPress += EnterKeyPressHandler;
 
             LoadLastSavedUserId();
         }
@@ -56,7 +62,7 @@ namespace BrickForgeCommanderUI.Login___Registeration
 
                         UserTypeItem selectedUserType = (UserTypeItem)dboxUserType.SelectedItem;
 
-                        string register = "INSERT INTO kanif.Login_Credentials (UserName, Password, AuthenticationKey,VendorTypeID) VALUES (@UserName, @Password, @AuthenticationKey,@VendorTypeID)";
+                        string register = "INSERT INTO kanif.Login_Credentials (UserName, Password, AuthenticationKey,VenderTypeID) VALUES (@UserName, @Password, @AuthenticationKey,@VenderTypeID)";
                         SqlCommand command = new SqlCommand(register, con);
                         command.Parameters.AddWithValue("@UserName", txtUserName.Text);
                         command.Parameters.AddWithValue("@Password", txtPassword.Text);
@@ -64,7 +70,7 @@ namespace BrickForgeCommanderUI.Login___Registeration
                         command.Parameters.AddWithValue("@VendorTypeID", selectedUserType.ID);
                         command.ExecuteNonQuery();
 
-                        string insertVTD = "INSERT INTO YourOtherTable (Id, Name, Address, City, Phone, VendorTypeID) VALUES (@Id, @Name, @Address, @City, @Phone, @VendorTypeID)";
+                        string insertVTD = "INSERT INTO YourOtherTable (Id, Name, Address, City, Phone, VenderTypeID) VALUES (@Id, @Name, @Address, @City, @Phone, @VenderTypeID)";
                         using (SqlCommand insertVTDCommand = new SqlCommand(insertVTD, con))
                         {
                             insertVTDCommand.Parameters.AddWithValue("@Id", txtId.Text);
@@ -72,11 +78,12 @@ namespace BrickForgeCommanderUI.Login___Registeration
                             insertVTDCommand.Parameters.AddWithValue("@Address", txtAddress.Text);
                             insertVTDCommand.Parameters.AddWithValue("@City", dboxCity.SelectedItem.ToString());
                             insertVTDCommand.Parameters.AddWithValue("@Phone", txtPhoneNo.Text);
-                            insertVTDCommand.Parameters.AddWithValue("@VendorTypeID", selectedUserType.ID);
+                            insertVTDCommand.Parameters.AddWithValue("@VenderTypeID", selectedUserType.ID);
                             insertVTDCommand.ExecuteNonQuery();
                         }
 
                         con.Close();
+
 
                         txtUserName.Text = "";
                         txtPassword.Text = "";
@@ -102,29 +109,6 @@ namespace BrickForgeCommanderUI.Login___Registeration
             ClearData();
         }
 
-        private void txtUserName_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Enter)
-            {
-                txtPassword.Focus();
-            }
-        }
-
-        private void txtPassword_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Enter)
-            {
-                txtConfirmPassword.Focus();
-            }
-        }
-
-        private void txtConPassword_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Enter)
-            {
-                btnRegister.Focus();
-            }
-        }
 
              #region Functions
 
@@ -147,17 +131,45 @@ namespace BrickForgeCommanderUI.Login___Registeration
         {
             if (e.KeyChar == (char)Keys.Enter)
             {
-                // Get the next control in the tab order
                 Control nextControl = GetNextControl((Control)sender, true);
 
-                // If there is a next control, set focus to it
                 if (nextControl != null)
                 {
-                    nextControl.Focus();
-                    e.Handled = true; // Prevent the Enter key from being processed further
+                    if (sender == dboxUserType)
+                    {
+                        txtUserName.Focus();
+                    }
+                    else if (sender == dboxCity)
+                    {
+                        txtAddress.Focus();
+                    }
+                    else
+                    {
+                        nextControl.Focus();
+                    }
+
+                    e.Handled = true;
+                }
+            }
+            else if (e.KeyChar == (char)Keys.Down)
+            {
+                if (sender is ComboBox comboBox)
+                {
+                    int newIndex = (comboBox.SelectedIndex + 1) % comboBox.Items.Count;
+                    comboBox.SelectedIndex = newIndex;
+                }
+            }
+            else if (e.KeyChar == (char)Keys.Up)
+            {
+                if (sender is ComboBox comboBox)
+                {
+                    int newIndex = (comboBox.SelectedIndex - 1 + comboBox.Items.Count) % comboBox.Items.Count;
+                    comboBox.SelectedIndex = newIndex;
                 }
             }
         }
+
+
 
         private void LoadLastSavedUserId()
         {
@@ -266,6 +278,32 @@ namespace BrickForgeCommanderUI.Login___Registeration
 
         #endregion
 
+             #region KeyEvents
+
+        private void txtUserName_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                txtPassword.Focus();
+            }
+        }
+
+        private void txtPassword_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                txtConfirmPassword.Focus();
+            }
+        }
+
+        private void txtConPassword_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                btnRegister.Focus();
+            }
+        }
+
         private void frmRegisteration_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.Control && e.KeyCode == Keys.R)
@@ -284,10 +322,32 @@ namespace BrickForgeCommanderUI.Login___Registeration
             }
         }
 
-        private void txtConPassword_TextChanged(object sender, EventArgs e)
+        private void txtPhoneNo_KeyDown(object sender, KeyEventArgs e)
         {
-
+            if(e.KeyCode ==Keys.Right) 
+            {
+                dboxUserType.Focus();
+            }
         }
+
+        private void txtConfirmPassword_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+               btnRegister.PerformClick();
+            }
+        }
+
+        private void txtAddress_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                e.Handled = true;
+                dboxCity.Focus();
+            }
+        }
+
+        #endregion
     }
     public class UserTypeItem
     {

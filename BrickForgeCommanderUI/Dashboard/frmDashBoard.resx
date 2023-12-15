@@ -121,32 +121,6 @@
     <value>697, 17</value>
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="pbClose.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        DAAACwwBP0AiyAAAAMhJREFUSEvtlV0OgjAQhOcSGr2g3leIJnoL8edRd8zUoKzQLfjGlxDS7c4MUAqY
-        CXMHNg2w1DAbaqjV0McatnY8bkAVCWGvaWpq6aFylzOwsMadQg4XYK2pn8i8amlWmvKJhITNEzkhxeaJ
-        vpDR5gkvZDLzxFfIkaaTmScYcgX2NJb5aTJzort4B1gYAwZf4SycR/QKsvPHwhfhLbJXU3uMPqPRITkG
-        xSERYTik5KpCGmtKn+uaO1blQdq7mx4q+1jD/344M12AJ7Cm6EKrseZ7AAAAAElFTkSuQmCC
-</value>
-  </data>
-  <data name="pbMaximize.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        DAAACwwBP0AiyAAAAOxJREFUSEvtVUsOgjAU7Bn8HFZ3eildSERXHkEWegCWXKDOJFNSaAtWwsYwyUQz
-        n/eSosUsyIK1tgIbjzW4lh2AnjJ+p5IdohckD7KSQGbX6zSyQvSCL3ArKwlmlM1a8NbnA0wuoaeM3xlc
-        wPPcg34xuiSWAdmtFQkBc6Wv0QGyxrx2xihY1AAOKiVTv0nrDP8JHADewUIStULatOH/AR4DeAFPkqid
-        welHxAGge8hXydRLaXkPGeH23mFRA2I/xSEveXfRnP2PxjA521XhFpCzXnaOR1lJIMNj6fRkhYCZ+8LZ
-        KON3nrIXfANjPuUUZwbCxzbQAAAAAElFTkSuQmCC
-</value>
-  </data>
-  <data name="pbMinimize.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        DAAACwwBP0AiyAAAAExJREFUSEtjGAWjYBQMJ/D//382IC4A4okU4nwgZoUaiwBAwWIg/kQlXAw1FgFA
-        gmiKKMFYLWAFYpD3sHmbFIw9iEbBKBgFQxYwMAAAEf0m5r8MuDoAAAAASUVORK5CYII=
-</value>
-  </data>
   <data name="lblLogOut.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAYAAAByDd+UAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
@@ -329,6 +303,32 @@
         DAAACwwBP0AiyAAAAI9JREFUSEvtkmEKgCAMRj1EkgfUs9aPTtMF7BtMCJ2BOujPHnyETp+2coYxRM7Z
         I5GHurD8RG4k8bQOEG7IwfIL2bm0jslFluRYHBHPwwaqIeVvoWd3bQMWp6+NNMe1cTmBDfWrBy5Jtbme
         C6IgzK19UAjqVsy3pQdE71vr3LwGwnKIvrwAMbVLpy3GDzj3AApiMacr1ftnAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="pbMinimize.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
+        DAAACwwBP0AiyAAAAExJREFUSEtjGAWjYBQMJ/D//382IC4A4okU4nwgZoUaiwBAwWIg/kQlXAw1FgFA
+        gmiKKMFYLWAFYpD3sHmbFIw9iEbBKBgFQxYwMAAAEf0m5r8MuDoAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="pbMaximize.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
+        DAAACwwBP0AiyAAAAOxJREFUSEvtVUsOgjAU7Bn8HFZ3eildSERXHkEWegCWXKDOJFNSaAtWwsYwyUQz
+        n/eSosUsyIK1tgIbjzW4lh2AnjJ+p5IdohckD7KSQGbX6zSyQvSCL3ArKwlmlM1a8NbnA0wuoaeM3xlc
+        wPPcg34xuiSWAdmtFQkBc6Wv0QGyxrx2xihY1AAOKiVTv0nrDP8JHADewUIStULatOH/AR4DeAFPkqid
+        welHxAGge8hXydRLaXkPGeH23mFRA2I/xSEveXfRnP2PxjA521XhFpCzXnaOR1lJIMNj6fRkhYCZ+8LZ
+        KON3nrIXfANjPuUUZwbCxzbQAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="pbClose.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
+        DAAACwwBP0AiyAAAAMhJREFUSEvtlV0OgjAQhOcSGr2g3leIJnoL8edRd8zUoKzQLfjGlxDS7c4MUAqY
+        CXMHNg2w1DAbaqjV0McatnY8bkAVCWGvaWpq6aFylzOwsMadQg4XYK2pn8i8amlWmvKJhITNEzkhxeaJ
+        vpDR5gkvZDLzxFfIkaaTmScYcgX2NJb5aTJzort4B1gYAwZf4SycR/QKsvPHwhfhLbJXU3uMPqPRITkG
+        xSERYTik5KpCGmtKn+uaO1blQdq7mx4q+1jD/344M12AJ7Cm6EKrseZ7AAAAAElFTkSuQmCC
 </value>
   </data>
 </root>
