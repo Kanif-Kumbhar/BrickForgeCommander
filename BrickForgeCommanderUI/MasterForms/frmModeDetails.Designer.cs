@@ -29,20 +29,32 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.bfC_DropDownMenu1 = new BrickForgeCommanderUI.Controls.BFC_DropDownMenu(this.components);
-            this.bfC_TextBox1 = new BrickForgeCommanderUI.Controls.BFC_TextBox();
             this.bfC_TextBox2 = new BrickForgeCommanderUI.Controls.BFC_TextBox();
+            this.bfC_TextBox1 = new BrickForgeCommanderUI.Controls.BFC_TextBox();
+            this.bfC_DropDownMenu1 = new BrickForgeCommanderUI.Controls.BFC_DropDownMenu(this.components);
             this.SuspendLayout();
             // 
-            // bfC_DropDownMenu1
+            // bfC_TextBox2
             // 
-            this.bfC_DropDownMenu1.ImageScalingSize = new System.Drawing.Size(24, 24);
-            this.bfC_DropDownMenu1.IsMainMenu = false;
-            this.bfC_DropDownMenu1.MenuItemHeight = 25;
-            this.bfC_DropDownMenu1.MenuItemTextColor = System.Drawing.Color.DimGray;
-            this.bfC_DropDownMenu1.Name = "bfC_DropDownMenu1";
-            this.bfC_DropDownMenu1.PrimaryColor = System.Drawing.Color.MediumSlateBlue;
-            this.bfC_DropDownMenu1.Size = new System.Drawing.Size(61, 4);
+            this.bfC_TextBox2.BackColor = System.Drawing.SystemColors.Window;
+            this.bfC_TextBox2.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.bfC_TextBox2.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.bfC_TextBox2.BorderRadius = 0;
+            this.bfC_TextBox2.BorderSize = 2;
+            this.bfC_TextBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
+            this.bfC_TextBox2.ForeColor = System.Drawing.Color.DimGray;
+            this.bfC_TextBox2.Location = new System.Drawing.Point(72, 284);
+            this.bfC_TextBox2.Margin = new System.Windows.Forms.Padding(4);
+            this.bfC_TextBox2.MultiLine = false;
+            this.bfC_TextBox2.Name = "bfC_TextBox2";
+            this.bfC_TextBox2.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.bfC_TextBox2.PasswordChar = false;
+            this.bfC_TextBox2.PlaceHolderColor = System.Drawing.Color.DarkGray;
+            this.bfC_TextBox2.PlaceHolderText = "";
+            this.bfC_TextBox2.Size = new System.Drawing.Size(250, 39);
+            this.bfC_TextBox2.TabIndex = 2;
+            this.bfC_TextBox2.Texts = "";
+            this.bfC_TextBox2.UnderLineStyle = false;
             // 
             // bfC_TextBox1
             // 
@@ -67,27 +79,15 @@
             this.bfC_TextBox1.UnderLineStyle = false;
             this.bfC_TextBox1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.bfC_TextBox1_KeyDown);
             // 
-            // bfC_TextBox2
+            // bfC_DropDownMenu1
             // 
-            this.bfC_TextBox2.BackColor = System.Drawing.SystemColors.Window;
-            this.bfC_TextBox2.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.bfC_TextBox2.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.bfC_TextBox2.BorderRadius = 0;
-            this.bfC_TextBox2.BorderSize = 2;
-            this.bfC_TextBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
-            this.bfC_TextBox2.ForeColor = System.Drawing.Color.DimGray;
-            this.bfC_TextBox2.Location = new System.Drawing.Point(552, 290);
-            this.bfC_TextBox2.Margin = new System.Windows.Forms.Padding(4);
-            this.bfC_TextBox2.MultiLine = false;
-            this.bfC_TextBox2.Name = "bfC_TextBox2";
-            this.bfC_TextBox2.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.bfC_TextBox2.PasswordChar = false;
-            this.bfC_TextBox2.PlaceHolderColor = System.Drawing.Color.DarkGray;
-            this.bfC_TextBox2.PlaceHolderText = "";
-            this.bfC_TextBox2.Size = new System.Drawing.Size(250, 39);
-            this.bfC_TextBox2.TabIndex = 2;
-            this.bfC_TextBox2.Texts = "";
-            this.bfC_TextBox2.UnderLineStyle = false;
+            this.bfC_DropDownMenu1.ImageScalingSize = new System.Drawing.Size(24, 24);
+            this.bfC_DropDownMenu1.IsMainMenu = false;
+            this.bfC_DropDownMenu1.MenuItemHeight = 25;
+            this.bfC_DropDownMenu1.MenuItemTextColor = System.Drawing.Color.DimGray;
+            this.bfC_DropDownMenu1.Name = "bfC_DropDownMenu1";
+            this.bfC_DropDownMenu1.PrimaryColor = System.Drawing.Color.MediumSlateBlue;
+            this.bfC_DropDownMenu1.Size = new System.Drawing.Size(61, 4);
             // 
             // frmModeDetails
             // 

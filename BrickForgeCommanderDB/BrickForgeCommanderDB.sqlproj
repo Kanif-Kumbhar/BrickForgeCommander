@@ -68,7 +68,6 @@
     <RefactorLog Include="BrickForgeCommanderDB.refactorlog" />
   </ItemGroup>
   <ItemGroup>
-    <Build Include="LoginCredential\Login_Credentials.sql" />
     <Build Include="kanif.sql" />
     <Build Include="ChildTables\OrderTables\Orders.sql" />
     <Build Include="ChildTables\OrderTables\OrderDetails.sql" />
@@ -76,5 +75,6 @@
     <Build Include="ChildTables\VendorTables\VenderDetails.sql" />
     <Build Include="MasterTables\VenderTypeDetails.sql" />
     <Build Include="MasterTables\CityDetails.sql" />
+    <Build Include="LoginCredential\Login_Credentials.sql" />
   </ItemGroup>
 </Project>

@@ -32,8 +32,13 @@ namespace BrickForgeCommanderUI.MasterForms.Menu
 
         private void frmMasterMenu_Load(object sender, EventArgs e)
         {
-
+            
         }
 
+        private void btnVendorTypeDetails_Click(object sender, EventArgs e)
+        {
+            frmVendorTypeDetails VTD = new frmVendorTypeDetails();
+            VTD.Show();
+        }
     }
 }

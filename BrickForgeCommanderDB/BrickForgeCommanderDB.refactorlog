@@ -98,4 +98,18 @@
     <Property Name="ParentElementType" Value="SqlTable" />
     <Property Name="NewName" Value="CityId" />
   </Operation>
+  <Operation Name="Rename Refactor" Key="56fe56eb-304f-4d6d-a6fb-cd22c2b30be4" ChangeDateTime="12/15/2023 15:28:13">
+    <Property Name="ElementName" Value="[kanif].[Login_Credentials].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[kanif].[Login_Credentials]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="UserId" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="931776a7-ace4-4f96-920f-229e30e853e9" ChangeDateTime="12/16/2023 02:33:28">
+    <Property Name="ElementName" Value="[kanif].[Login_Credentials].[Key]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[kanif].[Login_Credentials]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="AuthenticationKey" />
+  </Operation>
 </Operations>

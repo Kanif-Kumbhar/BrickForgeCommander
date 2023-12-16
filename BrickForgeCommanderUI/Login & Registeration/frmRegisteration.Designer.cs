@@ -312,11 +312,11 @@
             // 
             this.txtId.BackColor = System.Drawing.SystemColors.Control;
             this.txtId.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtId.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
             this.txtId.Location = new System.Drawing.Point(9, 81);
             this.txtId.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtId.Name = "txtId";
-            this.txtId.PasswordChar = '*';
-            this.txtId.Size = new System.Drawing.Size(324, 35);
+            this.txtId.Size = new System.Drawing.Size(324, 22);
             this.txtId.TabIndex = 53;
             // 
             // label3
