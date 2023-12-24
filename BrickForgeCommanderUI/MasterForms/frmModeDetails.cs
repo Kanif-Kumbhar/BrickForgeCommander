@@ -1,13 +1,6 @@
 ﻿using BrickForgeCommanderUI.Controls.FunctionControls;
 using BrickForgeCommanderUI.Misc.Anya_sReport;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace BrickForgeCommanderUI.MasterForms
@@ -20,8 +13,8 @@ namespace BrickForgeCommanderUI.MasterForms
             InitializeComponent();
             undoRedo = new BFC_UndoRedo();
 
-           // undoRedo.TextBoxes.Add(txtId);
-          //  undoRedo.TextBoxes.Add(txtName);
+            // undoRedo.TextBoxes.Add(txtId);
+            //  undoRedo.TextBoxes.Add(txtName);
 
             undoRedo.TextBoxName = "CommonName";
 

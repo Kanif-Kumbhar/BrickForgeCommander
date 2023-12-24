@@ -1,12 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
 using System.Drawing;
 using System.Drawing.Drawing2D;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace BrickForgeCommanderUI.Controls
@@ -38,20 +33,26 @@ namespace BrickForgeCommanderUI.Controls
         #endregion
 
         [Category("Custom")]
-        public Color BorderColor 
+        public string TextBoxText
+        {
+            get { return textBox1.Text; }
+            set { textBox1.Text = value; }
+        }
+        [Category("Custom")]
+        public Color BorderColor
         {
             get
             {
-               return borderColor;
+                return borderColor;
             }
             set
             {
                 borderColor = value;
                 this.Invalidate();
-            } 
+            }
         }
         [Category("Custom")]
-        public int BorderSize 
+        public int BorderSize
         {
             get
             {
@@ -64,7 +65,7 @@ namespace BrickForgeCommanderUI.Controls
             }
         }
         [Category("Custom")]
-        public bool UnderLineStyle 
+        public bool UnderLineStyle
         {
             get
             {
@@ -80,10 +81,10 @@ namespace BrickForgeCommanderUI.Controls
         public bool PasswordChar
         {
             get { return isPasswordChar; }
-            set 
-            { 
+            set
+            {
                 isPasswordChar = value;
-                if(!isPlaceHolder) 
+                if (!isPlaceHolder)
                 {
                     textBox1.UseSystemPasswordChar = value;
                 }
@@ -96,7 +97,7 @@ namespace BrickForgeCommanderUI.Controls
             set { textBox1.Multiline = value; }
         }
         [Category("Custom")]
-        public override Color BackColor 
+        public override Color BackColor
         {
             get
             {
@@ -132,7 +133,7 @@ namespace BrickForgeCommanderUI.Controls
             {
                 base.Font = value;
                 textBox1.Font = value;
-                if(this.DesignMode) 
+                if (this.DesignMode)
                 {
                     UpdateControlHeight();
                 }
@@ -152,7 +153,7 @@ namespace BrickForgeCommanderUI.Controls
                 SetPlaceHolder();
             }
         }
-        [Category ("Custom")]
+        [Category("Custom")]
         public int BorderRadius
         {
             get
@@ -161,7 +162,7 @@ namespace BrickForgeCommanderUI.Controls
             }
             set
             {
-                if(value >= 0)
+                if (value >= 0)
                 {
                     borderRadius = value;
                     this.Invalidate();
@@ -171,7 +172,7 @@ namespace BrickForgeCommanderUI.Controls
         [Category("Custom")]
         public Color BorderFocusColor { get => borderFocusColor; set => borderFocusColor = value; }
         [Category("Custom")]
-        public Color PlaceHolderColor 
+        public Color PlaceHolderColor
         {
             get
             {
@@ -185,7 +186,7 @@ namespace BrickForgeCommanderUI.Controls
             }
         }
         [Category("Custom")]
-        public string PlaceHolderText 
+        public string PlaceHolderText
         {
             get
             {
@@ -200,7 +201,7 @@ namespace BrickForgeCommanderUI.Controls
         }
         private void SetPlaceHolder()
         {
-            if(string.IsNullOrEmpty(textBox1.Text) && placeHolderText != "" )
+            if (string.IsNullOrEmpty(textBox1.Text) && placeHolderText != "")
             {
                 isPlaceHolder = true;
                 textBox1.Text = placeHolderText;
@@ -227,16 +228,16 @@ namespace BrickForgeCommanderUI.Controls
             base.OnPaint(e);
             Graphics graph = e.Graphics;
 
-            if(borderRadius > 1)
+            if (borderRadius > 1)
             {
                 var rectBorderSmooth = this.ClientRectangle;
                 var rectBorder = Rectangle.Inflate(rectBorderSmooth, -borderSize, -borderSize);
                 int smoothSize = borderSize > 0 ? borderSize : 1;
 
-                using (GraphicsPath pathBorderSmooth = GetFigurePath(rectBorderSmooth, borderRadius)) 
-                using(GraphicsPath pathBorder = GetFigurePath(rectBorder, borderRadius - borderSize))
+                using (GraphicsPath pathBorderSmooth = GetFigurePath(rectBorderSmooth, borderRadius))
+                using (GraphicsPath pathBorder = GetFigurePath(rectBorder, borderRadius - borderSize))
                 using (Pen penBorderSmooth = new Pen(this.Parent.BackColor, smoothSize))
-                using(Pen penBorder = new Pen(borderColor, borderSize))
+                using (Pen penBorder = new Pen(borderColor, borderSize))
                 {
                     this.Region = new Region(pathBorderSmooth);
                     if (borderRadius > 15) SetTextBoxRoundedRegion();
@@ -279,7 +280,7 @@ namespace BrickForgeCommanderUI.Controls
             if (MultiLine)
             {
                 pathTxt = GetFigurePath(textBox1.ClientRectangle, borderRadius - borderSize);
-                textBox1.Region = new Region(pathTxt);  
+                textBox1.Region = new Region(pathTxt);
             }
             else
             {
@@ -293,17 +294,17 @@ namespace BrickForgeCommanderUI.Controls
             float curveSize = radius * 2F;
 
             path.StartFigure();
-            path.AddArc(rect.X,rect.Y,curveSize,curveSize,180,90);
-            path.AddArc(rect.Right - curveSize,rect.Y,curveSize,curveSize,270,90);
-            path.AddArc(rect.Right - curveSize,rect.Bottom - curveSize,curveSize,curveSize,0,90);
-            path.AddArc(rect.X,rect.Bottom - curveSize,curveSize,curveSize,90,90);
+            path.AddArc(rect.X, rect.Y, curveSize, curveSize, 180, 90);
+            path.AddArc(rect.Right - curveSize, rect.Y, curveSize, curveSize, 270, 90);
+            path.AddArc(rect.Right - curveSize, rect.Bottom - curveSize, curveSize, curveSize, 0, 90);
+            path.AddArc(rect.X, rect.Bottom - curveSize, curveSize, curveSize, 90, 90);
             path.CloseFigure();
             return path;
         }
         protected override void OnResize(EventArgs e)
         {
             base.OnResize(e);
-            if(this.DesignMode)
+            if (this.DesignMode)
                 UpdateControlHeight();
         }
 
@@ -327,12 +328,12 @@ namespace BrickForgeCommanderUI.Controls
 
         private void BFC_TextBox_Load(object sender, EventArgs e)
         {
-           
+
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            if(_TextChanged != null)
+            if (_TextChanged != null)
             {
                 _TextChanged.Invoke(sender, e);
             }

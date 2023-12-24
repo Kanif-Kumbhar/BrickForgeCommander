@@ -1,12 +1,5 @@
-﻿using BrickForgeCommanderUI.Dashboard;
-using BrickForgeCommanderUI.Login___Registeration;
-using BrickForgeCommanderUI.MasterForms;
-using BrickForgeCommanderUI.MasterForms.Menu;
-using BrickForgeCommanderUI.Misc.Anya_sReport;
+﻿using BrickForgeCommanderUI.Misc;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace BrickForgeCommanderUI
@@ -21,7 +14,7 @@ namespace BrickForgeCommanderUI
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmModeDetails());
+            Application.Run(new test());
         }
     }
 }

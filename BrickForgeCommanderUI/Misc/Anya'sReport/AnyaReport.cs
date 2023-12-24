@@ -6,6 +6,8 @@ namespace BrickForgeCommanderUI.Misc.Anya_sReport
 {
     public partial class AnyaReports : Form
     {
+
+        #region DialogResults
         public static DialogResult Show(string text)
         {
             AnyaReports customDialog = new AnyaReports(text);
@@ -29,6 +31,7 @@ namespace BrickForgeCommanderUI.Misc.Anya_sReport
             AnyaReports customDialog = new AnyaReports(text, caption, buttons, mood);
             return customDialog.ShowDialog();
         }
+        #endregion
 
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
         private static extern IntPtr CreateRoundRectRgn
@@ -43,35 +46,34 @@ namespace BrickForgeCommanderUI.Misc.Anya_sReport
         public AnyaReports()
         {
             InitializeComponent();
-
             this.FormBorderStyle = FormBorderStyle.None;
             Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 30, 30));
         }
 
-
         public AnyaReports(string text)
+            : this()
         {
-            txtReport.Text = text;
+            txtReports.Text = text;
         }
+
         public AnyaReports(string text, string caption)
+            : this(text)
         {
-            txtReport.Text = text;
             lblCaption.Text = caption;
         }
+
         public AnyaReports(string text, string caption, ReportButton buttons)
+            : this(text, caption)
         {
-            txtReport.Text = text;
-            lblCaption.Text = caption;
             GetButtons(buttons);
         }
+
         public AnyaReports(string text, string caption, ReportButton buttons, Anya mood)
+            : this(text, caption, buttons)
         {
-            InitializeComponent();
-            txtReport.Text = text;
-            lblCaption.Text = caption;
-            GetButtons(buttons);
             GetAnyaMood(mood);
         }
+
 
         private void AnyaReports_Load(object sender, EventArgs e)
         {
