@@ -89,13 +89,19 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Controls\NavControls\dBtn.cs" />
-    <Compile Include="Dashboard\frmDashBoard.cs">
+    <Compile Include="Misc\Anya%27sReport\AnyaReport.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Dashboard\frmDashBoard.Designer.cs">
+    <Compile Include="Misc\Anya%27sReport\AnyaReport.Designer.cs">
+      <DependentUpon>AnyaReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Misc\Dashboard\frmDashBoard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Misc\Dashboard\frmDashBoard.Designer.cs">
       <DependentUpon>frmDashBoard.cs</DependentUpon>
     </Compile>
-    <Compile Include="Dashboard\Models\DashBoard.cs" />
+    <Compile Include="Misc\Dashboard\Models\DashBoard.cs" />
     <Compile Include="Db\DbConnection.cs" />
     <Compile Include="Display\frmStart.cs">
       <SubType>Form</SubType>
@@ -151,7 +157,10 @@
     <EmbeddedResource Include="Controls\FunctionControls\BFC_UndoRedo.resx">
       <DependentUpon>BFC_UndoRedo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Dashboard\frmDashBoard.resx">
+    <EmbeddedResource Include="Misc\Anya%27sReport\AnyaReport.resx">
+      <DependentUpon>AnyaReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Misc\Dashboard\frmDashBoard.resx">
       <DependentUpon>frmDashBoard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Display\frmStart.resx">
@@ -341,6 +350,24 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\StatusType.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Angry_Anya.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Confused_Anya.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Smile_Anya.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Crying_Anya.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Happy_Anya.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Nervous_Anya.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

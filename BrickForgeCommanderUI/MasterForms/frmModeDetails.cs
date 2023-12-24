@@ -1,4 +1,5 @@
 ﻿using BrickForgeCommanderUI.Controls.FunctionControls;
+using BrickForgeCommanderUI.Misc.Anya_sReport;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -52,6 +53,11 @@ namespace BrickForgeCommanderUI.MasterForms
         private void bfC_TextBox1_KeyDown(object sender, KeyEventArgs e)
         {
 
+        }
+
+        private void bfC_Button1_Click(object sender, EventArgs e)
+        {
+            AnyaReports.Show("Special message", "Custom Caption", AnyaReports.ReportButton.Ok, AnyaReports.Anya.Happy);
         }
     }
 }

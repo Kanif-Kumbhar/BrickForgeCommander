@@ -28,25 +28,34 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.bfC_DropDownMenu1 = new BrickForgeCommanderUI.Controls.BFC_DropDownMenu(this.components);
+            this.bfC_Button1 = new BrickForgeCommanderUI.Controls.BFC_Button();
             this.SuspendLayout();
             // 
-            // bfC_DropDownMenu1
+            // bfC_Button1
             // 
-            this.bfC_DropDownMenu1.ImageScalingSize = new System.Drawing.Size(24, 24);
-            this.bfC_DropDownMenu1.IsMainMenu = false;
-            this.bfC_DropDownMenu1.MenuItemHeight = 25;
-            this.bfC_DropDownMenu1.MenuItemTextColor = System.Drawing.Color.DimGray;
-            this.bfC_DropDownMenu1.Name = "bfC_DropDownMenu1";
-            this.bfC_DropDownMenu1.PrimaryColor = System.Drawing.Color.MediumSlateBlue;
-            this.bfC_DropDownMenu1.Size = new System.Drawing.Size(61, 4);
+            this.bfC_Button1.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.bfC_Button1.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.bfC_Button1.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.bfC_Button1.BorderRadius = 20;
+            this.bfC_Button1.BorderSize = 0;
+            this.bfC_Button1.FlatAppearance.BorderSize = 0;
+            this.bfC_Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bfC_Button1.ForeColor = System.Drawing.Color.White;
+            this.bfC_Button1.Location = new System.Drawing.Point(245, 145);
+            this.bfC_Button1.Name = "bfC_Button1";
+            this.bfC_Button1.Size = new System.Drawing.Size(150, 40);
+            this.bfC_Button1.TabIndex = 0;
+            this.bfC_Button1.Text = "bfC_Button1";
+            this.bfC_Button1.TextColor = System.Drawing.Color.White;
+            this.bfC_Button1.UseVisualStyleBackColor = false;
+            this.bfC_Button1.Click += new System.EventHandler(this.bfC_Button1_Click);
             // 
             // frmModeDetails
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(820, 434);
+            this.Controls.Add(this.bfC_Button1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmModeDetails";
             this.Text = "frmModeDetails";
@@ -56,6 +65,7 @@
         }
 
         #endregion
-        private Controls.BFC_DropDownMenu bfC_DropDownMenu1;
+
+        private Controls.BFC_Button bfC_Button1;
     }
 }
