@@ -141,7 +141,7 @@ namespace BrickForgeCommanderUI.MasterForms
 
         private void frmVendorTypeDetails_Load(object sender, EventArgs e)
         {
-            int radius = 50; // Adjust the radius as needed
+            int radius = 50;
             GraphicsPath path = new GraphicsPath();
             path.AddArc(0, 0, radius, radius, 180, 90);
             path.AddArc(this.Width - radius, 0, radius, radius, 270, 90);
@@ -151,7 +151,6 @@ namespace BrickForgeCommanderUI.MasterForms
 
             ExecuteSelectQuery();
 
-            // Populate originalDataTableCopy with the initial data
             originalDataTableCopy = dataTable.Copy();
         }
 
@@ -160,7 +159,7 @@ namespace BrickForgeCommanderUI.MasterForms
 
         private void btnClose_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            this.Close();
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
@@ -191,10 +190,8 @@ namespace BrickForgeCommanderUI.MasterForms
         {
             sqlQueryRunner.SaveDataToDatabase(dataTable, tableName);
 
-            // Update the copy of the original DataTable
             originalDataTableCopy = dataTable?.Copy();
 
-            // Clear current DataTable for the next set of changes
             dataTable.Clear();
 
             currentId++;
@@ -255,14 +252,11 @@ namespace BrickForgeCommanderUI.MasterForms
         {
             if (originalDataTableCopy != null)
             {
-                // Reset the DataTable to the original state
                 dataTable.Clear();
                 dataTable.Merge(originalDataTableCopy);
 
-                // Update the changes DataTable
                 UpdateChangesDataTable();
 
-                // Reset undo and redo stacks
                 vendorTypeIdUndoStack.Clear();
                 vendorTypeIdRedoStack.Clear();
                 vendorTypeNameUndoStack.Clear();
@@ -270,7 +264,6 @@ namespace BrickForgeCommanderUI.MasterForms
 
                 UpdateUndoRedoButtons();
 
-                // Set the DataGridView DataSource to reflect the reset data
                 dgvVendorTypeDetails.DataSource = dataTable;
 
             }

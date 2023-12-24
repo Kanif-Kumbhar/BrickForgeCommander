@@ -88,6 +88,7 @@
     <Compile Include="Controls\NavControls\BFC_Close.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Controls\NavControls\dBtn.cs" />
     <Compile Include="Dashboard\frmDashBoard.cs">
       <SubType>Form</SubType>
     </Compile>

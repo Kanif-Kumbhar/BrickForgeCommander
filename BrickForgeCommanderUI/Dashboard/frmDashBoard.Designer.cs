@@ -155,9 +155,9 @@
             this.flowPanelBottom.Controls.Add(this.lblLogOut);
             this.flowPanelBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.flowPanelBottom.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
-            this.flowPanelBottom.Location = new System.Drawing.Point(61, 731);
+            this.flowPanelBottom.Location = new System.Drawing.Point(61, 707);
             this.flowPanelBottom.Name = "flowPanelBottom";
-            this.flowPanelBottom.Size = new System.Drawing.Size(1529, 36);
+            this.flowPanelBottom.Size = new System.Drawing.Size(1299, 36);
             this.flowPanelBottom.TabIndex = 13;
             // 
             // lblLogOut
@@ -167,11 +167,11 @@
             this.lblLogOut.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.lblLogOut.ForeColor = System.Drawing.Color.White;
             this.lblLogOut.Image = ((System.Drawing.Image)(resources.GetObject("lblLogOut.Image")));
-            this.lblLogOut.Location = new System.Drawing.Point(1474, 0);
+            this.lblLogOut.Location = new System.Drawing.Point(1244, 0);
             this.lblLogOut.Margin = new System.Windows.Forms.Padding(0, 0, 5, 0);
             this.lblLogOut.Name = "lblLogOut";
             this.lblLogOut.Padding = new System.Windows.Forms.Padding(25, 0, 25, 0);
-            this.lblLogOut.Size = new System.Drawing.Size(50, 32);
+            this.lblLogOut.Size = new System.Drawing.Size(50, 28);
             this.lblLogOut.TabIndex = 18;
             this.lblLogOut.Click += new System.EventHandler(this.lblLogOut_Click);
             // 
@@ -202,7 +202,7 @@
             this.lblMenu.ForeColor = System.Drawing.Color.White;
             this.lblMenu.Location = new System.Drawing.Point(77, 48);
             this.lblMenu.Name = "lblMenu";
-            this.lblMenu.Size = new System.Drawing.Size(77, 32);
+            this.lblMenu.Size = new System.Drawing.Size(62, 28);
             this.lblMenu.TabIndex = 2;
             this.lblMenu.Text = "Menu";
             this.lblMenu.Click += new System.EventHandler(this.lblMenu_Click);
@@ -221,7 +221,7 @@
             this.siderBar.MaximumSize = new System.Drawing.Size(200, 1080);
             this.siderBar.MinimumSize = new System.Drawing.Size(61, 627);
             this.siderBar.Name = "siderBar";
-            this.siderBar.Size = new System.Drawing.Size(61, 767);
+            this.siderBar.Size = new System.Drawing.Size(61, 743);
             this.siderBar.TabIndex = 11;
             // 
             // panel22
@@ -393,7 +393,7 @@
             this.pnlMain.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlMain.Location = new System.Drawing.Point(61, 43);
             this.pnlMain.Name = "pnlMain";
-            this.pnlMain.Size = new System.Drawing.Size(1529, 688);
+            this.pnlMain.Size = new System.Drawing.Size(1299, 664);
             this.pnlMain.TabIndex = 15;
             // 
             // panel21
@@ -405,7 +405,7 @@
             this.panel21.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel21.Location = new System.Drawing.Point(0, 152);
             this.panel21.Name = "panel21";
-            this.panel21.Size = new System.Drawing.Size(1529, 536);
+            this.panel21.Size = new System.Drawing.Size(1299, 512);
             this.panel21.TabIndex = 25;
             // 
             // panel28
@@ -414,7 +414,7 @@
             this.panel28.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(45)))), ((int)(((byte)(86)))));
             this.panel28.Controls.Add(this.dgvUnderStock);
             this.panel28.Controls.Add(this.label15);
-            this.panel28.Location = new System.Drawing.Point(473, 333);
+            this.panel28.Location = new System.Drawing.Point(243, 309);
             this.panel28.Name = "panel28";
             this.panel28.Size = new System.Drawing.Size(420, 197);
             this.panel28.TabIndex = 41;
@@ -460,7 +460,7 @@
             this.label15.ForeColor = System.Drawing.Color.White;
             this.label15.Location = new System.Drawing.Point(14, 10);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(215, 30);
+            this.label15.Size = new System.Drawing.Size(187, 25);
             this.label15.TabIndex = 0;
             this.label15.Text = "Products UnderStock";
             // 
@@ -480,9 +480,9 @@
             this.panel29.Controls.Add(this.lblNumberOfCustomer);
             this.panel29.Controls.Add(this.label5);
             this.panel29.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel29.Location = new System.Drawing.Point(7, 333);
+            this.panel29.Location = new System.Drawing.Point(7, 309);
             this.panel29.Name = "panel29";
-            this.panel29.Size = new System.Drawing.Size(460, 197);
+            this.panel29.Size = new System.Drawing.Size(230, 197);
             this.panel29.TabIndex = 40;
             // 
             // pictureBox8
@@ -519,7 +519,7 @@
             this.label9.ForeColor = System.Drawing.Color.DarkGray;
             this.label9.Location = new System.Drawing.Point(76, 146);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(89, 28);
+            this.label9.Size = new System.Drawing.Size(77, 23);
             this.label9.TabIndex = 6;
             this.label9.Text = "Products";
             // 
@@ -529,7 +529,7 @@
             this.lblNumberOfProducts.ForeColor = System.Drawing.Color.White;
             this.lblNumberOfProducts.Location = new System.Drawing.Point(78, 173);
             this.lblNumberOfProducts.Name = "lblNumberOfProducts";
-            this.lblNumberOfProducts.Size = new System.Drawing.Size(62, 25);
+            this.lblNumberOfProducts.Size = new System.Drawing.Size(49, 20);
             this.lblNumberOfProducts.TabIndex = 5;
             this.lblNumberOfProducts.Text = "10000";
             // 
@@ -540,7 +540,7 @@
             this.label3.ForeColor = System.Drawing.Color.DarkGray;
             this.label3.Location = new System.Drawing.Point(76, 93);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(93, 28);
+            this.label3.Size = new System.Drawing.Size(79, 23);
             this.label3.TabIndex = 4;
             this.label3.Text = "Suppliers";
             // 
@@ -550,7 +550,7 @@
             this.lblNumberOfSupplier.ForeColor = System.Drawing.Color.White;
             this.lblNumberOfSupplier.Location = new System.Drawing.Point(76, 118);
             this.lblNumberOfSupplier.Name = "lblNumberOfSupplier";
-            this.lblNumberOfSupplier.Size = new System.Drawing.Size(62, 25);
+            this.lblNumberOfSupplier.Size = new System.Drawing.Size(49, 20);
             this.lblNumberOfSupplier.TabIndex = 3;
             this.lblNumberOfSupplier.Text = "10000";
             // 
@@ -561,7 +561,7 @@
             this.label7.ForeColor = System.Drawing.Color.DarkGray;
             this.label7.Location = new System.Drawing.Point(74, 42);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(104, 28);
+            this.label7.Size = new System.Drawing.Size(91, 23);
             this.label7.TabIndex = 2;
             this.label7.Text = "Customers";
             // 
@@ -571,7 +571,7 @@
             this.lblNumberOfCustomer.ForeColor = System.Drawing.Color.White;
             this.lblNumberOfCustomer.Location = new System.Drawing.Point(74, 63);
             this.lblNumberOfCustomer.Name = "lblNumberOfCustomer";
-            this.lblNumberOfCustomer.Size = new System.Drawing.Size(62, 25);
+            this.lblNumberOfCustomer.Size = new System.Drawing.Size(49, 20);
             this.lblNumberOfCustomer.TabIndex = 1;
             this.lblNumberOfCustomer.Text = "10000";
             // 
@@ -582,7 +582,7 @@
             this.label5.ForeColor = System.Drawing.Color.White;
             this.label5.Location = new System.Drawing.Point(5, 8);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(158, 32);
+            this.label5.Size = new System.Drawing.Size(129, 28);
             this.label5.TabIndex = 0;
             this.label5.Text = "Total Counter";
             // 
@@ -600,7 +600,7 @@
             legend1.ForeColor = System.Drawing.Color.Gainsboro;
             legend1.Name = "Legend1";
             this.chartTop5Products.Legends.Add(legend1);
-            this.chartTop5Products.Location = new System.Drawing.Point(899, -2);
+            this.chartTop5Products.Location = new System.Drawing.Point(669, -2);
             this.chartTop5Products.Name = "chartTop5Products";
             this.chartTop5Products.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None;
             this.chartTop5Products.PaletteCustomColors = new System.Drawing.Color[] {
@@ -621,7 +621,7 @@
             series1.Legend = "Legend1";
             series1.Name = "Series1";
             this.chartTop5Products.Series.Add(series1);
-            this.chartTop5Products.Size = new System.Drawing.Size(624, 532);
+            this.chartTop5Products.Size = new System.Drawing.Size(624, 508);
             this.chartTop5Products.TabIndex = 39;
             this.chartTop5Products.Text = "chart2";
             title1.Alignment = System.Drawing.ContentAlignment.MiddleLeft;
@@ -672,7 +672,7 @@
             series2.MarkerSize = 10;
             series2.Name = "Series1";
             this.chartGrossRevenue.Series.Add(series2);
-            this.chartGrossRevenue.Size = new System.Drawing.Size(886, 329);
+            this.chartGrossRevenue.Size = new System.Drawing.Size(656, 305);
             this.chartGrossRevenue.TabIndex = 38;
             this.chartGrossRevenue.Text = "chart1";
             title2.Alignment = System.Drawing.ContentAlignment.MiddleLeft;
@@ -690,7 +690,7 @@
             this.panel20.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel20.Location = new System.Drawing.Point(0, 58);
             this.panel20.Name = "panel20";
-            this.panel20.Size = new System.Drawing.Size(1529, 94);
+            this.panel20.Size = new System.Drawing.Size(1299, 94);
             this.panel20.TabIndex = 24;
             // 
             // panel24
@@ -700,7 +700,7 @@
             this.panel24.Controls.Add(this.pictureBox4);
             this.panel24.Controls.Add(this.lblTotalProfit);
             this.panel24.Controls.Add(this.label6);
-            this.panel24.Location = new System.Drawing.Point(978, 11);
+            this.panel24.Location = new System.Drawing.Point(748, 11);
             this.panel24.Name = "panel24";
             this.panel24.Size = new System.Drawing.Size(545, 78);
             this.panel24.TabIndex = 36;
@@ -721,7 +721,7 @@
             this.lblTotalProfit.ForeColor = System.Drawing.Color.White;
             this.lblTotalProfit.Location = new System.Drawing.Point(84, 41);
             this.lblTotalProfit.Name = "lblTotalProfit";
-            this.lblTotalProfit.Size = new System.Drawing.Size(62, 25);
+            this.lblTotalProfit.Size = new System.Drawing.Size(49, 20);
             this.lblTotalProfit.TabIndex = 1;
             this.lblTotalProfit.Text = "10000";
             // 
@@ -732,7 +732,7 @@
             this.label6.ForeColor = System.Drawing.SystemColors.ActiveBorder;
             this.label6.Location = new System.Drawing.Point(84, 10);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(97, 25);
+            this.label6.Size = new System.Drawing.Size(82, 20);
             this.label6.TabIndex = 0;
             this.label6.Text = "Total Profit";
             // 
@@ -746,7 +746,7 @@
             this.panel25.Controls.Add(this.label4);
             this.panel25.Location = new System.Drawing.Point(370, 11);
             this.panel25.Name = "panel25";
-            this.panel25.Size = new System.Drawing.Size(602, 78);
+            this.panel25.Size = new System.Drawing.Size(372, 78);
             this.panel25.TabIndex = 35;
             // 
             // pictureBox3
@@ -765,7 +765,7 @@
             this.lblTotalRevenue.ForeColor = System.Drawing.Color.White;
             this.lblTotalRevenue.Location = new System.Drawing.Point(88, 41);
             this.lblTotalRevenue.Name = "lblTotalRevenue";
-            this.lblTotalRevenue.Size = new System.Drawing.Size(62, 25);
+            this.lblTotalRevenue.Size = new System.Drawing.Size(49, 20);
             this.lblTotalRevenue.TabIndex = 1;
             this.lblTotalRevenue.Text = "10000";
             // 
@@ -776,7 +776,7 @@
             this.label4.ForeColor = System.Drawing.SystemColors.ActiveBorder;
             this.label4.Location = new System.Drawing.Point(94, 11);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(120, 25);
+            this.label4.Size = new System.Drawing.Size(102, 20);
             this.label4.TabIndex = 0;
             this.label4.Text = "Total Revenue";
             // 
@@ -807,7 +807,7 @@
             this.lblTotalOrders.ForeColor = System.Drawing.Color.White;
             this.lblTotalOrders.Location = new System.Drawing.Point(75, 41);
             this.lblTotalOrders.Name = "lblTotalOrders";
-            this.lblTotalOrders.Size = new System.Drawing.Size(62, 25);
+            this.lblTotalOrders.Size = new System.Drawing.Size(49, 20);
             this.lblTotalOrders.TabIndex = 1;
             this.lblTotalOrders.Text = "10000";
             // 
@@ -818,7 +818,7 @@
             this.label1.ForeColor = System.Drawing.SystemColors.ActiveBorder;
             this.label1.Location = new System.Drawing.Point(75, 10);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(158, 25);
+            this.label1.Size = new System.Drawing.Size(129, 20);
             this.label1.TabIndex = 0;
             this.label1.Text = "Number of Orders";
             // 
@@ -844,8 +844,8 @@
             this.splitContainer1.Panel2.Controls.Add(this.btnLast30d);
             this.splitContainer1.Panel2.Controls.Add(this.btnCustom);
             this.splitContainer1.Panel2.Controls.Add(this.btnToday);
-            this.splitContainer1.Size = new System.Drawing.Size(1529, 58);
-            this.splitContainer1.SplitterDistance = 821;
+            this.splitContainer1.Size = new System.Drawing.Size(1299, 58);
+            this.splitContainer1.SplitterDistance = 597;
             this.splitContainer1.SplitterWidth = 1;
             this.splitContainer1.TabIndex = 23;
             // 
@@ -857,7 +857,7 @@
             this.panel27.Controls.Add(this.dtpStartDate);
             this.panel27.Controls.Add(this.dtpEndDate);
             this.panel27.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel27.Location = new System.Drawing.Point(340, 0);
+            this.panel27.Location = new System.Drawing.Point(116, 0);
             this.panel27.Name = "panel27";
             this.panel27.Size = new System.Drawing.Size(481, 58);
             this.panel27.TabIndex = 16;
@@ -870,7 +870,7 @@
             this.lbldash.Location = new System.Drawing.Point(227, 5);
             this.lbldash.MinimumSize = new System.Drawing.Size(14, 20);
             this.lbldash.Name = "lbldash";
-            this.lbldash.Size = new System.Drawing.Size(34, 48);
+            this.lbldash.Size = new System.Drawing.Size(30, 41);
             this.lbldash.TabIndex = 23;
             this.lbldash.Text = "-";
             this.lbldash.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -879,7 +879,7 @@
             // 
             this.lblEndDate.AutoSize = true;
             this.lblEndDate.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblEndDate.Location = new System.Drawing.Point(265, 21);
+            this.lblEndDate.Location = new System.Drawing.Point(265, 19);
             this.lblEndDate.MinimumSize = new System.Drawing.Size(200, 25);
             this.lblEndDate.Name = "lblEndDate";
             this.lblEndDate.Size = new System.Drawing.Size(200, 25);
@@ -892,7 +892,7 @@
             // 
             this.lblStartDate.AutoSize = true;
             this.lblStartDate.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblStartDate.Location = new System.Drawing.Point(16, 20);
+            this.lblStartDate.Location = new System.Drawing.Point(16, 18);
             this.lblStartDate.MinimumSize = new System.Drawing.Size(200, 25);
             this.lblStartDate.Name = "lblStartDate";
             this.lblStartDate.Size = new System.Drawing.Size(200, 25);
@@ -909,7 +909,7 @@
             this.dtpStartDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpStartDate.Location = new System.Drawing.Point(16, 20);
             this.dtpStartDate.Name = "dtpStartDate";
-            this.dtpStartDate.Size = new System.Drawing.Size(200, 27);
+            this.dtpStartDate.Size = new System.Drawing.Size(200, 24);
             this.dtpStartDate.TabIndex = 19;
             this.dtpStartDate.ValueChanged += new System.EventHandler(this.dtpStartDate_ValueChanged);
             // 
@@ -920,7 +920,7 @@
             this.dtpEndDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpEndDate.Location = new System.Drawing.Point(265, 21);
             this.dtpEndDate.Name = "dtpEndDate";
-            this.dtpEndDate.Size = new System.Drawing.Size(200, 27);
+            this.dtpEndDate.Size = new System.Drawing.Size(200, 24);
             this.dtpEndDate.TabIndex = 20;
             this.dtpEndDate.ValueChanged += new System.EventHandler(this.dtpEndDate_ValueChanged);
             // 
@@ -935,7 +935,7 @@
             this.label2.Location = new System.Drawing.Point(12, 10);
             this.label2.Name = "label2";
             this.label2.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.label2.Size = new System.Drawing.Size(188, 44);
+            this.label2.Size = new System.Drawing.Size(162, 37);
             this.label2.TabIndex = 15;
             this.label2.Text = "DashBoard";
             // 
@@ -1043,7 +1043,7 @@
             // pbMinimize
             // 
             this.pbMinimize.Image = ((System.Drawing.Image)(resources.GetObject("pbMinimize.Image")));
-            this.pbMinimize.Location = new System.Drawing.Point(1406, 10);
+            this.pbMinimize.Location = new System.Drawing.Point(1176, 10);
             this.pbMinimize.Margin = new System.Windows.Forms.Padding(10);
             this.pbMinimize.Name = "pbMinimize";
             this.pbMinimize.Size = new System.Drawing.Size(22, 26);
@@ -1054,7 +1054,7 @@
             // pbMaximize
             // 
             this.pbMaximize.Image = ((System.Drawing.Image)(resources.GetObject("pbMaximize.Image")));
-            this.pbMaximize.Location = new System.Drawing.Point(1448, 10);
+            this.pbMaximize.Location = new System.Drawing.Point(1218, 10);
             this.pbMaximize.Margin = new System.Windows.Forms.Padding(10);
             this.pbMaximize.Name = "pbMaximize";
             this.pbMaximize.Size = new System.Drawing.Size(27, 26);
@@ -1065,7 +1065,7 @@
             // pbClose
             // 
             this.pbClose.Image = ((System.Drawing.Image)(resources.GetObject("pbClose.Image")));
-            this.pbClose.Location = new System.Drawing.Point(1495, 10);
+            this.pbClose.Location = new System.Drawing.Point(1265, 10);
             this.pbClose.Margin = new System.Windows.Forms.Padding(10);
             this.pbClose.Name = "pbClose";
             this.pbClose.Size = new System.Drawing.Size(24, 26);
@@ -1083,25 +1083,25 @@
             this.floatPanelTop.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
             this.floatPanelTop.Location = new System.Drawing.Point(61, 0);
             this.floatPanelTop.Name = "floatPanelTop";
-            this.floatPanelTop.Size = new System.Drawing.Size(1529, 43);
+            this.floatPanelTop.Size = new System.Drawing.Size(1299, 43);
             this.floatPanelTop.TabIndex = 12;
             // 
             // flowPanelRight
             // 
             this.flowPanelRight.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
             this.flowPanelRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.flowPanelRight.Location = new System.Drawing.Point(1590, 0);
+            this.flowPanelRight.Location = new System.Drawing.Point(1360, 0);
             this.flowPanelRight.MaximumSize = new System.Drawing.Size(10, 1080);
             this.flowPanelRight.MinimumSize = new System.Drawing.Size(10, 563);
             this.flowPanelRight.Name = "flowPanelRight";
-            this.flowPanelRight.Size = new System.Drawing.Size(10, 767);
+            this.flowPanelRight.Size = new System.Drawing.Size(10, 743);
             this.flowPanelRight.TabIndex = 14;
             // 
             // frmDashBoard
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(28)))), ((int)(((byte)(63)))));
-            this.ClientSize = new System.Drawing.Size(1600, 767);
+            this.ClientSize = new System.Drawing.Size(1370, 743);
             this.Controls.Add(this.pnlMain);
             this.Controls.Add(this.floatPanelTop);
             this.Controls.Add(this.flowPanelBottom);

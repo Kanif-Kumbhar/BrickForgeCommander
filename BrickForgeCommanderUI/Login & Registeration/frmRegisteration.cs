@@ -56,11 +56,12 @@ namespace BrickForgeCommanderUI.Login___Registeration
         {
             using (SqlConnection con = new SqlConnection(ConnectionString))
             {
-                if (ValidateFields())
+                if (!ValidateFields())
                 {
                     MessageBox.Show("Please fill in all fields", "Registration Failed!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
                 }
-                else if (txtPassword.Text == txtConfirmPassword.Text)
+                if (txtPassword.Text == txtConfirmPassword.Text)
                 {
                     try
                     {
@@ -79,14 +80,14 @@ namespace BrickForgeCommanderUI.Login___Registeration
                         command.Parameters.AddWithValue("@AuthenticationKey", txtKey.Text);
                         command.ExecuteNonQuery();
 
-                        string insertVTD = "INSERT INTO kanif.VenderTypeDetails (VenderId, FirstName, MiddleName, LastName, Address, CityId, PhoneNo, VenderTypeID,UserId) VALUES (@VenderId, @FirstName, @MiddleName, @LastName, @Address, @CityId, @PhoneNo, @VenderTypeID, @UserId)";
+                        string insertVTD = "INSERT INTO kanif.VenderDetails (VenderId, FirstName, MiddleName, LastName, Address, CityId, PhoneNo, VenderTypeId,UserId) VALUES (@VenderId, @FirstName, @MiddleName, @LastName, @Address, @CityId, @PhoneNo, @VenderTypeId, @UserId)";
                         using (SqlCommand insertVTDCommand = new SqlCommand(insertVTD, con))
                         {
                             insertVTDCommand.Parameters.AddWithValue("@VenderId", nextVenderId);
 
                             string[] names = txtName.Text.Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
 
-                            insertVTDCommand.Parameters.AddWithValue("@FirstName", names[0]);
+                            insertVTDCommand.Parameters.AddWithValue("@FirstName", names.Length > 0 ? names[0] : string.Empty);
 
                             if (names.Length > 1)
                             {
@@ -118,11 +119,11 @@ namespace BrickForgeCommanderUI.Login___Registeration
                                 return;
                             }
 
-                            insertVTDCommand.Parameters.AddWithValue("@Phoneno", txtPhoneNo.Text);
+                            insertVTDCommand.Parameters.AddWithValue("@PhoneNo", txtPhoneNo.Text); // Fix parameter name
 
                             if (dboxUserType.SelectedItem != null)
                             {
-                                insertVTDCommand.Parameters.AddWithValue("@VenderTypeID", selectedUserType.ID);
+                                insertVTDCommand.Parameters.AddWithValue("@VenderTypeId", selectedUserType.ID);
                                 insertVTDCommand.Parameters.AddWithValue("@UserId", nextUserId);
                             }
                             else
@@ -342,14 +343,60 @@ namespace BrickForgeCommanderUI.Login___Registeration
 
         private bool ValidateFields()
         {
-            return !string.IsNullOrWhiteSpace(txtUserName.Text) &&
-                   ValidatePassword(txtPassword.Text) &&
-                   dboxUserType.SelectedItem != null;
+            if (string.IsNullOrWhiteSpace(txtName.Text))
+            {
+                MessageBox.Show("Please enter a name", "Registration Failed!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtName.Focus();
+                return false;
+            }
+            else if (string.IsNullOrWhiteSpace(txtAddress.Text))
+            {
+                MessageBox.Show("Please enter an address", "Registration Failed!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+            else if (string.IsNullOrWhiteSpace(txtPhoneNo.Text))
+            {
+                MessageBox.Show("Please enter a phone number", "Registration Failed!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+            else if (string.IsNullOrWhiteSpace(txtUserName.Text))
+            {
+                MessageBox.Show("Please enter a username", "Registration Failed!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+            else if (string.IsNullOrWhiteSpace(txtPassword.Text))
+            {
+                MessageBox.Show("Please enter a password", "Registration Failed!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+            else if (string.IsNullOrWhiteSpace(txtConfirmPassword.Text))
+            {
+                MessageBox.Show("Please confirm the password", "Registration Failed!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+            else if (dboxCity.SelectedItem == null)
+            {
+                MessageBox.Show("Please select a city", "Registration Failed!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+            else if (dboxUserType.SelectedItem == null)
+            {
+                MessageBox.Show("Please select a user type", "Registration Failed!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+            else if (!ValidatePassword(txtPassword.Text))
+            {
+                MessageBox.Show("Please enter a valid password. It should contain at least one uppercase letter and one special character, and be at least 8 characters long.", "Registration Failed!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+
+            return true;
         }
+
 
         private bool ValidatePassword(string password)
         {
-            string pattern = @"^(?=.*[A-Z])(?=.*[!@#$%^&*()_+]).*$";
+            string pattern = @"^(?=.*[A-Z])(?=.*[!@#$%^&*()_+]).{8,}$";
             return Regex.IsMatch(password, pattern);
         }
 
