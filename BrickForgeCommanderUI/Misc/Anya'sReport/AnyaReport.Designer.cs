@@ -39,8 +39,7 @@
             this.btnRetry = new BrickForgeCommanderUI.Controls.BFC_Button();
             this.btnCancle = new BrickForgeCommanderUI.Controls.BFC_Button();
             this.pnlMain = new System.Windows.Forms.Panel();
-            this.txtReport = new BrickForgeCommanderUI.Controls.BFC_TextBox();
-            this.lblReport = new System.Windows.Forms.RichTextBox();
+            this.txtReport = new System.Windows.Forms.RichTextBox();
             this.pnlTop.SuspendLayout();
             this.pnlLeft.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picboxAnya)).BeginInit();
@@ -130,10 +129,12 @@
             this.btnOk.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.btnOk.BorderRadius = 0;
             this.btnOk.BorderSize = 3;
+            this.btnOk.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.btnOk.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(83)))), ((int)(((byte)(255)))));
             this.btnOk.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnOk.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnOk.ForeColor = System.Drawing.Color.White;
-            this.btnOk.Location = new System.Drawing.Point(21, 14);
+            this.btnOk.Location = new System.Drawing.Point(313, 15);
             this.btnOk.Name = "btnOk";
             this.btnOk.Size = new System.Drawing.Size(140, 50);
             this.btnOk.TabIndex = 2;
@@ -148,10 +149,12 @@
             this.btnRetry.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.btnRetry.BorderRadius = 0;
             this.btnRetry.BorderSize = 3;
+            this.btnRetry.DialogResult = System.Windows.Forms.DialogResult.Retry;
             this.btnRetry.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(83)))), ((int)(((byte)(255)))));
             this.btnRetry.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRetry.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRetry.ForeColor = System.Drawing.Color.White;
-            this.btnRetry.Location = new System.Drawing.Point(166, 14);
+            this.btnRetry.Location = new System.Drawing.Point(21, 15);
             this.btnRetry.Name = "btnRetry";
             this.btnRetry.Size = new System.Drawing.Size(140, 50);
             this.btnRetry.TabIndex = 1;
@@ -166,10 +169,12 @@
             this.btnCancle.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.btnCancle.BorderRadius = 0;
             this.btnCancle.BorderSize = 3;
+            this.btnCancle.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnCancle.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(83)))), ((int)(((byte)(255)))));
             this.btnCancle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancle.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancle.ForeColor = System.Drawing.Color.White;
-            this.btnCancle.Location = new System.Drawing.Point(311, 14);
+            this.btnCancle.Location = new System.Drawing.Point(167, 15);
             this.btnCancle.Name = "btnCancle";
             this.btnCancle.Size = new System.Drawing.Size(140, 50);
             this.btnCancle.TabIndex = 0;
@@ -180,7 +185,6 @@
             // pnlMain
             // 
             this.pnlMain.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(212)))), ((int)(((byte)(212)))));
-            this.pnlMain.Controls.Add(this.lblReport);
             this.pnlMain.Controls.Add(this.txtReport);
             this.pnlMain.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlMain.Location = new System.Drawing.Point(365, 47);
@@ -191,38 +195,15 @@
             // txtReport
             // 
             this.txtReport.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(212)))), ((int)(((byte)(212)))));
-            this.txtReport.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(212)))), ((int)(((byte)(212)))));
-            this.txtReport.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(212)))), ((int)(((byte)(212)))));
-            this.txtReport.BorderRadius = 0;
-            this.txtReport.BorderSize = 0;
-            this.txtReport.Font = new System.Drawing.Font("Modern No. 20", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtReport.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtReport.Font = new System.Drawing.Font("Modern No. 20", 14F);
             this.txtReport.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtReport.Location = new System.Drawing.Point(0, 264);
-            this.txtReport.Margin = new System.Windows.Forms.Padding(4);
-            this.txtReport.MultiLine = true;
+            this.txtReport.Location = new System.Drawing.Point(0, 56);
             this.txtReport.Name = "txtReport";
-            this.txtReport.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.txtReport.PasswordChar = false;
-            this.txtReport.PlaceHolderColor = System.Drawing.Color.DarkGray;
-            this.txtReport.PlaceHolderText = "";
-            this.txtReport.Size = new System.Drawing.Size(467, 87);
-            this.txtReport.TabIndex = 0;
-            this.txtReport.TextBoxText = "";
-            this.txtReport.Texts = "";
-            this.txtReport.UnderLineStyle = false;
-            // 
-            // lblReport
-            // 
-            this.lblReport.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(212)))), ((int)(((byte)(212)))));
-            this.lblReport.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.lblReport.Font = new System.Drawing.Font("Modern No. 20", 14F);
-            this.lblReport.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lblReport.Location = new System.Drawing.Point(0, 56);
-            this.lblReport.Name = "lblReport";
-            this.lblReport.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
-            this.lblReport.Size = new System.Drawing.Size(455, 293);
-            this.lblReport.TabIndex = 2;
-            this.lblReport.Text = "";
+            this.txtReport.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
+            this.txtReport.Size = new System.Drawing.Size(455, 293);
+            this.txtReport.TabIndex = 2;
+            this.txtReport.Text = "";
             // 
             // AnyaReports
             // 
@@ -234,6 +215,7 @@
             this.Controls.Add(this.pnlLeft);
             this.Controls.Add(this.pnlTop);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.KeyPreview = true;
             this.Name = "AnyaReports";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "AnyaReport";
@@ -261,7 +243,6 @@
         private Controls.BFC_Button btnRetry;
         private Controls.BFC_Button btnCancle;
         private System.Windows.Forms.Label lblCaption;
-        private Controls.BFC_TextBox txtReport;
-        private System.Windows.Forms.RichTextBox lblReport;
+        private System.Windows.Forms.RichTextBox txtReport;
     }
 }

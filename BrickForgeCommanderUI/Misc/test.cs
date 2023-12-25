@@ -12,24 +12,30 @@ namespace BrickForgeCommanderUI.Misc
             InitializeComponent();
         }
 
-        private void btnAngry_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
+        {
+            DialogResult result = AnyaReports.Show("Are you sure you want to delete this record?", "Confirm Delete", ReportButton.OkCancle,Anya.Crying );
+
+            // Check the user's choice
+            if (result == DialogResult.Yes)
+            {
+                MessageBox.Show("Deleted");
+            }
+            else
+            {
+                // User clicked 'No' or closed the message box
+                MessageBox.Show("Delete operation canceled.", "Operation Canceled", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+           AnyaReports.Show("Are you sure you want to delete this record?", "Confirm Delete", ReportButton.OkCancleRetry, Anya.Crying);
+        }
+
+        private void bfC_Button1_Click(object sender, EventArgs e)
         {
             AnyaReports.Show("Hello");
-        }
-
-        private void btnHappy_Click(object sender, EventArgs e)
-        {
-            AnyaReports.Show("Hello my name is anya and im 88 year old how are yu meuodknddkdvvsnvvkvn", "test", ReportButton.OkCancle, Anya.Confused);
-        }
-
-        private void btnCrying_Click(object sender, EventArgs e)
-        {
-            AnyaReports.Show("Hello","Testttt",ReportButton.Retry);
-        }
-
-        private void btnConfused_Click(object sender, EventArgs e)
-        {
-            AnyaReports.Show("Hello", "Testttt", ReportButton.OkCancleRetry);
         }
     }
 }

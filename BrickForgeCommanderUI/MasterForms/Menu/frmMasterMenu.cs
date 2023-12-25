@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BrickForgeCommanderUI.Misc.Anya_sReport;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -39,6 +40,11 @@ namespace BrickForgeCommanderUI.MasterForms.Menu
         {
             frmVendorTypeDetails VTD = new frmVendorTypeDetails();
             VTD.Show();
+        }
+
+        private void bfC_Button3_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }

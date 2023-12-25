@@ -16,8 +16,13 @@ namespace BrickForgeCommanderUI.Controls
         private int borderSize = 0;
         private int borderRadius = 20;
         private Color borderColor = Color.PaleVioletRed;
+        private Color borderFocusColor = Color.Green;
+        private Color originalBorderColor;
 
         #region Properties
+
+        [Category("BFC Custom")]
+        public Color BorderFocusColor { get => borderFocusColor; set => borderFocusColor = value; }
 
         [Category("BFC Custom")]
         public int BorderSize
@@ -77,6 +82,11 @@ namespace BrickForgeCommanderUI.Controls
             this.BackColor = Color.MediumSlateBlue;
             this.ForeColor = Color.White;
             this.Resize += new EventHandler(Button_Resize);
+
+            this.GotFocus += BFC_Button_GotFocus;
+            this.LostFocus += BFC_Button_LostFocus;
+
+            originalBorderColor = borderColor;
         }
 
         private void Button_Resize(object sender, EventArgs e)
@@ -154,5 +164,17 @@ namespace BrickForgeCommanderUI.Controls
         }
 
         #endregion
+
+        private void BFC_Button_GotFocus(object sender, EventArgs e)
+        {
+            borderColor = borderFocusColor;
+            this.Invalidate();
+        }
+
+        private void BFC_Button_LostFocus(object sender, EventArgs e)
+        {
+            borderColor = originalBorderColor;
+            this.Invalidate();
+        }
     }
 }

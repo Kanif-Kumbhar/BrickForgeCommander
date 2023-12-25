@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Drawing;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
 
@@ -55,9 +56,8 @@ namespace BrickForgeCommanderUI.Misc.Anya_sReport
         {
             btnRetry.Visible = false;
             btnCancle.Visible = false;
-            //btnOk.Location = btnClose.Location;
 
-            lblReport.Text = text;
+            txtReport.Text = text;
         }
 
         public AnyaReports(string text, string caption)
@@ -65,7 +65,6 @@ namespace BrickForgeCommanderUI.Misc.Anya_sReport
         {
             btnRetry.Visible = false;
             btnCancle.Visible = false;
-           // btnOk.Location = btnClose.Location;
 
             lblCaption.Text = caption;
         }
@@ -81,11 +80,16 @@ namespace BrickForgeCommanderUI.Misc.Anya_sReport
         {
             GetAnyaMood(mood);
         }
-
+        public AnyaReports(string text, string caption, ReportButton buttons, Anya mood, ReportType isScrollable)
+             : this(text, caption, buttons, mood)
+        {
+            GetReportType(isScrollable);
+        }
 
         private void AnyaReports_Load(object sender, EventArgs e)
         {
-            //Empty
+            txtReport.ReadOnly = true;
+            this.AcceptButton = btnCancle;
         }
 
         private void GetAnyaMood(Anya mood)
@@ -117,6 +121,10 @@ namespace BrickForgeCommanderUI.Misc.Anya_sReport
 
         private void GetButtons(ReportButton button)
         {
+            btnOk.Visible = false;
+            btnRetry.Visible = false;
+            btnCancle.Visible = false;
+
             switch (button)
             {
                 case ReportButton.Ok:
@@ -125,22 +133,43 @@ namespace BrickForgeCommanderUI.Misc.Anya_sReport
                 case ReportButton.OkCancle:
                     btnOk.Visible = true;
                     btnCancle.Visible = true;
+                    SwapButtons(btnOk, btnCancle);
                     break;
                 case ReportButton.Retry:
-                    btnRetry.Location = btnCancle.Location;
                     btnRetry.Visible = true;
+                    SwapButtons(btnRetry, btnOk);
                     break;
                 case ReportButton.OkCancleRetry:
                     btnOk.Visible = true;
-                    btnCancle.Visible = true;
                     btnRetry.Visible = true;
+                    btnCancle.Visible = true;
+                    SwapButtons(btnOk, btnRetry);
                     break;
                 default:
                     break;
             }
         }
 
+        private void GetReportType(ReportType isScroable)
+        {
+            txtReport.ScrollBars = RichTextBoxScrollBars.None;
+            switch (isScroable)
+            {
+                case ReportType.Yes:
+                    txtReport.ScrollBars = RichTextBoxScrollBars.Vertical;
+                    break;
+                case ReportType.No:
+                    txtReport.ScrollBars = RichTextBoxScrollBars.None;
+                    break;
+            }
+        }
 
+        private void SwapButtons(Button btn1, Button btn2)
+        {
+            Point tempLocation = btn1.Location;
+            btn1.Location = btn2.Location;
+            btn2.Location = tempLocation;
+        }
         #region enums
         public enum ReportButton
         {
@@ -160,6 +189,12 @@ namespace BrickForgeCommanderUI.Misc.Anya_sReport
             Smile
         }
 
+        public enum ReportType
+        {
+            Yes,
+            No,
+        }
+
         #endregion
 
 
@@ -167,5 +202,7 @@ namespace BrickForgeCommanderUI.Misc.Anya_sReport
         {
             picboxAnya.Image?.Dispose();
         }
+
+
     }
 }

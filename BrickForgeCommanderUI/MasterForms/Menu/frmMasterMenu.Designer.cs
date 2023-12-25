@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMasterMenu));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.bfC_Close1 = new BrickForgeCommanderUI.Controls.NavControls.BFC_Close();
             this.lblHead = new System.Windows.Forms.Label();
             this.pnlMain = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
@@ -39,7 +40,6 @@
             this.bfC_Button2 = new BrickForgeCommanderUI.Controls.BFC_Button();
             this.btnVendorTypeDetails = new BrickForgeCommanderUI.Controls.BFC_Button();
             this.bfC_Button3 = new BrickForgeCommanderUI.Controls.BFC_Button();
-            this.bfC_Close1 = new BrickForgeCommanderUI.Controls.NavControls.BFC_Close();
             this.panel1.SuspendLayout();
             this.pnlMain.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -55,6 +55,26 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(600, 46);
             this.panel1.TabIndex = 0;
+            // 
+            // bfC_Close1
+            // 
+            this.bfC_Close1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(86)))), ((int)(((byte)(174)))));
+            this.bfC_Close1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(86)))), ((int)(((byte)(174)))));
+            this.bfC_Close1.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.bfC_Close1.BorderRadius = 0;
+            this.bfC_Close1.BorderSize = 0;
+            this.bfC_Close1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.bfC_Close1.FlatAppearance.BorderSize = 0;
+            this.bfC_Close1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bfC_Close1.ForeColor = System.Drawing.Color.White;
+            this.bfC_Close1.Image = ((System.Drawing.Image)(resources.GetObject("bfC_Close1.Image")));
+            this.bfC_Close1.Location = new System.Drawing.Point(525, 0);
+            this.bfC_Close1.Name = "bfC_Close1";
+            this.bfC_Close1.Size = new System.Drawing.Size(75, 46);
+            this.bfC_Close1.TabIndex = 1;
+            this.bfC_Close1.Text = " ";
+            this.bfC_Close1.TextColor = System.Drawing.Color.White;
+            this.bfC_Close1.UseVisualStyleBackColor = false;
             // 
             // lblHead
             // 
@@ -229,25 +249,7 @@
             this.bfC_Button3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.bfC_Button3.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(212)))), ((int)(((byte)(223)))));
             this.bfC_Button3.UseVisualStyleBackColor = false;
-            // 
-            // bfC_Close1
-            // 
-            this.bfC_Close1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(86)))), ((int)(((byte)(174)))));
-            this.bfC_Close1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(86)))), ((int)(((byte)(174)))));
-            this.bfC_Close1.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.bfC_Close1.BorderRadius = 0;
-            this.bfC_Close1.BorderSize = 0;
-            this.bfC_Close1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.bfC_Close1.FlatAppearance.BorderSize = 0;
-            this.bfC_Close1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bfC_Close1.ForeColor = System.Drawing.Color.White;
-            this.bfC_Close1.Image = ((System.Drawing.Image)(resources.GetObject("bfC_Close1.Image")));
-            this.bfC_Close1.Location = new System.Drawing.Point(525, 0);
-            this.bfC_Close1.Name = "bfC_Close1";
-            this.bfC_Close1.Size = new System.Drawing.Size(75, 46);
-            this.bfC_Close1.TabIndex = 1;
-            this.bfC_Close1.TextColor = System.Drawing.Color.White;
-            this.bfC_Close1.UseVisualStyleBackColor = false;
+            this.bfC_Button3.Click += new System.EventHandler(this.bfC_Button3_Click);
             // 
             // frmMasterMenu
             // 

@@ -1,4 +1,6 @@
-﻿using BrickForgeCommanderUI.Misc;
+﻿using BrickForgeCommanderUI.MasterForms.Menu;
+using BrickForgeCommanderUI.Misc;
+using BrickForgeCommanderUI.Misc.Anya_sReport;
 using System;
 using System.Windows.Forms;
 
@@ -14,7 +16,7 @@ namespace BrickForgeCommanderUI
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new test());
+            Application.Run(new AnyaReports());
         }
     }
 }
