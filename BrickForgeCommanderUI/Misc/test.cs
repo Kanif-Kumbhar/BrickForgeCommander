@@ -19,7 +19,17 @@ namespace BrickForgeCommanderUI.Misc
 
         private void btnHappy_Click(object sender, EventArgs e)
         {
-            AnyaReports.Show("Hello", "test", ReportButton.Ok, Anya.Confused);
+            AnyaReports.Show("Hello my name is anya and im 88 year old how are yu meuodknddkdvvsnvvkvn", "test", ReportButton.OkCancle, Anya.Confused);
+        }
+
+        private void btnCrying_Click(object sender, EventArgs e)
+        {
+            AnyaReports.Show("Hello","Testttt",ReportButton.Retry);
+        }
+
+        private void btnConfused_Click(object sender, EventArgs e)
+        {
+            AnyaReports.Show("Hello", "Testttt", ReportButton.OkCancleRetry);
         }
     }
 }

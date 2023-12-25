@@ -31,12 +31,29 @@ namespace BrickForgeCommanderUI.Controls
         public event EventHandler _TextChanged;
 
         #endregion
-
         [Category("Custom")]
         public string TextBoxText
         {
-            get { return textBox1.Text; }
-            set { textBox1.Text = value; }
+            get
+            {
+                if (isPlaceHolder) return "";
+                return textBox1.Text;
+            }
+            set
+            {
+                textBox1.Text = value;
+                // Update isPlaceHolder flag accordingly
+                if (string.IsNullOrEmpty(value) || value == placeHolderText)
+                {
+                    isPlaceHolder = true;
+                    SetPlaceHolder();
+                }
+                else
+                {
+                    isPlaceHolder = false;
+                    RemovePlaceHolder();
+                }
+            }
         }
         [Category("Custom")]
         public Color BorderColor
@@ -150,7 +167,16 @@ namespace BrickForgeCommanderUI.Controls
             set
             {
                 textBox1.Text = value;
-                SetPlaceHolder();
+                if (string.IsNullOrEmpty(value) || value == placeHolderText)
+                {
+                    isPlaceHolder = true;
+                    SetPlaceHolder();
+                }
+                else
+                {
+                    isPlaceHolder = false;
+                    RemovePlaceHolder();
+                }
             }
         }
         [Category("Custom")]
@@ -222,6 +248,7 @@ namespace BrickForgeCommanderUI.Controls
                     textBox1.UseSystemPasswordChar = true;
             }
         }
+
 
         protected override void OnPaint(PaintEventArgs e)
         {

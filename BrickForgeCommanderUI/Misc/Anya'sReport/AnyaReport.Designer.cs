@@ -30,17 +30,17 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AnyaReports));
             this.pnlTop = new System.Windows.Forms.Panel();
+            this.btnClose = new BrickForgeCommanderUI.Controls.NavControls.BFC_Close();
             this.lblCaption = new System.Windows.Forms.Label();
             this.pnlLeft = new System.Windows.Forms.Panel();
             this.picboxAnya = new System.Windows.Forms.PictureBox();
             this.pnlBottom = new System.Windows.Forms.Panel();
-            this.pnlMain = new System.Windows.Forms.Panel();
-            this.txtReport = new BrickForgeCommanderUI.Controls.BFC_TextBox();
             this.btnOk = new BrickForgeCommanderUI.Controls.BFC_Button();
             this.btnRetry = new BrickForgeCommanderUI.Controls.BFC_Button();
             this.btnCancle = new BrickForgeCommanderUI.Controls.BFC_Button();
-            this.btnClose = new BrickForgeCommanderUI.Controls.NavControls.BFC_Close();
-            this.txtReports = new BrickForgeCommanderUI.Controls.BFC_TextBox();
+            this.pnlMain = new System.Windows.Forms.Panel();
+            this.txtReport = new BrickForgeCommanderUI.Controls.BFC_TextBox();
+            this.lblReport = new System.Windows.Forms.RichTextBox();
             this.pnlTop.SuspendLayout();
             this.pnlLeft.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picboxAnya)).BeginInit();
@@ -58,6 +58,27 @@
             this.pnlTop.Name = "pnlTop";
             this.pnlTop.Size = new System.Drawing.Size(832, 47);
             this.pnlTop.TabIndex = 0;
+            // 
+            // btnClose
+            // 
+            this.btnClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(176)))), ((int)(((byte)(176)))));
+            this.btnClose.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(176)))), ((int)(((byte)(176)))));
+            this.btnClose.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnClose.BorderRadius = 0;
+            this.btnClose.BorderSize = 0;
+            this.btnClose.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnClose.FlatAppearance.BorderSize = 0;
+            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClose.Font = new System.Drawing.Font("Microsoft YaHei UI", 16F);
+            this.btnClose.ForeColor = System.Drawing.Color.White;
+            this.btnClose.Image = ((System.Drawing.Image)(resources.GetObject("btnClose.Image")));
+            this.btnClose.Location = new System.Drawing.Point(758, 0);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(74, 47);
+            this.btnClose.TabIndex = 0;
+            this.btnClose.Text = " ";
+            this.btnClose.TextColor = System.Drawing.Color.White;
+            this.btnClose.UseVisualStyleBackColor = false;
             // 
             // lblCaption
             // 
@@ -101,40 +122,6 @@
             this.pnlBottom.Name = "pnlBottom";
             this.pnlBottom.Size = new System.Drawing.Size(467, 68);
             this.pnlBottom.TabIndex = 2;
-            // 
-            // pnlMain
-            // 
-            this.pnlMain.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(212)))), ((int)(((byte)(212)))));
-            this.pnlMain.Controls.Add(this.txtReports);
-            this.pnlMain.Controls.Add(this.txtReport);
-            this.pnlMain.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlMain.Location = new System.Drawing.Point(365, 47);
-            this.pnlMain.Name = "pnlMain";
-            this.pnlMain.Size = new System.Drawing.Size(467, 349);
-            this.pnlMain.TabIndex = 3;
-            // 
-            // txtReport
-            // 
-            this.txtReport.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(212)))), ((int)(((byte)(212)))));
-            this.txtReport.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(212)))), ((int)(((byte)(212)))));
-            this.txtReport.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(212)))), ((int)(((byte)(212)))));
-            this.txtReport.BorderRadius = 0;
-            this.txtReport.BorderSize = 0;
-            this.txtReport.Font = new System.Drawing.Font("Modern No. 20", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtReport.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtReport.Location = new System.Drawing.Point(0, 56);
-            this.txtReport.Margin = new System.Windows.Forms.Padding(4);
-            this.txtReport.MultiLine = true;
-            this.txtReport.Name = "txtReport";
-            this.txtReport.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.txtReport.PasswordChar = false;
-            this.txtReport.PlaceHolderColor = System.Drawing.Color.DarkGray;
-            this.txtReport.PlaceHolderText = "";
-            this.txtReport.Size = new System.Drawing.Size(467, 295);
-            this.txtReport.TabIndex = 0;
-            this.txtReport.TextBoxText = "";
-            this.txtReport.Texts = "";
-            this.txtReport.UnderLineStyle = false;
             // 
             // btnOk
             // 
@@ -190,49 +177,52 @@
             this.btnCancle.TextColor = System.Drawing.Color.White;
             this.btnCancle.UseVisualStyleBackColor = false;
             // 
-            // btnClose
+            // pnlMain
             // 
-            this.btnClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(176)))), ((int)(((byte)(176)))));
-            this.btnClose.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(176)))), ((int)(((byte)(176)))));
-            this.btnClose.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnClose.BorderRadius = 0;
-            this.btnClose.BorderSize = 0;
-            this.btnClose.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnClose.FlatAppearance.BorderSize = 0;
-            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClose.Font = new System.Drawing.Font("Microsoft YaHei UI", 16F);
-            this.btnClose.ForeColor = System.Drawing.Color.White;
-            this.btnClose.Image = ((System.Drawing.Image)(resources.GetObject("btnClose.Image")));
-            this.btnClose.Location = new System.Drawing.Point(758, 0);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(74, 47);
-            this.btnClose.TabIndex = 0;
-            this.btnClose.Text = " ";
-            this.btnClose.TextColor = System.Drawing.Color.White;
-            this.btnClose.UseVisualStyleBackColor = false;
+            this.pnlMain.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(212)))), ((int)(((byte)(212)))));
+            this.pnlMain.Controls.Add(this.lblReport);
+            this.pnlMain.Controls.Add(this.txtReport);
+            this.pnlMain.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlMain.Location = new System.Drawing.Point(365, 47);
+            this.pnlMain.Name = "pnlMain";
+            this.pnlMain.Size = new System.Drawing.Size(467, 349);
+            this.pnlMain.TabIndex = 3;
             // 
-            // txtReports
+            // txtReport
             // 
-            this.txtReports.BackColor = System.Drawing.SystemColors.Window;
-            this.txtReports.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.txtReports.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.txtReports.BorderRadius = 0;
-            this.txtReports.BorderSize = 2;
-            this.txtReports.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
-            this.txtReports.ForeColor = System.Drawing.Color.DimGray;
-            this.txtReports.Location = new System.Drawing.Point(86, 14);
-            this.txtReports.Margin = new System.Windows.Forms.Padding(4);
-            this.txtReports.MultiLine = false;
-            this.txtReports.Name = "txtReports";
-            this.txtReports.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.txtReports.PasswordChar = false;
-            this.txtReports.PlaceHolderColor = System.Drawing.Color.DarkGray;
-            this.txtReports.PlaceHolderText = "";
-            this.txtReports.Size = new System.Drawing.Size(250, 39);
-            this.txtReports.TabIndex = 1;
-            this.txtReports.TextBoxText = "";
-            this.txtReports.Texts = "";
-            this.txtReports.UnderLineStyle = false;
+            this.txtReport.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(212)))), ((int)(((byte)(212)))));
+            this.txtReport.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(212)))), ((int)(((byte)(212)))));
+            this.txtReport.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(212)))), ((int)(((byte)(212)))));
+            this.txtReport.BorderRadius = 0;
+            this.txtReport.BorderSize = 0;
+            this.txtReport.Font = new System.Drawing.Font("Modern No. 20", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtReport.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtReport.Location = new System.Drawing.Point(0, 264);
+            this.txtReport.Margin = new System.Windows.Forms.Padding(4);
+            this.txtReport.MultiLine = true;
+            this.txtReport.Name = "txtReport";
+            this.txtReport.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.txtReport.PasswordChar = false;
+            this.txtReport.PlaceHolderColor = System.Drawing.Color.DarkGray;
+            this.txtReport.PlaceHolderText = "";
+            this.txtReport.Size = new System.Drawing.Size(467, 87);
+            this.txtReport.TabIndex = 0;
+            this.txtReport.TextBoxText = "";
+            this.txtReport.Texts = "";
+            this.txtReport.UnderLineStyle = false;
+            // 
+            // lblReport
+            // 
+            this.lblReport.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(212)))), ((int)(((byte)(212)))));
+            this.lblReport.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.lblReport.Font = new System.Drawing.Font("Modern No. 20", 14F);
+            this.lblReport.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.lblReport.Location = new System.Drawing.Point(0, 56);
+            this.lblReport.Name = "lblReport";
+            this.lblReport.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
+            this.lblReport.Size = new System.Drawing.Size(455, 293);
+            this.lblReport.TabIndex = 2;
+            this.lblReport.Text = "";
             // 
             // AnyaReports
             // 
@@ -272,6 +262,6 @@
         private Controls.BFC_Button btnCancle;
         private System.Windows.Forms.Label lblCaption;
         private Controls.BFC_TextBox txtReport;
-        private Controls.BFC_TextBox txtReports;
+        private System.Windows.Forms.RichTextBox lblReport;
     }
 }

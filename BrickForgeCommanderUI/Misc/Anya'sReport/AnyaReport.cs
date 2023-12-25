@@ -53,12 +53,20 @@ namespace BrickForgeCommanderUI.Misc.Anya_sReport
         public AnyaReports(string text)
             : this()
         {
-            txtReports.Text = text;
+            btnRetry.Visible = false;
+            btnCancle.Visible = false;
+            //btnOk.Location = btnClose.Location;
+
+            lblReport.Text = text;
         }
 
         public AnyaReports(string text, string caption)
             : this(text)
         {
+            btnRetry.Visible = false;
+            btnCancle.Visible = false;
+           // btnOk.Location = btnClose.Location;
+
             lblCaption.Text = caption;
         }
 
@@ -77,9 +85,7 @@ namespace BrickForgeCommanderUI.Misc.Anya_sReport
 
         private void AnyaReports_Load(object sender, EventArgs e)
         {
-            btnCancle.Hide();
-            btnOk.Hide();
-            btnRetry.Hide();
+            //Empty
         }
 
         private void GetAnyaMood(Anya mood)
@@ -114,20 +120,20 @@ namespace BrickForgeCommanderUI.Misc.Anya_sReport
             switch (button)
             {
                 case ReportButton.Ok:
-                    btnOk.Show();
+                    btnOk.Visible = true;
                     break;
                 case ReportButton.OkCancle:
-                    btnOk.Show();
-                    btnCancle.Show();
+                    btnOk.Visible = true;
+                    btnCancle.Visible = true;
                     break;
                 case ReportButton.Retry:
                     btnRetry.Location = btnCancle.Location;
-                    btnRetry.Show();
+                    btnRetry.Visible = true;
                     break;
                 case ReportButton.OkCancleRetry:
-                    btnOk.Show();
-                    btnCancle.Show();
-                    btnRetry.Show();
+                    btnOk.Visible = true;
+                    btnCancle.Visible = true;
+                    btnRetry.Visible = true;
                     break;
                 default:
                     break;
