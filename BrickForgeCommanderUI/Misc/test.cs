@@ -37,5 +37,13 @@ namespace BrickForgeCommanderUI.Misc
         {
             AnyaReports.Show("Hello");
         }
+
+        private void btnNervous_Click(object sender, EventArgs e)
+        {
+            if ((DialogResult  = AnyaReports.Show("Hello", "Testing", ReportButton.YesNoCancle, Anya.Nervous)) == DialogResult.Yes)
+            {
+                AnyaReports.Show("Done","",ReportButton.Ok,Anya.Crying);
+            }
+        }
     }
 }

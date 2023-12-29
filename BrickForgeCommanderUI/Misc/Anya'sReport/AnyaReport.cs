@@ -145,6 +145,34 @@ namespace BrickForgeCommanderUI.Misc.Anya_sReport
                     btnCancle.Visible = true;
                     SwapButtons(btnOk, btnRetry);
                     break;
+                case ReportButton.Yes:
+                    btnOk.Visible = true;
+                    btnOk.Text = "Yes";
+                    btnOk.DialogResult = DialogResult.Yes;
+                    break;
+                case ReportButton.YesNo:
+                    btnOk.Visible = true;
+                    btnCancle.Visible= true;
+                    SwapButtons(btnOk, btnCancle);
+                    btnOk.Text = "Yes";
+                    btnCancle.Text = "No";
+                    btnOk.DialogResult = DialogResult.Yes;
+                    btnCancle.DialogResult = DialogResult.No;
+                    break;
+                case ReportButton.YesNoCancle:
+                    btnOk.Visible = true;
+                    btnCancle.Visible = true;
+                    btnRetry.Visible= true;
+                    SwapButtons(btnOk, btnRetry);
+                    btnOk.Text = "Yes";
+                    btnCancle.Text = "No";
+                    btnRetry.Text = "Cancle";
+                    btnOk.DialogResult = DialogResult.Yes;
+                    btnCancle.DialogResult = DialogResult.No;
+                    btnRetry.DialogResult = DialogResult.Cancel;
+                    break;
+                case ReportButton.RetryCancle:
+                    break;
                 default:
                     break;
             }
@@ -177,6 +205,10 @@ namespace BrickForgeCommanderUI.Misc.Anya_sReport
             OkCancle,
             Retry,
             OkCancleRetry,
+            Yes,
+            YesNo,
+            YesNoCancle,
+            RetryCancle,
         }
 
         public enum Anya
