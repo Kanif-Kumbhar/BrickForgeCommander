@@ -24,6 +24,7 @@ namespace BrickForgeCommanderUI.Controls
         public BFC_TextBox()
         {
             InitializeComponent();
+
         }
 
         #region Events
@@ -41,17 +42,14 @@ namespace BrickForgeCommanderUI.Controls
             }
             set
             {
-                textBox1.Text = value;
-                // Update isPlaceHolder flag accordingly
                 if (string.IsNullOrEmpty(value) || value == placeHolderText)
                 {
-                    isPlaceHolder = true;
                     SetPlaceHolder();
                 }
                 else
                 {
-                    isPlaceHolder = false;
                     RemovePlaceHolder();
+                    textBox1.Text = value;
                 }
             }
         }
@@ -179,7 +177,7 @@ namespace BrickForgeCommanderUI.Controls
                 }
             }
         }
-        [Category("Custom")]
+            [Category("Custom")]
         public int BorderRadius
         {
             get
@@ -221,10 +219,10 @@ namespace BrickForgeCommanderUI.Controls
             set
             {
                 placeHolderText = value;
-                textBox1.Text = "";
                 SetPlaceHolder();
             }
         }
+        [Category("Validation")]
         private void SetPlaceHolder()
         {
             if (string.IsNullOrEmpty(textBox1.Text) && placeHolderText != "")
@@ -248,6 +246,7 @@ namespace BrickForgeCommanderUI.Controls
                     textBox1.UseSystemPasswordChar = true;
             }
         }
+
 
 
         protected override void OnPaint(PaintEventArgs e)
@@ -312,6 +311,7 @@ namespace BrickForgeCommanderUI.Controls
             else
             {
                 pathTxt = GetFigurePath(textBox1.ClientRectangle, BorderSize * 2);
+                textBox1.Region = new Region(pathTxt);
             }
         }
 
@@ -412,7 +412,6 @@ namespace BrickForgeCommanderUI.Controls
         {
             this.OnKeyDown(e);
         }
-
         #endregion
     }
 }

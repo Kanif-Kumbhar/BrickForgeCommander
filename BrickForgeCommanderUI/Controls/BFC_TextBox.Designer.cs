@@ -68,6 +68,6 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
+        protected System.Windows.Forms.TextBox textBox1;
     }
 }

@@ -89,68 +89,77 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Controls\NavControls\dBtn.cs" />
-    <Compile Include="Misc\Anya%27sReport\AnyaReport.cs">
+    <Compile Include="Controls\Validation\RequiredFieldTextBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Misc\Anya%27sReport\AnyaReport.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Misc\Anya%27sReport\AnyaReport.Designer.cs">
+    <Compile Include="Forms\Misc\Anya%27sReport\AnyaReport.Designer.cs">
       <DependentUpon>AnyaReport.cs</DependentUpon>
     </Compile>
-    <Compile Include="Misc\Dashboard\frmDashBoard.cs">
+    <Compile Include="Forms\Misc\Dashboard\frmDashBoard.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Misc\Dashboard\frmDashBoard.Designer.cs">
+    <Compile Include="Forms\Misc\Dashboard\frmDashBoard.Designer.cs">
       <DependentUpon>frmDashBoard.cs</DependentUpon>
     </Compile>
-    <Compile Include="Misc\Dashboard\Models\DashBoard.cs" />
+    <Compile Include="Forms\Misc\Dashboard\Models\DashBoard.cs" />
     <Compile Include="Db\DbConnection.cs" />
-    <Compile Include="Display\frmStart.cs">
+    <Compile Include="Forms\Display\frmStart.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Display\frmStart.Designer.cs">
+    <Compile Include="Forms\Display\frmStart.Designer.cs">
       <DependentUpon>frmStart.cs</DependentUpon>
     </Compile>
-    <Compile Include="Login &amp; Registeration\frmForgotPwd.cs">
+    <Compile Include="Forms\Login &amp; Registeration\frmForgotPwd.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Login &amp; Registeration\frmForgotPwd.Designer.cs">
+    <Compile Include="Forms\Login &amp; Registeration\frmForgotPwd.Designer.cs">
       <DependentUpon>frmForgotPwd.cs</DependentUpon>
     </Compile>
-    <Compile Include="Login &amp; Registeration\frmLogin.cs">
+    <Compile Include="Forms\Login &amp; Registeration\frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Login &amp; Registeration\frmLogin.Designer.cs">
+    <Compile Include="Forms\Login &amp; Registeration\frmLogin.Designer.cs">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="Login &amp; Registeration\frmRegisteration.cs">
+    <Compile Include="Forms\Login &amp; Registeration\frmRegisteration.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Login &amp; Registeration\frmRegisteration.Designer.cs">
+    <Compile Include="Forms\Login &amp; Registeration\frmRegisteration.Designer.cs">
       <DependentUpon>frmRegisteration.cs</DependentUpon>
     </Compile>
-    <Compile Include="MasterForms\Command\SqlQueryRunner.cs" />
-    <Compile Include="MasterForms\frmModeDetails.cs">
+    <Compile Include="Forms\MasterForms\Command\SqlQueryRunner.cs" />
+    <Compile Include="Forms\MasterForms\frmModeDetails.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MasterForms\frmModeDetails.Designer.cs">
+    <Compile Include="Forms\MasterForms\frmModeDetails.Designer.cs">
       <DependentUpon>frmModeDetails.cs</DependentUpon>
     </Compile>
-    <Compile Include="MasterForms\Menu\frmMasterMenu.cs">
+    <Compile Include="Forms\MasterForms\Menu\frmMasterMenu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MasterForms\Menu\frmMasterMenu.Designer.cs">
+    <Compile Include="Forms\MasterForms\Menu\frmMasterMenu.Designer.cs">
       <DependentUpon>frmMasterMenu.cs</DependentUpon>
     </Compile>
-    <Compile Include="MasterForms\VendorTypeDetails.cs">
+    <Compile Include="Forms\MasterForms\VendorTypeDetails.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MasterForms\VendorTypeDetails.Designer.cs">
+    <Compile Include="Forms\MasterForms\VendorTypeDetails.Designer.cs">
       <DependentUpon>VendorTypeDetails.cs</DependentUpon>
     </Compile>
-    <Compile Include="Misc\test.cs">
+    <Compile Include="Forms\Misc\test.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Misc\test.Designer.cs">
+    <Compile Include="Forms\Misc\test.Designer.cs">
       <DependentUpon>test.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\TransactionForms\Worker\WorkerRegistration\frmWorkerRegisteration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\TransactionForms\Worker\WorkerRegistration\frmWorkerRegisteration.Designer.cs">
+      <DependentUpon>frmWorkerRegisteration.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -163,35 +172,38 @@
     <EmbeddedResource Include="Controls\FunctionControls\BFC_UndoRedo.resx">
       <DependentUpon>BFC_UndoRedo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Misc\Anya%27sReport\AnyaReport.resx">
+    <EmbeddedResource Include="Forms\Misc\Anya%27sReport\AnyaReport.resx">
       <DependentUpon>AnyaReport.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Misc\Dashboard\frmDashBoard.resx">
+    <EmbeddedResource Include="Forms\Misc\Dashboard\frmDashBoard.resx">
       <DependentUpon>frmDashBoard.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Display\frmStart.resx">
+    <EmbeddedResource Include="Forms\Display\frmStart.resx">
       <DependentUpon>frmStart.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Login &amp; Registeration\frmForgotPwd.resx">
+    <EmbeddedResource Include="Forms\Login &amp; Registeration\frmForgotPwd.resx">
       <DependentUpon>frmForgotPwd.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Login &amp; Registeration\frmLogin.resx">
+    <EmbeddedResource Include="Forms\Login &amp; Registeration\frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Login &amp; Registeration\frmRegisteration.resx">
+    <EmbeddedResource Include="Forms\Login &amp; Registeration\frmRegisteration.resx">
       <DependentUpon>frmRegisteration.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MasterForms\frmModeDetails.resx">
+    <EmbeddedResource Include="Forms\MasterForms\frmModeDetails.resx">
       <DependentUpon>frmModeDetails.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MasterForms\Menu\frmMasterMenu.resx">
+    <EmbeddedResource Include="Forms\MasterForms\Menu\frmMasterMenu.resx">
       <DependentUpon>frmMasterMenu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MasterForms\VendorTypeDetails.resx">
+    <EmbeddedResource Include="Forms\MasterForms\VendorTypeDetails.resx">
       <DependentUpon>VendorTypeDetails.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Misc\test.resx">
+    <EmbeddedResource Include="Forms\Misc\test.resx">
       <DependentUpon>test.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\TransactionForms\Worker\WorkerRegistration\frmWorkerRegisteration.resx">
+      <DependentUpon>frmWorkerRegisteration.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -377,6 +389,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Nervous_Anya.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\bfcCustomControls\bfc_CustomControls.csproj">
+      <Project>{dca29d35-52f5-4c7a-8270-de58a31a7633}</Project>
+      <Name>bfc_CustomControls</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

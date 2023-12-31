@@ -216,7 +216,7 @@
             this.txtPhoneNo.PlaceHolderText = "                 Eg.   0123456789";
             this.txtPhoneNo.Size = new System.Drawing.Size(324, 39);
             this.txtPhoneNo.TabIndex = 60;
-            this.txtPhoneNo.Texts = "";
+            this.txtPhoneNo.Text = "";
             this.txtPhoneNo.UnderLineStyle = false;
             this.txtPhoneNo.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtPhoneNo_KeyDown);
             // 
@@ -239,7 +239,7 @@
             this.txtAddress.PlaceHolderText = "Eg. A/P KumbharGalli, KavathePiran.";
             this.txtAddress.Size = new System.Drawing.Size(324, 39);
             this.txtAddress.TabIndex = 59;
-            this.txtAddress.Texts = "";
+            this.txtAddress.Text = "";
             this.txtAddress.UnderLineStyle = false;
             this.txtAddress.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAddress_KeyPress);
             // 
@@ -262,7 +262,7 @@
             this.txtName.PlaceHolderText = "( First ) ( Middle ) ( Last )";
             this.txtName.Size = new System.Drawing.Size(324, 39);
             this.txtName.TabIndex = 58;
-            this.txtName.Texts = "";
+            this.txtName.Text = "";
             this.txtName.UnderLineStyle = true;
             // 
             // label7
@@ -399,7 +399,7 @@
             this.txtConfirmPassword.PlaceHolderText = "";
             this.txtConfirmPassword.Size = new System.Drawing.Size(324, 39);
             this.txtConfirmPassword.TabIndex = 65;
-            this.txtConfirmPassword.Texts = "";
+            this.txtConfirmPassword.Text = "";
             this.txtConfirmPassword.UnderLineStyle = false;
             this.txtConfirmPassword.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtConfirmPassword_KeyDown);
             // 
@@ -422,7 +422,7 @@
             this.txtPassword.PlaceHolderText = "";
             this.txtPassword.Size = new System.Drawing.Size(324, 39);
             this.txtPassword.TabIndex = 64;
-            this.txtPassword.Texts = "";
+            this.txtPassword.Text = "";
             this.txtPassword.UnderLineStyle = false;
             // 
             // txtKey
@@ -444,7 +444,7 @@
             this.txtKey.PlaceHolderText = "Eg. Place of Birth, D.O.B.";
             this.txtKey.Size = new System.Drawing.Size(324, 39);
             this.txtKey.TabIndex = 61;
-            this.txtKey.Texts = "";
+            this.txtKey.Text = "";
             this.txtKey.UnderLineStyle = false;
             // 
             // txtUserName
@@ -466,7 +466,7 @@
             this.txtUserName.PlaceHolderText = "Eg. UserName@4344";
             this.txtUserName.Size = new System.Drawing.Size(324, 39);
             this.txtUserName.TabIndex = 60;
-            this.txtUserName.Texts = "";
+            this.txtUserName.Text = "";
             this.txtUserName.UnderLineStyle = false;
             // 
             // label2
@@ -497,7 +497,7 @@
             this.dboxUserType.Name = "dboxUserType";
             this.dboxUserType.Size = new System.Drawing.Size(200, 35);
             this.dboxUserType.TabIndex = 58;
-            this.dboxUserType.Texts = "";
+            this.dboxUserType.Text = "";
             // 
             // textBox6
             // 

@@ -1,4 +1,5 @@
 ﻿using BrickForgeCommanderUI.Dashboard;
+using BrickForgeCommanderUI.Forms.TransactionForms.Worker.WorkerRegistration;
 using BrickForgeCommanderUI.MasterForms.Menu;
 using BrickForgeCommanderUI.Misc;
 using BrickForgeCommanderUI.Misc.Anya_sReport;
@@ -17,7 +18,7 @@ namespace BrickForgeCommanderUI
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmDashBoard());
+            Application.Run(new frmWorkerRegisteration());
         }
     }
 }
