@@ -1,9 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using BrickForgeCommanderUI.Misc.Anya_sReport;
 using System.ComponentModel;
 using System.Drawing;
-using System.Linq;
 using System.Windows.Forms;
+using static BrickForgeCommanderUI.Misc.Anya_sReport.AnyaReports;
 
 namespace BrickForgeCommanderUI.Controls.Validation
 {
@@ -12,32 +11,25 @@ namespace BrickForgeCommanderUI.Controls.Validation
         private Color errorColor;
         private Color oldColor;
 
-        private string errorMessage = "Please enter all the required fields";
+        private Color errorForeColor;
+        private Color oldForeColor;
+
+        private string errorMessage = "Please fill the above field.";
 
         private Button connectedButton;
 
         public RequiredFieldTextBox()
         {
+            InitializeComponent();
             oldColor = this.BackColor;
+            oldForeColor = this.ForeColor;
 
             this.TextChanged += (sender, e) => OnTextChanged();
             this.Validating += (sender, e) => OnValidating(e);
             this.Enter += (sender, e) => OnEnter();
         }
 
-        [Category("Validation")]
-        public string ErrorMessage 
-        {
-            get
-            {
-                return errorMessage;
-            }
-            set
-            {
-                errorMessage = value;
-                this.Invalidate();
-            }
-        }
+        #region Properties
 
         [Category("Validation")]
         public Button ConnectedButton
@@ -52,10 +44,12 @@ namespace BrickForgeCommanderUI.Controls.Validation
 
                 if (connectedButton != null)
                 {
-                    connectedButton.Enabled = false;
-                    connectedButton.Click += (sender, e) => UpdateIsEmpty();
+                    connectedButton.Click += (sender, e) =>
+                    {
+                        UpdateIsEmpty();
+                        InvokeErrorMessage();
+                    };
                 }
-
                 this.Invalidate();
             }
         }
@@ -76,21 +70,60 @@ namespace BrickForgeCommanderUI.Controls.Validation
             }
         }
 
+        [Browsable(true)]
+        [Category("Validation")]
+        public Color ErrorForeColor
+        {
+            get
+            {
+                return errorForeColor;
+            }
+            set
+            {
+                errorForeColor = value;
+                this.Invalidate();
+            }
+        }
+
+        [Browsable(true)]
+        [Category("Validation")]
+        public string ErrorMessage
+        {
+            get
+            {
+                return errorMessage;
+            }
+            set
+            {
+                errorMessage = value;
+                this.Invalidate();
+            }
+        }
+        #endregion
+
         #region Functions
 
-          private void UpdateIsEmpty()
+        private void InvokeErrorMessage()
         {
             if (IsEmpty())
             {
-                MessageBox.Show(errorMessage, "Validation Error!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                string message = $"{errorMessage} \n Field Name:{this.Name}";
+                AnyaReports.Show(message, "Empty Field Warning", ReportButton.Ok, Anya.Nervous);
+            }
+        }
+        private void UpdateIsEmpty()
+        {
+            if (IsEmpty())
+            {
                 this.BackColor = errorColor;
+                this.ForeColor = errorForeColor;
             }
             else
             {
                 this.BackColor = oldColor;
+                this.ForeColor = oldForeColor;
             }
         }
-
 
         private bool IsEmpty()
         {
@@ -100,6 +133,7 @@ namespace BrickForgeCommanderUI.Controls.Validation
         private void SetOriginalColor()
         {
             this.BackColor = oldColor;
+            this.ForeColor = oldForeColor;
         }
 
         private void OnTextChanged()
@@ -113,20 +147,37 @@ namespace BrickForgeCommanderUI.Controls.Validation
         protected override void OnValidating(CancelEventArgs e)
         {
             UpdateIsEmpty();
-            if (!IsEmpty())
-            {
-                connectedButton.Enabled = true;
-            }
         }
 
         private void OnEnter()
         {
-            if(IsEmpty()) 
+            if (IsEmpty())
             {
                 this.BackColor = oldColor;
+                this.ForeColor = oldForeColor;
             }
         }
 
         #endregion
+
+        private void InitializeComponent()
+        {
+            this.SuspendLayout();
+            // 
+            // textBox1
+            // 
+            this.textBox1.Font = new System.Drawing.Font("Nirmala UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.MinimumSize = new System.Drawing.Size(0, 25);
+            this.textBox1.Size = new System.Drawing.Size(230, 27);
+            this.textBox1.TabIndex = 1;
+            // 
+            // RequiredFieldTextBox
+            // 
+            this.Name = "RequiredFieldTextBox";
+            this.Size = new System.Drawing.Size(250, 39);
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
+        }
     }
 }

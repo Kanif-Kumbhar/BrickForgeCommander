@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BrickForgeCommanderUI.Helpers;
+using System;
 using System.Windows.Forms;
 
 namespace BrickForgeCommanderUI.Forms.TransactionForms.Worker.WorkerRegistration
@@ -36,6 +37,14 @@ namespace BrickForgeCommanderUI.Forms.TransactionForms.Worker.WorkerRegistration
 
         }
 
+        private void frmWorkerRegisteration_KeyDown(object sender, KeyEventArgs e)
+        {
+           
+        }
 
+        private void requiredFieldTextBox2_Load_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }
