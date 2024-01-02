@@ -1,15 +1,18 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel;
 using System.Drawing;
+using System.Linq;
 using System.Windows.Forms;
 
 namespace BrickForgeCommanderUI.Controls.Validation
 {
     public class RequiredFieldTextBox : BFC_TextBox
     {
-        private bool isEmpty;
         private Color errorColor;
         private Color oldColor;
+
+        private string errorMessage = "Please enter all the required fields";
 
         private Button connectedButton;
 
@@ -18,7 +21,22 @@ namespace BrickForgeCommanderUI.Controls.Validation
             oldColor = this.BackColor;
 
             this.TextChanged += (sender, e) => OnTextChanged();
-            this.Leave += (sender, e) => OnLeave();
+            this.Validating += (sender, e) => OnValidating(e);
+            this.Enter += (sender, e) => OnEnter();
+        }
+
+        [Category("Validation")]
+        public string ErrorMessage 
+        {
+            get
+            {
+                return errorMessage;
+            }
+            set
+            {
+                errorMessage = value;
+                this.Invalidate();
+            }
         }
 
         [Category("Validation")]
@@ -34,17 +52,17 @@ namespace BrickForgeCommanderUI.Controls.Validation
 
                 if (connectedButton != null)
                 {
+                    connectedButton.Enabled = false;
                     connectedButton.Click += (sender, e) => UpdateIsEmpty();
-
-                    this.TextChanged += (sender, e) => UpdateButtonState();
-
-                    UpdateButtonState();
                 }
 
                 this.Invalidate();
             }
         }
-            [Category("Validation")]
+
+
+        [Browsable(true)]
+        [Category("Validation")]
         public Color ErrorColor
         {
             get
@@ -60,20 +78,19 @@ namespace BrickForgeCommanderUI.Controls.Validation
 
         #region Functions
 
-        private void UpdateIsEmpty()
+          private void UpdateIsEmpty()
         {
-            isEmpty = IsEmpty();
-            if (isEmpty)
+            if (IsEmpty())
             {
-                MessageBox.Show("Please fill in the input.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(errorMessage, "Validation Error!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 this.BackColor = errorColor;
-                this.Focus();
             }
             else
             {
                 this.BackColor = oldColor;
             }
         }
+
 
         private bool IsEmpty()
         {
@@ -93,21 +110,23 @@ namespace BrickForgeCommanderUI.Controls.Validation
             }
         }
 
-        private void OnLeave()
+        protected override void OnValidating(CancelEventArgs e)
         {
             UpdateIsEmpty();
-        }
-        private void UpdateButtonState()
-        {
-            if (IsEmpty())
-            {
-                connectedButton.Enabled = false;
-            }
-            else
+            if (!IsEmpty())
             {
                 connectedButton.Enabled = true;
             }
         }
+
+        private void OnEnter()
+        {
+            if(IsEmpty()) 
+            {
+                this.BackColor = oldColor;
+            }
+        }
+
         #endregion
     }
 }

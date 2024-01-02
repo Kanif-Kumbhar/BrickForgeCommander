@@ -24,5 +24,18 @@ namespace BrickForgeCommanderUI.Forms.TransactionForms.Worker.WorkerRegistration
         {
             MessageBox.Show("Next step");
         }
+
+
+        private void requiredFieldTextBox1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void requiredFieldTextBox2_Load(object sender, EventArgs e)
+        {
+
+        }
+
+
     }
 }

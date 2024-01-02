@@ -32,6 +32,7 @@ namespace BrickForgeCommanderUI.Controls
         public event EventHandler _TextChanged;
 
         #endregion
+        [Browsable(false)]
         [Category("Custom")]
         public string TextBoxText
         {
@@ -154,6 +155,7 @@ namespace BrickForgeCommanderUI.Controls
                 }
             }
         }
+        [Browsable(false)]
         [Category("Custom")]
         public string Texts
         {
@@ -177,7 +179,7 @@ namespace BrickForgeCommanderUI.Controls
                 }
             }
         }
-            [Category("Custom")]
+        [Category("Custom")]
         public int BorderRadius
         {
             get
