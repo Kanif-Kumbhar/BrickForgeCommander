@@ -89,6 +89,9 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Controls\NavControls\dBtn.cs" />
+    <Compile Include="Controls\Validation\DataFieldTextBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="Controls\Validation\RequiredFieldTextBox.cs">
       <SubType>UserControl</SubType>
     </Compile>

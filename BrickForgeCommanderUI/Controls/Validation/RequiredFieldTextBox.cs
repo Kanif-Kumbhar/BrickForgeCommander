@@ -32,7 +32,7 @@ namespace BrickForgeCommanderUI.Controls.Validation
         #region Properties
 
         [Category("Validation")]
-        public Button ConnectedButton
+        public virtual Button ConnectedButton
         {
             get
             {
@@ -103,7 +103,7 @@ namespace BrickForgeCommanderUI.Controls.Validation
 
         #region Functions
 
-        private void InvokeErrorMessage()
+        protected virtual void InvokeErrorMessage()
         {
             if (IsEmpty())
             {
@@ -111,7 +111,7 @@ namespace BrickForgeCommanderUI.Controls.Validation
                 AnyaReports.Show(message, "Empty Field Warning", ReportButton.Ok, Anya.Nervous);
             }
         }
-        private void UpdateIsEmpty()
+        protected void UpdateIsEmpty()
         {
             if (IsEmpty())
             {
@@ -125,12 +125,12 @@ namespace BrickForgeCommanderUI.Controls.Validation
             }
         }
 
-        private bool IsEmpty()
+        protected bool IsEmpty()
         {
             return string.IsNullOrEmpty(this.Texts);
         }
 
-        private void SetOriginalColor()
+        protected void SetOriginalColor()
         {
             this.BackColor = oldColor;
             this.ForeColor = oldForeColor;
@@ -149,7 +149,7 @@ namespace BrickForgeCommanderUI.Controls.Validation
             UpdateIsEmpty();
         }
 
-        private void OnEnter()
+        protected virtual void OnEnter()
         {
             if (IsEmpty())
             {
