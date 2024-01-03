@@ -17,7 +17,7 @@ namespace BrickForgeCommanderUI.Controls.Validation
     {
         private DataType selectedOption;
         private Color errroColor = Color.FromArgb(128, 255, 255);
-        private Color errorForeColor = Color.White;
+        private Color errorForeColor = Color.Black;
 
         private string errorMessage = "Please enter valid input.";
         private int range;

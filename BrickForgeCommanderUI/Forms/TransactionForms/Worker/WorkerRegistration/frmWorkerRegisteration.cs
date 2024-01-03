@@ -49,7 +49,7 @@ namespace BrickForgeCommanderUI.Forms.TransactionForms.Worker.WorkerRegistration
 
         private void bfC_Button1_Click(object sender, EventArgs e)
         {
-
+            
         }
     }
 }

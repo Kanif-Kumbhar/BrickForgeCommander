@@ -8,10 +8,10 @@ namespace BrickForgeCommanderUI.Controls.Validation
 {
     public class RequiredFieldTextBox : BFC_TextBox
     {
-        private Color errorColor;
+        private Color errorColor = Color.FromArgb(255, 128, 128);
         private Color oldColor;
 
-        private Color errorForeColor;
+        private Color errorForeColor = Color.Black;
         private Color oldForeColor;
 
         private string errorMessage = "Please fill the above field.";
@@ -176,8 +176,6 @@ namespace BrickForgeCommanderUI.Controls.Validation
             // 
             this.Name = "RequiredFieldTextBox";
             this.Size = new System.Drawing.Size(250, 39);
-            this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
     }
