@@ -16,7 +16,7 @@ namespace BrickForgeCommanderUI.Controls.Validation
 
         private string errorMessage = "Please fill the above field.";
 
-        private Button connectedButton;
+        protected Button connectedButton;
 
         public RequiredFieldTextBox()
         {
@@ -105,9 +105,10 @@ namespace BrickForgeCommanderUI.Controls.Validation
 
         protected virtual void InvokeErrorMessage()
         {
+            string textName = this.Name.Substring(3);
             if (IsEmpty())
             {
-                string message = $"{errorMessage} \n Field Name:{this.Name}";
+                string message = $"{errorMessage} \n \n \n Field Name:{textName}";
                 AnyaReports.Show(message, "Empty Field Warning", ReportButton.Ok, Anya.Nervous);
             }
         }
@@ -136,7 +137,7 @@ namespace BrickForgeCommanderUI.Controls.Validation
             this.ForeColor = oldForeColor;
         }
 
-        private void OnTextChanged()
+        protected void OnTextChanged()
         {
             if (!string.IsNullOrEmpty(this.Texts))
             {

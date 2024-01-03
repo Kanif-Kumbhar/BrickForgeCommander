@@ -30,8 +30,9 @@
         {
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.tb1 = new System.Windows.Forms.TextBox();
+            this.txtAddress = new BrickForgeCommanderUI.Controls.Validation.DataFieldTextBox();
             this.bfC_Button1 = new BrickForgeCommanderUI.Controls.BFC_Button();
-            this.dataFieldTextBox1 = new BrickForgeCommanderUI.Controls.Validation.DataFieldTextBox();
+            this.txtName = new BrickForgeCommanderUI.Controls.Validation.DataFieldTextBox();
             this.SuspendLayout();
             // 
             // textBox1
@@ -47,6 +48,37 @@
             this.tb1.Name = "tb1";
             this.tb1.Size = new System.Drawing.Size(100, 26);
             this.tb1.TabIndex = 0;
+            // 
+            // txtAddress
+            // 
+            this.txtAddress.BackColor = System.Drawing.SystemColors.Window;
+            this.txtAddress.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.txtAddress.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.txtAddress.BorderRadius = 0;
+            this.txtAddress.BorderSize = 2;
+            this.txtAddress.ConnectedButton = this.bfC_Button1;
+            this.txtAddress.DataFormat = BrickForgeCommanderUI.Controls.Validation.DataType.Alphabetic;
+            this.txtAddress.ErrorColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.txtAddress.ErrorForeColor = System.Drawing.Color.White;
+            this.txtAddress.ErrorMessage = "Please fill the above field.";
+            this.txtAddress.ErrroColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.txtAddress.ErrroForeColor = System.Drawing.Color.White;
+            this.txtAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
+            this.txtAddress.ForeColor = System.Drawing.Color.DimGray;
+            this.txtAddress.Location = new System.Drawing.Point(634, 204);
+            this.txtAddress.Margin = new System.Windows.Forms.Padding(4);
+            this.txtAddress.MultiLine = false;
+            this.txtAddress.Name = "txtAddress";
+            this.txtAddress.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.txtAddress.PasswordChar = false;
+            this.txtAddress.PlaceHolderColor = System.Drawing.Color.DarkGray;
+            this.txtAddress.PlaceHolderText = "hh";
+            this.txtAddress.Range = 5;
+            this.txtAddress.Size = new System.Drawing.Size(250, 39);
+            this.txtAddress.TabIndex = 2;
+            this.txtAddress.TextBoxText = "";
+            this.txtAddress.Texts = "";
+            this.txtAddress.UnderLineStyle = false;
             // 
             // bfC_Button1
             // 
@@ -68,43 +100,44 @@
             this.bfC_Button1.UseVisualStyleBackColor = false;
             this.bfC_Button1.Click += new System.EventHandler(this.bfC_Button1_Click);
             // 
-            // dataFieldTextBox1
+            // txtName
             // 
-            this.dataFieldTextBox1.BackColor = System.Drawing.SystemColors.Window;
-            this.dataFieldTextBox1.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.dataFieldTextBox1.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.dataFieldTextBox1.BorderRadius = 0;
-            this.dataFieldTextBox1.BorderSize = 2;
-            this.dataFieldTextBox1.ConnectedButton = null;
-            this.dataFieldTextBox1.ErrorColor = System.Drawing.Color.Empty;
-            this.dataFieldTextBox1.ErrorForeColor = System.Drawing.Color.Empty;
-            this.dataFieldTextBox1.ErrorMessage = "Please fill the above field.";
-            this.dataFieldTextBox1.ErrroColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.dataFieldTextBox1.ErrroForeColor = System.Drawing.Color.White;
-            this.dataFieldTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
-            this.dataFieldTextBox1.ForeColor = System.Drawing.Color.DimGray;
-            this.dataFieldTextBox1.Location = new System.Drawing.Point(350, 219);
-            this.dataFieldTextBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.dataFieldTextBox1.MultiLine = false;
-            this.dataFieldTextBox1.Name = "dataFieldTextBox1";
-            this.dataFieldTextBox1.NumericValidationProperty = 0;
-            this.dataFieldTextBox1.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.dataFieldTextBox1.PasswordChar = false;
-            this.dataFieldTextBox1.PlaceHolderColor = System.Drawing.Color.DarkGray;
-            this.dataFieldTextBox1.PlaceHolderText = "";
-            this.dataFieldTextBox1.SelectedOption = BrickForgeCommanderUI.Controls.Validation.UserChoice.NumericDataValidation;
-            this.dataFieldTextBox1.Size = new System.Drawing.Size(250, 41);
-            this.dataFieldTextBox1.TabIndex = 2;
-            this.dataFieldTextBox1.TextBoxText = "";
-            this.dataFieldTextBox1.Texts = "";
-            this.dataFieldTextBox1.UnderLineStyle = false;
+            this.txtName.BackColor = System.Drawing.SystemColors.Window;
+            this.txtName.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.txtName.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.txtName.BorderRadius = 0;
+            this.txtName.BorderSize = 2;
+            this.txtName.ConnectedButton = this.bfC_Button1;
+            this.txtName.DataFormat = BrickForgeCommanderUI.Controls.Validation.DataType.Alphabetic;
+            this.txtName.ErrorColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.txtName.ErrorForeColor = System.Drawing.Color.White;
+            this.txtName.ErrorMessage = "Please fill the above field.";
+            this.txtName.ErrroColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.txtName.ErrroForeColor = System.Drawing.Color.White;
+            this.txtName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
+            this.txtName.ForeColor = System.Drawing.Color.DimGray;
+            this.txtName.Location = new System.Drawing.Point(318, 204);
+            this.txtName.Margin = new System.Windows.Forms.Padding(4);
+            this.txtName.MultiLine = false;
+            this.txtName.Name = "txtName";
+            this.txtName.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.txtName.PasswordChar = false;
+            this.txtName.PlaceHolderColor = System.Drawing.Color.DarkGray;
+            this.txtName.PlaceHolderText = "hh";
+            this.txtName.Range = 5;
+            this.txtName.Size = new System.Drawing.Size(250, 39);
+            this.txtName.TabIndex = 2;
+            this.txtName.TextBoxText = "";
+            this.txtName.Texts = "";
+            this.txtName.UnderLineStyle = false;
             // 
             // frmWorkerRegisteration
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1185, 643);
-            this.Controls.Add(this.dataFieldTextBox1);
+            this.Controls.Add(this.txtAddress);
+            this.Controls.Add(this.txtName);
             this.Controls.Add(this.bfC_Button1);
             this.KeyPreview = true;
             this.Name = "frmWorkerRegisteration";
@@ -118,6 +151,7 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox tb1;
         private Controls.BFC_Button bfC_Button1;
-        private Controls.Validation.DataFieldTextBox dataFieldTextBox1;
+        private Controls.Validation.DataFieldTextBox txtName;
+        private Controls.Validation.DataFieldTextBox txtAddress;
     }
 }
