@@ -176,8 +176,6 @@ namespace BrickForgeCommanderUI.Controls.Validation
             // 
             this.Name = "RequiredFieldTextBox";
             this.Size = new System.Drawing.Size(250, 39);
-            this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
     }

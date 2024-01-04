@@ -20,7 +20,7 @@ namespace BrickForgeCommanderUI.Controls.Validation
         private Color errorForeColor = Color.Black;
 
         private string errorMessage = "Please enter valid input.";
-        private int range = 10;
+        private int range;
 
         public DataFieldTextBox()
         {
