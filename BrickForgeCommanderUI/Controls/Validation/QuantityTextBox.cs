@@ -7,22 +7,15 @@ using static BrickForgeCommanderUI.Misc.Anya_sReport.AnyaReports;
 
 namespace BrickForgeCommanderUI.Controls.Validation
 {
-    public enum DataType
-    {
-        Alphabetic,
-        Numeric,
-        AlphaNumeric
-    }
-    public class DataFieldTextBox : RequiredFieldTextBox
+    public class QuantityTextBox : RequiredFieldTextBox
     {
         private DataType selectedOption;
-        private Color errroColor = Color.FromArgb(128, 255, 255);
+        private Color errroColor = Color.Aquamarine;
         private Color errorForeColor = Color.Black;
 
         private string errorMessage = "Please enter valid input.";
-        private int range = 10;
 
-        public DataFieldTextBox()
+        public QuantityTextBox()
         {
             this.TextChanged += (sender, e) => OnTextChanged();
             this.Validating += (sender, e) => OnValidating(e);
@@ -78,21 +71,6 @@ namespace BrickForgeCommanderUI.Controls.Validation
         }
 
         [Category("Data Validation")]
-        [Description("Accepted range of input data.")]
-        public int Range
-        {
-            get
-            {
-                return range;
-            }
-            set
-            {
-                range = value;
-                this.Invalidate();
-            }
-        }
-
-        [Category("Data Validation")]
         [DisplayName("Data Format")]
         [Description("Format of input which is acceptable.")]
         public DataType DataFormat
@@ -129,20 +107,7 @@ namespace BrickForgeCommanderUI.Controls.Validation
         {
             get
             {
-                switch (DataFormat)
-                {
-                    case DataType.Alphabetic:
-                        return $"^[a-zA-Z]{{1,{range}}}$";
-
-                    case DataType.Numeric:
-                        return $"^[0-9]{{1,{range}}}$";
-
-                    case DataType.AlphaNumeric:
-                        return $"^[a-zA-Z0-9]{{1,{range}}}$";
-
-                    default:
-                        return string.Empty;
-                }
+                return @"^\d+(\.\d+)?$";
             }
         }
 
@@ -183,8 +148,7 @@ namespace BrickForgeCommanderUI.Controls.Validation
             if (!IsEmpty() && !IsInputValid())
             {
                 AnyaReports.Show($"{errorMessage} \n \n Field Name: {textName} \n \n" +
-                    $"Expected range: {range} \n \n " +
-                    $"Expected input type: {selectedOption}",
+                    $"Expected input type: Non-Negative Real Numbers.",
                     "Invalid Input Type!!", ReportButton.Ok, Anya.Confused);
             }
         }
