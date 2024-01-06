@@ -182,8 +182,8 @@ namespace BrickForgeCommanderUI.Controls.Validation
 
             if (!IsEmpty() && !IsInputValid())
             {
-                AnyaReports.Show($"{errorMessage} \n \n Field Name: {textName} \n \n" +
-                    $"Expected range: {range} \n \n " +
+                AnyaReports.Show($"{errorMessage} \n \n Field Name: {textName} \n" +
+                    $"Expected range: {range} \n" +
                     $"Expected input type: {selectedOption}",
                     "Invalid Input Type!!", ReportButton.Ok, Anya.Confused);
             }

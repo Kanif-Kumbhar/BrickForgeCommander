@@ -89,6 +89,9 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Controls\NavControls\dBtn.cs" />
+    <Compile Include="Controls\Validation\AmountTextBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="Controls\Validation\DataFieldTextBox.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -178,6 +181,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\FunctionControls\BFC_UndoRedo.resx">
       <DependentUpon>BFC_UndoRedo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Validation\AmountTextBox.resx">
+      <DependentUpon>AmountTextBox.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\Validation\RequiredFieldTextBox.resx">
       <DependentUpon>RequiredFieldTextBox.cs</DependentUpon>

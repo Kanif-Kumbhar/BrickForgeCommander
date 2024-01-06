@@ -19,7 +19,22 @@ namespace BrickForgeCommanderUI.Controls
         private Color borderFocusColor = Color.Green;
         private Color originalBorderColor;
 
+        private Keys clickKey;
+
         #region Properties
+
+        [Category("BFC Custom")]
+        [DisplayName("Attached Key")]
+        [Description("Attack the key to perform click action.")]
+        public Keys ClickKey
+        {
+            get { return clickKey; }
+            set 
+            { 
+                clickKey = value;
+                this.Invalidate();
+            }
+        }
 
         [Category("BFC Custom")]
         public Color BorderFocusColor { get => borderFocusColor; set => borderFocusColor = value; }
@@ -163,6 +178,19 @@ namespace BrickForgeCommanderUI.Controls
             this.Invalidate();
         }
 
+        protected override void OnKeyPress(KeyPressEventArgs e)
+        {
+            base.OnKeyPress(e);
+
+            if (e.KeyChar == (char)clickKey && (Control.ModifierKeys & Keys.Control) == Keys.Control)
+            {
+                MessageBox.Show("Pass");
+                this.PerformClick();
+                //OnClick(EventArgs.Empty);
+            }
+        }
+
+
         #endregion
 
         private void BFC_Button_GotFocus(object sender, EventArgs e)
@@ -176,5 +204,6 @@ namespace BrickForgeCommanderUI.Controls
             borderColor = originalBorderColor;
             this.Invalidate();
         }
+
     }
 }
