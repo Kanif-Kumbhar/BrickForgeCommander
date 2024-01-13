@@ -5,13 +5,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BrickForgeCommanderUI.Db
+namespace BrickForgeCommanderUI.Helpers
 {
     public abstract class DbConnection
     {
         private readonly string connectionString;
 
-        public DbConnection()
+        protected DbConnection()
         {
             connectionString = "Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=BrickForgeCommanderDB;Integrated Security=True;Encrypt=False";
         }

@@ -123,6 +123,26 @@ namespace BrickForgeCommanderUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap DeleteIcon {
+            get {
+                object obj = ResourceManager.GetObject("DeleteIcon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap EditIcon {
+            get {
+                object obj = ResourceManager.GetObject("EditIcon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Happy_Anya {
             get {
                 object obj = ResourceManager.GetObject("Happy_Anya", resourceCulture);

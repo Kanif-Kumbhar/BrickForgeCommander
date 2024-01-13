@@ -41,8 +41,14 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Controls.Ribbon" />
     <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Windows.Forms.DataVisualization.Design" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -76,6 +82,9 @@
     </Compile>
     <Compile Include="Controls\BFC_TextBox.Designer.cs">
       <DependentUpon>BFC_TextBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\FunctionControls\BfcDataGridView.cs">
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Controls\FunctionControls\BFC_UndoRedo.cs">
       <SubType>UserControl</SubType>
@@ -170,6 +179,7 @@
     <Compile Include="Forms\TransactionForms\Worker\WorkerRegistration\frmWorkerRegisteration.Designer.cs">
       <DependentUpon>frmWorkerRegisteration.cs</DependentUpon>
     </Compile>
+    <Compile Include="Helpers\FormHelper.cs" />
     <Compile Include="Helpers\NavigationHelper.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -411,6 +421,12 @@
       <Project>{dca29d35-52f5-4c7a-8270-de58a31a7633}</Project>
       <Name>bfc_CustomControls</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CustomControls\EditIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CustomControls\DeleteIcon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
