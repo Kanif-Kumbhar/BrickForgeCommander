@@ -100,6 +100,7 @@ namespace BrickForgeCommanderUI.Controls
 
             this.GotFocus += BFC_Button_GotFocus;
             this.LostFocus += BFC_Button_LostFocus;
+            this.KeyDown += BFC_Button_KeyDown;
 
             originalBorderColor = borderColor;
         }
@@ -178,18 +179,6 @@ namespace BrickForgeCommanderUI.Controls
             this.Invalidate();
         }
 
-        protected override void OnKeyPress(KeyPressEventArgs e)
-        {
-            base.OnKeyPress(e);
-
-            if (e.KeyChar == (char)clickKey && (Control.ModifierKeys & Keys.Control) == Keys.Control)
-            {
-                MessageBox.Show("Pass");
-                this.PerformClick();
-                //OnClick(EventArgs.Empty);
-            }
-        }
-
 
         #endregion
 
@@ -205,5 +194,16 @@ namespace BrickForgeCommanderUI.Controls
             this.Invalidate();
         }
 
+        private void BFC_Button_KeyDown(object sender, KeyEventArgs e)
+        {
+            if ((clickKey.HasFlag(Keys.Control) || clickKey.HasFlag(Keys.Alt) || clickKey.HasFlag(Keys.Shift)) && e.KeyCode == Keys.A)
+            {
+                this.PerformClick();
+            }
+            else if (e.KeyCode == clickKey)
+            {
+                this.PerformClick();
+            }
+        }
     }
 }
