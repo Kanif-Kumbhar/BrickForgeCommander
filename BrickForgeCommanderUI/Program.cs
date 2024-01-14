@@ -18,7 +18,7 @@ namespace BrickForgeCommanderUI
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmWorkerRegisteration());
+            Application.Run(new test());
         }
     }
 }

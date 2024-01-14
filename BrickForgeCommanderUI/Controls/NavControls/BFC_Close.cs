@@ -12,7 +12,7 @@ namespace BrickForgeCommanderUI.Controls.NavControls
     {
         public BFC_Close()
         {
-            this.Text = " ";
+            this.Text = "";
             this.Size = new Size(75, 37);
             this.Image = Properties.Resources.icons8_close_24;
             this.Click += BFC_Close_Click;

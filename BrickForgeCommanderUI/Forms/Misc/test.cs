@@ -1,6 +1,8 @@
 ﻿using BrickForgeCommanderUI.Misc.Anya_sReport;
 using System;
 using System.Windows.Forms;
+using BrickForgeCommanderUI.Helpers;
+using BrickForgeCommanderUI.Login___Registeration;
 using static BrickForgeCommanderUI.Misc.Anya_sReport.AnyaReports;
 
 namespace BrickForgeCommanderUI.Misc
@@ -44,6 +46,16 @@ namespace BrickForgeCommanderUI.Misc
             {
                 AnyaReports.Show("Done","",ReportButton.Ok,Anya.Crying);
             }
+        }
+
+        private void btnConfused_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void bfcNewButton1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
