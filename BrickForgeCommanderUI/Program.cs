@@ -2,6 +2,7 @@
 using System.Windows.Forms;
 using BrickForgeCommanderUI.Forms.MasterForms.Master;
 
+
 namespace BrickForgeCommanderUI
 {
     internal static class Program

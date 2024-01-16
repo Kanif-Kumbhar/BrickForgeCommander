@@ -1,6 +1,6 @@
-﻿CREATE TABLE [kanif].[OrderDetails]
+﻿CREATE TABLE [BFC].[OrderDetails]
 (
-	[OrderDetailId] INT NOT NULL PRIMARY KEY, 
+	[OrderDetailId] INT NOT NULL PRIMARY KEY Identity(1,1), 
     [OrderId] INT NOT NULL, 
     [ProductId] INT NOT NULL, 
     [UnitPrice] DECIMAL(12, 2) NOT NULL, 

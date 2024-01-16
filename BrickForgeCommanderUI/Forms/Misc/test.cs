@@ -4,6 +4,7 @@ using System.Windows.Forms;
 using BrickForgeCommanderUI.Helpers;
 using BrickForgeCommanderUI.Login___Registeration;
 using static BrickForgeCommanderUI.Misc.Anya_sReport.AnyaReports;
+using BrickForgeCommanderUI.Controls;
 
 namespace BrickForgeCommanderUI.Misc
 {
@@ -48,6 +49,16 @@ namespace BrickForgeCommanderUI.Misc
             }
         }
 
+        protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
+        {
+            if (ShortcutKeyHandler.ProcessShortcutKeys(this, keyData))
+            {
+                return true;
+            }
+
+            return base.ProcessCmdKey(ref msg, keyData);
+        }
+
         private void btnConfused_Click(object sender, EventArgs e)
         {
             
@@ -56,6 +67,26 @@ namespace BrickForgeCommanderUI.Misc
         private void bfcNewButton1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void bfC_Button1_Click_1(object sender, EventArgs e)
+        {
+            MessageBox.Show("A");
+        }
+
+        private void bfC_Button2_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("B");
+        }
+
+        private void bfC_Button3_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("C");
+        }
+
+        private void bfC_Button4_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("D");
         }
     }
 }

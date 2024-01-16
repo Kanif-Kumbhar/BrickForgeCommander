@@ -1,4 +1,4 @@
-﻿CREATE TABLE [kanif].[Orders]
+﻿CREATE TABLE [BFC].[Orders]
 (
 	[OrderId] INT NOT NULL PRIMARY KEY, 
     [OrderDate] DATETIME NOT NULL, 

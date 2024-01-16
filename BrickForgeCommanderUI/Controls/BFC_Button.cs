@@ -1,12 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-using System.Windows.Forms;
 using System.Drawing;
 using System.Drawing.Drawing2D;
+using System.Windows.Forms;
 using System.ComponentModel;
 
 namespace BrickForgeCommanderUI.Controls
@@ -17,22 +13,61 @@ namespace BrickForgeCommanderUI.Controls
         private int borderRadius = 20;
         private Color borderColor = Color.PaleVioletRed;
         private Color borderFocusColor = Color.Green;
-        private Color originalBorderColor;
+        private readonly Color originalBorderColor;
 
-        private Keys clickKey;
+        private static Dictionary<BFC_Button, Keys> clickKeys = new Dictionary<BFC_Button, Keys>();
+
+        public BFC_Button()
+        {
+            this.FlatStyle = FlatStyle.Flat;
+            this.FlatAppearance.BorderSize = 0;
+            this.Size = new Size(150, 40);
+            this.BackColor = Color.MediumSlateBlue;
+            this.ForeColor = Color.White;
+            this.Resize += new EventHandler(Button_Resize);
+
+            this.GotFocus += BFC_Button_GotFocus;
+            this.LostFocus += BFC_Button_LostFocus;
+            this.KeyDown += BFC_Button_KeyDown;
+
+            if (!clickKeys.ContainsKey(this))
+            {
+                clickKeys.Add(this, Keys.None);
+            }
+
+            originalBorderColor = borderColor;
+
+            this.Disposed += new EventHandler(BFC_Button_Disposed);
+        }
 
         #region Properties
 
         [Category("BFC Custom")]
         [DisplayName("Attached Key")]
-        [Description("Attack the key to perform click action.")]
+        [Description("Attach the key to perform click action.")]
         public Keys ClickKey
         {
-            get { return clickKey; }
-            set 
-            { 
-                clickKey = value;
-                this.Invalidate();
+            get
+            {
+                if (clickKeys.ContainsKey(this))
+                {
+                    return clickKeys[this];
+                }
+                else
+                {
+                    return Keys.None;
+                }
+            }
+            set
+            {
+                if (clickKeys.ContainsKey(this))
+                {
+                    clickKeys[this] = value;
+                }
+                else
+                {
+                    clickKeys.Add(this, value);
+                }
             }
         }
 
@@ -73,6 +108,7 @@ namespace BrickForgeCommanderUI.Controls
                 this.Invalidate();
             }
         }
+
         [Category("BFC Custom")]
         public Color BackgroundColor
         {
@@ -88,22 +124,6 @@ namespace BrickForgeCommanderUI.Controls
         }
 
         #endregion
-
-        public BFC_Button()
-        {
-            this.FlatStyle = FlatStyle.Flat;
-            this.FlatAppearance.BorderSize = 0;
-            this.Size = new Size(150, 40);
-            this.BackColor = Color.MediumSlateBlue;
-            this.ForeColor = Color.White;
-            this.Resize += new EventHandler(Button_Resize);
-
-            this.GotFocus += BFC_Button_GotFocus;
-            this.LostFocus += BFC_Button_LostFocus;
-            this.KeyDown += BFC_Button_KeyDown;
-
-            originalBorderColor = borderColor;
-        }
 
         private void Button_Resize(object sender, EventArgs e)
         {
@@ -147,7 +167,7 @@ namespace BrickForgeCommanderUI.Controls
                     pevent.Graphics.SmoothingMode = SmoothingMode.AntiAlias;
                     this.Region = new Region(pathSurface);
                     pevent.Graphics.DrawPath(penSurface, pathSurface);
-                    
+
                     if (borderSize >= 1)
                         pevent.Graphics.DrawPath(penBorder, pathBorder);
                 }
@@ -171,14 +191,17 @@ namespace BrickForgeCommanderUI.Controls
         protected override void OnHandleCreated(EventArgs e)
         {
             base.OnHandleCreated(e);
-            this.Parent.BackColorChanged += new EventHandler(Container_BackColorChanged);
+
+            if (this.Parent != null)
+            {
+                this.Parent.BackColorChanged += new EventHandler(Container_BackColorChanged);
+            }
         }
 
         private void Container_BackColorChanged(object sender, EventArgs e)
         {
             this.Invalidate();
         }
-
 
         #endregion
 
@@ -196,13 +219,34 @@ namespace BrickForgeCommanderUI.Controls
 
         private void BFC_Button_KeyDown(object sender, KeyEventArgs e)
         {
-            if ((clickKey.HasFlag(Keys.Control) || clickKey.HasFlag(Keys.Alt) || clickKey.HasFlag(Keys.Shift)) && e.KeyCode == Keys.A)
+            if (clickKeys.ContainsKey(this))
             {
-                this.PerformClick();
+                Keys assignedKey = clickKeys[this];
+
+                // Check if the assigned key matches and no modifiers are pressed
+                if (e.KeyCode == assignedKey && e.Modifiers == Keys.None)
+                {
+                    this.Focus();
+                    this.PerformClick();
+                }
+                // Check if a combination of Ctrl+Shift+AssignedKey is pressed
+                else if (e.KeyCode == assignedKey && (e.Modifiers & (Keys.Control | Keys.Shift)) == (Keys.Control | Keys.Shift))
+                {
+                    this.Focus();
+                    this.PerformClick();
+                }
             }
-            else if (e.KeyCode == clickKey)
+        }
+
+
+
+        private void BFC_Button_Disposed(object sender, EventArgs e)
+        {
+            clickKeys.Remove(this);
+
+            if (this.Parent != null)
             {
-                this.PerformClick();
+                this.Parent.BackColorChanged -= Container_BackColorChanged;
             }
         }
     }

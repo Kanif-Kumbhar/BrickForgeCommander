@@ -42,6 +42,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Design" />
     <Reference Include="System.Management" />
@@ -113,6 +114,7 @@
     <Compile Include="Controls\Validation\RequiredFieldTextBox.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="Forms\MasterForms\MasterHelper\SqlCommandHelper.cs" />
     <Compile Include="Forms\MasterForms\Master\frmVenderTypeDetails.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -132,6 +134,8 @@
       <DependentUpon>frmDashBoard.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Misc\Dashboard\Models\DashBoard.cs" />
+    <Compile Include="Helpers\KeyHandler.cs" />
+    <Compile Include="Helpers\ShortcutKeyHandler.cs" />
     <Compile Include="Helpers\DbConnection.cs" />
     <Compile Include="Forms\Display\frmStart.cs">
       <SubType>Form</SubType>
@@ -157,7 +161,7 @@
     <Compile Include="Forms\Login &amp; Registeration\frmRegisteration.Designer.cs">
       <DependentUpon>frmRegisteration.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\MasterForms\Command\SqlQueryRunner.cs" />
+    <Compile Include="Forms\MasterForms\MasterHelper\SqlQueryRunner.cs" />
     <Compile Include="Forms\MasterForms\Menu\frmMasterMenu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -236,7 +240,6 @@
       <DesignTime>True</DesignTime>
     </Compile>
     <None Include="app.manifest" />
-    <None Include="App1.config" />
     <None Include="BrickForgeCommanderDBDataSet.xsc">
       <DependentUpon>BrickForgeCommanderDBDataSet.xsd</DependentUpon>
     </None>

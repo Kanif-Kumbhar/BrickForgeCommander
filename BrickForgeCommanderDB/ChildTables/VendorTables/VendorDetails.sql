@@ -1,6 +1,6 @@
-﻿CREATE TABLE [kanif].[VenderDetails]
+﻿CREATE TABLE [BFC].[VendorDetails]
 (
-	[VenderId] INT NOT NULL PRIMARY KEY, 
+	[VendorId] INT NOT NULL PRIMARY KEY Identity(1,1), 
     [FirstName] VARCHAR(25) NOT NULL, 
     [MiddleName] VARCHAR(25) NOT NULL,
     [LastName] VARCHAR(25) NOT NULL, 

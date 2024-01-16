@@ -22,7 +22,7 @@
     <SqlServerVerification>False</SqlServerVerification>
     <IncludeCompositeObjects>True</IncludeCompositeObjects>
     <TargetDatabaseSet>True</TargetDatabaseSet>
-    <DefaultSchema>kanif</DefaultSchema>
+    <DefaultSchema>BFC</DefaultSchema>
     <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
@@ -69,13 +69,15 @@
     <RefactorLog Include="BrickForgeCommanderDB.refactorlog" />
   </ItemGroup>
   <ItemGroup>
-    <Build Include="kanif.sql" />
+    <Build Include="BFC.sql" />
     <Build Include="ChildTables\OrderTables\Orders.sql" />
     <Build Include="ChildTables\OrderTables\OrderDetails.sql" />
     <Build Include="ChildTables\ProductTable\ProductDetails.sql" />
-    <Build Include="ChildTables\VendorTables\VenderDetails.sql" />
-    <Build Include="MasterTables\VenderTypeDetails.sql" />
+    <Build Include="ChildTables\VendorTables\VendorDetails.sql" />
+    <Build Include="MasterTables\VendorTypeDetails.sql" />
     <Build Include="MasterTables\CityDetails.sql" />
     <Build Include="LoginCredential\Login_Credentials.sql" />
+    <Build Include="MasterTables\StatusDetails.sql" />
+    <Build Include="MasterTables\WorkerRoleDetails.sql" />
   </ItemGroup>
 </Project>

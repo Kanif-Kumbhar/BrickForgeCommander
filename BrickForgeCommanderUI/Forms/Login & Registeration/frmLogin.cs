@@ -47,7 +47,7 @@ namespace BrickForgeCommanderUI.Login___Registeration
             try
             {
                 con.Open();
-                string login = "SELECT * FROM kanif.Login_Credentials WHERE UserName = '" + txtUserName.Text + "'AND Password = '" + txtPassword.Text + "'";
+                string login = "SELECT * FROM BFC.Login_Credentials WHERE UserName = '" + txtUserName.Text + "'AND Password = '" + txtPassword.Text + "'";
                 cmd = new SqlCommand(login, con);
                 SqlDataReader dr = cmd.ExecuteReader();
 
