@@ -114,12 +114,19 @@
     <Compile Include="Controls\Validation\RequiredFieldTextBox.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="Forms\MasterForms\MasterHelper\MasterControlHelper.cs" />
     <Compile Include="Forms\MasterForms\MasterHelper\SqlCommandHelper.cs" />
-    <Compile Include="Forms\MasterForms\Master\frmVenderTypeDetails.cs">
+    <Compile Include="Forms\MasterForms\Master\frmCityDetails.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\MasterForms\Master\frmVenderTypeDetails.Designer.cs">
-      <DependentUpon>frmVenderTypeDetails.cs</DependentUpon>
+    <Compile Include="Forms\MasterForms\Master\frmCityDetails.Designer.cs">
+      <DependentUpon>frmCityDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MasterForms\Master\frmVendorTypeDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MasterForms\Master\frmVendorTypeDetails.Designer.cs">
+      <DependentUpon>frmVendorTypeDetails.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Misc\Anya%27sReport\AnyaReport.cs">
       <SubType>Form</SubType>
@@ -134,6 +141,12 @@
       <DependentUpon>frmDashBoard.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Misc\Dashboard\Models\DashBoard.cs" />
+    <Compile Include="Forms\TransactionForms\Worker\WorkerRegistration\frmWorkersRegistration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\TransactionForms\Worker\WorkerRegistration\frmWorkersRegistration.Designer.cs">
+      <DependentUpon>frmWorkersRegistration.cs</DependentUpon>
+    </Compile>
     <Compile Include="Helpers\KeyHandler.cs" />
     <Compile Include="Helpers\ShortcutKeyHandler.cs" />
     <Compile Include="Helpers\DbConnection.cs" />
@@ -174,12 +187,6 @@
     <Compile Include="Forms\Misc\test.Designer.cs">
       <DependentUpon>test.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\TransactionForms\Worker\WorkerRegistration\frmWorkerRegisteration.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\TransactionForms\Worker\WorkerRegistration\frmWorkerRegisteration.Designer.cs">
-      <DependentUpon>frmWorkerRegisteration.cs</DependentUpon>
-    </Compile>
     <Compile Include="Helpers\FormHelper.cs" />
     <Compile Include="Helpers\NavigationHelper.cs" />
     <Compile Include="Program.cs" />
@@ -199,8 +206,11 @@
     <EmbeddedResource Include="Controls\Validation\RequiredFieldTextBox.resx">
       <DependentUpon>RequiredFieldTextBox.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\MasterForms\Master\frmVenderTypeDetails.resx">
-      <DependentUpon>frmVenderTypeDetails.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\MasterForms\Master\frmCityDetails.resx">
+      <DependentUpon>frmCityDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MasterForms\Master\frmVendorTypeDetails.resx">
+      <DependentUpon>frmVendorTypeDetails.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Misc\Anya%27sReport\AnyaReport.resx">
       <DependentUpon>AnyaReport.cs</DependentUpon>
@@ -226,8 +236,8 @@
     <EmbeddedResource Include="Forms\Misc\test.resx">
       <DependentUpon>test.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\TransactionForms\Worker\WorkerRegistration\frmWorkerRegisteration.resx">
-      <DependentUpon>frmWorkerRegisteration.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\TransactionForms\Worker\WorkerRegistration\frmWorkersRegistration.resx">
+      <DependentUpon>frmWorkersRegistration.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -415,12 +425,6 @@
     <None Include="Resources\Nervous_Anya.png" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\bfcCustomControls\bfc_CustomControls.csproj">
-      <Project>{dca29d35-52f5-4c7a-8270-de58a31a7633}</Project>
-      <Name>bfc_CustomControls</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\CustomControls\EditIcon.png" />
   </ItemGroup>
   <ItemGroup>
@@ -428,6 +432,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\NavIcons\Add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BloodGroup.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Location.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PartyType.png" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

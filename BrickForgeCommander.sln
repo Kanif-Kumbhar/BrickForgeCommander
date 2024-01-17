@@ -7,8 +7,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BrickForgeCommanderUI", "Br
 EndProject
 Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "BrickForgeCommanderDB", "BrickForgeCommanderDB\BrickForgeCommanderDB.sqlproj", "{B0CA7A58-0922-46E0-8064-8FED9A35FC9A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "bfc_CustomControls", "bfcCustomControls\bfc_CustomControls.csproj", "{DCA29D35-52F5-4C7A-8270-DE58A31A7633}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -25,10 +23,6 @@ Global
 		{B0CA7A58-0922-46E0-8064-8FED9A35FC9A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B0CA7A58-0922-46E0-8064-8FED9A35FC9A}.Release|Any CPU.Build.0 = Release|Any CPU
 		{B0CA7A58-0922-46E0-8064-8FED9A35FC9A}.Release|Any CPU.Deploy.0 = Release|Any CPU
-		{DCA29D35-52F5-4C7A-8270-DE58A31A7633}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{DCA29D35-52F5-4C7A-8270-DE58A31A7633}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{DCA29D35-52F5-4C7A-8270-DE58A31A7633}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{DCA29D35-52F5-4C7A-8270-DE58A31A7633}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

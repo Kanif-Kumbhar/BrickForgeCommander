@@ -1,6 +1,6 @@
 ﻿namespace BrickForgeCommanderUI.Forms.MasterForms.Master
 {
-    partial class frmVenderTypeDetails
+    partial class frmCityDetails
     {
         /// <summary>
         /// Required designer variable.
@@ -28,43 +28,43 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCityDetails));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmVenderTypeDetails));
             this.panel1 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
+            this.btnClose = new BrickForgeCommanderUI.Controls.NavControls.BFC_Close();
             this.pnlBody = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel15 = new System.Windows.Forms.Panel();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.txtCityName = new BrickForgeCommanderUI.Controls.Validation.RequiredFieldTextBox();
+            this.btnInsert = new BrickForgeCommanderUI.Controls.BFC_Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.lblCityId = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel14 = new System.Windows.Forms.Panel();
+            this.btnUpdate = new BrickForgeCommanderUI.Controls.BFC_Button();
+            this.btnDelete = new BrickForgeCommanderUI.Controls.BFC_Button();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel13 = new System.Windows.Forms.Panel();
+            this.btnUndo = new BrickForgeCommanderUI.Controls.BFC_Button();
+            this.btnRedo = new BrickForgeCommanderUI.Controls.BFC_Button();
+            this.btnClear = new BrickForgeCommanderUI.Controls.BFC_Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel9 = new System.Windows.Forms.Panel();
             this.panel11 = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.dgvVenderTypeDetails = new System.Windows.Forms.DataGridView();
+            this.dgvCityDetails = new System.Windows.Forms.DataGridView();
             this.panel8 = new System.Windows.Forms.Panel();
             this.panel12 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel10 = new System.Windows.Forms.Panel();
-            this.txtVenderTypeName = new BrickForgeCommanderUI.Controls.Validation.RequiredFieldTextBox();
-            this.btnInsert = new BrickForgeCommanderUI.Controls.BFC_Button();
-            this.txtVenderTypeId = new BrickForgeCommanderUI.Controls.BFC_TextBox();
-            this.btnUpdate = new BrickForgeCommanderUI.Controls.BFC_Button();
-            this.btnDelete = new BrickForgeCommanderUI.Controls.BFC_Button();
-            this.btnUndo = new BrickForgeCommanderUI.Controls.BFC_Button();
-            this.btnRedo = new BrickForgeCommanderUI.Controls.BFC_Button();
-            this.btnClear = new BrickForgeCommanderUI.Controls.BFC_Button();
             this.btnBackWard = new BrickForgeCommanderUI.Controls.BFC_Button();
             this.btnForward = new BrickForgeCommanderUI.Controls.BFC_Button();
-            this.btnClose = new BrickForgeCommanderUI.Controls.NavControls.BFC_Close();
             this.panel1.SuspendLayout();
             this.pnlBody.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -80,7 +80,7 @@
             this.panel9.SuspendLayout();
             this.panel11.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvVenderTypeDetails)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCityDetails)).BeginInit();
             this.panel8.SuspendLayout();
             this.panel7.SuspendLayout();
             this.panel10.SuspendLayout();
@@ -104,9 +104,30 @@
             this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(7, 9);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(300, 45);
+            this.label3.Size = new System.Drawing.Size(179, 45);
             this.label3.TabIndex = 1;
-            this.label3.Text = "Vender Type Details";
+            this.label3.Text = "City Details";
+            // 
+            // btnClose
+            // 
+            this.btnClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(21)))), ((int)(((byte)(21)))));
+            this.btnClose.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(21)))), ((int)(((byte)(21)))));
+            this.btnClose.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnClose.BorderFocusColor = System.Drawing.Color.Green;
+            this.btnClose.BorderRadius = 0;
+            this.btnClose.BorderSize = 0;
+            this.btnClose.ClickKey = System.Windows.Forms.Keys.Escape;
+            this.btnClose.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnClose.FlatAppearance.BorderSize = 0;
+            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClose.ForeColor = System.Drawing.Color.White;
+            this.btnClose.Image = ((System.Drawing.Image)(resources.GetObject("btnClose.Image")));
+            this.btnClose.Location = new System.Drawing.Point(755, 0);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(62, 55);
+            this.btnClose.TabIndex = 0;
+            this.btnClose.TextColor = System.Drawing.Color.White;
+            this.btnClose.UseVisualStyleBackColor = false;
             // 
             // pnlBody
             // 
@@ -157,16 +178,16 @@
             this.groupBox2.Size = new System.Drawing.Size(375, 210);
             this.groupBox2.TabIndex = 0;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Vender Type Details";
+            this.groupBox2.Text = "Vendor Type Details";
             // 
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.ColumnCount = 1;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Controls.Add(this.txtVenderTypeName, 0, 3);
+            this.tableLayoutPanel1.Controls.Add(this.txtCityName, 0, 3);
             this.tableLayoutPanel1.Controls.Add(this.label2, 0, 2);
             this.tableLayoutPanel1.Controls.Add(this.label1, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.txtVenderTypeId, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.lblCityId, 0, 1);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(3, 31);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -178,214 +199,33 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(369, 176);
             this.tableLayoutPanel1.TabIndex = 1;
             // 
-            // label2
+            // txtCityName
             // 
-            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Nirmala UI", 11F);
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
-            this.label2.Location = new System.Drawing.Point(3, 102);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(205, 30);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Vender Type Name:";
-            // 
-            // label1
-            // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Nirmala UI", 11F);
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
-            this.label1.Location = new System.Drawing.Point(3, 14);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(166, 30);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Vender Type Id:";
-            // 
-            // panel5
-            // 
-            this.panel5.Controls.Add(this.panel14);
-            this.panel5.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel5.Location = new System.Drawing.Point(0, 303);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(415, 92);
-            this.panel5.TabIndex = 1;
-            // 
-            // panel14
-            // 
-            this.panel14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.panel14.Controls.Add(this.btnUpdate);
-            this.panel14.Controls.Add(this.btnDelete);
-            this.panel14.Controls.Add(this.btnInsert);
-            this.panel14.Location = new System.Drawing.Point(12, 8);
-            this.panel14.Name = "panel14";
-            this.panel14.Size = new System.Drawing.Size(395, 72);
-            this.panel14.TabIndex = 1;
-            // 
-            // panel4
-            // 
-            this.panel4.Controls.Add(this.panel13);
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel4.Location = new System.Drawing.Point(0, 0);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(415, 81);
-            this.panel4.TabIndex = 0;
-            // 
-            // panel13
-            // 
-            this.panel13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.panel13.Controls.Add(this.btnUndo);
-            this.panel13.Controls.Add(this.btnRedo);
-            this.panel13.Controls.Add(this.btnClear);
-            this.panel13.Location = new System.Drawing.Point(12, 8);
-            this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(395, 65);
-            this.panel13.TabIndex = 1;
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.panel9);
-            this.panel2.Controls.Add(this.panel8);
-            this.panel2.Controls.Add(this.panel7);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel2.Location = new System.Drawing.Point(413, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(404, 395);
-            this.panel2.TabIndex = 0;
-            // 
-            // panel9
-            // 
-            this.panel9.Controls.Add(this.panel11);
-            this.panel9.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel9.Location = new System.Drawing.Point(0, 81);
-            this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(404, 222);
-            this.panel9.TabIndex = 4;
-            // 
-            // panel11
-            // 
-            this.panel11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.panel11.Controls.Add(this.groupBox1);
-            this.panel11.ForeColor = System.Drawing.Color.White;
-            this.panel11.Location = new System.Drawing.Point(6, 0);
-            this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(386, 224);
-            this.panel11.TabIndex = 1;
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.dgvVenderTypeDetails);
-            this.groupBox1.Font = new System.Drawing.Font("MS UI Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.ForeColor = System.Drawing.Color.White;
-            this.groupBox1.Location = new System.Drawing.Point(8, 6);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(368, 210);
-            this.groupBox1.TabIndex = 0;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Vender Type Details";
-            // 
-            // dgvVenderTypeDetails
-            // 
-            this.dgvVenderTypeDetails.AllowUserToResizeColumns = false;
-            this.dgvVenderTypeDetails.AllowUserToResizeRows = false;
-            this.dgvVenderTypeDetails.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvVenderTypeDetails.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.dgvVenderTypeDetails.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgvVenderTypeDetails.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.dgvVenderTypeDetails.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(45)))), ((int)(((byte)(86)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("MS UI Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(141)))), ((int)(((byte)(181)))));
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvVenderTypeDetails.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvVenderTypeDetails.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(45)))), ((int)(((byte)(86)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("MS UI Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(122)))), ((int)(((byte)(133)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvVenderTypeDetails.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvVenderTypeDetails.EnableHeadersVisualStyles = false;
-            this.dgvVenderTypeDetails.GridColor = System.Drawing.Color.White;
-            this.dgvVenderTypeDetails.Location = new System.Drawing.Point(6, 30);
-            this.dgvVenderTypeDetails.Name = "dgvVenderTypeDetails";
-            this.dgvVenderTypeDetails.ReadOnly = true;
-            this.dgvVenderTypeDetails.RowHeadersVisible = false;
-            this.dgvVenderTypeDetails.RowHeadersWidth = 62;
-            this.dgvVenderTypeDetails.RowTemplate.Height = 35;
-            this.dgvVenderTypeDetails.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvVenderTypeDetails.Size = new System.Drawing.Size(356, 174);
-            this.dgvVenderTypeDetails.TabIndex = 2;
-            this.dgvVenderTypeDetails.SelectionChanged += new System.EventHandler(this.dgvVenderTypeDetails_SelectionChanged);
-            // 
-            // panel8
-            // 
-            this.panel8.Controls.Add(this.panel12);
-            this.panel8.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel8.Location = new System.Drawing.Point(0, 0);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(404, 81);
-            this.panel8.TabIndex = 3;
-            // 
-            // panel12
-            // 
-            this.panel12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.panel12.Location = new System.Drawing.Point(6, 8);
-            this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(386, 65);
-            this.panel12.TabIndex = 1;
-            // 
-            // panel7
-            // 
-            this.panel7.Controls.Add(this.panel10);
-            this.panel7.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel7.Location = new System.Drawing.Point(0, 303);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(404, 92);
-            this.panel7.TabIndex = 2;
-            // 
-            // panel10
-            // 
-            this.panel10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.panel10.Controls.Add(this.btnBackWard);
-            this.panel10.Controls.Add(this.btnForward);
-            this.panel10.Location = new System.Drawing.Point(6, 8);
-            this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(386, 72);
-            this.panel10.TabIndex = 0;
-            // 
-            // txtVenderTypeName
-            // 
-            this.txtVenderTypeName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.txtVenderTypeName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
-            this.txtVenderTypeName.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.txtVenderTypeName.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.txtVenderTypeName.BorderRadius = 0;
-            this.txtVenderTypeName.BorderSize = 2;
-            this.txtVenderTypeName.ConnectedButton = this.btnInsert;
-            this.txtVenderTypeName.ErrorColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.txtVenderTypeName.ErrorForeColor = System.Drawing.Color.Black;
-            this.txtVenderTypeName.ErrorMessage = "Please fill the above field.";
-            this.txtVenderTypeName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
-            this.txtVenderTypeName.ForeColor = System.Drawing.Color.DimGray;
-            this.txtVenderTypeName.Location = new System.Drawing.Point(4, 136);
-            this.txtVenderTypeName.Margin = new System.Windows.Forms.Padding(4);
-            this.txtVenderTypeName.MultiLine = false;
-            this.txtVenderTypeName.Name = "txtVenderTypeName";
-            this.txtVenderTypeName.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.txtVenderTypeName.PasswordChar = false;
-            this.txtVenderTypeName.PlaceHolderColor = System.Drawing.Color.IndianRed;
-            this.txtVenderTypeName.PlaceHolderText = "Name";
-            this.txtVenderTypeName.Size = new System.Drawing.Size(331, 39);
-            this.txtVenderTypeName.TabIndex = 1;
-            this.txtVenderTypeName.TextBoxText = "";
-            this.txtVenderTypeName.Texts = "";
-            this.txtVenderTypeName.UnderLineStyle = true;
+            this.txtCityName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.txtCityName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            this.txtCityName.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.txtCityName.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.txtCityName.BorderRadius = 0;
+            this.txtCityName.BorderSize = 2;
+            this.txtCityName.ConnectedButton = this.btnInsert;
+            this.txtCityName.ErrorColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.txtCityName.ErrorForeColor = System.Drawing.Color.Black;
+            this.txtCityName.ErrorMessage = "Please fill the above field.";
+            this.txtCityName.Font = new System.Drawing.Font("Nirmala UI", 9F);
+            this.txtCityName.ForeColor = System.Drawing.Color.DimGray;
+            this.txtCityName.Location = new System.Drawing.Point(4, 136);
+            this.txtCityName.Margin = new System.Windows.Forms.Padding(4);
+            this.txtCityName.MultiLine = false;
+            this.txtCityName.Name = "txtCityName";
+            this.txtCityName.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.txtCityName.PasswordChar = false;
+            this.txtCityName.PlaceHolderColor = System.Drawing.Color.IndianRed;
+            this.txtCityName.PlaceHolderText = "   ";
+            this.txtCityName.Size = new System.Drawing.Size(331, 40);
+            this.txtCityName.TabIndex = 1;
+            this.txtCityName.TextBoxText = "";
+            this.txtCityName.Texts = "";
+            this.txtCityName.UnderLineStyle = true;
             // 
             // btnInsert
             // 
@@ -409,29 +249,60 @@
             this.btnInsert.UseVisualStyleBackColor = false;
             this.btnInsert.Click += new System.EventHandler(this.btnInsert_Click);
             // 
-            // txtVenderTypeId
+            // label2
             // 
-            this.txtVenderTypeId.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.txtVenderTypeId.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
-            this.txtVenderTypeId.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.txtVenderTypeId.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.txtVenderTypeId.BorderRadius = 0;
-            this.txtVenderTypeId.BorderSize = 2;
-            this.txtVenderTypeId.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
-            this.txtVenderTypeId.ForeColor = System.Drawing.Color.DimGray;
-            this.txtVenderTypeId.Location = new System.Drawing.Point(4, 48);
-            this.txtVenderTypeId.Margin = new System.Windows.Forms.Padding(4);
-            this.txtVenderTypeId.MultiLine = false;
-            this.txtVenderTypeId.Name = "txtVenderTypeId";
-            this.txtVenderTypeId.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.txtVenderTypeId.PasswordChar = false;
-            this.txtVenderTypeId.PlaceHolderColor = System.Drawing.Color.DarkGray;
-            this.txtVenderTypeId.PlaceHolderText = "    ";
-            this.txtVenderTypeId.Size = new System.Drawing.Size(331, 39);
-            this.txtVenderTypeId.TabIndex = 2;
-            this.txtVenderTypeId.TextBoxText = "";
-            this.txtVenderTypeId.Texts = "";
-            this.txtVenderTypeId.UnderLineStyle = true;
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Nirmala UI", 11F);
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
+            this.label2.Location = new System.Drawing.Point(3, 102);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(119, 30);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "City Name:";
+            // 
+            // label1
+            // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Nirmala UI", 11F);
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
+            this.label1.Location = new System.Drawing.Point(3, 14);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(80, 30);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "City Id:";
+            // 
+            // lblCityId
+            // 
+            this.lblCityId.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.lblCityId.AutoSize = true;
+            this.lblCityId.Font = new System.Drawing.Font("Nirmala UI", 11F);
+            this.lblCityId.ForeColor = System.Drawing.Color.White;
+            this.lblCityId.Location = new System.Drawing.Point(3, 58);
+            this.lblCityId.Name = "lblCityId";
+            this.lblCityId.Size = new System.Drawing.Size(0, 30);
+            this.lblCityId.TabIndex = 0;
+            // 
+            // panel5
+            // 
+            this.panel5.Controls.Add(this.panel14);
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel5.Location = new System.Drawing.Point(0, 303);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(415, 92);
+            this.panel5.TabIndex = 1;
+            // 
+            // panel14
+            // 
+            this.panel14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.panel14.Controls.Add(this.btnUpdate);
+            this.panel14.Controls.Add(this.btnDelete);
+            this.panel14.Controls.Add(this.btnInsert);
+            this.panel14.Location = new System.Drawing.Point(12, 8);
+            this.panel14.Name = "panel14";
+            this.panel14.Size = new System.Drawing.Size(395, 72);
+            this.panel14.TabIndex = 1;
             // 
             // btnUpdate
             // 
@@ -477,6 +348,26 @@
             this.btnDelete.UseVisualStyleBackColor = false;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.panel13);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel4.Location = new System.Drawing.Point(0, 0);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(415, 81);
+            this.panel4.TabIndex = 0;
+            // 
+            // panel13
+            // 
+            this.panel13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.panel13.Controls.Add(this.btnUndo);
+            this.panel13.Controls.Add(this.btnRedo);
+            this.panel13.Controls.Add(this.btnClear);
+            this.panel13.Location = new System.Drawing.Point(12, 8);
+            this.panel13.Name = "panel13";
+            this.panel13.Size = new System.Drawing.Size(395, 65);
+            this.panel13.TabIndex = 1;
+            // 
             // btnUndo
             // 
             this.btnUndo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
@@ -486,6 +377,7 @@
             this.btnUndo.BorderRadius = 9;
             this.btnUndo.BorderSize = 0;
             this.btnUndo.ClickKey = System.Windows.Forms.Keys.None;
+            this.btnUndo.Enabled = false;
             this.btnUndo.FlatAppearance.BorderSize = 0;
             this.btnUndo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUndo.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -497,7 +389,7 @@
             this.btnUndo.TabIndex = 0;
             this.btnUndo.TextColor = System.Drawing.Color.White;
             this.btnUndo.UseVisualStyleBackColor = false;
-            this.btnUndo.Click += new System.EventHandler(this.btnUndo_Click);
+            this.btnUndo.Visible = false;
             // 
             // btnRedo
             // 
@@ -508,6 +400,7 @@
             this.btnRedo.BorderRadius = 9;
             this.btnRedo.BorderSize = 0;
             this.btnRedo.ClickKey = System.Windows.Forms.Keys.None;
+            this.btnRedo.Enabled = false;
             this.btnRedo.FlatAppearance.BorderSize = 0;
             this.btnRedo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRedo.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -519,7 +412,7 @@
             this.btnRedo.TabIndex = 0;
             this.btnRedo.TextColor = System.Drawing.Color.White;
             this.btnRedo.UseVisualStyleBackColor = false;
-            this.btnRedo.Click += new System.EventHandler(this.btnRedo_Click);
+            this.btnRedo.Visible = false;
             // 
             // btnClear
             // 
@@ -541,6 +434,126 @@
             this.btnClear.TabIndex = 0;
             this.btnClear.TextColor = System.Drawing.Color.White;
             this.btnClear.UseVisualStyleBackColor = false;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.panel9);
+            this.panel2.Controls.Add(this.panel8);
+            this.panel2.Controls.Add(this.panel7);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel2.Location = new System.Drawing.Point(413, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(404, 395);
+            this.panel2.TabIndex = 0;
+            // 
+            // panel9
+            // 
+            this.panel9.Controls.Add(this.panel11);
+            this.panel9.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel9.Location = new System.Drawing.Point(0, 81);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(404, 222);
+            this.panel9.TabIndex = 4;
+            // 
+            // panel11
+            // 
+            this.panel11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.panel11.Controls.Add(this.groupBox1);
+            this.panel11.ForeColor = System.Drawing.Color.White;
+            this.panel11.Location = new System.Drawing.Point(6, 0);
+            this.panel11.Name = "panel11";
+            this.panel11.Size = new System.Drawing.Size(386, 224);
+            this.panel11.TabIndex = 1;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.dgvCityDetails);
+            this.groupBox1.Font = new System.Drawing.Font("MS UI Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.ForeColor = System.Drawing.Color.White;
+            this.groupBox1.Location = new System.Drawing.Point(8, 6);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(368, 210);
+            this.groupBox1.TabIndex = 0;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Vendor Type Details";
+            // 
+            // dgvCityDetails
+            // 
+            this.dgvCityDetails.AllowUserToResizeColumns = false;
+            this.dgvCityDetails.AllowUserToResizeRows = false;
+            this.dgvCityDetails.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvCityDetails.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.dgvCityDetails.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvCityDetails.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dgvCityDetails.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(45)))), ((int)(((byte)(86)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("MS UI Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(141)))), ((int)(((byte)(181)))));
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvCityDetails.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvCityDetails.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvCityDetails.Cursor = System.Windows.Forms.Cursors.Hand;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(45)))), ((int)(((byte)(86)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("MS UI Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvCityDetails.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvCityDetails.EnableHeadersVisualStyles = false;
+            this.dgvCityDetails.GridColor = System.Drawing.Color.White;
+            this.dgvCityDetails.Location = new System.Drawing.Point(6, 30);
+            this.dgvCityDetails.Name = "dgvCityDetails";
+            this.dgvCityDetails.ReadOnly = true;
+            this.dgvCityDetails.RowHeadersVisible = false;
+            this.dgvCityDetails.RowHeadersWidth = 62;
+            this.dgvCityDetails.RowTemplate.Height = 35;
+            this.dgvCityDetails.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvCityDetails.Size = new System.Drawing.Size(356, 174);
+            this.dgvCityDetails.TabIndex = 2;
+            this.dgvCityDetails.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvVendorTypeDetails_CellClick);
+            this.dgvCityDetails.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvVendorTypeDetails_CellContentDoubleClick);
+            // 
+            // panel8
+            // 
+            this.panel8.Controls.Add(this.panel12);
+            this.panel8.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel8.Location = new System.Drawing.Point(0, 0);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(404, 81);
+            this.panel8.TabIndex = 3;
+            // 
+            // panel12
+            // 
+            this.panel12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.panel12.Location = new System.Drawing.Point(6, 8);
+            this.panel12.Name = "panel12";
+            this.panel12.Size = new System.Drawing.Size(386, 65);
+            this.panel12.TabIndex = 1;
+            // 
+            // panel7
+            // 
+            this.panel7.Controls.Add(this.panel10);
+            this.panel7.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel7.Location = new System.Drawing.Point(0, 303);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(404, 92);
+            this.panel7.TabIndex = 2;
+            // 
+            // panel10
+            // 
+            this.panel10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.panel10.Controls.Add(this.btnBackWard);
+            this.panel10.Controls.Add(this.btnForward);
+            this.panel10.Location = new System.Drawing.Point(6, 8);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(386, 72);
+            this.panel10.TabIndex = 0;
             // 
             // btnBackWard
             // 
@@ -583,29 +596,9 @@
             this.btnForward.TabIndex = 0;
             this.btnForward.TextColor = System.Drawing.Color.White;
             this.btnForward.UseVisualStyleBackColor = false;
+            this.btnForward.Click += new System.EventHandler(this.btnForward_Click);
             // 
-            // btnClose
-            // 
-            this.btnClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(21)))), ((int)(((byte)(21)))));
-            this.btnClose.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(21)))), ((int)(((byte)(21)))));
-            this.btnClose.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnClose.BorderFocusColor = System.Drawing.Color.Green;
-            this.btnClose.BorderRadius = 0;
-            this.btnClose.BorderSize = 0;
-            this.btnClose.ClickKey = System.Windows.Forms.Keys.Escape;
-            this.btnClose.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnClose.FlatAppearance.BorderSize = 0;
-            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClose.ForeColor = System.Drawing.Color.White;
-            this.btnClose.Image = ((System.Drawing.Image)(resources.GetObject("btnClose.Image")));
-            this.btnClose.Location = new System.Drawing.Point(755, 0);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(62, 55);
-            this.btnClose.TabIndex = 0;
-            this.btnClose.TextColor = System.Drawing.Color.White;
-            this.btnClose.UseVisualStyleBackColor = false;
-            // 
-            // frmVenderTypeDetails
+            // frmCityDetails
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -615,11 +608,12 @@
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.KeyPreview = true;
-            this.Name = "frmVenderTypeDetails";
-            this.Text = "frmVenderTypeDetails";
-            this.Load += new System.EventHandler(this.frmVenderTypeDetails_Load);
-            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.frmVenderTypeDetails_KeyDown);
-            this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.frmVenderTypeDetails_KeyUp);
+            this.Name = "frmCityDetails";
+            this.Text = "frmCityDetails";
+            this.Activated += new System.EventHandler(this.frmVendorTypeDetails_Activated);
+            this.Load += new System.EventHandler(this.frmVendorTypeDetails_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.frmVendorTypeDetails_KeyDown);
+            this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.frmVendorTypeDetails_KeyUp);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.pnlBody.ResumeLayout(false);
@@ -637,7 +631,7 @@
             this.panel9.ResumeLayout(false);
             this.panel11.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvVenderTypeDetails)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCityDetails)).EndInit();
             this.panel8.ResumeLayout(false);
             this.panel7.ResumeLayout(false);
             this.panel10.ResumeLayout(false);
@@ -667,12 +661,11 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private Controls.Validation.RequiredFieldTextBox txtVenderTypeName;
+        private Controls.Validation.RequiredFieldTextBox txtCityName;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private Controls.BFC_TextBox txtVenderTypeId;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.DataGridView dgvVenderTypeDetails;
+        private System.Windows.Forms.DataGridView dgvCityDetails;
         private Controls.BFC_Button btnUpdate;
         private Controls.BFC_Button btnDelete;
         private Controls.BFC_Button btnInsert;
@@ -681,5 +674,6 @@
         private Controls.BFC_Button btnRedo;
         private Controls.BFC_Button btnBackWard;
         private Controls.BFC_Button btnForward;
+        private System.Windows.Forms.Label lblCityId;
     }
 }

@@ -3,7 +3,6 @@ using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
 using System.Windows.Forms;
-using BrickForgeCommanderUI.Controls;
 using BrickForgeCommanderUI.Controls.Validation;
 
 
@@ -49,6 +48,7 @@ namespace BrickForgeCommanderUI.Forms.MasterForms.MasterHelper
             {
                 using (SqlConnection connection = new SqlConnection(connectionString))
                 {
+                    string name = tableName.Replace("Details", "Name");
                     connection.Open();
 
                     using (SqlTransaction transaction = connection.BeginTransaction())
@@ -57,7 +57,7 @@ namespace BrickForgeCommanderUI.Forms.MasterForms.MasterHelper
                         {
                             if (!string.IsNullOrEmpty(textBox.Texts))
                             {
-                                string insert = $"INSERT INTO [BFC].[{tableName}] (VendorTypeName) VALUES (@Name)";
+                                string insert = $"INSERT INTO [BFC].[{tableName}] ({name}) VALUES (@Name)";
                                 using (SqlCommand command = new SqlCommand(insert, connection, transaction))
                                 {
                                     command.Parameters.AddWithValue("@Name", textBox.Texts);
@@ -65,6 +65,7 @@ namespace BrickForgeCommanderUI.Forms.MasterForms.MasterHelper
                                 }
 
                                 transaction.Commit();
+                                textBox.Texts = String.Empty;
                                 MessageBox.Show("Record Added Successfull", "Success", MessageBoxButtons.OK,
                                     MessageBoxIcon.Information);
                             }
@@ -85,30 +86,33 @@ namespace BrickForgeCommanderUI.Forms.MasterForms.MasterHelper
             }
         }
 
-        public static void UpdateData(BFC_TextBox textId, RequiredFieldTextBox textName, string tableName)
+        public static void UpdateData(Label textId, RequiredFieldTextBox textName, string tableName)
         {
             try
             {
                 using (SqlConnection connection = new SqlConnection(connectionString))
                 {
+                    string name = tableName.Replace("Details", "Name");
+                    string id = tableName.Replace("Details", "Id");
                     connection.Open();
 
                     using (SqlTransaction transaction = connection.BeginTransaction())
                     {
                         try
                         {
-                            if (!string.IsNullOrEmpty(textName.Texts) && !string.IsNullOrEmpty(textId.Texts))
+                            if (!string.IsNullOrEmpty(textName.Texts) && !string.IsNullOrEmpty(textId.Text))
                             {
                                 string update =
-                                    $"UPDATE [BFC].[{tableName}] SET VendorTypeName = @Name WHERE VendorTypeId = @Id";
+                                    $"UPDATE [BFC].[{tableName}] SET {name} = @Name WHERE {id} = @Id";
                                 using (SqlCommand command = new SqlCommand(update, connection, transaction))
                                 {
-                                    command.Parameters.AddWithValue("@Id", textId.Texts);
+                                    command.Parameters.AddWithValue("@Id", textId.Text);
                                     command.Parameters.AddWithValue("@Name", textName.Texts);
                                     command.ExecuteNonQuery();
                                 }
 
                                 transaction.Commit();
+                                textName.Texts = String.Empty;
                                 MessageBox.Show("Record Updated Successfull", "Success", MessageBoxButtons.OK,
                                     MessageBoxIcon.Information);
                             }
@@ -133,29 +137,30 @@ namespace BrickForgeCommanderUI.Forms.MasterForms.MasterHelper
             }
         }
 
-        public static void DeleteData(BFC_TextBox textId, string tableName)
+        public static void DeleteData(Label textId, string tableName)
         {
             try
             {
-                string message = $"Do you want to delete the record with ID {textId.Texts}?";
+                string message = $"Do you want to delete the record with ID {textId.Text}?";
                 if (MessageBox.Show(message, "Confirmation", MessageBoxButtons.YesNo) == DialogResult.Yes)
                 {
                     using (SqlConnection connection = new SqlConnection(connectionString))
                     {
+                        string id = tableName.Replace("Details", "Id");
                         connection.Open();
 
                         using (SqlTransaction transaction = connection.BeginTransaction())
                         {
                             try
                             {
-                                if (!string.IsNullOrEmpty(textId.Texts))
+                                if (!string.IsNullOrEmpty(textId.Text))
                                 {
                                     string delete = 
-                                        $"DELETE FROM [BFC].[{tableName}] WHERE VendorTypeId = @Id";
+                                        $"DELETE FROM [BFC].[{tableName}] WHERE {id} = @Id";
 
                                     using (SqlCommand command = new SqlCommand(delete, connection, transaction))
                                     {
-                                        command.Parameters.AddWithValue("@Id", textId.Texts);
+                                        command.Parameters.AddWithValue("@Id", textId.Text);
                                         command.ExecuteNonQuery();
                                     }
 
@@ -185,6 +190,37 @@ namespace BrickForgeCommanderUI.Forms.MasterForms.MasterHelper
             {
                 MessageBox.Show($"Error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        public static int GetId(string tableName)
+        {
+            int lastInsertedId = 0;
+            DataTable table = new DataTable(tableName);
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+
+                string query = $"SELECT * FROM [BFC].[{tableName}]";
+
+                using (SqlDataAdapter dataAdapter = new SqlDataAdapter(query,connection))
+                {
+                    dataAdapter.Fill(table);
+                }
+
+                if (table.Rows.Count > 0)
+                {
+                    DataRow lastRow = table.Rows[table.Rows.Count - 1];
+                    foreach (DataColumn column in table.Columns)
+                    {
+                        string columnName = column.ColumnName;
+                        lastInsertedId = (int)lastRow[columnName];
+                        break;
+                    }
+                }
+
+            }
+            return lastInsertedId;
         }
     }
 }

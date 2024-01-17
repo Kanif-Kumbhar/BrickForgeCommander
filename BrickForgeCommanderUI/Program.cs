@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Windows.Forms;
 using BrickForgeCommanderUI.Forms.MasterForms.Master;
+using BrickForgeCommanderUI.Forms.TransactionForms.Worker.WorkerRegistration;
+using BrickForgeCommanderUI.Login___Registeration;
 
 
 namespace BrickForgeCommanderUI
@@ -15,7 +17,7 @@ namespace BrickForgeCommanderUI
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmVenderTypeDetails());
+            Application.Run(new frmWorkersRegistration());
         }
     }
 }

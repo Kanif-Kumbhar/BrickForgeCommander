@@ -83,6 +83,16 @@ namespace BrickForgeCommanderUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap BloodGroup {
+            get {
+                object obj = ResourceManager.GetObject("BloodGroup", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap calendarDark {
             get {
                 object obj = ResourceManager.GetObject("calendarDark", resourceCulture);
@@ -513,6 +523,16 @@ namespace BrickForgeCommanderUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Location {
+            get {
+                object obj = ResourceManager.GetObject("Location", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap MaterialType {
             get {
                 object obj = ResourceManager.GetObject("MaterialType", resourceCulture);
@@ -526,6 +546,16 @@ namespace BrickForgeCommanderUI.Properties {
         internal static System.Drawing.Bitmap Nervous_Anya {
             get {
                 object obj = ResourceManager.GetObject("Nervous_Anya", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap PartyType {
+            get {
+                object obj = ResourceManager.GetObject("PartyType", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
