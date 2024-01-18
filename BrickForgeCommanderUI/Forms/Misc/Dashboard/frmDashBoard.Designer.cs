@@ -242,6 +242,7 @@
             this.btnMaster.BorderFocusColor = System.Drawing.Color.Green;
             this.btnMaster.BorderRadius = 1;
             this.btnMaster.BorderSize = 0;
+            this.btnMaster.ClickKey = System.Windows.Forms.Keys.None;
             this.btnMaster.FlatAppearance.BorderSize = 0;
             this.btnMaster.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMaster.Font = new System.Drawing.Font("Nirmala UI", 14F);
@@ -276,6 +277,7 @@
             this.bfC_Button1.BorderFocusColor = System.Drawing.Color.Green;
             this.bfC_Button1.BorderRadius = 1;
             this.bfC_Button1.BorderSize = 0;
+            this.bfC_Button1.ClickKey = System.Windows.Forms.Keys.None;
             this.bfC_Button1.FlatAppearance.BorderSize = 0;
             this.bfC_Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bfC_Button1.Font = new System.Drawing.Font("Nirmala UI", 14F);
@@ -309,6 +311,7 @@
             this.bfC_Button2.BorderFocusColor = System.Drawing.Color.Green;
             this.bfC_Button2.BorderRadius = 1;
             this.bfC_Button2.BorderSize = 0;
+            this.bfC_Button2.ClickKey = System.Windows.Forms.Keys.None;
             this.bfC_Button2.FlatAppearance.BorderSize = 0;
             this.bfC_Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bfC_Button2.Font = new System.Drawing.Font("Nirmala UI", 14F);
@@ -342,6 +345,7 @@
             this.bfC_Button3.BorderFocusColor = System.Drawing.Color.Green;
             this.bfC_Button3.BorderRadius = 1;
             this.bfC_Button3.BorderSize = 0;
+            this.bfC_Button3.ClickKey = System.Windows.Forms.Keys.None;
             this.bfC_Button3.FlatAppearance.BorderSize = 0;
             this.bfC_Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bfC_Button3.Font = new System.Drawing.Font("Nirmala UI", 14F);
@@ -375,6 +379,7 @@
             this.bfC_Button4.BorderFocusColor = System.Drawing.Color.Green;
             this.bfC_Button4.BorderRadius = 1;
             this.bfC_Button4.BorderSize = 0;
+            this.bfC_Button4.ClickKey = System.Windows.Forms.Keys.None;
             this.bfC_Button4.FlatAppearance.BorderSize = 0;
             this.bfC_Button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bfC_Button4.Font = new System.Drawing.Font("Nirmala UI", 14F);
@@ -850,7 +855,7 @@
             this.splitContainer1.Panel2.Controls.Add(this.btnCustom);
             this.splitContainer1.Panel2.Controls.Add(this.btnToday);
             this.splitContainer1.Size = new System.Drawing.Size(1299, 58);
-            this.splitContainer1.SplitterDistance = 600;
+            this.splitContainer1.SplitterDistance = 603;
             this.splitContainer1.SplitterWidth = 1;
             this.splitContainer1.TabIndex = 23;
             // 
@@ -862,7 +867,7 @@
             this.panel27.Controls.Add(this.dtpStartDate);
             this.panel27.Controls.Add(this.dtpEndDate);
             this.panel27.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel27.Location = new System.Drawing.Point(119, 0);
+            this.panel27.Location = new System.Drawing.Point(122, 0);
             this.panel27.Name = "panel27";
             this.panel27.Size = new System.Drawing.Size(481, 58);
             this.panel27.TabIndex = 16;

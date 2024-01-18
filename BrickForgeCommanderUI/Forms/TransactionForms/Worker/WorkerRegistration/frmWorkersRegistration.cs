@@ -62,6 +62,15 @@ namespace BrickForgeCommanderUI.Forms.TransactionForms.Worker.WorkerRegistration
             }
         }
 
+        private void frmWorkersRegistration_Load(object sender, System.EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'brickForgeCommanderDBDataSet.CityDetails' table. You can move, or remove it, as needed.
+            //this.cityDetailsTableAdapter.Fill(this.brickForgeCommanderDBDataSet.CityDetails);
+            // TODO: This line of code loads data into the 'brickForgeCommanderDBDataSet.CityDetails' table. You can move, or remove it, as needed.
+            //this.cityDetailsTableAdapter.Fill(this.brickForgeCommanderDBDataSet.CityDetails);
+
+        }
+
         private void frmWorkersRegistration_MouseUp(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)

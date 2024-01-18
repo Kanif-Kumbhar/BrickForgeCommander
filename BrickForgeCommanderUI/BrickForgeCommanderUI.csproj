@@ -66,6 +66,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>BrickForgeCommanderDBDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Controls\BFCRadioButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Controls\BFC_Button.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -114,6 +117,12 @@
     <Compile Include="Controls\Validation\RequiredFieldTextBox.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="Forms\MasterForms\Master\frmStatusDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MasterForms\Master\frmStatusDetails.Designer.cs">
+      <DependentUpon>frmStatusDetails.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\MasterForms\MasterHelper\MasterControlHelper.cs" />
     <Compile Include="Forms\MasterForms\MasterHelper\SqlCommandHelper.cs" />
     <Compile Include="Forms\MasterForms\Master\frmCityDetails.cs">
@@ -127,6 +136,12 @@
     </Compile>
     <Compile Include="Forms\MasterForms\Master\frmVendorTypeDetails.Designer.cs">
       <DependentUpon>frmVendorTypeDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MasterForms\Master\MasterForm1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MasterForms\Master\MasterForm1.Designer.cs">
+      <DependentUpon>MasterForm1.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Misc\Anya%27sReport\AnyaReport.cs">
       <SubType>Form</SubType>
@@ -206,11 +221,17 @@
     <EmbeddedResource Include="Controls\Validation\RequiredFieldTextBox.resx">
       <DependentUpon>RequiredFieldTextBox.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MasterForms\Master\frmStatusDetails.resx">
+      <DependentUpon>frmStatusDetails.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\MasterForms\Master\frmCityDetails.resx">
       <DependentUpon>frmCityDetails.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\MasterForms\Master\frmVendorTypeDetails.resx">
       <DependentUpon>frmVendorTypeDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MasterForms\Master\MasterForm1.resx">
+      <DependentUpon>MasterForm1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Misc\Anya%27sReport\AnyaReport.resx">
       <DependentUpon>AnyaReport.cs</DependentUpon>
