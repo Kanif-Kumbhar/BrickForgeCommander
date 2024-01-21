@@ -1,14 +1,15 @@
-﻿using BrickForgeCommanderUI.Helpers;
+﻿using BrickForgeCommanderUI.Forms.MasterForms.MasterHelper;
+using BrickForgeCommanderUI.Helpers;
+using BrickForgeCommanderUI.Login___Registeration;
 using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Drawing;
 using System.Windows.Forms;
-using BrickForgeCommanderUI.Forms.MasterForms.MasterHelper;
 
 namespace BrickForgeCommanderUI.Forms.MasterForms.Master
 {
-    public partial class frmVendorTypeDetails : Form
+    public partial class MasterForm2 : Form
     {
         private readonly DataTable dataTable;
         private readonly string tableName = "VendorTypeDetails";
@@ -17,7 +18,7 @@ namespace BrickForgeCommanderUI.Forms.MasterForms.Master
         private bool aKeyPressed = false;
         private bool bCtrlKeyPressed = false;
 
-        public frmVendorTypeDetails()
+        public MasterForm2()
         {
             InitializeComponent();
             keyHandler = new KeyHandler();
@@ -40,14 +41,14 @@ namespace BrickForgeCommanderUI.Forms.MasterForms.Master
             this.KeyDown += frmVendorTypeDetails_KeyDown;
             this.KeyUp += frmVendorTypeDetails_KeyUp;
 
-            lblVendorTypeId.Text = (SqlCommandHelper.GetId(tableName)+1).ToString();
+            lblVendorTypeId.Text = (SqlCommandHelper.GetId(tableName) + 1).ToString();
         }
 
         private void frmVendorTypeDetails_Activated(object sender, EventArgs e)
         {
             SqlCommandHelper.DisplayData(tableName, dgvVendorTypeDetails, dataTable);
         }
-       
+
         private void frmVendorTypeDetails_KeyDown(object sender, KeyEventArgs e)
         {
             switch (e.KeyCode)
@@ -85,23 +86,23 @@ namespace BrickForgeCommanderUI.Forms.MasterForms.Master
         }
 
         #endregion
-       
+
         #region Button Events
 
         private void btnInsert_Click(object sender, EventArgs e)
         {
             SqlCommandHelper.InsertData(txtVendorTypeName, tableName);
-            SqlCommandHelper.DisplayData(tableName,dgvVendorTypeDetails,dataTable);
+            SqlCommandHelper.DisplayData(tableName, dgvVendorTypeDetails, dataTable);
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            SqlCommandHelper.UpdateData(lblVendorTypeId,txtVendorTypeName,tableName);
+            SqlCommandHelper.UpdateData(lblVendorTypeId, txtVendorTypeName, tableName);
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            SqlCommandHelper.DeleteData(lblVendorTypeId,tableName);
+            SqlCommandHelper.DeleteData(lblVendorTypeId, tableName);
         }
 
         private void btnClear_Click(object sender, EventArgs e)
@@ -112,10 +113,10 @@ namespace BrickForgeCommanderUI.Forms.MasterForms.Master
 
         private void btnForward_Click(object sender, EventArgs e)
         {
-            //FormHelper.OpenForm<frmCityDetails>();
+           //FormHelper.OpenForm<frmLogin>();
             this.Hide();
         }
-       
+
         private void frmVendorTypeDetails_KeyUp(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.A && e.Modifiers == Keys.None)
@@ -127,7 +128,7 @@ namespace BrickForgeCommanderUI.Forms.MasterForms.Master
                 bCtrlKeyPressed = false;
             }
         }
-        
+
 
         #endregion
 
@@ -136,12 +137,12 @@ namespace BrickForgeCommanderUI.Forms.MasterForms.Master
         private void dgvVendorTypeDetails_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             lblVendorTypeId.Text = dgvVendorTypeDetails.SelectedCells[0].Value.ToString();
-            MasterControlHelper.CellSingleClick(lblVendorTypeId,tableName,dgvVendorTypeDetails,e);
+            MasterControlHelper.CellSingleClick(lblVendorTypeId, tableName, dgvVendorTypeDetails, e);
         }
-        
+
         private void dgvVendorTypeDetails_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            MasterControlHelper.CellDoubleClick(lblVendorTypeId,txtVendorTypeName ,tableName, dgvVendorTypeDetails, e);
+            MasterControlHelper.CellDoubleClick(lblVendorTypeId, txtVendorTypeName, tableName, dgvVendorTypeDetails, e);
         }
 
         #endregion

@@ -72,7 +72,7 @@ namespace BrickForgeCommanderUI.Login___Registeration
 
                         UserTypeItem selectedUserType = (UserTypeItem)dboxUserType.SelectedItem;
 
-                        string register = "INSERT INTO kanif.Login_Credentials (UserId, UserName, Password, AuthenticationKey) VALUES (@UserId, @UserName, @Password, @AuthenticationKey)";
+                        string register = "INSERT INTO BFC.Login_Credentials (UserId, UserName, Password, AuthenticationKey) VALUES (@UserId, @UserName, @Password, @AuthenticationKey)";
                         SqlCommand command = new SqlCommand(register, con);
                         command.Parameters.AddWithValue("@UserId", nextUserId);
                         command.Parameters.AddWithValue("@UserName", txtUserName.Text);
@@ -80,7 +80,7 @@ namespace BrickForgeCommanderUI.Login___Registeration
                         command.Parameters.AddWithValue("@AuthenticationKey", txtKey.Text);
                         command.ExecuteNonQuery();
 
-                        string insertVTD = "INSERT INTO kanif.VenderDetails (VenderId, FirstName, MiddleName, LastName, Address, CityId, PhoneNo, VenderTypeId,UserId) VALUES (@VenderId, @FirstName, @MiddleName, @LastName, @Address, @CityId, @PhoneNo, @VenderTypeId, @UserId)";
+                        string insertVTD = "INSERT INTO BFC.VenderDetails (VenderId, FirstName, MiddleName, LastName, Address, CityId, PhoneNo, VenderTypeId,UserId) VALUES (@VenderId, @FirstName, @MiddleName, @LastName, @Address, @CityId, @PhoneNo, @VenderTypeId, @UserId)";
                         using (SqlCommand insertVTDCommand = new SqlCommand(insertVTD, con))
                         {
                             insertVTDCommand.Parameters.AddWithValue("@VenderId", nextVenderId);
@@ -227,7 +227,7 @@ namespace BrickForgeCommanderUI.Login___Registeration
             {
                 connection.Open();
 
-                string query = "SELECT ISNULL(MAX(UserId), 0) + 1 FROM kanif.Login_Credentials";
+                string query = "SELECT ISNULL(MAX(UserId), 0) + 1 FROM BFC.Login_Credentials";
 
                 using (SqlCommand command = new SqlCommand(query, connection))
                 {
@@ -256,7 +256,7 @@ namespace BrickForgeCommanderUI.Login___Registeration
             {
                 connection.Open();
 
-                string query = "SELECT ISNULL(MAX(VenderId), 0) + 1 FROM kanif.VenderDetails";
+                string query = "SELECT ISNULL(MAX(VenderId), 0) + 1 FROM BFC.VenderDetails";
 
                 using (SqlCommand command = new SqlCommand(query, connection))
                 {
@@ -292,7 +292,7 @@ namespace BrickForgeCommanderUI.Login___Registeration
             {
                 connection.Open();
 
-                string query = "SELECT VenderTypeId, VenderTypeName FROM kanif.VendorTypeDetails WHERE VenderTypeName IN ('Admin', 'Manager')";
+                string query = "SELECT VenderTypeId, VenderTypeName FROM BFC.VendorTypeDetails WHERE VenderTypeName IN ('Admin', 'Manager')";
 
                 using (SqlCommand command = new SqlCommand(query, connection))
                 {
@@ -319,7 +319,7 @@ namespace BrickForgeCommanderUI.Login___Registeration
             {
                 connection.Open();
 
-                string query = "SELECT CityId, CityName FROM kanif.CityDetails";
+                string query = "SELECT CityId, CityName FROM BFC.CityDetails";
 
                 using (SqlCommand command = new SqlCommand(query, connection))
                 {

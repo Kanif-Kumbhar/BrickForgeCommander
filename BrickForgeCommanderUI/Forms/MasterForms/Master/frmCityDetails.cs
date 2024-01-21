@@ -113,7 +113,7 @@ namespace BrickForgeCommanderUI.Forms.MasterForms.Master
 
         private void btnForward_Click(object sender, EventArgs e)
         {
-            FormHelper.OpenForm<frmLogin>();
+          //  FormHelper.OpenForm<frmLogin>();
             this.Hide();
         }
 

@@ -13,6 +13,7 @@ using BrickForgeCommanderUI.MasterForms;
 using BrickForgeCommanderUI.MasterForms.Menu;
 using BrickForgeCommanderUI.Misc.Anya_sReport;
 using static BrickForgeCommanderUI.Misc.Anya_sReport.AnyaReports;
+using BrickForgeCommanderUI.Helpers;
 
 namespace BrickForgeCommanderUI.Dashboard
 {
@@ -47,23 +48,6 @@ namespace BrickForgeCommanderUI.Dashboard
             lblStartDate.Text = dtpStartDate.Text;
             lblEndDate.Text = dtpEndDate.Text;
             dgvUnderStock.Columns[1].Width = 50;
-
-            TestingAnya();
-        }
-
-        private void TestingAnya()
-        {
-            if ((AnyaReports.Show("Good morning everyone. Was your day good?", "Hello Message", ReportButton.YesNo, Anya.Smile) == DialogResult.Yes))
-            {
-                if ((AnyaReports.Show("Nice to hear that!! Did you ate your lunch?", "Anya Happy", ReportButton.YesNo, Anya.Happy) == DialogResult.No))
-                {
-                    AnyaReports.Show("Why?", "Anya worried >_<", ReportButton.Ok, Anya.Nervous);
-                }
-            }
-            else
-            {
-                AnyaReports.Show("Why what happened?","Anya crying",ReportButton.Ok, Anya.Crying);
-            }
         }
 
         #region Functions
@@ -184,12 +168,6 @@ namespace BrickForgeCommanderUI.Dashboard
                 }
             }
         }
-
-        #endregion
-
-        #region TimerCall
-
-
 
         #endregion
 
@@ -340,6 +318,16 @@ namespace BrickForgeCommanderUI.Dashboard
         private void btnMaster_Click(object sender, EventArgs e)
         {
             new frmMasterMenu().Show();
+        }
+
+        private void bfC_Button4_Click(object sender, EventArgs e)
+        {
+            FormHelper.OpenForm<frmMasterMenu>(pnlMain,FormHelper.FormPosition.Center);
+        }
+
+        private void bfC_Button3_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }

@@ -12,7 +12,7 @@ namespace BrickForgeCommanderUI.Forms.Login___Registeration
     public partial class frmStatusDetails : Form
     {
         private readonly DataTable dataTable;
-        private readonly string tableName = "VendorTypeDetails";
+        private readonly string tableName = "StatusDetails";
 
         private readonly KeyHandler keyHandler;
         private bool aKeyPressed = false;
@@ -41,7 +41,7 @@ namespace BrickForgeCommanderUI.Forms.Login___Registeration
             this.KeyDown += frmVendorTypeDetails_KeyDown;
             this.KeyUp += frmVendorTypeDetails_KeyUp;
 
-            lblVendorTypeId.Text = (SqlCommandHelper.GetId(tableName) + 1).ToString();
+            lblStatusId.Text = (SqlCommandHelper.GetId(tableName) + 1).ToString();
         }
 
         private void frmVendorTypeDetails_Activated(object sender, EventArgs e)
@@ -91,29 +91,29 @@ namespace BrickForgeCommanderUI.Forms.Login___Registeration
 
         private void btnInsert_Click(object sender, EventArgs e)
         {
-            SqlCommandHelper.InsertData(txtVendorTypeName, tableName);
+            SqlCommandHelper.InsertData(txtStatusName, tableName);
             SqlCommandHelper.DisplayData(tableName, dgvVendorTypeDetails, dataTable);
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            SqlCommandHelper.UpdateData(lblVendorTypeId, txtVendorTypeName, tableName);
+            SqlCommandHelper.UpdateData(lblStatusId, txtStatusName, tableName);
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            SqlCommandHelper.DeleteData(lblVendorTypeId, tableName);
+            SqlCommandHelper.DeleteData(lblStatusId, tableName);
         }
 
         private void btnClear_Click(object sender, EventArgs e)
         {
-            txtVendorTypeName.Texts = string.Empty;
-            lblVendorTypeId.Text = (SqlCommandHelper.GetId(tableName) + 1).ToString();
+            txtStatusName.Texts = string.Empty;
+            lblStatusId.Text = (SqlCommandHelper.GetId(tableName) + 1).ToString();
         }
 
         private void btnForward_Click(object sender, EventArgs e)
         {
-            FormHelper.OpenForm<frmLogin>();
+            //FormHelper.OpenForm<frmLogin>();
             this.Hide();
         }
 
@@ -136,13 +136,13 @@ namespace BrickForgeCommanderUI.Forms.Login___Registeration
 
         private void dgvVendorTypeDetails_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            lblVendorTypeId.Text = dgvVendorTypeDetails.SelectedCells[0].Value.ToString();
-            MasterControlHelper.CellSingleClick(lblVendorTypeId, tableName, dgvVendorTypeDetails, e);
+            lblStatusId.Text = dgvVendorTypeDetails.SelectedCells[0].Value.ToString();
+            MasterControlHelper.CellSingleClick(lblStatusId, tableName, dgvVendorTypeDetails, e);
         }
 
         private void dgvVendorTypeDetails_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            MasterControlHelper.CellDoubleClick(lblVendorTypeId, txtVendorTypeName, tableName, dgvVendorTypeDetails, e);
+            MasterControlHelper.CellDoubleClick(lblStatusId, txtStatusName, tableName, dgvVendorTypeDetails, e);
         }
 
 

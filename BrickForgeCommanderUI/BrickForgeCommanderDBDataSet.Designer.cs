@@ -751,22 +751,22 @@ namespace BrickForgeCommanderUI.BrickForgeCommanderDBDataSetTableAdapters {
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = "DELETE FROM [kanif].[CityDetails] WHERE (([CityId] = @Original_CityId) AND ([City" +
+            this._adapter.DeleteCommand.CommandText = "DELETE FROM [BFC].[CityDetails] WHERE (([CityId] = @Original_CityId) AND ([City" +
                 "Name] = @Original_CityName))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_CityId", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CityId", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_CityName", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CityName", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [kanif].[CityDetails] ([CityName]) VALUES (@CityName);\r\nSELECT CityId" +
-                ", CityName FROM kanif.CityDetails WHERE (CityId = SCOPE_IDENTITY())";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO [BFC].[CityDetails] ([CityName]) VALUES (@CityName);\r\nSELECT CityId" +
+                ", CityName FROM BFC.CityDetails WHERE (CityId = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CityName", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CityName", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = "UPDATE [kanif].[CityDetails] SET [CityName] = @CityName WHERE (([CityId] = @Origi" +
+            this._adapter.UpdateCommand.CommandText = "UPDATE [BFC].[CityDetails] SET [CityName] = @CityName WHERE (([CityId] = @Origi" +
                 "nal_CityId) AND ([CityName] = @Original_CityName));\r\nSELECT CityId, CityName FRO" +
-                "M kanif.CityDetails WHERE (CityId = @CityId)";
+                "M BFC.CityDetails WHERE (CityId = @CityId)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CityName", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CityName", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_CityId", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CityId", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
@@ -787,7 +787,7 @@ namespace BrickForgeCommanderUI.BrickForgeCommanderDBDataSetTableAdapters {
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT CityId, CityName FROM kanif.CityDetails";
+            this._commandCollection[0].CommandText = "SELECT CityId, CityName FROM BFC.CityDetails";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         

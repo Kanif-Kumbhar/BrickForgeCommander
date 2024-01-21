@@ -1,6 +1,6 @@
-﻿namespace BrickForgeCommanderUI.Forms.Login___Registeration
+﻿namespace BrickForgeCommanderUI.Forms.MasterForms.Master
 {
-    partial class frmStatusDetails
+    partial class MasterForm2
     {
         /// <summary>
         /// Required designer variable.
@@ -28,32 +28,28 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmStatusDetails));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MasterForm2));
             this.panel1 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
-            this.btnClose = new BrickForgeCommanderUI.Controls.NavControls.BFC_Close();
             this.pnlBody = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel15 = new System.Windows.Forms.Panel();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.txtStatusName = new BrickForgeCommanderUI.Controls.Validation.RequiredFieldTextBox();
+            this.txtVendorTypeName = new BrickForgeCommanderUI.Controls.Validation.RequiredFieldTextBox();
             this.btnInsert = new BrickForgeCommanderUI.Controls.BFC_Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.lblStatusId = new System.Windows.Forms.Label();
+            this.lblVendorTypeId = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel14 = new System.Windows.Forms.Panel();
             this.btnUpdate = new BrickForgeCommanderUI.Controls.BFC_Button();
             this.btnDelete = new BrickForgeCommanderUI.Controls.BFC_Button();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel13 = new System.Windows.Forms.Panel();
-            this.btnUndo = new BrickForgeCommanderUI.Controls.BFC_Button();
-            this.btnRedo = new BrickForgeCommanderUI.Controls.BFC_Button();
-            this.btnClear = new BrickForgeCommanderUI.Controls.BFC_Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel9 = new System.Windows.Forms.Panel();
             this.panel11 = new System.Windows.Forms.Panel();
@@ -63,8 +59,12 @@
             this.panel12 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel10 = new System.Windows.Forms.Panel();
+            this.btnUndo = new BrickForgeCommanderUI.Controls.BFC_Button();
+            this.btnRedo = new BrickForgeCommanderUI.Controls.BFC_Button();
+            this.btnClear = new BrickForgeCommanderUI.Controls.BFC_Button();
             this.btnBackWard = new BrickForgeCommanderUI.Controls.BFC_Button();
             this.btnForward = new BrickForgeCommanderUI.Controls.BFC_Button();
+            this.btnClose = new BrickForgeCommanderUI.Controls.NavControls.BFC_Close();
             this.panel1.SuspendLayout();
             this.pnlBody.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -96,7 +96,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(817, 55);
             this.panel1.TabIndex = 0;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // label3
             // 
@@ -108,27 +107,6 @@
             this.label3.Size = new System.Drawing.Size(302, 45);
             this.label3.TabIndex = 1;
             this.label3.Text = "Vendor Type Details";
-            // 
-            // btnClose
-            // 
-            this.btnClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(21)))), ((int)(((byte)(21)))));
-            this.btnClose.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(21)))), ((int)(((byte)(21)))));
-            this.btnClose.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnClose.BorderFocusColor = System.Drawing.Color.Green;
-            this.btnClose.BorderRadius = 0;
-            this.btnClose.BorderSize = 0;
-            this.btnClose.ClickKey = System.Windows.Forms.Keys.Escape;
-            this.btnClose.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnClose.FlatAppearance.BorderSize = 0;
-            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClose.ForeColor = System.Drawing.Color.White;
-            this.btnClose.Image = ((System.Drawing.Image)(resources.GetObject("btnClose.Image")));
-            this.btnClose.Location = new System.Drawing.Point(755, 0);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(62, 55);
-            this.btnClose.TabIndex = 0;
-            this.btnClose.TextColor = System.Drawing.Color.White;
-            this.btnClose.UseVisualStyleBackColor = false;
             // 
             // pnlBody
             // 
@@ -185,10 +163,10 @@
             // 
             this.tableLayoutPanel1.ColumnCount = 1;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Controls.Add(this.txtStatusName, 0, 3);
+            this.tableLayoutPanel1.Controls.Add(this.txtVendorTypeName, 0, 3);
             this.tableLayoutPanel1.Controls.Add(this.label2, 0, 2);
             this.tableLayoutPanel1.Controls.Add(this.label1, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.lblStatusId, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.lblVendorTypeId, 0, 1);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(3, 31);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -200,33 +178,33 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(369, 176);
             this.tableLayoutPanel1.TabIndex = 1;
             // 
-            // txtStatusName
+            // txtVendorTypeName
             // 
-            this.txtStatusName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.txtStatusName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
-            this.txtStatusName.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.txtStatusName.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.txtStatusName.BorderRadius = 0;
-            this.txtStatusName.BorderSize = 2;
-            this.txtStatusName.ConnectedButton = this.btnInsert;
-            this.txtStatusName.ErrorColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.txtStatusName.ErrorForeColor = System.Drawing.Color.Black;
-            this.txtStatusName.ErrorMessage = "Please fill the above field.";
-            this.txtStatusName.Font = new System.Drawing.Font("Nirmala UI", 9F);
-            this.txtStatusName.ForeColor = System.Drawing.Color.DimGray;
-            this.txtStatusName.Location = new System.Drawing.Point(4, 136);
-            this.txtStatusName.Margin = new System.Windows.Forms.Padding(4);
-            this.txtStatusName.MultiLine = false;
-            this.txtStatusName.Name = "txtStatusName";
-            this.txtStatusName.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.txtStatusName.PasswordChar = false;
-            this.txtStatusName.PlaceHolderColor = System.Drawing.Color.IndianRed;
-            this.txtStatusName.PlaceHolderText = "   ";
-            this.txtStatusName.Size = new System.Drawing.Size(331, 40);
-            this.txtStatusName.TabIndex = 1;
-            this.txtStatusName.TextBoxText = "";
-            this.txtStatusName.Texts = "";
-            this.txtStatusName.UnderLineStyle = true;
+            this.txtVendorTypeName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.txtVendorTypeName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            this.txtVendorTypeName.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.txtVendorTypeName.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.txtVendorTypeName.BorderRadius = 0;
+            this.txtVendorTypeName.BorderSize = 2;
+            this.txtVendorTypeName.ConnectedButton = this.btnInsert;
+            this.txtVendorTypeName.ErrorColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.txtVendorTypeName.ErrorForeColor = System.Drawing.Color.Black;
+            this.txtVendorTypeName.ErrorMessage = "Please fill the above field.";
+            this.txtVendorTypeName.Font = new System.Drawing.Font("Nirmala UI", 9F);
+            this.txtVendorTypeName.ForeColor = System.Drawing.Color.DimGray;
+            this.txtVendorTypeName.Location = new System.Drawing.Point(4, 136);
+            this.txtVendorTypeName.Margin = new System.Windows.Forms.Padding(4);
+            this.txtVendorTypeName.MultiLine = false;
+            this.txtVendorTypeName.Name = "txtVendorTypeName";
+            this.txtVendorTypeName.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.txtVendorTypeName.PasswordChar = false;
+            this.txtVendorTypeName.PlaceHolderColor = System.Drawing.Color.IndianRed;
+            this.txtVendorTypeName.PlaceHolderText = "   ";
+            this.txtVendorTypeName.Size = new System.Drawing.Size(331, 40);
+            this.txtVendorTypeName.TabIndex = 1;
+            this.txtVendorTypeName.TextBoxText = "";
+            this.txtVendorTypeName.Texts = "";
+            this.txtVendorTypeName.UnderLineStyle = true;
             // 
             // btnInsert
             // 
@@ -274,16 +252,16 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Vendor Type Id:";
             // 
-            // lblStatusId
+            // lblVendorTypeId
             // 
-            this.lblStatusId.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.lblStatusId.AutoSize = true;
-            this.lblStatusId.Font = new System.Drawing.Font("Nirmala UI", 11F);
-            this.lblStatusId.ForeColor = System.Drawing.Color.White;
-            this.lblStatusId.Location = new System.Drawing.Point(3, 58);
-            this.lblStatusId.Name = "lblStatusId";
-            this.lblStatusId.Size = new System.Drawing.Size(0, 30);
-            this.lblStatusId.TabIndex = 0;
+            this.lblVendorTypeId.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.lblVendorTypeId.AutoSize = true;
+            this.lblVendorTypeId.Font = new System.Drawing.Font("Nirmala UI", 11F);
+            this.lblVendorTypeId.ForeColor = System.Drawing.Color.White;
+            this.lblVendorTypeId.Location = new System.Drawing.Point(3, 58);
+            this.lblVendorTypeId.Name = "lblVendorTypeId";
+            this.lblVendorTypeId.Size = new System.Drawing.Size(0, 30);
+            this.lblVendorTypeId.TabIndex = 0;
             // 
             // panel5
             // 
@@ -368,74 +346,6 @@
             this.panel13.Name = "panel13";
             this.panel13.Size = new System.Drawing.Size(395, 65);
             this.panel13.TabIndex = 1;
-            // 
-            // btnUndo
-            // 
-            this.btnUndo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnUndo.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnUndo.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnUndo.BorderFocusColor = System.Drawing.Color.Green;
-            this.btnUndo.BorderRadius = 9;
-            this.btnUndo.BorderSize = 0;
-            this.btnUndo.ClickKey = System.Windows.Forms.Keys.None;
-            this.btnUndo.Enabled = false;
-            this.btnUndo.FlatAppearance.BorderSize = 0;
-            this.btnUndo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUndo.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUndo.ForeColor = System.Drawing.Color.White;
-            this.btnUndo.Image = global::BrickForgeCommanderUI.Properties.Resources.icons8_undo_40;
-            this.btnUndo.Location = new System.Drawing.Point(296, 7);
-            this.btnUndo.Name = "btnUndo";
-            this.btnUndo.Size = new System.Drawing.Size(43, 49);
-            this.btnUndo.TabIndex = 0;
-            this.btnUndo.TextColor = System.Drawing.Color.White;
-            this.btnUndo.UseVisualStyleBackColor = false;
-            this.btnUndo.Visible = false;
-            // 
-            // btnRedo
-            // 
-            this.btnRedo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnRedo.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnRedo.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnRedo.BorderFocusColor = System.Drawing.Color.Green;
-            this.btnRedo.BorderRadius = 9;
-            this.btnRedo.BorderSize = 0;
-            this.btnRedo.ClickKey = System.Windows.Forms.Keys.None;
-            this.btnRedo.Enabled = false;
-            this.btnRedo.FlatAppearance.BorderSize = 0;
-            this.btnRedo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRedo.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRedo.ForeColor = System.Drawing.Color.White;
-            this.btnRedo.Image = global::BrickForgeCommanderUI.Properties.Resources.icons8_redo_40;
-            this.btnRedo.Location = new System.Drawing.Point(338, 7);
-            this.btnRedo.Name = "btnRedo";
-            this.btnRedo.Size = new System.Drawing.Size(43, 49);
-            this.btnRedo.TabIndex = 0;
-            this.btnRedo.TextColor = System.Drawing.Color.White;
-            this.btnRedo.UseVisualStyleBackColor = false;
-            this.btnRedo.Visible = false;
-            // 
-            // btnClear
-            // 
-            this.btnClear.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnClear.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnClear.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnClear.BorderFocusColor = System.Drawing.Color.Green;
-            this.btnClear.BorderRadius = 9;
-            this.btnClear.BorderSize = 0;
-            this.btnClear.ClickKey = System.Windows.Forms.Keys.None;
-            this.btnClear.FlatAppearance.BorderSize = 0;
-            this.btnClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClear.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClear.ForeColor = System.Drawing.Color.White;
-            this.btnClear.Image = global::BrickForgeCommanderUI.Properties.Resources.icons8_clear_40;
-            this.btnClear.Location = new System.Drawing.Point(9, 7);
-            this.btnClear.Name = "btnClear";
-            this.btnClear.Size = new System.Drawing.Size(66, 49);
-            this.btnClear.TabIndex = 0;
-            this.btnClear.TextColor = System.Drawing.Color.White;
-            this.btnClear.UseVisualStyleBackColor = false;
-            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // panel2
             // 
@@ -556,6 +466,74 @@
             this.panel10.Size = new System.Drawing.Size(386, 72);
             this.panel10.TabIndex = 0;
             // 
+            // btnUndo
+            // 
+            this.btnUndo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnUndo.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnUndo.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnUndo.BorderFocusColor = System.Drawing.Color.Green;
+            this.btnUndo.BorderRadius = 9;
+            this.btnUndo.BorderSize = 0;
+            this.btnUndo.ClickKey = System.Windows.Forms.Keys.None;
+            this.btnUndo.Enabled = false;
+            this.btnUndo.FlatAppearance.BorderSize = 0;
+            this.btnUndo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUndo.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUndo.ForeColor = System.Drawing.Color.White;
+            this.btnUndo.Image = global::BrickForgeCommanderUI.Properties.Resources.icons8_undo_40;
+            this.btnUndo.Location = new System.Drawing.Point(296, 7);
+            this.btnUndo.Name = "btnUndo";
+            this.btnUndo.Size = new System.Drawing.Size(43, 49);
+            this.btnUndo.TabIndex = 0;
+            this.btnUndo.TextColor = System.Drawing.Color.White;
+            this.btnUndo.UseVisualStyleBackColor = false;
+            this.btnUndo.Visible = false;
+            // 
+            // btnRedo
+            // 
+            this.btnRedo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnRedo.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnRedo.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnRedo.BorderFocusColor = System.Drawing.Color.Green;
+            this.btnRedo.BorderRadius = 9;
+            this.btnRedo.BorderSize = 0;
+            this.btnRedo.ClickKey = System.Windows.Forms.Keys.None;
+            this.btnRedo.Enabled = false;
+            this.btnRedo.FlatAppearance.BorderSize = 0;
+            this.btnRedo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRedo.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRedo.ForeColor = System.Drawing.Color.White;
+            this.btnRedo.Image = global::BrickForgeCommanderUI.Properties.Resources.icons8_redo_40;
+            this.btnRedo.Location = new System.Drawing.Point(338, 7);
+            this.btnRedo.Name = "btnRedo";
+            this.btnRedo.Size = new System.Drawing.Size(43, 49);
+            this.btnRedo.TabIndex = 0;
+            this.btnRedo.TextColor = System.Drawing.Color.White;
+            this.btnRedo.UseVisualStyleBackColor = false;
+            this.btnRedo.Visible = false;
+            // 
+            // btnClear
+            // 
+            this.btnClear.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnClear.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnClear.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnClear.BorderFocusColor = System.Drawing.Color.Green;
+            this.btnClear.BorderRadius = 9;
+            this.btnClear.BorderSize = 0;
+            this.btnClear.ClickKey = System.Windows.Forms.Keys.None;
+            this.btnClear.FlatAppearance.BorderSize = 0;
+            this.btnClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClear.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClear.ForeColor = System.Drawing.Color.White;
+            this.btnClear.Image = global::BrickForgeCommanderUI.Properties.Resources.icons8_clear_40;
+            this.btnClear.Location = new System.Drawing.Point(9, 7);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Size = new System.Drawing.Size(66, 49);
+            this.btnClear.TabIndex = 0;
+            this.btnClear.TextColor = System.Drawing.Color.White;
+            this.btnClear.UseVisualStyleBackColor = false;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
+            // 
             // btnBackWard
             // 
             this.btnBackWard.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
@@ -600,7 +578,28 @@
             this.btnForward.UseVisualStyleBackColor = false;
             this.btnForward.Click += new System.EventHandler(this.btnForward_Click);
             // 
-            // frmStatusDetails
+            // btnClose
+            // 
+            this.btnClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(21)))), ((int)(((byte)(21)))));
+            this.btnClose.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(21)))), ((int)(((byte)(21)))));
+            this.btnClose.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnClose.BorderFocusColor = System.Drawing.Color.Green;
+            this.btnClose.BorderRadius = 0;
+            this.btnClose.BorderSize = 0;
+            this.btnClose.ClickKey = System.Windows.Forms.Keys.Escape;
+            this.btnClose.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnClose.FlatAppearance.BorderSize = 0;
+            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClose.ForeColor = System.Drawing.Color.White;
+            this.btnClose.Image = ((System.Drawing.Image)(resources.GetObject("btnClose.Image")));
+            this.btnClose.Location = new System.Drawing.Point(755, 0);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(62, 55);
+            this.btnClose.TabIndex = 0;
+            this.btnClose.TextColor = System.Drawing.Color.White;
+            this.btnClose.UseVisualStyleBackColor = false;
+            // 
+            // MasterForm2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -610,8 +609,8 @@
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.KeyPreview = true;
-            this.Name = "frmStatusDetails";
-            this.Text = "frmStatusDetails";
+            this.Name = "MasterForm2";
+            this.Text = "MasterForm2";
             this.Activated += new System.EventHandler(this.frmVendorTypeDetails_Activated);
             this.Load += new System.EventHandler(this.frmVendorTypeDetails_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.frmVendorTypeDetails_KeyDown);
@@ -663,7 +662,7 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private Controls.Validation.RequiredFieldTextBox txtStatusName;
+        private Controls.Validation.RequiredFieldTextBox txtVendorTypeName;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
@@ -676,6 +675,6 @@
         private Controls.BFC_Button btnRedo;
         private Controls.BFC_Button btnBackWard;
         private Controls.BFC_Button btnForward;
-        private System.Windows.Forms.Label lblStatusId;
+        private System.Windows.Forms.Label lblVendorTypeId;
     }
 }

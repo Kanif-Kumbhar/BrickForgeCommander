@@ -71,6 +71,11 @@ namespace BrickForgeCommanderUI.Forms.TransactionForms.Worker.WorkerRegistration
 
         }
 
+        private void requiredFieldTextBox1_Load(object sender, System.EventArgs e)
+        {
+
+        }
+
         private void frmWorkersRegistration_MouseUp(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)

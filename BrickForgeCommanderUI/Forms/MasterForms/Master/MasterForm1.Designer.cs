@@ -28,24 +28,32 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MasterForm1));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MasterForm1));
             this.panel1 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
+            this.btnClose = new BrickForgeCommanderUI.Controls.NavControls.BFC_Close();
             this.pnlBody = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel15 = new System.Windows.Forms.Panel();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.txtCityName = new BrickForgeCommanderUI.Controls.Validation.RequiredFieldTextBox();
+            this.btnInsert = new BrickForgeCommanderUI.Controls.BFC_Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.lblCityId = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel14 = new System.Windows.Forms.Panel();
+            this.btnUpdate = new BrickForgeCommanderUI.Controls.BFC_Button();
+            this.btnDelete = new BrickForgeCommanderUI.Controls.BFC_Button();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel13 = new System.Windows.Forms.Panel();
+            this.btnUndo = new BrickForgeCommanderUI.Controls.BFC_Button();
+            this.btnRedo = new BrickForgeCommanderUI.Controls.BFC_Button();
+            this.btnClear = new BrickForgeCommanderUI.Controls.BFC_Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel9 = new System.Windows.Forms.Panel();
             this.panel11 = new System.Windows.Forms.Panel();
@@ -55,16 +63,8 @@
             this.panel12 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel10 = new System.Windows.Forms.Panel();
-            this.txtCityName = new BrickForgeCommanderUI.Controls.Validation.RequiredFieldTextBox();
-            this.btnInsert = new BrickForgeCommanderUI.Controls.BFC_Button();
-            this.btnUpdate = new BrickForgeCommanderUI.Controls.BFC_Button();
-            this.btnDelete = new BrickForgeCommanderUI.Controls.BFC_Button();
-            this.btnUndo = new BrickForgeCommanderUI.Controls.BFC_Button();
-            this.btnRedo = new BrickForgeCommanderUI.Controls.BFC_Button();
-            this.btnClear = new BrickForgeCommanderUI.Controls.BFC_Button();
             this.btnBackWard = new BrickForgeCommanderUI.Controls.BFC_Button();
             this.btnForward = new BrickForgeCommanderUI.Controls.BFC_Button();
-            this.btnClose = new BrickForgeCommanderUI.Controls.NavControls.BFC_Close();
             this.panel1.SuspendLayout();
             this.pnlBody.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -107,6 +107,27 @@
             this.label3.Size = new System.Drawing.Size(302, 45);
             this.label3.TabIndex = 1;
             this.label3.Text = "Vendor Type Details";
+            // 
+            // btnClose
+            // 
+            this.btnClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(21)))), ((int)(((byte)(21)))));
+            this.btnClose.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(21)))), ((int)(((byte)(21)))));
+            this.btnClose.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnClose.BorderFocusColor = System.Drawing.Color.Green;
+            this.btnClose.BorderRadius = 0;
+            this.btnClose.BorderSize = 0;
+            this.btnClose.ClickKey = System.Windows.Forms.Keys.Escape;
+            this.btnClose.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnClose.FlatAppearance.BorderSize = 0;
+            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClose.ForeColor = System.Drawing.Color.White;
+            this.btnClose.Image = ((System.Drawing.Image)(resources.GetObject("btnClose.Image")));
+            this.btnClose.Location = new System.Drawing.Point(755, 0);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(62, 55);
+            this.btnClose.TabIndex = 0;
+            this.btnClose.TextColor = System.Drawing.Color.White;
+            this.btnClose.UseVisualStyleBackColor = false;
             // 
             // pnlBody
             // 
@@ -178,6 +199,56 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(369, 176);
             this.tableLayoutPanel1.TabIndex = 1;
             // 
+            // txtCityName
+            // 
+            this.txtCityName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.txtCityName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            this.txtCityName.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.txtCityName.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.txtCityName.BorderRadius = 0;
+            this.txtCityName.BorderSize = 2;
+            this.txtCityName.ConnectedButton = this.btnInsert;
+            this.txtCityName.ErrorColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.txtCityName.ErrorForeColor = System.Drawing.Color.Black;
+            this.txtCityName.ErrorMessage = "Please fill the above field.";
+            this.txtCityName.Font = new System.Drawing.Font("Nirmala UI", 9F);
+            this.txtCityName.ForeColor = System.Drawing.Color.DimGray;
+            this.txtCityName.Location = new System.Drawing.Point(4, 136);
+            this.txtCityName.Margin = new System.Windows.Forms.Padding(4);
+            this.txtCityName.MultiLine = false;
+            this.txtCityName.Name = "txtCityName";
+            this.txtCityName.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.txtCityName.PasswordChar = false;
+            this.txtCityName.PlaceHolderColor = System.Drawing.Color.IndianRed;
+            this.txtCityName.PlaceHolderText = "   ";
+            this.txtCityName.Size = new System.Drawing.Size(331, 40);
+            this.txtCityName.TabIndex = 1;
+            this.txtCityName.TextBoxText = "";
+            this.txtCityName.Texts = "";
+            this.txtCityName.UnderLineStyle = true;
+            // 
+            // btnInsert
+            // 
+            this.btnInsert.BackColor = System.Drawing.Color.MediumTurquoise;
+            this.btnInsert.BackgroundColor = System.Drawing.Color.MediumTurquoise;
+            this.btnInsert.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnInsert.BorderFocusColor = System.Drawing.Color.Green;
+            this.btnInsert.BorderRadius = 9;
+            this.btnInsert.BorderSize = 0;
+            this.btnInsert.ClickKey = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Insert)));
+            this.btnInsert.FlatAppearance.BorderSize = 0;
+            this.btnInsert.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnInsert.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInsert.ForeColor = System.Drawing.Color.White;
+            this.btnInsert.Location = new System.Drawing.Point(9, 11);
+            this.btnInsert.Name = "btnInsert";
+            this.btnInsert.Size = new System.Drawing.Size(120, 49);
+            this.btnInsert.TabIndex = 0;
+            this.btnInsert.Text = "Insert";
+            this.btnInsert.TextColor = System.Drawing.Color.White;
+            this.btnInsert.UseVisualStyleBackColor = false;
+            this.btnInsert.Click += new System.EventHandler(this.btnInsert_Click);
+            // 
             // label2
             // 
             this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
@@ -233,6 +304,50 @@
             this.panel14.Size = new System.Drawing.Size(395, 72);
             this.panel14.TabIndex = 1;
             // 
+            // btnUpdate
+            // 
+            this.btnUpdate.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnUpdate.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnUpdate.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnUpdate.BorderFocusColor = System.Drawing.Color.Green;
+            this.btnUpdate.BorderRadius = 9;
+            this.btnUpdate.BorderSize = 0;
+            this.btnUpdate.ClickKey = System.Windows.Forms.Keys.K;
+            this.btnUpdate.FlatAppearance.BorderSize = 0;
+            this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUpdate.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpdate.ForeColor = System.Drawing.Color.White;
+            this.btnUpdate.Location = new System.Drawing.Point(137, 11);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(120, 49);
+            this.btnUpdate.TabIndex = 0;
+            this.btnUpdate.Text = "Update";
+            this.btnUpdate.TextColor = System.Drawing.Color.White;
+            this.btnUpdate.UseVisualStyleBackColor = false;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.BackColor = System.Drawing.Color.MediumVioletRed;
+            this.btnDelete.BackgroundColor = System.Drawing.Color.MediumVioletRed;
+            this.btnDelete.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnDelete.BorderFocusColor = System.Drawing.Color.Green;
+            this.btnDelete.BorderRadius = 9;
+            this.btnDelete.BorderSize = 0;
+            this.btnDelete.ClickKey = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Delete)));
+            this.btnDelete.FlatAppearance.BorderSize = 0;
+            this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDelete.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDelete.ForeColor = System.Drawing.Color.White;
+            this.btnDelete.Location = new System.Drawing.Point(264, 11);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(120, 49);
+            this.btnDelete.TabIndex = 0;
+            this.btnDelete.Text = "Delete";
+            this.btnDelete.TextColor = System.Drawing.Color.White;
+            this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            // 
             // panel4
             // 
             this.panel4.Controls.Add(this.panel13);
@@ -252,6 +367,74 @@
             this.panel13.Name = "panel13";
             this.panel13.Size = new System.Drawing.Size(395, 65);
             this.panel13.TabIndex = 1;
+            // 
+            // btnUndo
+            // 
+            this.btnUndo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnUndo.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnUndo.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnUndo.BorderFocusColor = System.Drawing.Color.Green;
+            this.btnUndo.BorderRadius = 9;
+            this.btnUndo.BorderSize = 0;
+            this.btnUndo.ClickKey = System.Windows.Forms.Keys.None;
+            this.btnUndo.Enabled = false;
+            this.btnUndo.FlatAppearance.BorderSize = 0;
+            this.btnUndo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUndo.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUndo.ForeColor = System.Drawing.Color.White;
+            this.btnUndo.Image = global::BrickForgeCommanderUI.Properties.Resources.icons8_undo_40;
+            this.btnUndo.Location = new System.Drawing.Point(296, 7);
+            this.btnUndo.Name = "btnUndo";
+            this.btnUndo.Size = new System.Drawing.Size(43, 49);
+            this.btnUndo.TabIndex = 0;
+            this.btnUndo.TextColor = System.Drawing.Color.White;
+            this.btnUndo.UseVisualStyleBackColor = false;
+            this.btnUndo.Visible = false;
+            // 
+            // btnRedo
+            // 
+            this.btnRedo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnRedo.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnRedo.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnRedo.BorderFocusColor = System.Drawing.Color.Green;
+            this.btnRedo.BorderRadius = 9;
+            this.btnRedo.BorderSize = 0;
+            this.btnRedo.ClickKey = System.Windows.Forms.Keys.None;
+            this.btnRedo.Enabled = false;
+            this.btnRedo.FlatAppearance.BorderSize = 0;
+            this.btnRedo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRedo.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRedo.ForeColor = System.Drawing.Color.White;
+            this.btnRedo.Image = global::BrickForgeCommanderUI.Properties.Resources.icons8_redo_40;
+            this.btnRedo.Location = new System.Drawing.Point(338, 7);
+            this.btnRedo.Name = "btnRedo";
+            this.btnRedo.Size = new System.Drawing.Size(43, 49);
+            this.btnRedo.TabIndex = 0;
+            this.btnRedo.TextColor = System.Drawing.Color.White;
+            this.btnRedo.UseVisualStyleBackColor = false;
+            this.btnRedo.Visible = false;
+            // 
+            // btnClear
+            // 
+            this.btnClear.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnClear.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnClear.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnClear.BorderFocusColor = System.Drawing.Color.Green;
+            this.btnClear.BorderRadius = 9;
+            this.btnClear.BorderSize = 0;
+            this.btnClear.ClickKey = System.Windows.Forms.Keys.None;
+            this.btnClear.FlatAppearance.BorderSize = 0;
+            this.btnClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClear.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClear.ForeColor = System.Drawing.Color.White;
+            this.btnClear.Image = global::BrickForgeCommanderUI.Properties.Resources.icons8_clear_40;
+            this.btnClear.Location = new System.Drawing.Point(9, 7);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Size = new System.Drawing.Size(66, 49);
+            this.btnClear.TabIndex = 0;
+            this.btnClear.TextColor = System.Drawing.Color.White;
+            this.btnClear.UseVisualStyleBackColor = false;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // panel2
             // 
@@ -372,168 +555,6 @@
             this.panel10.Size = new System.Drawing.Size(386, 72);
             this.panel10.TabIndex = 0;
             // 
-            // txtCityName
-            // 
-            this.txtCityName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.txtCityName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
-            this.txtCityName.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.txtCityName.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.txtCityName.BorderRadius = 0;
-            this.txtCityName.BorderSize = 2;
-            this.txtCityName.ConnectedButton = this.btnInsert;
-            this.txtCityName.ErrorColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.txtCityName.ErrorForeColor = System.Drawing.Color.Black;
-            this.txtCityName.ErrorMessage = "Please fill the above field.";
-            this.txtCityName.Font = new System.Drawing.Font("Nirmala UI", 9F);
-            this.txtCityName.ForeColor = System.Drawing.Color.DimGray;
-            this.txtCityName.Location = new System.Drawing.Point(4, 136);
-            this.txtCityName.Margin = new System.Windows.Forms.Padding(4);
-            this.txtCityName.MultiLine = false;
-            this.txtCityName.Name = "txtCityName";
-            this.txtCityName.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.txtCityName.PasswordChar = false;
-            this.txtCityName.PlaceHolderColor = System.Drawing.Color.IndianRed;
-            this.txtCityName.PlaceHolderText = "   ";
-            this.txtCityName.Size = new System.Drawing.Size(331, 40);
-            this.txtCityName.TabIndex = 1;
-            this.txtCityName.TextBoxText = "";
-            this.txtCityName.Texts = "";
-            this.txtCityName.UnderLineStyle = true;
-            // 
-            // btnInsert
-            // 
-            this.btnInsert.BackColor = System.Drawing.Color.MediumTurquoise;
-            this.btnInsert.BackgroundColor = System.Drawing.Color.MediumTurquoise;
-            this.btnInsert.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnInsert.BorderFocusColor = System.Drawing.Color.Green;
-            this.btnInsert.BorderRadius = 9;
-            this.btnInsert.BorderSize = 0;
-            this.btnInsert.ClickKey = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Insert)));
-            this.btnInsert.FlatAppearance.BorderSize = 0;
-            this.btnInsert.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnInsert.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnInsert.ForeColor = System.Drawing.Color.White;
-            this.btnInsert.Location = new System.Drawing.Point(9, 11);
-            this.btnInsert.Name = "btnInsert";
-            this.btnInsert.Size = new System.Drawing.Size(120, 49);
-            this.btnInsert.TabIndex = 0;
-            this.btnInsert.Text = "Insert";
-            this.btnInsert.TextColor = System.Drawing.Color.White;
-            this.btnInsert.UseVisualStyleBackColor = false;
-            this.btnInsert.Click += new System.EventHandler(this.btnInsert_Click);
-            // 
-            // btnUpdate
-            // 
-            this.btnUpdate.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.btnUpdate.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
-            this.btnUpdate.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnUpdate.BorderFocusColor = System.Drawing.Color.Green;
-            this.btnUpdate.BorderRadius = 9;
-            this.btnUpdate.BorderSize = 0;
-            this.btnUpdate.ClickKey = System.Windows.Forms.Keys.K;
-            this.btnUpdate.FlatAppearance.BorderSize = 0;
-            this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUpdate.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUpdate.ForeColor = System.Drawing.Color.White;
-            this.btnUpdate.Location = new System.Drawing.Point(137, 11);
-            this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(120, 49);
-            this.btnUpdate.TabIndex = 0;
-            this.btnUpdate.Text = "Update";
-            this.btnUpdate.TextColor = System.Drawing.Color.White;
-            this.btnUpdate.UseVisualStyleBackColor = false;
-            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
-            // 
-            // btnDelete
-            // 
-            this.btnDelete.BackColor = System.Drawing.Color.MediumVioletRed;
-            this.btnDelete.BackgroundColor = System.Drawing.Color.MediumVioletRed;
-            this.btnDelete.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnDelete.BorderFocusColor = System.Drawing.Color.Green;
-            this.btnDelete.BorderRadius = 9;
-            this.btnDelete.BorderSize = 0;
-            this.btnDelete.ClickKey = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Delete)));
-            this.btnDelete.FlatAppearance.BorderSize = 0;
-            this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDelete.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDelete.ForeColor = System.Drawing.Color.White;
-            this.btnDelete.Location = new System.Drawing.Point(264, 11);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(120, 49);
-            this.btnDelete.TabIndex = 0;
-            this.btnDelete.Text = "Delete";
-            this.btnDelete.TextColor = System.Drawing.Color.White;
-            this.btnDelete.UseVisualStyleBackColor = false;
-            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
-            // 
-            // btnUndo
-            // 
-            this.btnUndo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnUndo.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnUndo.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnUndo.BorderFocusColor = System.Drawing.Color.Green;
-            this.btnUndo.BorderRadius = 9;
-            this.btnUndo.BorderSize = 0;
-            this.btnUndo.ClickKey = System.Windows.Forms.Keys.None;
-            this.btnUndo.Enabled = false;
-            this.btnUndo.FlatAppearance.BorderSize = 0;
-            this.btnUndo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUndo.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUndo.ForeColor = System.Drawing.Color.White;
-            this.btnUndo.Image = global::BrickForgeCommanderUI.Properties.Resources.icons8_undo_40;
-            this.btnUndo.Location = new System.Drawing.Point(296, 7);
-            this.btnUndo.Name = "btnUndo";
-            this.btnUndo.Size = new System.Drawing.Size(43, 49);
-            this.btnUndo.TabIndex = 0;
-            this.btnUndo.TextColor = System.Drawing.Color.White;
-            this.btnUndo.UseVisualStyleBackColor = false;
-            this.btnUndo.Visible = false;
-            // 
-            // btnRedo
-            // 
-            this.btnRedo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnRedo.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnRedo.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnRedo.BorderFocusColor = System.Drawing.Color.Green;
-            this.btnRedo.BorderRadius = 9;
-            this.btnRedo.BorderSize = 0;
-            this.btnRedo.ClickKey = System.Windows.Forms.Keys.None;
-            this.btnRedo.Enabled = false;
-            this.btnRedo.FlatAppearance.BorderSize = 0;
-            this.btnRedo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRedo.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRedo.ForeColor = System.Drawing.Color.White;
-            this.btnRedo.Image = global::BrickForgeCommanderUI.Properties.Resources.icons8_redo_40;
-            this.btnRedo.Location = new System.Drawing.Point(338, 7);
-            this.btnRedo.Name = "btnRedo";
-            this.btnRedo.Size = new System.Drawing.Size(43, 49);
-            this.btnRedo.TabIndex = 0;
-            this.btnRedo.TextColor = System.Drawing.Color.White;
-            this.btnRedo.UseVisualStyleBackColor = false;
-            this.btnRedo.Visible = false;
-            // 
-            // btnClear
-            // 
-            this.btnClear.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnClear.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnClear.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnClear.BorderFocusColor = System.Drawing.Color.Green;
-            this.btnClear.BorderRadius = 9;
-            this.btnClear.BorderSize = 0;
-            this.btnClear.ClickKey = System.Windows.Forms.Keys.None;
-            this.btnClear.FlatAppearance.BorderSize = 0;
-            this.btnClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClear.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClear.ForeColor = System.Drawing.Color.White;
-            this.btnClear.Image = global::BrickForgeCommanderUI.Properties.Resources.icons8_clear_40;
-            this.btnClear.Location = new System.Drawing.Point(9, 7);
-            this.btnClear.Name = "btnClear";
-            this.btnClear.Size = new System.Drawing.Size(66, 49);
-            this.btnClear.TabIndex = 0;
-            this.btnClear.TextColor = System.Drawing.Color.White;
-            this.btnClear.UseVisualStyleBackColor = false;
-            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
-            // 
             // btnBackWard
             // 
             this.btnBackWard.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
@@ -577,27 +598,6 @@
             this.btnForward.TextColor = System.Drawing.Color.White;
             this.btnForward.UseVisualStyleBackColor = false;
             this.btnForward.Click += new System.EventHandler(this.btnForward_Click);
-            // 
-            // btnClose
-            // 
-            this.btnClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(21)))), ((int)(((byte)(21)))));
-            this.btnClose.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(21)))), ((int)(((byte)(21)))));
-            this.btnClose.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnClose.BorderFocusColor = System.Drawing.Color.Green;
-            this.btnClose.BorderRadius = 0;
-            this.btnClose.BorderSize = 0;
-            this.btnClose.ClickKey = System.Windows.Forms.Keys.Escape;
-            this.btnClose.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnClose.FlatAppearance.BorderSize = 0;
-            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClose.ForeColor = System.Drawing.Color.White;
-            this.btnClose.Image = ((System.Drawing.Image)(resources.GetObject("btnClose.Image")));
-            this.btnClose.Location = new System.Drawing.Point(755, 0);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(62, 55);
-            this.btnClose.TabIndex = 0;
-            this.btnClose.TextColor = System.Drawing.Color.White;
-            this.btnClose.UseVisualStyleBackColor = false;
             // 
             // MasterForm1
             // 

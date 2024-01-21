@@ -70,7 +70,7 @@ namespace BrickForgeCommanderUI.Login___Registeration
             try
             {
                 con.Open();
-                string login = "SELECT * FROM kanif.Login_Credentials WHERE UserName = '" + txtUserName.Text + "'AND Password = '" + txtPassword.Text + "'";
+                string login = "SELECT * FROM BFC.Login_Credentials WHERE UserName = '" + txtUserName.Text + "'AND Password = '" + txtPassword.Text + "'";
                 cmd = new SqlCommand(login, con);
                 SqlDataReader dr = cmd.ExecuteReader();
 
@@ -98,7 +98,7 @@ namespace BrickForgeCommanderUI.Login___Registeration
             try
             {
                 con.Open();
-                string checkUserAndKey = "SELECT * FROM kanif.Login_Credentials WHERE UserName = @UserName AND AuthenticationKey = @AuthenticationKey";
+                string checkUserAndKey = "SELECT * FROM BFC.Login_Credentials WHERE UserName = @UserName AND AuthenticationKey = @AuthenticationKey";
                 cmd = new SqlCommand(checkUserAndKey, con);
                 cmd.Parameters.AddWithValue("@UserName", txtUserName.Text);
                 cmd.Parameters.AddWithValue("@AuthenticationKey", txtKey.Text);
@@ -204,7 +204,7 @@ namespace BrickForgeCommanderUI.Login___Registeration
 
                 con.Open();
 
-                string getOldPasswordQuery = "SELECT Password FROM kanif.Login_Credentials WHERE UserName = @UserName";
+                string getOldPasswordQuery = "SELECT Password FROM BFC.Login_Credentials WHERE UserName = @UserName";
                 cmd = new SqlCommand(getOldPasswordQuery, con);
                 cmd.Parameters.AddWithValue("@UserName", txtUserName.Text);
 
@@ -220,7 +220,7 @@ namespace BrickForgeCommanderUI.Login___Registeration
                         return;
                     }
 
-                    string updatePassword = "UPDATE kanif.Login_Credentials SET Password = @Password WHERE UserName = @UserName";
+                    string updatePassword = "UPDATE BFC.Login_Credentials SET Password = @Password WHERE UserName = @UserName";
                     cmd = new SqlCommand(updatePassword, con);
                     cmd.Parameters.AddWithValue("@Password", txtPassword.Text);
                     cmd.Parameters.AddWithValue("@UserName", txtUserName.Text);
