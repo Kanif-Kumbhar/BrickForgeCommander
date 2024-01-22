@@ -87,9 +87,6 @@
     <Compile Include="Controls\BFC_TextBox.Designer.cs">
       <DependentUpon>BFC_TextBox.cs</DependentUpon>
     </Compile>
-    <Compile Include="Controls\FunctionControls\BfcDataGridView.cs">
-      <SubType>Component</SubType>
-    </Compile>
     <Compile Include="Controls\FunctionControls\BFC_UndoRedo.cs">
       <SubType>UserControl</SubType>
     </Compile>

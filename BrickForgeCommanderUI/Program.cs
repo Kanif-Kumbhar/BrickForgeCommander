@@ -2,6 +2,7 @@
 using System.Windows.Forms;
 using BrickForgeCommanderUI.Dashboard;
 using BrickForgeCommanderUI.Forms.TransactionForms.Worker.WorkerRegistration;
+using BrickForgeCommanderUI.Misc;
 
 
 namespace BrickForgeCommanderUI

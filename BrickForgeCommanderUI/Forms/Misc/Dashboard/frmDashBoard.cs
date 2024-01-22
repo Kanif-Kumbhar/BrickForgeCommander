@@ -9,6 +9,7 @@ using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BrickForgeCommanderUI.Forms.TransactionForms.Worker.WorkerRegistration;
 using BrickForgeCommanderUI.MasterForms;
 using BrickForgeCommanderUI.MasterForms.Menu;
 using BrickForgeCommanderUI.Misc.Anya_sReport;
@@ -322,7 +323,7 @@ namespace BrickForgeCommanderUI.Dashboard
 
         private void bfC_Button4_Click(object sender, EventArgs e)
         {
-            FormHelper.OpenForm<frmMasterMenu>(pnlMain,FormHelper.FormPosition.Center);
+            FormHelper.OpenDialogForm<frmWorkersRegistration>();
         }
 
         private void bfC_Button3_Click(object sender, EventArgs e)

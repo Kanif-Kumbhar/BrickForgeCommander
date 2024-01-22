@@ -76,6 +76,11 @@ namespace BrickForgeCommanderUI.Forms.TransactionForms.Worker.WorkerRegistration
 
         }
 
+        private void btnAddRow_Click(object sender, System.EventArgs e)
+        {
+            dgvDocument.Rows.Add();
+        }
+
         private void frmWorkersRegistration_MouseUp(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)

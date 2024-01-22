@@ -2,9 +2,7 @@
 using System;
 using System.Windows.Forms;
 using BrickForgeCommanderUI.Helpers;
-using BrickForgeCommanderUI.Login___Registeration;
 using static BrickForgeCommanderUI.Misc.Anya_sReport.AnyaReports;
-using BrickForgeCommanderUI.Controls;
 
 namespace BrickForgeCommanderUI.Misc
 {
@@ -13,6 +11,40 @@ namespace BrickForgeCommanderUI.Misc
         public test()
         {
             InitializeComponent();
+            InitializeDataGridView();
+        }
+
+        private void InitializeDataGridView()
+        {
+            // Create DataGridView
+            DataGridView dataGridView1 = new DataGridView();
+            dataGridView1.Dock = DockStyle.Fill;
+
+            // Create Columns
+            DataGridViewTextBoxColumn clmDocumentName = new DataGridViewTextBoxColumn();
+            clmDocumentName.HeaderText = "Document Name";
+            clmDocumentName.Name = "clmDocumentName";
+
+            DataGridViewImageColumn clmDocumentPreview = new DataGridViewImageColumn();
+            clmDocumentPreview.HeaderText = "Document Preview";
+            clmDocumentPreview.Name = "clmDocumentPreview";
+
+            DataGridViewButtonColumn clmAction = new DataGridViewButtonColumn();
+            clmAction.HeaderText = "Action";
+            clmAction.Name = "clmAction";
+            clmAction.Text = "Upload";
+            clmAction.UseColumnTextForButtonValue = true;
+
+            // Add Columns to DataGridView
+            dataGridView1.Columns.AddRange(new DataGridViewColumn[]
+            {
+                clmDocumentName,
+                clmDocumentPreview,
+                clmAction
+            });
+
+            // Add DataGridView to Form
+            Controls.Add(dataGridView1);
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -88,5 +120,6 @@ namespace BrickForgeCommanderUI.Misc
         {
             MessageBox.Show("D");
         }
+
     }
 }
