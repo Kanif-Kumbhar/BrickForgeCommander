@@ -1,15 +1,26 @@
-﻿using System.Windows.Forms;
+﻿using BrickForgeCommanderUI.Presenters.CommonPresenters;
+using System;
+using System.Windows.Forms;
+using BrickForgeCommanderUI.Interface.CommonInterface;
+using System.Collections.Generic;
+using System.ComponentModel;
 
 namespace BrickForgeCommanderUI.Forms.TransactionForms.Worker.WorkerRegistration
 {
-    public partial class frmWorkersRegistration : Form
+    public partial class frmWorkersRegistration : Form, IDocumentView
     {
         private bool isDragging = false;
         private int mouseX, mouseY;
+
+        private readonly DocumentPresenter _presenter;
+
+        public event Action<string, byte[]> UploadDocument;
+        public event Action<string> PreviewDocument;
         public frmWorkersRegistration()
         {
             InitializeComponent();
             this.Icon = null;
+            _presenter = new DocumentPresenter(this);
         }
 
         #region Borderless Form
@@ -90,5 +101,15 @@ namespace BrickForgeCommanderUI.Forms.TransactionForms.Worker.WorkerRegistration
         }
 
         #endregion
+
+        public void ShowError(string message)
+        {
+            MessageBox.Show(message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+
+        public void UpdateDataGridView(List<string> documentNames)
+        {
+            dgvDocument.DataSource = new BindingSource(new BindingList<string>(documentNames), null);
+        }
     }
 }

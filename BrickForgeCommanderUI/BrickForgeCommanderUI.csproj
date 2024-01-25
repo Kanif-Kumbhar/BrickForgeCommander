@@ -159,6 +159,12 @@
       <DependentUpon>frmDashBoard.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Misc\Dashboard\Models\DashBoard.cs" />
+    <Compile Include="Forms\Misc\frmPreviewImage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Misc\frmPreviewImage.Designer.cs">
+      <DependentUpon>frmPreviewImage.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\TransactionForms\Worker\WorkerRegistration\frmWorkersRegistration.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -207,6 +213,8 @@
     </Compile>
     <Compile Include="Helpers\FormHelper.cs" />
     <Compile Include="Helpers\NavigationHelper.cs" />
+    <Compile Include="Interface\CommonInterface\IDocumentView.cs" />
+    <Compile Include="Presenters\CommonPresenters\DocumentPresenter.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Controls\BFC_ComboBox.resx">
@@ -468,6 +476,24 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\PartyType.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BrickForgeCommander.DataAccess\BrickForgeCommander.DataAccess.csproj">
+      <Project>{9dcdeda1-1f10-46d2-b3aa-46aff2392e60}</Project>
+      <Name>BrickForgeCommander.DataAccess</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BrickForgeCommander.Models\BrickForgeCommander.Models.csproj">
+      <Project>{70c49be6-6384-484a-a255-61d1c0a1dc0c}</Project>
+      <Name>BrickForgeCommander.Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BrickForgeCommander.Repositories\BrickForgeCommander.Repositories.csproj">
+      <Project>{cb704de7-58a8-45ce-9ef0-1e806b424a8a}</Project>
+      <Name>BrickForgeCommander.Repositories</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BrickForgeCommander.Services\BrickForgeCommander.Services.csproj">
+      <Project>{94ff7b86-5429-4609-9b8b-043dd529d44e}</Project>
+      <Name>BrickForgeCommander.Services</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
