@@ -7,14 +7,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BrickForgeCommanderUI", "Br
 EndProject
 Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "BrickForgeCommanderDB", "BrickForgeCommanderDB\BrickForgeCommanderDB.sqlproj", "{B0CA7A58-0922-46E0-8064-8FED9A35FC9A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BrickForgeCommander.Models", "BrickForgeCommander.Models\BrickForgeCommander.Models.csproj", "{70C49BE6-6384-484A-A255-61D1C0A1DC0C}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BrickForgeCommander.Services", "BrickForgeCommander.Services\BrickForgeCommander.Services.csproj", "{94FF7B86-5429-4609-9B8B-043DD529D44E}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BrickForgeCommander.Repositories", "BrickForgeCommander.Repositories\BrickForgeCommander.Repositories.csproj", "{CB704DE7-58A8-45CE-9EF0-1E806B424A8A}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BrickForgeCommander.DataAccess", "BrickForgeCommander.DataAccess\BrickForgeCommander.DataAccess.csproj", "{9DCDEDA1-1F10-46D2-B3AA-46AFF2392E60}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -31,22 +23,6 @@ Global
 		{B0CA7A58-0922-46E0-8064-8FED9A35FC9A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B0CA7A58-0922-46E0-8064-8FED9A35FC9A}.Release|Any CPU.Build.0 = Release|Any CPU
 		{B0CA7A58-0922-46E0-8064-8FED9A35FC9A}.Release|Any CPU.Deploy.0 = Release|Any CPU
-		{70C49BE6-6384-484A-A255-61D1C0A1DC0C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{70C49BE6-6384-484A-A255-61D1C0A1DC0C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{70C49BE6-6384-484A-A255-61D1C0A1DC0C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{70C49BE6-6384-484A-A255-61D1C0A1DC0C}.Release|Any CPU.Build.0 = Release|Any CPU
-		{94FF7B86-5429-4609-9B8B-043DD529D44E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{94FF7B86-5429-4609-9B8B-043DD529D44E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{94FF7B86-5429-4609-9B8B-043DD529D44E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{94FF7B86-5429-4609-9B8B-043DD529D44E}.Release|Any CPU.Build.0 = Release|Any CPU
-		{CB704DE7-58A8-45CE-9EF0-1E806B424A8A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{CB704DE7-58A8-45CE-9EF0-1E806B424A8A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{CB704DE7-58A8-45CE-9EF0-1E806B424A8A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{CB704DE7-58A8-45CE-9EF0-1E806B424A8A}.Release|Any CPU.Build.0 = Release|Any CPU
-		{9DCDEDA1-1F10-46D2-B3AA-46AFF2392E60}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9DCDEDA1-1F10-46D2-B3AA-46AFF2392E60}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9DCDEDA1-1F10-46D2-B3AA-46AFF2392E60}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9DCDEDA1-1F10-46D2-B3AA-46AFF2392E60}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

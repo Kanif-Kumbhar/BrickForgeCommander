@@ -4,8 +4,6 @@ using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Globalization;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace BrickForgeCommanderUI.Dashboard.Models
 {
@@ -211,13 +209,13 @@ namespace BrickForgeCommanderUI.Dashboard.Models
             endDate = new DateTime(endDate.Year, endDate.Month, endDate.Day,endDate.Hour,endDate.Minute,59); 
             if(startDate != this.startDate || endDate != this.endDate) 
             {
-            this.startDate = startDate;
-            this.endDate = endDate;
-            this.numberDays = (endDate - startDate).Days;
+                this.startDate = startDate;
+                this.endDate = endDate;
+                this.numberDays = (endDate - startDate).Days;
 
-            GetNumberItems();
-            GetProductAnalysis();
-            GetOrderAnalysis();
+                GetNumberItems();
+                GetProductAnalysis();
+                GetOrderAnalysis();
                 Console.WriteLine("Refereshed Data: {0} - {1}", startDate.ToString(), endDate.ToString());
                 return true; 
             }

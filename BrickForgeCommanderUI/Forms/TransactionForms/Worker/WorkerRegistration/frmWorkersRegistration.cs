@@ -1,26 +1,18 @@
-﻿using BrickForgeCommanderUI.Presenters.CommonPresenters;
-using System;
+﻿using System;
 using System.Windows.Forms;
-using BrickForgeCommanderUI.Interface.CommonInterface;
-using System.Collections.Generic;
-using System.ComponentModel;
+using BrickForgeCommanderUI.Helpers;
 
 namespace BrickForgeCommanderUI.Forms.TransactionForms.Worker.WorkerRegistration
 {
-    public partial class frmWorkersRegistration : Form, IDocumentView
+    public partial class frmWorkersRegistration : Form
     {
         private bool isDragging = false;
         private int mouseX, mouseY;
 
-        private readonly DocumentPresenter _presenter;
-
-        public event Action<string, byte[]> UploadDocument;
-        public event Action<string> PreviewDocument;
         public frmWorkersRegistration()
         {
             InitializeComponent();
             this.Icon = null;
-            _presenter = new DocumentPresenter(this);
         }
 
         #region Borderless Form
@@ -82,14 +74,15 @@ namespace BrickForgeCommanderUI.Forms.TransactionForms.Worker.WorkerRegistration
 
         }
 
-        private void requiredFieldTextBox1_Load(object sender, System.EventArgs e)
-        {
-
-        }
-
         private void btnAddRow_Click(object sender, System.EventArgs e)
         {
             dgvDocument.Rows.Add();
+        }
+
+        private void dgvDocument_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            DocumentUploader.UploadDocument(dgvDocument,e);
+            DocumentUploader.PreviewDocument(pnlMain,dgvDocument,e);
         }
 
         private void frmWorkersRegistration_MouseUp(object sender, MouseEventArgs e)
@@ -101,15 +94,5 @@ namespace BrickForgeCommanderUI.Forms.TransactionForms.Worker.WorkerRegistration
         }
 
         #endregion
-
-        public void ShowError(string message)
-        {
-            MessageBox.Show(message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-        }
-
-        public void UpdateDataGridView(List<string> documentNames)
-        {
-            dgvDocument.DataSource = new BindingSource(new BindingList<string>(documentNames), null);
-        }
     }
 }
