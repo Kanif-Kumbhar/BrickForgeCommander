@@ -8,5 +8,5 @@
     [CityId] INT NOT NULL,
     [PhoneNo] TEXT NOT NULL, 
     [VendorTypeId] INT NOT NULL, 
-    [UserId] INT NOT NULL, 
+    [UserId] INT NULL, 
 )

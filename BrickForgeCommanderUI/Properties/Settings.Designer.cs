@@ -33,5 +33,27 @@ namespace BrickForgeCommanderUI.Properties {
                 return ((string)(this["BrickForgeCommanderDBConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\\MSSQLLocalDB;Initial Catalog=BrickMasterDB;Integrated Secur" +
+            "ity=True;Encrypt=False")]
+        public string BrickMasterDBConnectionString {
+            get {
+                return ((string)(this["BrickMasterDBConnectionString"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=BFC;Integrated Security=True;E" +
+            "ncrypt=False")]
+        public string BFCConnectionString {
+            get {
+                return ((string)(this["BFCConnectionString"]));
+            }
+        }
     }
 }

@@ -58,12 +58,9 @@
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
-            this.brickForgeCommanderDBDataSet = new BrickForgeCommanderUI.BrickForgeCommanderDBDataSet();
             this.cityDetailsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.cityDetailsTableAdapter = new BrickForgeCommanderUI.BrickForgeCommanderDBDataSetTableAdapters.CityDetailsTableAdapter();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.brickForgeCommanderDBDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cityDetailsBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -537,17 +534,15 @@
             // 
             // brickForgeCommanderDBDataSet
             // 
-            this.brickForgeCommanderDBDataSet.DataSetName = "BrickForgeCommanderDBDataSet";
-            this.brickForgeCommanderDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+           
             // 
             // cityDetailsBindingSource
             // 
-            this.cityDetailsBindingSource.DataMember = "CityDetails";
-            this.cityDetailsBindingSource.DataSource = this.brickForgeCommanderDBDataSet;
+
             // 
             // cityDetailsTableAdapter
             // 
-            this.cityDetailsTableAdapter.ClearBeforeFill = true;
+
             // 
             // frmRegisteration
             // 
@@ -573,7 +568,6 @@
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.brickForgeCommanderDBDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cityDetailsBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -604,9 +598,7 @@
         private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.TextBox textBox3;
-        private BrickForgeCommanderDBDataSet brickForgeCommanderDBDataSet;
         private System.Windows.Forms.BindingSource cityDetailsBindingSource;
-        private BrickForgeCommanderDBDataSetTableAdapters.CityDetailsTableAdapter cityDetailsTableAdapter;
         private Controls.BFC_TextBox txtPhoneNo;
         private Controls.BFC_TextBox txtAddress;
         private Controls.BFC_TextBox txtKey;

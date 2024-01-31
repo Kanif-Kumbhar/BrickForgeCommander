@@ -64,6 +64,8 @@
     <Folder Include="ChildTables\ProductTable" />
     <Folder Include="ChildTables\VendorTables" />
     <Folder Include="MasterTables" />
+    <Folder Include="StoredProcedures" />
+    <Folder Include="ChildTables\WorkerTable" />
   </ItemGroup>
   <ItemGroup>
     <RefactorLog Include="BrickForgeCommanderDB.refactorlog" />
@@ -79,5 +81,12 @@
     <Build Include="LoginCredential\Login_Credentials.sql" />
     <Build Include="MasterTables\StatusDetails.sql" />
     <Build Include="MasterTables\WorkerRoleDetails.sql" />
+    <Build Include="StoredProcedures\usp_InsertVendorData.sql" />
+    <Build Include="ChildTables\WorkerTable\BatchDetails.sql" />
+    <Build Include="ChildTables\WorkerTable\WorkerDetails.sql" />
+    <Build Include="ChildTables\WorkerTable\DocumentDetails.sql" />
+    <Build Include="StoredProcedures\usp_UploadDocument.sql" />
+    <Build Include="ChildTables\WorkerTable\AttendanceDetails.sql" />
+    <Build Include="ChildTables\VendorTables\VendorImageDetails.sql" />
   </ItemGroup>
 </Project>

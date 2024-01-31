@@ -61,11 +61,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BrickForgeCommanderDBDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>BrickForgeCommanderDBDataSet.xsd</DependentUpon>
-    </Compile>
     <Compile Include="Controls\BFCRadioButton.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -113,6 +108,17 @@
     </Compile>
     <Compile Include="Controls\Validation\RequiredFieldTextBox.cs">
       <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DataSet\Worker.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Worker.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MasterForms\Master\frmBatchDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MasterForms\Master\frmBatchDetails.Designer.cs">
+      <DependentUpon>frmBatchDetails.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\MasterForms\Master\frmStatusDetails.cs">
       <SubType>Form</SubType>
@@ -232,6 +238,9 @@
     <EmbeddedResource Include="Controls\Validation\RequiredFieldTextBox.resx">
       <DependentUpon>RequiredFieldTextBox.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MasterForms\Master\frmBatchDetails.resx">
+      <DependentUpon>frmBatchDetails.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\MasterForms\Master\frmStatusDetails.resx">
       <DependentUpon>frmStatusDetails.cs</DependentUpon>
     </EmbeddedResource>
@@ -288,16 +297,16 @@
       <DesignTime>True</DesignTime>
     </Compile>
     <None Include="app.manifest" />
-    <None Include="BrickForgeCommanderDBDataSet.xsc">
-      <DependentUpon>BrickForgeCommanderDBDataSet.xsd</DependentUpon>
+    <None Include="DataSet\Worker.xsc">
+      <DependentUpon>Worker.xsd</DependentUpon>
     </None>
-    <None Include="BrickForgeCommanderDBDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>BrickForgeCommanderDBDataSet.Designer.cs</LastGenOutput>
+    <None Include="DataSet\Worker.xsd">
       <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Worker.Designer.cs</LastGenOutput>
     </None>
-    <None Include="BrickForgeCommanderDBDataSet.xss">
-      <DependentUpon>BrickForgeCommanderDBDataSet.xsd</DependentUpon>
+    <None Include="DataSet\Worker.xss">
+      <DependentUpon>Worker.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

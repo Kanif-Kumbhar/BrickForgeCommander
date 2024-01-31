@@ -83,5 +83,17 @@ namespace BrickForgeCommanderUI.Helpers
             }
             return selectedTable;
         }
+
+        public static DataTable GetDataTable()
+        {
+            if (documentTable != null && documentTable.Rows.Count > 0)
+            {
+                return documentTable;
+            }
+            else
+            {
+                return null;
+            }
+        }
     }
 }

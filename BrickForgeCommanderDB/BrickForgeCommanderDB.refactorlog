@@ -140,4 +140,53 @@
     <Property Name="ParentElementType" Value="SqlTable" />
     <Property Name="NewName" Value="StatusId" />
   </Operation>
+  <Operation Name="Rename Refactor" Key="bf20c265-c629-44c3-988d-1106e2263659" ChangeDateTime="01/28/2024 05:54:34">
+    <Property Name="ElementName" Value="[BFC].[BatchDetails].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[BFC].[BatchDetails]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="BatchId" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="02841e1d-9c10-40a1-9e51-a861bc36ead7" ChangeDateTime="01/28/2024 05:58:28">
+    <Property Name="ElementName" Value="[BFC].[WorkerDetails].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[BFC].[WorkerDetails]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="WorkerId" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="88a0319a-bab5-4286-a19d-325a767afe92" ChangeDateTime="01/28/2024 05:58:35">
+    <Property Name="ElementName" Value="[BFC].[WorkerDetails].[WorkerId]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[BFC].[WorkerDetails]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="VendorId" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="5cdcaaa6-d242-4cc0-b315-78ce42d8b419" ChangeDateTime="01/28/2024 06:05:50">
+    <Property Name="ElementName" Value="[BFC].[DocumentDetails].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[BFC].[DocumentDetails]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="D" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="1a333312-20d8-411a-addf-4114cb7dc18f" ChangeDateTime="01/28/2024 06:05:58">
+    <Property Name="ElementName" Value="[BFC].[DocumentDetails].[D]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[BFC].[DocumentDetails]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="DocumentName" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="18e2ca76-2a63-4140-ab31-e5834dfe4245" ChangeDateTime="01/28/2024 11:09:49">
+    <Property Name="ElementName" Value="[BFC].[AttendanceDetails].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[BFC].[AttendanceDetails]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="AttendenceId" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="837eb706-956a-40b9-a102-9fb05ec50d82" ChangeDateTime="01/28/2024 11:11:34">
+    <Property Name="ElementName" Value="[BFC].[AttendanceDetails].[Date]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[BFC].[AttendanceDetails]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="AttendanceDate" />
+  </Operation>
 </Operations>
