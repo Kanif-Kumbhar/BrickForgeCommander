@@ -6,16 +6,16 @@
     @Address VARCHAR(30),
     @CityId INT,
     @PhoneNo TEXT,
-    @VendorTypeId INT OUTPUT,
-    @Image IMAGE,
-    @UserId INT,
+    @Image NVARCHAR(MAX),
     -- Parameters for WorkerDetails
-    @BatchId VARCHAR(50)
+    @BatchId INT ,
+    @RoleId INT
 AS
 BEGIN
     BEGIN TRY
         BEGIN TRANSACTION;
 
+        DECLARE @VendorTypeId INT
         -- Set @VendorTypeId based on VendorTypeName
         SET @VendorTypeId = (SELECT VendorTypeId FROM BFC.VendorTypeDetails WHERE VendorTypeName = 'Worker');
 
@@ -27,8 +27,7 @@ BEGIN
             [Address],
             [CityId],
             [PhoneNo],
-            [VendorTypeId],
-            [UserId]
+            [VendorTypeId]
         )
         VALUES (
             @FirstName,
@@ -37,8 +36,7 @@ BEGIN
             @Address,
             @CityId,
             @PhoneNo,
-            @VendorTypeId,
-            @UserId
+            @VendorTypeId
         );
 
         -- Get the VendorId of the inserted row
@@ -48,11 +46,13 @@ BEGIN
         -- Insert into OtherTable using the VendorId as a reference
         INSERT INTO [BFC].[WorkerDetails] (
             [VendorId],
-            [BatchId]
+            [BatchId] ,
+            [RoleId]
         )
         VALUES (
             @VendorId,
-            @BatchId
+            @BatchId ,
+            @RoleId
         );
 
         -- Increase BatchSize in BatchDetails

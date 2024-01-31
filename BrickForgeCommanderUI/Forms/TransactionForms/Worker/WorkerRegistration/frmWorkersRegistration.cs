@@ -15,7 +15,7 @@ namespace BrickForgeCommanderUI.Forms.TransactionForms.Worker.WorkerRegistration
         private int mouseX, mouseY;
         private DataTable documentTable;
         private readonly string connectionString = ConfigurationManager.ConnectionStrings["BFC"].ConnectionString;
-        private Image image;
+        private string image;
 
         public frmWorkersRegistration()
         {
@@ -157,6 +157,7 @@ namespace BrickForgeCommanderUI.Forms.TransactionForms.Worker.WorkerRegistration
                         command.Parameters.AddWithValue("@MiddleName", middleName);
                         command.Parameters.AddWithValue("@LastName", lastName);
                         command.Parameters.AddWithValue("@Address", txtAddress.Texts);
+                        
 
                         if (cbxCity.SelectedItem != null && cbxCity.SelectedItem is DataRowView)
                         {
@@ -166,8 +167,8 @@ namespace BrickForgeCommanderUI.Forms.TransactionForms.Worker.WorkerRegistration
                         }
 
                         command.Parameters.AddWithValue("@PhoneNo", txtPhoneNo.Text);
-                        command.Parameters.AddWithValue("@Image",image );
-                        command.Parameters.AddWithValue("@UserId", null);
+                        command.Parameters.AddWithValue("@Image", image);
+
                         if (cbxBatch.SelectedItem != null && cbxBatch.SelectedItem is DataRowView)
                         {
                             DataRowView selectedBatch = (DataRowView)cbxBatch.SelectedItem;
@@ -175,7 +176,17 @@ namespace BrickForgeCommanderUI.Forms.TransactionForms.Worker.WorkerRegistration
                             command.Parameters.AddWithValue("@BatchId", batchId);
                         }
 
+                        // Remove the duplicate declaration of UserId
+                        if (cbxRole.SelectedItem != null && cbxRole.SelectedItem is DataRowView)
+                        {
+                            DataRowView selectedRole = (DataRowView)cbxRole.SelectedItem;
+                            int roleId = Convert.ToInt32(selectedRole["RoleId"]);
+                            command.Parameters.AddWithValue("@RoleId", roleId);
+                        }
+
                         command.ExecuteNonQuery();
+                        MessageBox.Show("Record Inserted Successfully!", "Registration Complete", MessageBoxButtons.OK,
+                            MessageBoxIcon.Information);
                     }
                 }
             }
@@ -245,8 +256,8 @@ namespace BrickForgeCommanderUI.Forms.TransactionForms.Worker.WorkerRegistration
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            InsertData();
-            UploadDocument();
+            ValidateUpload();
+            //UploadDocument();
         }
 
         private void UploadImage()
@@ -269,11 +280,30 @@ namespace BrickForgeCommanderUI.Forms.TransactionForms.Worker.WorkerRegistration
                         MessageBox.Show("Image size should be below 500KB.");
                         return;
                     }
-                    image = Image.FromFile(filePath);
-                    picWorkerPhoto.Image = image;
+
+                    image = filePath;
+                    picWorkerPhoto.ImageLocation = image;
                 }
             }
         }
+
+        private void ValidateUpload()
+        {
+            if (!string.IsNullOrEmpty(txtName.Texts) &&
+                !string.IsNullOrWhiteSpace(txtPhoneNo.Text) &&
+                cbxRole.SelectedItem != null &&
+                cbxBatch.SelectedItem != null &&
+                cbxCity.SelectedItem != null &&
+                image != null) 
+            {
+                InsertData();
+            }
+            else
+            {
+                MessageBox.Show("Please fill in all the required fields and upload an image.", "Validation Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
+            }
+        }
+
         #endregion
     }
 }
