@@ -168,7 +168,7 @@
             this.tableLayoutPanel3.ColumnCount = 3;
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 37.73585F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 62.26415F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 56F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 57F));
             this.tableLayoutPanel3.Controls.Add(this.label7, 0, 0);
             this.tableLayoutPanel3.Controls.Add(this.label9, 0, 1);
             this.tableLayoutPanel3.Controls.Add(this.btnNewCity, 2, 1);
@@ -223,7 +223,7 @@
             this.btnNewCity.ForeColor = System.Drawing.Color.White;
             this.btnNewCity.FormName = null;
             this.btnNewCity.Image = ((System.Drawing.Image)(resources.GetObject("btnNewCity.Image")));
-            this.btnNewCity.Location = new System.Drawing.Point(327, 138);
+            this.btnNewCity.Location = new System.Drawing.Point(326, 138);
             this.btnNewCity.Name = "btnNewCity";
             this.btnNewCity.Size = new System.Drawing.Size(43, 40);
             this.btnNewCity.TabIndex = 0;
@@ -325,7 +325,7 @@
             this.tableLayoutPanel2.ColumnCount = 3;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40.22727F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 59.77273F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 115F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 116F));
             this.tableLayoutPanel2.Controls.Add(this.label3, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.label4, 0, 1);
             this.tableLayoutPanel2.Controls.Add(this.bfcNewButton1, 2, 4);
@@ -392,7 +392,7 @@
             this.bfcNewButton1.ForeColor = System.Drawing.Color.White;
             this.bfcNewButton1.FormName = null;
             this.bfcNewButton1.Image = ((System.Drawing.Image)(resources.GetObject("bfcNewButton1.Image")));
-            this.bfcNewButton1.Location = new System.Drawing.Point(407, 272);
+            this.bfcNewButton1.Location = new System.Drawing.Point(406, 272);
             this.bfcNewButton1.Name = "bfcNewButton1";
             this.bfcNewButton1.Size = new System.Drawing.Size(45, 40);
             this.bfcNewButton1.TabIndex = 0;
@@ -415,7 +415,7 @@
             this.cbxBloodGroup.Location = new System.Drawing.Point(165, 272);
             this.cbxBloodGroup.MinimumSize = new System.Drawing.Size(200, 30);
             this.cbxBloodGroup.Name = "cbxBloodGroup";
-            this.cbxBloodGroup.Size = new System.Drawing.Size(236, 41);
+            this.cbxBloodGroup.Size = new System.Drawing.Size(235, 41);
             this.cbxBloodGroup.TabIndex = 1;
             this.cbxBloodGroup.Texts = " -Select Blood Group-";
             // 
@@ -461,7 +461,7 @@
             this.txtAge.PasswordChar = false;
             this.txtAge.PlaceHolderColor = System.Drawing.Color.DarkGray;
             this.txtAge.PlaceHolderText = "";
-            this.txtAge.Size = new System.Drawing.Size(234, 39);
+            this.txtAge.Size = new System.Drawing.Size(233, 39);
             this.txtAge.TabIndex = 3;
             this.txtAge.TextBoxText = "";
             this.txtAge.Texts = "";
@@ -479,7 +479,7 @@
             this.tableLayoutPanel4.RowCount = 1;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 57F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(236, 57);
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(235, 57);
             this.tableLayoutPanel4.TabIndex = 6;
             // 
             // rbMale
@@ -491,7 +491,7 @@
             this.rbMale.MinimumSize = new System.Drawing.Size(0, 21);
             this.rbMale.Name = "rbMale";
             this.rbMale.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.rbMale.Size = new System.Drawing.Size(95, 34);
+            this.rbMale.Size = new System.Drawing.Size(94, 34);
             this.rbMale.TabIndex = 5;
             this.rbMale.TabStop = true;
             this.rbMale.Text = "Male";
@@ -503,7 +503,7 @@
             this.rbFemale.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.rbFemale.AutoSize = true;
             this.rbFemale.CheckedColor = System.Drawing.Color.SlateBlue;
-            this.rbFemale.Location = new System.Drawing.Point(104, 11);
+            this.rbFemale.Location = new System.Drawing.Point(103, 11);
             this.rbFemale.MinimumSize = new System.Drawing.Size(0, 21);
             this.rbFemale.Name = "rbFemale";
             this.rbFemale.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
@@ -547,7 +547,7 @@
             this.dtpDOB.Location = new System.Drawing.Point(165, 79);
             this.dtpDOB.MinimumSize = new System.Drawing.Size(4, 35);
             this.dtpDOB.Name = "dtpDOB";
-            this.dtpDOB.Size = new System.Drawing.Size(236, 37);
+            this.dtpDOB.Size = new System.Drawing.Size(235, 37);
             this.dtpDOB.SkinColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(96)))), ((int)(((byte)(96)))));
             this.dtpDOB.TabIndex = 2;
             this.dtpDOB.TextColor = System.Drawing.Color.White;
@@ -559,7 +559,7 @@
             this.txtPhoneNo.Location = new System.Drawing.Point(165, 340);
             this.txtPhoneNo.Mask = "000-000-0000";
             this.txtPhoneNo.Name = "txtPhoneNo";
-            this.txtPhoneNo.Size = new System.Drawing.Size(236, 37);
+            this.txtPhoneNo.Size = new System.Drawing.Size(235, 37);
             this.txtPhoneNo.TabIndex = 7;
             // 
             // txtName
@@ -580,7 +580,7 @@
             this.txtName.PasswordChar = false;
             this.txtName.PlaceHolderColor = System.Drawing.Color.DarkGray;
             this.txtName.PlaceHolderText = "(Last) (Middle) (First)";
-            this.txtName.Size = new System.Drawing.Size(234, 39);
+            this.txtName.Size = new System.Drawing.Size(233, 39);
             this.txtName.TabIndex = 3;
             this.txtName.TextBoxText = "";
             this.txtName.Texts = "";
@@ -736,6 +736,7 @@
             this.btnClear.Text = "Clear";
             this.btnClear.TextColor = System.Drawing.Color.Ivory;
             this.btnClear.UseVisualStyleBackColor = false;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // btnSave
             // 

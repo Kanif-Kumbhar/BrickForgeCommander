@@ -5,6 +5,7 @@ using System.Data.SqlClient;
 using System.Drawing;
 using System.IO;
 using System.Windows.Forms;
+using BrickForgeCommanderUI.Forms.MasterForms.Master;
 using BrickForgeCommanderUI.Helpers;
 
 namespace BrickForgeCommanderUI.Forms.TransactionForms.Worker.WorkerRegistration
@@ -285,6 +286,27 @@ namespace BrickForgeCommanderUI.Forms.TransactionForms.Worker.WorkerRegistration
                     picWorkerPhoto.ImageLocation = image;
                 }
             }
+        }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            frmVendorTypeDetails vendorTypeForm = new frmVendorTypeDetails();
+            vendorTypeForm.TopLevel = false;
+            vendorTypeForm.AutoScroll = true;
+
+            // Set the parent to pnlMain
+            pnlMain.Controls.Add(vendorTypeForm);
+
+            // Calculate the center position
+            int x = (pnlMain.Width - vendorTypeForm.Width) / 2;
+            int y = (pnlMain.Height - vendorTypeForm.Height) / 2;
+
+            // Set the position
+            vendorTypeForm.Location = new Point(x, y);
+
+            vendorTypeForm.BringToFront();
+
+            vendorTypeForm.Show();
         }
 
         private void ValidateUpload()
