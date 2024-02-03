@@ -61,6 +61,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BFCDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BFCDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Controls\BFCRadioButton.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -171,11 +176,16 @@
     <Compile Include="Forms\Misc\frmPreviewImage.Designer.cs">
       <DependentUpon>frmPreviewImage.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\TransactionForms\Worker\Models\WorkerRegistration.cs" />
-    <Compile Include="Forms\TransactionForms\Worker\WorkerRegistration\frmWorkersRegistration.cs">
+    <Compile Include="Forms\TransactionForms\Worker\frmStaffList.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\TransactionForms\Worker\WorkerRegistration\frmWorkersRegistration.Designer.cs">
+    <Compile Include="Forms\TransactionForms\Worker\frmStaffList.Designer.cs">
+      <DependentUpon>frmStaffList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\TransactionForms\Worker\frmWorkersRegistration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\TransactionForms\Worker\frmWorkersRegistration.Designer.cs">
       <DependentUpon>frmWorkersRegistration.cs</DependentUpon>
     </Compile>
     <Compile Include="Helpers\DocumentUploader.cs" />
@@ -283,7 +293,10 @@
     <EmbeddedResource Include="Forms\Misc\test.resx">
       <DependentUpon>test.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\TransactionForms\Worker\WorkerRegistration\frmWorkersRegistration.resx">
+    <EmbeddedResource Include="Forms\TransactionForms\Worker\frmStaffList.resx">
+      <DependentUpon>frmStaffList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\TransactionForms\Worker\frmWorkersRegistration.resx">
       <DependentUpon>frmWorkersRegistration.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -297,6 +310,17 @@
       <DesignTime>True</DesignTime>
     </Compile>
     <None Include="app.manifest" />
+    <None Include="BFCDataSet.xsc">
+      <DependentUpon>BFCDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="BFCDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BFCDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BFCDataSet.xss">
+      <DependentUpon>BFCDataSet.xsd</DependentUpon>
+    </None>
     <None Include="DataSet\Worker.xsc">
       <DependentUpon>Worker.xsd</DependentUpon>
     </None>

@@ -2,10 +2,8 @@
 using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
-using System.Drawing;
 using System.IO;
 using System.Windows.Forms;
-using BrickForgeCommanderUI.Forms.MasterForms.Master;
 using BrickForgeCommanderUI.Helpers;
 
 namespace BrickForgeCommanderUI.Forms.TransactionForms.Worker.WorkerRegistration
@@ -97,7 +95,10 @@ namespace BrickForgeCommanderUI.Forms.TransactionForms.Worker.WorkerRegistration
             this.batchDetailsTableAdapter.Fill(this.worker.BatchDetails);
 
         }
-        private void btnAddRow_Click(object sender, System.EventArgs e)
+
+        #region Events
+
+        private void btnAddRow_Click(object sender, EventArgs e)
         {
             dgvDocument.Rows.Add();
         }
@@ -118,6 +119,20 @@ namespace BrickForgeCommanderUI.Forms.TransactionForms.Worker.WorkerRegistration
             DocumentUploader.UploadDocument(dgvDocument,e);
             DocumentUploader.PreviewDocument(pnlMain,dgvDocument,e);
         }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            ValidateUpload();
+            UploadDocument();
+            Clear();
+        }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            Clear();
+        }
+
+        #endregion
 
         #region Functions
 
@@ -208,16 +223,12 @@ namespace BrickForgeCommanderUI.Forms.TransactionForms.Worker.WorkerRegistration
                     string documentName = row["DocumentName"].ToString();
                     string filePath = row["FilePath"].ToString();
 
-                    Image documentImage = Image.FromFile(filePath);
-
-                    StoreDocumentToDataBase(documentName, documentImage);
-
-                    documentImage.Dispose();
+                    StoreDocumentToDataBase(documentName, filePath);
                 }
             }
         }
 
-        private void StoreDocumentToDataBase(string documentName, Image documentImage)
+        private void StoreDocumentToDataBase(string documentName, string documentImage)
         {
                 try
                 {
@@ -255,12 +266,6 @@ namespace BrickForgeCommanderUI.Forms.TransactionForms.Worker.WorkerRegistration
             return nameParts;
         }
 
-        private void btnSave_Click(object sender, EventArgs e)
-        {
-            ValidateUpload();
-            //UploadDocument();
-        }
-
         private void UploadImage()
         {
             using (OpenFileDialog openFileDialog = new OpenFileDialog())
@@ -288,27 +293,6 @@ namespace BrickForgeCommanderUI.Forms.TransactionForms.Worker.WorkerRegistration
             }
         }
 
-        private void btnClear_Click(object sender, EventArgs e)
-        {
-            frmVendorTypeDetails vendorTypeForm = new frmVendorTypeDetails();
-            vendorTypeForm.TopLevel = false;
-            vendorTypeForm.AutoScroll = true;
-
-            // Set the parent to pnlMain
-            pnlMain.Controls.Add(vendorTypeForm);
-
-            // Calculate the center position
-            int x = (pnlMain.Width - vendorTypeForm.Width) / 2;
-            int y = (pnlMain.Height - vendorTypeForm.Height) / 2;
-
-            // Set the position
-            vendorTypeForm.Location = new Point(x, y);
-
-            vendorTypeForm.BringToFront();
-
-            vendorTypeForm.Show();
-        }
-
         private void ValidateUpload()
         {
             if (!string.IsNullOrEmpty(txtName.Texts) &&
@@ -324,6 +308,25 @@ namespace BrickForgeCommanderUI.Forms.TransactionForms.Worker.WorkerRegistration
             {
                 MessageBox.Show("Please fill in all the required fields and upload an image.", "Validation Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
             }
+        }
+
+        private void Clear()
+        {
+            txtName.Texts = "";
+            txtAddress.Texts = "";
+            txtPhoneNo.Text = "";
+            txtAge.Texts = "";
+
+            dtpDOB.Value = DateTime.Now;
+
+            cbxBatch.SelectedItem = null;
+            cbxCity.SelectedItem = null;
+            cbxRole.SelectedItem = null;
+            cbxBloodGroup.SelectedItem = null;
+
+            picWorkerPhoto.Image = null;
+
+            dgvDocument.Rows.Clear();
         }
 
         #endregion

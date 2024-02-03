@@ -1,0 +1,122 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="BFCDataSet" targetNamespace="http://tempuri.org/BFCDataSet.xsd" xmlns:mstns="http://tempuri.org/BFCDataSet.xsd" xmlns="http://tempuri.org/BFCDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="BFCConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="BFCConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.BrickForgeCommanderUI.Properties.Settings.GlobalReference.Default.BFCConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="StaffListTableAdapter" GeneratorDataComponentClassName="StaffListTableAdapter" Name="StaffList" UserDataComponentName="StaffListTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="BFCConnectionString (Settings)" DbObjectName="BFC.BFC.StaffList" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT WorkerId, WorkerVendorId, BatchId, RoleId, RoleName, VendorId, VendorName, VendorAddress, CityId, CityName, PhoneNo, VendorTypeId, VendorTypeName, DocumentId, DocumentName, DocumentImage FROM BFC.StaffList</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="WorkerId" DataSetColumn="WorkerId" />
+              <Mapping SourceColumn="WorkerVendorId" DataSetColumn="WorkerVendorId" />
+              <Mapping SourceColumn="BatchId" DataSetColumn="BatchId" />
+              <Mapping SourceColumn="RoleId" DataSetColumn="RoleId" />
+              <Mapping SourceColumn="RoleName" DataSetColumn="RoleName" />
+              <Mapping SourceColumn="VendorId" DataSetColumn="VendorId" />
+              <Mapping SourceColumn="VendorName" DataSetColumn="VendorName" />
+              <Mapping SourceColumn="VendorAddress" DataSetColumn="VendorAddress" />
+              <Mapping SourceColumn="CityId" DataSetColumn="CityId" />
+              <Mapping SourceColumn="CityName" DataSetColumn="CityName" />
+              <Mapping SourceColumn="PhoneNo" DataSetColumn="PhoneNo" />
+              <Mapping SourceColumn="VendorTypeId" DataSetColumn="VendorTypeId" />
+              <Mapping SourceColumn="VendorTypeName" DataSetColumn="VendorTypeName" />
+              <Mapping SourceColumn="DocumentId" DataSetColumn="DocumentId" />
+              <Mapping SourceColumn="DocumentName" DataSetColumn="DocumentName" />
+              <Mapping SourceColumn="DocumentImage" DataSetColumn="DocumentImage" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="BFCDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_UserDSName="BFCDataSet" msprop:Generator_DataSetName="BFCDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="StaffList" msprop:Generator_RowEvHandlerName="StaffListRowChangeEventHandler" msprop:Generator_RowDeletedName="StaffListRowDeleted" msprop:Generator_RowDeletingName="StaffListRowDeleting" msprop:Generator_RowEvArgName="StaffListRowChangeEvent" msprop:Generator_TablePropName="StaffList" msprop:Generator_RowChangedName="StaffListRowChanged" msprop:Generator_RowChangingName="StaffListRowChanging" msprop:Generator_TableClassName="StaffListDataTable" msprop:Generator_RowClassName="StaffListRow" msprop:Generator_TableVarName="tableStaffList" msprop:Generator_UserTableName="StaffList">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="WorkerId" msprop:Generator_ColumnPropNameInRow="WorkerId" msprop:Generator_ColumnPropNameInTable="WorkerIdColumn" msprop:Generator_ColumnVarNameInTable="columnWorkerId" msprop:Generator_UserColumnName="WorkerId" type="xs:int" />
+              <xs:element name="WorkerVendorId" msprop:Generator_ColumnPropNameInRow="WorkerVendorId" msprop:Generator_ColumnPropNameInTable="WorkerVendorIdColumn" msprop:Generator_ColumnVarNameInTable="columnWorkerVendorId" msprop:Generator_UserColumnName="WorkerVendorId" type="xs:int" minOccurs="0" />
+              <xs:element name="BatchId" msprop:Generator_ColumnPropNameInRow="BatchId" msprop:Generator_ColumnPropNameInTable="BatchIdColumn" msprop:Generator_ColumnVarNameInTable="columnBatchId" msprop:Generator_UserColumnName="BatchId" type="xs:int" minOccurs="0" />
+              <xs:element name="RoleId" msprop:Generator_ColumnPropNameInRow="RoleId" msprop:Generator_ColumnPropNameInTable="RoleIdColumn" msprop:Generator_ColumnVarNameInTable="columnRoleId" msprop:Generator_UserColumnName="RoleId" type="xs:int" minOccurs="0" />
+              <xs:element name="RoleName" msprop:Generator_ColumnPropNameInRow="RoleName" msprop:Generator_ColumnPropNameInTable="RoleNameColumn" msprop:Generator_ColumnVarNameInTable="columnRoleName" msprop:Generator_UserColumnName="RoleName">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="VendorId" msprop:Generator_ColumnPropNameInRow="VendorId" msprop:Generator_ColumnPropNameInTable="VendorIdColumn" msprop:Generator_ColumnVarNameInTable="columnVendorId" msprop:Generator_UserColumnName="VendorId" type="xs:int" />
+              <xs:element name="VendorName" msdata:ReadOnly="true" msprop:Generator_ColumnPropNameInRow="VendorName" msprop:Generator_ColumnPropNameInTable="VendorNameColumn" msprop:Generator_ColumnVarNameInTable="columnVendorName" msprop:Generator_UserColumnName="VendorName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="77" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="VendorAddress" msprop:Generator_ColumnPropNameInRow="VendorAddress" msprop:Generator_ColumnPropNameInTable="VendorAddressColumn" msprop:Generator_ColumnVarNameInTable="columnVendorAddress" msprop:Generator_UserColumnName="VendorAddress">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CityId" msprop:Generator_ColumnPropNameInRow="CityId" msprop:Generator_ColumnPropNameInTable="CityIdColumn" msprop:Generator_ColumnVarNameInTable="columnCityId" msprop:Generator_UserColumnName="CityId" type="xs:int" />
+              <xs:element name="CityName" msprop:Generator_ColumnPropNameInRow="CityName" msprop:Generator_ColumnPropNameInTable="CityNameColumn" msprop:Generator_ColumnVarNameInTable="columnCityName" msprop:Generator_UserColumnName="CityName">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PhoneNo" msprop:Generator_ColumnPropNameInRow="PhoneNo" msprop:Generator_ColumnPropNameInTable="PhoneNoColumn" msprop:Generator_ColumnVarNameInTable="columnPhoneNo" msprop:Generator_UserColumnName="PhoneNo">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="VendorTypeId" msprop:Generator_ColumnPropNameInRow="VendorTypeId" msprop:Generator_ColumnPropNameInTable="VendorTypeIdColumn" msprop:Generator_ColumnVarNameInTable="columnVendorTypeId" msprop:Generator_UserColumnName="VendorTypeId" type="xs:int" />
+              <xs:element name="VendorTypeName" msprop:Generator_ColumnPropNameInRow="VendorTypeName" msprop:Generator_ColumnPropNameInTable="VendorTypeNameColumn" msprop:Generator_ColumnVarNameInTable="columnVendorTypeName" msprop:Generator_UserColumnName="VendorTypeName">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DocumentId" msprop:Generator_ColumnPropNameInRow="DocumentId" msprop:Generator_ColumnPropNameInTable="DocumentIdColumn" msprop:Generator_ColumnVarNameInTable="columnDocumentId" msprop:Generator_UserColumnName="DocumentId" type="xs:int" />
+              <xs:element name="DocumentName" msprop:Generator_ColumnPropNameInRow="DocumentName" msprop:Generator_ColumnPropNameInTable="DocumentNameColumn" msprop:Generator_ColumnVarNameInTable="columnDocumentName" msprop:Generator_UserColumnName="DocumentName">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DocumentImage" msprop:Generator_ColumnPropNameInRow="DocumentImage" msprop:Generator_ColumnPropNameInTable="DocumentImageColumn" msprop:Generator_ColumnVarNameInTable="columnDocumentImage" msprop:Generator_UserColumnName="DocumentImage" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

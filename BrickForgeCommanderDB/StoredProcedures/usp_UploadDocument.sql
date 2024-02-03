@@ -1,6 +1,6 @@
 ﻿CREATE PROCEDURE [BFC].[usp_UploadDocument]
     @DocumentName VARCHAR(50),
-    @DocumentImage IMAGE
+    @DocumentImage NVARCHAR(MAX)
 AS
 BEGIN
     DECLARE @LastInsertedVendorId INT;
