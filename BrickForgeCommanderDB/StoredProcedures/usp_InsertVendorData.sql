@@ -7,11 +7,14 @@
     @CityId INT,
     @PhoneNo TEXT,
     @Image NVARCHAR(MAX),
+    --Parameters for Blood Group
+    @BloodGroup VARCHAR(25),
     -- Parameters for WorkerDetails
     @BatchId INT ,
     @RoleId INT
 AS
 BEGIN
+    SET NOCOUNT ON;
     BEGIN TRY
         BEGIN TRANSACTION;
 
@@ -53,6 +56,15 @@ BEGIN
             @VendorId,
             @BatchId ,
             @RoleId
+        );
+
+        INSERT INTO [BFC].[VendorBloodGroupDetails] (
+            [VendorId],
+            [BloodGroup]
+        )
+        VALUES (
+            @VendorId,
+            @BloodGroup
         );
 
         -- Increase BatchSize in BatchDetails

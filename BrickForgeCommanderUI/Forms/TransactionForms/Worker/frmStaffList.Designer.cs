@@ -28,33 +28,41 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmStaffList));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pnlMain = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.label4 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.dgvStaff = new System.Windows.Forms.DataGridView();
+            this.clmId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clmName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clmAddress = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clmCity = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clmBatch = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clmRole = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clmBloodGroup = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
+            this.label5 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.label3 = new System.Windows.Forms.Label();
             this.pbClose = new System.Windows.Forms.PictureBox();
             this.pbMaximize = new System.Windows.Forms.PictureBox();
             this.pbMinimize = new System.Windows.Forms.PictureBox();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.label11 = new System.Windows.Forms.Label();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-            this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.dgvDocument = new System.Windows.Forms.DataGridView();
             this.btnRefesh = new BrickForgeCommanderUI.Controls.BFC_Button();
             this.btnPrint = new BrickForgeCommanderUI.Controls.BFC_Button();
             this.btnNewRegistration = new BrickForgeCommanderUI.Controls.BFC_Button();
@@ -63,43 +71,22 @@
             this.txtBatch = new BrickForgeCommanderUI.Controls.BFC_TextBox();
             this.txtCity = new BrickForgeCommanderUI.Controls.BFC_TextBox();
             this.txtName = new BrickForgeCommanderUI.Controls.BFC_TextBox();
-            this.bFCDataSet = new BrickForgeCommanderUI.BFCDataSet();
-            this.staffListBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.staffListTableAdapter = new BrickForgeCommanderUI.BFCDataSetTableAdapters.StaffListTableAdapter();
-            this.workerIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.workerVendorIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.batchIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.roleIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.roleNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.vendorIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.vendorNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.vendorAddressDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cityIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cityNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.phoneNoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.vendorTypeIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.vendorTypeNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.documentIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.documentNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.documentImageDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pnlMain.SuspendLayout();
             this.panel5.SuspendLayout();
+            this.tableLayoutPanel3.SuspendLayout();
             this.panel6.SuspendLayout();
+            this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvStaff)).BeginInit();
             this.panel4.SuspendLayout();
+            this.tableLayoutPanel4.SuspendLayout();
             this.panel3.SuspendLayout();
+            this.tableLayoutPanel2.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbClose)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbMaximize)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbMinimize)).BeginInit();
             this.flowLayoutPanel1.SuspendLayout();
-            this.tableLayoutPanel1.SuspendLayout();
-            this.tableLayoutPanel3.SuspendLayout();
-            this.tableLayoutPanel4.SuspendLayout();
-            this.tableLayoutPanel2.SuspendLayout();
-            this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvDocument)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bFCDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.staffListBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlMain
@@ -131,6 +118,33 @@
             this.panel5.Size = new System.Drawing.Size(538, 67);
             this.panel5.TabIndex = 1;
             // 
+            // tableLayoutPanel3
+            // 
+            this.tableLayoutPanel3.ColumnCount = 2;
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 38.94695F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 61.05304F));
+            this.tableLayoutPanel3.Controls.Add(this.label4, 0, 0);
+            this.tableLayoutPanel3.Controls.Add(this.txtBloodGroup, 1, 0);
+            this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
+            this.tableLayoutPanel3.RowCount = 1;
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(538, 67);
+            this.tableLayoutPanel3.TabIndex = 1;
+            // 
+            // label4
+            // 
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F);
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(41, 18);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(165, 31);
+            this.label4.TabIndex = 1;
+            this.label4.Text = "Blood Group:";
+            // 
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
@@ -139,6 +153,130 @@
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(1176, 524);
             this.panel6.TabIndex = 1;
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox2.Controls.Add(this.dgvStaff);
+            this.groupBox2.Font = new System.Drawing.Font("Modern No. 20", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox2.ForeColor = System.Drawing.Color.White;
+            this.groupBox2.Location = new System.Drawing.Point(9, 11);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(1158, 502);
+            this.groupBox2.TabIndex = 2;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Staff List";
+            // 
+            // dgvStaff
+            // 
+            this.dgvStaff.AllowUserToAddRows = false;
+            this.dgvStaff.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.dgvStaff.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dgvStaff.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Modern No. 20", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvStaff.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            this.dgvStaff.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvStaff.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.clmId,
+            this.clmName,
+            this.clmAddress,
+            this.clmCity,
+            this.clmBatch,
+            this.clmRole,
+            this.clmBloodGroup});
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Modern No. 20", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvStaff.DefaultCellStyle = dataGridViewCellStyle9;
+            this.dgvStaff.Location = new System.Drawing.Point(6, 36);
+            this.dgvStaff.Name = "dgvStaff";
+            this.dgvStaff.RowHeadersVisible = false;
+            this.dgvStaff.RowHeadersWidth = 62;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Nirmala UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.White;
+            this.dgvStaff.RowsDefaultCellStyle = dataGridViewCellStyle10;
+            this.dgvStaff.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.dgvStaff.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Nirmala UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgvStaff.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.White;
+            this.dgvStaff.RowTemplate.Height = 40;
+            this.dgvStaff.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.dgvStaff.Size = new System.Drawing.Size(1146, 460);
+            this.dgvStaff.TabIndex = 7;
+            this.dgvStaff.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvStaff_CellClick);
+            // 
+            // clmId
+            // 
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.clmId.DefaultCellStyle = dataGridViewCellStyle7;
+            this.clmId.HeaderText = "Id";
+            this.clmId.MinimumWidth = 8;
+            this.clmId.Name = "clmId";
+            this.clmId.ReadOnly = true;
+            this.clmId.Width = 80;
+            // 
+            // clmName
+            // 
+            this.clmName.HeaderText = "Name";
+            this.clmName.MinimumWidth = 8;
+            this.clmName.Name = "clmName";
+            this.clmName.ReadOnly = true;
+            this.clmName.Width = 250;
+            // 
+            // clmAddress
+            // 
+            this.clmAddress.HeaderText = "Address";
+            this.clmAddress.MinimumWidth = 8;
+            this.clmAddress.Name = "clmAddress";
+            this.clmAddress.ReadOnly = true;
+            this.clmAddress.Width = 180;
+            // 
+            // clmCity
+            // 
+            this.clmCity.HeaderText = "City";
+            this.clmCity.MinimumWidth = 8;
+            this.clmCity.Name = "clmCity";
+            this.clmCity.ReadOnly = true;
+            this.clmCity.Width = 150;
+            // 
+            // clmBatch
+            // 
+            this.clmBatch.HeaderText = "Batch";
+            this.clmBatch.MinimumWidth = 8;
+            this.clmBatch.Name = "clmBatch";
+            this.clmBatch.ReadOnly = true;
+            this.clmBatch.Width = 150;
+            // 
+            // clmRole
+            // 
+            this.clmRole.HeaderText = "Role";
+            this.clmRole.MinimumWidth = 8;
+            this.clmRole.Name = "clmRole";
+            this.clmRole.ReadOnly = true;
+            this.clmRole.Width = 150;
+            // 
+            // clmBloodGroup
+            // 
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Modern No. 20", 7.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.clmBloodGroup.DefaultCellStyle = dataGridViewCellStyle8;
+            this.clmBloodGroup.HeaderText = "Blood Group";
+            this.clmBloodGroup.MinimumWidth = 8;
+            this.clmBloodGroup.Name = "clmBloodGroup";
+            this.clmBloodGroup.ReadOnly = true;
+            this.clmBloodGroup.Width = 200;
             // 
             // panel4
             // 
@@ -149,6 +287,33 @@
             this.panel4.Size = new System.Drawing.Size(545, 67);
             this.panel4.TabIndex = 1;
             // 
+            // tableLayoutPanel4
+            // 
+            this.tableLayoutPanel4.ColumnCount = 2;
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.68884F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 66.31116F));
+            this.tableLayoutPanel4.Controls.Add(this.txtBatch, 0, 0);
+            this.tableLayoutPanel4.Controls.Add(this.label5, 0, 0);
+            this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel4.Name = "tableLayoutPanel4";
+            this.tableLayoutPanel4.RowCount = 1;
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(545, 67);
+            this.tableLayoutPanel4.TabIndex = 1;
+            // 
+            // label5
+            // 
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F);
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(20, 18);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(160, 31);
+            this.label5.TabIndex = 1;
+            this.label5.Text = "Batch Name:";
+            // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
@@ -158,6 +323,33 @@
             this.panel3.Size = new System.Drawing.Size(538, 67);
             this.panel3.TabIndex = 1;
             // 
+            // tableLayoutPanel2
+            // 
+            this.tableLayoutPanel2.ColumnCount = 2;
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 36.67517F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 63.32484F));
+            this.tableLayoutPanel2.Controls.Add(this.txtCity, 0, 0);
+            this.tableLayoutPanel2.Controls.Add(this.label2, 0, 0);
+            this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
+            this.tableLayoutPanel2.RowCount = 1;
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(538, 67);
+            this.tableLayoutPanel2.TabIndex = 2;
+            // 
+            // label2
+            // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F);
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(130, 18);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(64, 31);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "City:";
+            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
@@ -166,6 +358,33 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(545, 67);
             this.panel1.TabIndex = 1;
+            // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.ColumnCount = 2;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 32.63306F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 67.36694F));
+            this.tableLayoutPanel1.Controls.Add(this.txtName, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.label3, 0, 0);
+            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 1;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(545, 67);
+            this.tableLayoutPanel1.TabIndex = 0;
+            // 
+            // label3
+            // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F);
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(85, 18);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(89, 31);
+            this.label3.TabIndex = 1;
+            this.label3.Text = "Name:";
             // 
             // pbClose
             // 
@@ -227,51 +446,6 @@
             this.label11.TabIndex = 4;
             this.label11.Text = "Staff List Preview";
             // 
-            // tableLayoutPanel1
-            // 
-            this.tableLayoutPanel1.ColumnCount = 2;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 32.63306F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 67.36694F));
-            this.tableLayoutPanel1.Controls.Add(this.txtName, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.label3, 0, 0);
-            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 1;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(545, 67);
-            this.tableLayoutPanel1.TabIndex = 0;
-            // 
-            // tableLayoutPanel3
-            // 
-            this.tableLayoutPanel3.ColumnCount = 2;
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 38.94695F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 61.05304F));
-            this.tableLayoutPanel3.Controls.Add(this.txtBloodGroup, 0, 0);
-            this.tableLayoutPanel3.Controls.Add(this.label4, 0, 0);
-            this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
-            this.tableLayoutPanel3.RowCount = 1;
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(538, 67);
-            this.tableLayoutPanel3.TabIndex = 1;
-            // 
-            // tableLayoutPanel4
-            // 
-            this.tableLayoutPanel4.ColumnCount = 2;
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.68884F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 66.31116F));
-            this.tableLayoutPanel4.Controls.Add(this.txtBatch, 0, 0);
-            this.tableLayoutPanel4.Controls.Add(this.label5, 0, 0);
-            this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel4.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel4.Name = "tableLayoutPanel4";
-            this.tableLayoutPanel4.RowCount = 1;
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(545, 67);
-            this.tableLayoutPanel4.TabIndex = 1;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -280,136 +454,6 @@
             this.label1.Size = new System.Drawing.Size(51, 20);
             this.label1.TabIndex = 5;
             this.label1.Text = "label1";
-            // 
-            // label3
-            // 
-            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F);
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(85, 18);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(89, 31);
-            this.label3.TabIndex = 1;
-            this.label3.Text = "Name:";
-            // 
-            // label4
-            // 
-            this.label4.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F);
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(41, 18);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(165, 31);
-            this.label4.TabIndex = 1;
-            this.label4.Text = "Blood Group:";
-            // 
-            // label5
-            // 
-            this.label5.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F);
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(20, 18);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(160, 31);
-            this.label5.TabIndex = 1;
-            this.label5.Text = "Batch Name:";
-            // 
-            // tableLayoutPanel2
-            // 
-            this.tableLayoutPanel2.ColumnCount = 2;
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 36.67517F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 63.32484F));
-            this.tableLayoutPanel2.Controls.Add(this.txtCity, 0, 0);
-            this.tableLayoutPanel2.Controls.Add(this.label2, 0, 0);
-            this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
-            this.tableLayoutPanel2.RowCount = 1;
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(538, 67);
-            this.tableLayoutPanel2.TabIndex = 2;
-            // 
-            // label2
-            // 
-            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F);
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(40, 18);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(64, 31);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "City:";
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox2.Controls.Add(this.dgvDocument);
-            this.groupBox2.Font = new System.Drawing.Font("Modern No. 20", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.ForeColor = System.Drawing.Color.White;
-            this.groupBox2.Location = new System.Drawing.Point(9, 11);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(1158, 502);
-            this.groupBox2.TabIndex = 2;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Staff List";
-            // 
-            // dgvDocument
-            // 
-            this.dgvDocument.AllowUserToAddRows = false;
-            this.dgvDocument.AutoGenerateColumns = false;
-            this.dgvDocument.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.dgvDocument.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.dgvDocument.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Modern No. 20", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvDocument.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvDocument.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvDocument.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.workerIdDataGridViewTextBoxColumn,
-            this.workerVendorIdDataGridViewTextBoxColumn,
-            this.batchIdDataGridViewTextBoxColumn,
-            this.roleIdDataGridViewTextBoxColumn,
-            this.roleNameDataGridViewTextBoxColumn,
-            this.vendorIdDataGridViewTextBoxColumn,
-            this.vendorNameDataGridViewTextBoxColumn,
-            this.vendorAddressDataGridViewTextBoxColumn,
-            this.cityIdDataGridViewTextBoxColumn,
-            this.cityNameDataGridViewTextBoxColumn,
-            this.phoneNoDataGridViewTextBoxColumn,
-            this.vendorTypeIdDataGridViewTextBoxColumn,
-            this.vendorTypeNameDataGridViewTextBoxColumn,
-            this.documentIdDataGridViewTextBoxColumn,
-            this.documentNameDataGridViewTextBoxColumn,
-            this.documentImageDataGridViewTextBoxColumn});
-            this.dgvDocument.DataSource = this.staffListBindingSource;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Modern No. 20", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvDocument.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvDocument.Location = new System.Drawing.Point(15, 48);
-            this.dgvDocument.Name = "dgvDocument";
-            this.dgvDocument.RowHeadersVisible = false;
-            this.dgvDocument.RowHeadersWidth = 62;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.dgvDocument.RowsDefaultCellStyle = dataGridViewCellStyle3;
-            this.dgvDocument.RowTemplate.Height = 40;
-            this.dgvDocument.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.dgvDocument.Size = new System.Drawing.Size(1131, 440);
-            this.dgvDocument.TabIndex = 6;
             // 
             // btnRefesh
             // 
@@ -433,6 +477,7 @@
             this.btnRefesh.Text = "Refresh";
             this.btnRefesh.TextColor = System.Drawing.Color.White;
             this.btnRefesh.UseVisualStyleBackColor = false;
+            this.btnRefesh.Click += new System.EventHandler(this.btnRefesh_Click);
             // 
             // btnPrint
             // 
@@ -503,6 +548,7 @@
             this.btnSearch.Text = "Search";
             this.btnSearch.TextColor = System.Drawing.Color.White;
             this.btnSearch.UseVisualStyleBackColor = false;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // txtBloodGroup
             // 
@@ -521,7 +567,7 @@
             this.txtBloodGroup.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
             this.txtBloodGroup.PasswordChar = false;
             this.txtBloodGroup.PlaceHolderColor = System.Drawing.Color.DarkGray;
-            this.txtBloodGroup.PlaceHolderText = "";
+            this.txtBloodGroup.PlaceHolderText = "Ex. B+";
             this.txtBloodGroup.Size = new System.Drawing.Size(231, 39);
             this.txtBloodGroup.TabIndex = 4;
             this.txtBloodGroup.TextBoxText = "";
@@ -545,7 +591,7 @@
             this.txtBatch.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
             this.txtBatch.PasswordChar = false;
             this.txtBatch.PlaceHolderColor = System.Drawing.Color.DarkGray;
-            this.txtBatch.PlaceHolderText = "";
+            this.txtBatch.PlaceHolderText = "Ex. Sankh";
             this.txtBatch.Size = new System.Drawing.Size(279, 39);
             this.txtBatch.TabIndex = 4;
             this.txtBatch.TextBoxText = "";
@@ -562,14 +608,14 @@
             this.txtCity.BorderSize = 2;
             this.txtCity.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
             this.txtCity.ForeColor = System.Drawing.Color.Ivory;
-            this.txtCity.Location = new System.Drawing.Point(111, 14);
+            this.txtCity.Location = new System.Drawing.Point(201, 14);
             this.txtCity.Margin = new System.Windows.Forms.Padding(4);
             this.txtCity.MultiLine = false;
             this.txtCity.Name = "txtCity";
             this.txtCity.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
             this.txtCity.PasswordChar = false;
             this.txtCity.PlaceHolderColor = System.Drawing.Color.DarkGray;
-            this.txtCity.PlaceHolderText = "";
+            this.txtCity.PlaceHolderText = "Ex. One Piece";
             this.txtCity.Size = new System.Drawing.Size(231, 39);
             this.txtCity.TabIndex = 4;
             this.txtCity.TextBoxText = "";
@@ -593,155 +639,12 @@
             this.txtName.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
             this.txtName.PasswordChar = false;
             this.txtName.PlaceHolderColor = System.Drawing.Color.DarkGray;
-            this.txtName.PlaceHolderText = "";
+            this.txtName.PlaceHolderText = "Ex. Monkey D. Luffy";
             this.txtName.Size = new System.Drawing.Size(285, 39);
             this.txtName.TabIndex = 4;
             this.txtName.TextBoxText = "";
             this.txtName.Texts = "";
             this.txtName.UnderLineStyle = true;
-            // 
-            // bFCDataSet
-            // 
-            this.bFCDataSet.DataSetName = "BFCDataSet";
-            this.bFCDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // staffListBindingSource
-            // 
-            this.staffListBindingSource.DataMember = "StaffList";
-            this.staffListBindingSource.DataSource = this.bFCDataSet;
-            // 
-            // staffListTableAdapter
-            // 
-            this.staffListTableAdapter.ClearBeforeFill = true;
-            // 
-            // workerIdDataGridViewTextBoxColumn
-            // 
-            this.workerIdDataGridViewTextBoxColumn.DataPropertyName = "WorkerId";
-            this.workerIdDataGridViewTextBoxColumn.HeaderText = "WorkerId";
-            this.workerIdDataGridViewTextBoxColumn.MinimumWidth = 8;
-            this.workerIdDataGridViewTextBoxColumn.Name = "workerIdDataGridViewTextBoxColumn";
-            this.workerIdDataGridViewTextBoxColumn.Width = 150;
-            // 
-            // workerVendorIdDataGridViewTextBoxColumn
-            // 
-            this.workerVendorIdDataGridViewTextBoxColumn.DataPropertyName = "WorkerVendorId";
-            this.workerVendorIdDataGridViewTextBoxColumn.HeaderText = "WorkerVendorId";
-            this.workerVendorIdDataGridViewTextBoxColumn.MinimumWidth = 8;
-            this.workerVendorIdDataGridViewTextBoxColumn.Name = "workerVendorIdDataGridViewTextBoxColumn";
-            this.workerVendorIdDataGridViewTextBoxColumn.Width = 150;
-            // 
-            // batchIdDataGridViewTextBoxColumn
-            // 
-            this.batchIdDataGridViewTextBoxColumn.DataPropertyName = "BatchId";
-            this.batchIdDataGridViewTextBoxColumn.HeaderText = "BatchId";
-            this.batchIdDataGridViewTextBoxColumn.MinimumWidth = 8;
-            this.batchIdDataGridViewTextBoxColumn.Name = "batchIdDataGridViewTextBoxColumn";
-            this.batchIdDataGridViewTextBoxColumn.Width = 150;
-            // 
-            // roleIdDataGridViewTextBoxColumn
-            // 
-            this.roleIdDataGridViewTextBoxColumn.DataPropertyName = "RoleId";
-            this.roleIdDataGridViewTextBoxColumn.HeaderText = "RoleId";
-            this.roleIdDataGridViewTextBoxColumn.MinimumWidth = 8;
-            this.roleIdDataGridViewTextBoxColumn.Name = "roleIdDataGridViewTextBoxColumn";
-            this.roleIdDataGridViewTextBoxColumn.Width = 150;
-            // 
-            // roleNameDataGridViewTextBoxColumn
-            // 
-            this.roleNameDataGridViewTextBoxColumn.DataPropertyName = "RoleName";
-            this.roleNameDataGridViewTextBoxColumn.HeaderText = "RoleName";
-            this.roleNameDataGridViewTextBoxColumn.MinimumWidth = 8;
-            this.roleNameDataGridViewTextBoxColumn.Name = "roleNameDataGridViewTextBoxColumn";
-            this.roleNameDataGridViewTextBoxColumn.Width = 150;
-            // 
-            // vendorIdDataGridViewTextBoxColumn
-            // 
-            this.vendorIdDataGridViewTextBoxColumn.DataPropertyName = "VendorId";
-            this.vendorIdDataGridViewTextBoxColumn.HeaderText = "VendorId";
-            this.vendorIdDataGridViewTextBoxColumn.MinimumWidth = 8;
-            this.vendorIdDataGridViewTextBoxColumn.Name = "vendorIdDataGridViewTextBoxColumn";
-            this.vendorIdDataGridViewTextBoxColumn.Width = 150;
-            // 
-            // vendorNameDataGridViewTextBoxColumn
-            // 
-            this.vendorNameDataGridViewTextBoxColumn.DataPropertyName = "VendorName";
-            this.vendorNameDataGridViewTextBoxColumn.HeaderText = "VendorName";
-            this.vendorNameDataGridViewTextBoxColumn.MinimumWidth = 8;
-            this.vendorNameDataGridViewTextBoxColumn.Name = "vendorNameDataGridViewTextBoxColumn";
-            this.vendorNameDataGridViewTextBoxColumn.ReadOnly = true;
-            this.vendorNameDataGridViewTextBoxColumn.Width = 150;
-            // 
-            // vendorAddressDataGridViewTextBoxColumn
-            // 
-            this.vendorAddressDataGridViewTextBoxColumn.DataPropertyName = "VendorAddress";
-            this.vendorAddressDataGridViewTextBoxColumn.HeaderText = "VendorAddress";
-            this.vendorAddressDataGridViewTextBoxColumn.MinimumWidth = 8;
-            this.vendorAddressDataGridViewTextBoxColumn.Name = "vendorAddressDataGridViewTextBoxColumn";
-            this.vendorAddressDataGridViewTextBoxColumn.Width = 150;
-            // 
-            // cityIdDataGridViewTextBoxColumn
-            // 
-            this.cityIdDataGridViewTextBoxColumn.DataPropertyName = "CityId";
-            this.cityIdDataGridViewTextBoxColumn.HeaderText = "CityId";
-            this.cityIdDataGridViewTextBoxColumn.MinimumWidth = 8;
-            this.cityIdDataGridViewTextBoxColumn.Name = "cityIdDataGridViewTextBoxColumn";
-            this.cityIdDataGridViewTextBoxColumn.Width = 150;
-            // 
-            // cityNameDataGridViewTextBoxColumn
-            // 
-            this.cityNameDataGridViewTextBoxColumn.DataPropertyName = "CityName";
-            this.cityNameDataGridViewTextBoxColumn.HeaderText = "CityName";
-            this.cityNameDataGridViewTextBoxColumn.MinimumWidth = 8;
-            this.cityNameDataGridViewTextBoxColumn.Name = "cityNameDataGridViewTextBoxColumn";
-            this.cityNameDataGridViewTextBoxColumn.Width = 150;
-            // 
-            // phoneNoDataGridViewTextBoxColumn
-            // 
-            this.phoneNoDataGridViewTextBoxColumn.DataPropertyName = "PhoneNo";
-            this.phoneNoDataGridViewTextBoxColumn.HeaderText = "PhoneNo";
-            this.phoneNoDataGridViewTextBoxColumn.MinimumWidth = 8;
-            this.phoneNoDataGridViewTextBoxColumn.Name = "phoneNoDataGridViewTextBoxColumn";
-            this.phoneNoDataGridViewTextBoxColumn.Width = 150;
-            // 
-            // vendorTypeIdDataGridViewTextBoxColumn
-            // 
-            this.vendorTypeIdDataGridViewTextBoxColumn.DataPropertyName = "VendorTypeId";
-            this.vendorTypeIdDataGridViewTextBoxColumn.HeaderText = "VendorTypeId";
-            this.vendorTypeIdDataGridViewTextBoxColumn.MinimumWidth = 8;
-            this.vendorTypeIdDataGridViewTextBoxColumn.Name = "vendorTypeIdDataGridViewTextBoxColumn";
-            this.vendorTypeIdDataGridViewTextBoxColumn.Width = 150;
-            // 
-            // vendorTypeNameDataGridViewTextBoxColumn
-            // 
-            this.vendorTypeNameDataGridViewTextBoxColumn.DataPropertyName = "VendorTypeName";
-            this.vendorTypeNameDataGridViewTextBoxColumn.HeaderText = "VendorTypeName";
-            this.vendorTypeNameDataGridViewTextBoxColumn.MinimumWidth = 8;
-            this.vendorTypeNameDataGridViewTextBoxColumn.Name = "vendorTypeNameDataGridViewTextBoxColumn";
-            this.vendorTypeNameDataGridViewTextBoxColumn.Width = 150;
-            // 
-            // documentIdDataGridViewTextBoxColumn
-            // 
-            this.documentIdDataGridViewTextBoxColumn.DataPropertyName = "DocumentId";
-            this.documentIdDataGridViewTextBoxColumn.HeaderText = "DocumentId";
-            this.documentIdDataGridViewTextBoxColumn.MinimumWidth = 8;
-            this.documentIdDataGridViewTextBoxColumn.Name = "documentIdDataGridViewTextBoxColumn";
-            this.documentIdDataGridViewTextBoxColumn.Width = 150;
-            // 
-            // documentNameDataGridViewTextBoxColumn
-            // 
-            this.documentNameDataGridViewTextBoxColumn.DataPropertyName = "DocumentName";
-            this.documentNameDataGridViewTextBoxColumn.HeaderText = "DocumentName";
-            this.documentNameDataGridViewTextBoxColumn.MinimumWidth = 8;
-            this.documentNameDataGridViewTextBoxColumn.Name = "documentNameDataGridViewTextBoxColumn";
-            this.documentNameDataGridViewTextBoxColumn.Width = 150;
-            // 
-            // documentImageDataGridViewTextBoxColumn
-            // 
-            this.documentImageDataGridViewTextBoxColumn.DataPropertyName = "DocumentImage";
-            this.documentImageDataGridViewTextBoxColumn.HeaderText = "DocumentImage";
-            this.documentImageDataGridViewTextBoxColumn.MinimumWidth = 8;
-            this.documentImageDataGridViewTextBoxColumn.Name = "documentImageDataGridViewTextBoxColumn";
-            this.documentImageDataGridViewTextBoxColumn.Width = 150;
             // 
             // frmStaffList
             // 
@@ -762,26 +665,24 @@
             this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.frmWorkersRegistration_MouseUp);
             this.pnlMain.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
+            this.tableLayoutPanel3.ResumeLayout(false);
+            this.tableLayoutPanel3.PerformLayout();
             this.panel6.ResumeLayout(false);
+            this.groupBox2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvStaff)).EndInit();
             this.panel4.ResumeLayout(false);
+            this.tableLayoutPanel4.ResumeLayout(false);
+            this.tableLayoutPanel4.PerformLayout();
             this.panel3.ResumeLayout(false);
+            this.tableLayoutPanel2.ResumeLayout(false);
+            this.tableLayoutPanel2.PerformLayout();
             this.panel1.ResumeLayout(false);
+            this.tableLayoutPanel1.ResumeLayout(false);
+            this.tableLayoutPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbClose)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbMaximize)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbMinimize)).EndInit();
             this.flowLayoutPanel1.ResumeLayout(false);
-            this.tableLayoutPanel1.ResumeLayout(false);
-            this.tableLayoutPanel1.PerformLayout();
-            this.tableLayoutPanel3.ResumeLayout(false);
-            this.tableLayoutPanel3.PerformLayout();
-            this.tableLayoutPanel4.ResumeLayout(false);
-            this.tableLayoutPanel4.PerformLayout();
-            this.tableLayoutPanel2.ResumeLayout(false);
-            this.tableLayoutPanel2.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvDocument)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bFCDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.staffListBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -817,25 +718,13 @@
         private Controls.BFC_TextBox txtCity;
         private Controls.BFC_TextBox txtName;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.DataGridView dgvDocument;
-        private BFCDataSet bFCDataSet;
-        private System.Windows.Forms.BindingSource staffListBindingSource;
-        private BFCDataSetTableAdapters.StaffListTableAdapter staffListTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn workerIdDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn workerVendorIdDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn batchIdDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn roleIdDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn roleNameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn vendorIdDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn vendorNameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn vendorAddressDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cityIdDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cityNameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn phoneNoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn vendorTypeIdDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn vendorTypeNameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn documentIdDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn documentNameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn documentImageDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridView dgvStaff;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clmId;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clmName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clmAddress;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clmCity;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clmBatch;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clmRole;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clmBloodGroup;
     }
 }

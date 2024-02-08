@@ -3,6 +3,7 @@
     @DocumentImage NVARCHAR(MAX)
 AS
 BEGIN
+    SET NOCOUNT ON;
     DECLARE @LastInsertedVendorId INT;
     SET @LastInsertedVendorId = (SELECT IDENT_CURRENT('BFC.VendorDetails'));
 

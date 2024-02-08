@@ -210,4 +210,25 @@
     <Property Name="ParentElementType" Value="SqlTable" />
     <Property Name="NewName" Value="VendorId" />
   </Operation>
+  <Operation Name="Rename Refactor" Key="ccc0a1de-9d95-4c87-8daa-c3f60e72b2ea" ChangeDateTime="02/07/2024 11:40:58">
+    <Property Name="ElementName" Value="[BFC].[SupplierDetails].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[BFC].[SupplierDetails]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="SupplierId" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="7a8eff86-467e-4295-9f20-8e4cb90acf7a" ChangeDateTime="02/07/2024 11:43:52">
+    <Property Name="ElementName" Value="[BFC].[RawMaterialDetails].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[BFC].[RawMaterialDetails]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="MaterialId" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="353db2df-a1d4-4377-9506-3e55700e896f" ChangeDateTime="02/07/2024 11:47:49">
+    <Property Name="ElementName" Value="[BFC].[StockReports].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[BFC].[StockReports]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="ReportId" />
+  </Operation>
 </Operations>

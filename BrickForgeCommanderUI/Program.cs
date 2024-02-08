@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 using BrickForgeCommanderUI.Dashboard;
+using BrickForgeCommanderUI.Forms.Misc;
 using BrickForgeCommanderUI.Forms.TransactionForms.Worker;
 using BrickForgeCommanderUI.Forms.TransactionForms.Worker.WorkerRegistration;
 using BrickForgeCommanderUI.Misc;

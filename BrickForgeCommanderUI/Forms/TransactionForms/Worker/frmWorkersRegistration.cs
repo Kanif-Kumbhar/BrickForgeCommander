@@ -160,9 +160,9 @@ namespace BrickForgeCommanderUI.Forms.TransactionForms.Worker.WorkerRegistration
                 using (SqlConnection connection = new SqlConnection(connectionString))
                 {
                     string[] name = SplitFullName(txtName.Texts);
-                    string firstName = name[0];
-                    string middleName = name[1];
-                    string lastName = name[2];
+                    string lastName = name[0];
+                    string firstName = name[1];
+                    string middleName = name[2];
                     connection.Open();
 
                     using (SqlCommand command = new SqlCommand("BFC.usp_InsertVendorData", connection))
@@ -190,6 +190,12 @@ namespace BrickForgeCommanderUI.Forms.TransactionForms.Worker.WorkerRegistration
                             DataRowView selectedBatch = (DataRowView)cbxBatch.SelectedItem;
                             int batchId = Convert.ToInt32(selectedBatch["BatchId"]);
                             command.Parameters.AddWithValue("@BatchId", batchId);
+                        }
+
+                        if (cbxBloodGroup.SelectedItem != null)
+                        {
+                            string bloodGroupId = cbxBloodGroup.SelectedItem.ToString();
+                            command.Parameters.AddWithValue("@BloodGroup", bloodGroupId);
                         }
 
                         // Remove the duplicate declaration of UserId
