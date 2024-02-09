@@ -231,4 +231,11 @@
     <Property Name="ParentElementType" Value="SqlTable" />
     <Property Name="NewName" Value="ReportId" />
   </Operation>
+  <Operation Name="Rename Refactor" Key="e1919a6d-7486-420f-b9d5-8d7331acea9b" ChangeDateTime="02/09/2024 14:40:27">
+    <Property Name="ElementName" Value="[BFC].[PartyPaymentDetails].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[BFC].[PartyPaymentDetails]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="PPaymentId" />
+  </Operation>
 </Operations>

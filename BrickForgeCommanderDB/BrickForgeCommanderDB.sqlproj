@@ -68,6 +68,7 @@
     <Folder Include="ChildTables\WorkerTable" />
     <Folder Include="Views" />
     <Folder Include="ChildTables\MaterialTables" />
+    <Folder Include="ChildTables\LedgerTable" />
   </ItemGroup>
   <ItemGroup>
     <RefactorLog Include="BrickForgeCommanderDB.refactorlog" />
@@ -96,5 +97,7 @@
     <Build Include="ChildTables\MaterialTables\StockReports.sql" />
     <Build Include="StoredProcedures\usp_InsertRawMaterialDetails.sql" />
     <Build Include="StoredProcedures\usp_InsertStockDetails.sql" />
+    <Build Include="ChildTables\LedgerTable\PartyPaymentDetails.sql" />
+    <Build Include="StoredProcedures\usp_RecordPartyPayment.sql" />
   </ItemGroup>
 </Project>

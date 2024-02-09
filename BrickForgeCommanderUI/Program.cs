@@ -2,6 +2,7 @@
 using System.Windows.Forms;
 using BrickForgeCommanderUI.Dashboard;
 using BrickForgeCommanderUI.Forms.Misc;
+using BrickForgeCommanderUI.Forms.TransactionForms.RawMaterial;
 using BrickForgeCommanderUI.Forms.TransactionForms.Worker;
 using BrickForgeCommanderUI.Forms.TransactionForms.Worker.WorkerRegistration;
 using BrickForgeCommanderUI.Misc;
@@ -19,7 +20,7 @@ namespace BrickForgeCommanderUI
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmStaffList());
+            Application.Run(new frmRawMaterialDetails());
         }
     }
 }

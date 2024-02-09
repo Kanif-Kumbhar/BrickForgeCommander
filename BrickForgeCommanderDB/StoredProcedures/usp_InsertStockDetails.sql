@@ -1,6 +1,7 @@
 ﻿CREATE PROCEDURE [BFC].[usp_InsertStockDetails]
 (
     @MaterialId INT,
+    @VendorId INT,
     @PurchasePrice MONEY,
     @Quantity INT
 )
@@ -57,8 +58,8 @@ BEGIN
         SET @StockStatus = 'Fullstocked';
     END;
 
-    INSERT INTO BFC.StockReports (MaterialId, Quantity, StockStatus, PurchasePrice,DateReported)
-    VALUES (@MaterialId, @Quantity, @StockStatus, @PurchasePrice,GETDATE());
+    INSERT INTO BFC.StockReports (MaterialId,SupplierId ,Quantity, StockStatus, PurchasePrice,DateReported)
+    VALUES (@MaterialId,@VendorId ,@Quantity, @StockStatus, @PurchasePrice,GETDATE());
 
     UPDATE BFC.StockReports SET UnitPrice = @NewUnitPrice WHERE MaterialId = @MaterialId;
 
