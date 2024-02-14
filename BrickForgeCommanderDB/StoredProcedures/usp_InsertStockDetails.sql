@@ -11,57 +11,39 @@ BEGIN
     BEGIN TRANSACTION;
 
     DECLARE @Capacity INT;
+    DECLARE @TotalStockAvailable INT;
     DECLARE @StockStatus VARCHAR(25);
     DECLARE @NewUnitPrice MONEY;
-    DECLARE @PreviousTotalPurchase MONEY;
-    DECLARE @PreviousQuantity INT;
+    DECLARE @TotalPurchase MONEY;
+    DECLARE @TotalQuantity INT;
     DECLARE @PreviousUnitPrice MONEY;
 
-    SELECT 
-        @PreviousTotalPurchase = SUM(Quantity * UnitPrice),
-        @PreviousQuantity = SUM(Quantity)
-    FROM 
-        BFC.StockReports
-    WHERE 
-        MaterialId = @MaterialId;
+    SELECT @TotalPurchase = SUM(PurchasePrice),
+           @TotalQuantity = SUM(Quantity)
+    FROM BFC.StockReports
+    WHERE MaterialId = @MaterialId;
+            
+    SET @StockStatus = 'Understocked';
 
-    IF @PreviousQuantity > 0
-    BEGIN
-        SET @PreviousUnitPrice = @PreviousTotalPurchase / @PreviousQuantity;
-    END
+    IF @TotalQuantity > 0
+        SET @NewUnitPrice = @TotalPurchase / @TotalQuantity;
     ELSE
-    BEGIN
-        SET @PreviousUnitPrice = @PurchasePrice;
-    END;
+        SET @NewUnitPrice = @PurchasePrice / @Quantity;
 
-    IF @PreviousQuantity > 0
-    BEGIN
-        SET @NewUnitPrice = ((@PreviousUnitPrice * @PreviousQuantity) + @PurchasePrice) / (@PreviousQuantity + @Quantity);
-    END
-    ELSE
-    BEGIN
-        SET @NewUnitPrice = @PurchasePrice / @Quantity; -- Use PurchasePrice directly if PreviousQuantity is 0
-    END;
+    INSERT INTO BFC.StockReports (MaterialId, SupplierId, Quantity, StockStatus, PurchasePrice, DateReported)
+    VALUES (@MaterialId, @VendorId, @Quantity, @StockStatus, @PurchasePrice, GETDATE());
 
-    SELECT @Capacity = Capacity FROM BFC.RawMaterialDetails WHERE MaterialId = @MaterialId;
+    UPDATE BFC.RawMaterialDetails SET TotalQuantity = TotalQuantity + @Quantity, UnitPrice = @NewUnitPrice WHERE MaterialId = @MaterialId;
 
-    IF @Quantity > @Capacity
-    BEGIN
+    SELECT @Capacity = Capacity, @TotalStockAvailable = TotalQuantity FROM BFC.RawMaterialDetails WHERE MaterialId = @MaterialId;
+
+    IF @TotalStockAvailable > @Capacity
         SET @StockStatus = 'Overstocked';
-    END
-    ELSE IF @Quantity < @Capacity
-    BEGIN
+    ELSE IF @TotalStockAvailable < @Capacity 
         SET @StockStatus = 'Understocked';
-    END
-    ELSE
-    BEGIN
-        SET @StockStatus = 'Fullstocked';
-    END;
-
-    INSERT INTO BFC.StockReports (MaterialId,SupplierId ,Quantity, StockStatus, PurchasePrice,DateReported)
-    VALUES (@MaterialId,@VendorId ,@Quantity, @StockStatus, @PurchasePrice,GETDATE());
-
-    UPDATE BFC.StockReports SET UnitPrice = @NewUnitPrice WHERE MaterialId = @MaterialId;
-
+    ELSE IF @TotalStockAvailable = @Capacity
+        SET @StockStatus = 'Fully Stocked';
+    
+    UPDATE BFC.StockReports SET StockStatus = @StockStatus WHERE MaterialId = @MaterialId;
     COMMIT TRANSACTION;
 END;

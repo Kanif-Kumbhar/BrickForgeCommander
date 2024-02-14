@@ -114,6 +114,11 @@
     <Compile Include="Controls\Validation\RequiredFieldTextBox.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="DataSet\RawMaterials.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RawMaterials.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DataSet\Worker.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -181,6 +186,18 @@
     </Compile>
     <Compile Include="Forms\TransactionForms\RawMaterial\frmRawMaterialDetails.Designer.cs">
       <DependentUpon>frmRawMaterialDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\TransactionForms\RawMaterial\frmRawMaterialPurchase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\TransactionForms\RawMaterial\frmRawMaterialPurchase.Designer.cs">
+      <DependentUpon>frmRawMaterialPurchase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\TransactionForms\RawMaterial\frmStockReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\TransactionForms\RawMaterial\frmStockReport.Designer.cs">
+      <DependentUpon>frmStockReport.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\TransactionForms\Worker\frmStaffList.cs">
       <SubType>Form</SubType>
@@ -302,6 +319,12 @@
     <EmbeddedResource Include="Forms\TransactionForms\RawMaterial\frmRawMaterialDetails.resx">
       <DependentUpon>frmRawMaterialDetails.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\TransactionForms\RawMaterial\frmRawMaterialPurchase.resx">
+      <DependentUpon>frmRawMaterialPurchase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\TransactionForms\RawMaterial\frmStockReport.resx">
+      <DependentUpon>frmStockReport.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\TransactionForms\Worker\frmStaffList.resx">
       <DependentUpon>frmStaffList.cs</DependentUpon>
     </EmbeddedResource>
@@ -330,6 +353,17 @@
     </None>
     <None Include="BFCDataSet.xss">
       <DependentUpon>BFCDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet\RawMaterials.xsc">
+      <DependentUpon>RawMaterials.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet\RawMaterials.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>RawMaterials.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSet\RawMaterials.xss">
+      <DependentUpon>RawMaterials.xsd</DependentUpon>
     </None>
     <None Include="DataSet\Worker.xsc">
       <DependentUpon>Worker.xsd</DependentUpon>

@@ -99,5 +99,6 @@
     <Build Include="StoredProcedures\usp_InsertStockDetails.sql" />
     <Build Include="ChildTables\LedgerTable\PartyPaymentDetails.sql" />
     <Build Include="StoredProcedures\usp_RecordPartyPayment.sql" />
+    <Build Include="Views\StockDetails.sql" />
   </ItemGroup>
 </Project>
