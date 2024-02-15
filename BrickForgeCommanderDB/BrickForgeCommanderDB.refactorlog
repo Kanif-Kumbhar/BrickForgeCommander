@@ -238,4 +238,18 @@
     <Property Name="ParentElementType" Value="SqlTable" />
     <Property Name="NewName" Value="PPaymentId" />
   </Operation>
+  <Operation Name="Rename Refactor" Key="39578931-5e64-4bf8-982d-56c2635a596f" ChangeDateTime="02/14/2024 06:29:56">
+    <Property Name="ElementName" Value="[BFC].[BrickDetails].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[BFC].[BrickDetails]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="BrickId" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="39fe590f-fd1d-4d90-a41f-e0efc7cea4bb" ChangeDateTime="02/14/2024 06:31:15">
+    <Property Name="ElementName" Value="[BFC].[ProductDetails].[ProductName]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[BFC].[ProductDetails]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="BrickId" />
+  </Operation>
 </Operations>

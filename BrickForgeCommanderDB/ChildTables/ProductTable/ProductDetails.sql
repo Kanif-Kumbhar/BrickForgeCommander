@@ -1,11 +1,12 @@
 ﻿CREATE TABLE [BFC].[ProductDetails]
 (
 	[ProductId] INT NOT NULL PRIMARY KEY Identity(1,1), 
-    [MaterialId] INT NOT NULL, 
-    [ProductName] NVARCHAR(50) NOT NULL, 
-    [unitPrice] DECIMAL(12, 2) NOT NULL, 
+    [BrickId] INT NOT NULL, 
+    [UnitPrice] DECIMAL(12, 2) NOT NULL, 
+    [ProfitMargin] DECIMAL(12, 2) NOT NULL,
+    [TotalAmount] MONEY NOT NULL,
     [ScoreId] INT NOT NULL, 
-    [ClassTypeId] NCHAR(10) NOT NULL, 
-    [isDiscontinued] BIT NOT NULL, 
-    [Stock] INT NOT NULL
+    [isDiscontinued] BIT NOT NULL DEFAULT 1, 
+    [Stock] INT NOT NULL DEFAULT 0, 
+    CONSTRAINT [FK_ProductDetails_BrickDetails] FOREIGN KEY ([BrickId]) REFERENCES [BFC].[BrickDetails]([BrickId])
 )

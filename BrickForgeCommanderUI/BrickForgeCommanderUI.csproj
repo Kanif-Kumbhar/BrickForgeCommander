@@ -114,6 +114,11 @@
     <Compile Include="Controls\Validation\RequiredFieldTextBox.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="DataSet\Product.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Product.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DataSet\RawMaterials.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -180,6 +185,18 @@
     </Compile>
     <Compile Include="Forms\Misc\frmPreviewImage.Designer.cs">
       <DependentUpon>frmPreviewImage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\TransactionForms\Production\frmBricksPaymentSetting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\TransactionForms\Production\frmBricksPaymentSetting.Designer.cs">
+      <DependentUpon>frmBricksPaymentSetting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\TransactionForms\Production\frmNewBrickEntry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\TransactionForms\Production\frmNewBrickEntry.Designer.cs">
+      <DependentUpon>frmNewBrickEntry.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\TransactionForms\RawMaterial\frmRawMaterialDetails.cs">
       <SubType>Form</SubType>
@@ -316,6 +333,12 @@
     <EmbeddedResource Include="Forms\Misc\test.resx">
       <DependentUpon>test.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\TransactionForms\Production\frmBricksPaymentSetting.resx">
+      <DependentUpon>frmBricksPaymentSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\TransactionForms\Production\frmNewBrickEntry.resx">
+      <DependentUpon>frmNewBrickEntry.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\TransactionForms\RawMaterial\frmRawMaterialDetails.resx">
       <DependentUpon>frmRawMaterialDetails.cs</DependentUpon>
     </EmbeddedResource>
@@ -353,6 +376,17 @@
     </None>
     <None Include="BFCDataSet.xss">
       <DependentUpon>BFCDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet\Product.xsc">
+      <DependentUpon>Product.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet\Product.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Product.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSet\Product.xss">
+      <DependentUpon>Product.xsd</DependentUpon>
     </None>
     <None Include="DataSet\RawMaterials.xsc">
       <DependentUpon>RawMaterials.xsd</DependentUpon>

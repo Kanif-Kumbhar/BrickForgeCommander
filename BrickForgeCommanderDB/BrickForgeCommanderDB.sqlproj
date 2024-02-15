@@ -100,5 +100,12 @@
     <Build Include="ChildTables\LedgerTable\PartyPaymentDetails.sql" />
     <Build Include="StoredProcedures\usp_RecordPartyPayment.sql" />
     <Build Include="Views\StockDetails.sql" />
+    <Build Include="MasterTables\BrickDetails.sql" />
+    <Build Include="ChildTables\ProductTable\BrickPaymentDetails.sql" />
+    <Build Include="StoredProcedures\usp_InsertOrUpdateBrickPaymentDetails.sql" />
+    <Build Include="Views\BrickLabourCharges.sql" />
+    <Build Include="ChildTables\ProductTable\ProductRawMaterialDetails.sql" />
+    <Build Include="StoredProcedures\usp_InsertProductDetails.sql" />
+    <Build Include="StoredProcedures\usp_InsertProductRawMaterials.sql" />
   </ItemGroup>
 </Project>

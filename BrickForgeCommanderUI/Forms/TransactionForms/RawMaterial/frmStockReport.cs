@@ -85,12 +85,29 @@ namespace BrickForgeCommanderUI.Forms.TransactionForms.RawMaterial
 
         private void frmStockReport_Activated(object sender, System.EventArgs e)
         {
+            GetStockReports();
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            SearchRawMaterial();
+            Clear();
+        }
+
+        private void btnRefesh_Click(object sender, EventArgs e)
+        {
+            GetStockReports();
+            Clear();
+        }
+
+        private void btnPrint_Click(object sender, EventArgs e)
+        {
 
         }
 
         #endregion
 
-        #region Events
+        #region Functions
 
         private void GetStockReports()
         {
@@ -129,6 +146,59 @@ namespace BrickForgeCommanderUI.Forms.TransactionForms.RawMaterial
                 }
             }
         }
+
+        private void Clear()
+        {
+            txtName.Texts = "";
+            txtStatus.Texts = "";
+        }
+
+        private void SearchRawMaterial()
+        {
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    connection.Open();
+                    string query = "SELECT MaterialName, SUM(Quantity) AS TotalQuantity, UnitPrice, [Status], Capacity " +
+                                   "FROM [BFC].[StockDetails] " +
+                                   "WHERE 1=1";
+
+                    if (!string.IsNullOrEmpty(txtName.Texts))
+                        query += $" AND MaterialName LIKE '%{txtName.Texts}%'";
+
+                    if (!string.IsNullOrWhiteSpace(txtStatus.Texts))
+                        query += $" AND Status = '{txtStatus.Texts}'";
+
+                    query += " GROUP BY MaterialName, [Status], UnitPrice, Capacity";
+
+                    using (SqlCommand command = new SqlCommand(query, connection))
+                    {
+                        using (SqlDataReader reader = command.ExecuteReader())
+                        {
+                            dgvRawMaterial.Rows.Clear();
+
+                            while (reader.Read())
+                            {
+                                int rowIndex = dgvRawMaterial.Rows.Add();
+
+                                dgvRawMaterial.Rows[rowIndex].Cells["clmCapacity"].Value = reader["Capacity"];
+                                dgvRawMaterial.Rows[rowIndex].Cells["clmSrNo"].Value = rowIndex + 1;
+                                dgvRawMaterial.Rows[rowIndex].Cells["clmName"].Value = reader["MaterialName"];
+                                dgvRawMaterial.Rows[rowIndex].Cells["clmQuantity"].Value = reader["TotalQuantity"];
+                                dgvRawMaterial.Rows[rowIndex].Cells["clmUnitPrice"].Value = reader["UnitPrice"];
+                                dgvRawMaterial.Rows[rowIndex].Cells["clmStatus"].Value = reader["Status"];
+                            }
+                        }
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show($"{e}");
+            }
+        }
+
         #endregion
     }
 }
